@@ -9,4 +9,6 @@ class Profile < ApplicationRecord
   validates :city, presence: true
   validates :state, presence: true
   validates :phone, presence: true
+  validates :birthday, presence: true
+  validates :description, presence: true
 end

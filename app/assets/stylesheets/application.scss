@@ -11,3 +11,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+// MAIN DESGIN
+
+#view-wrapper {
+  min-height: calc(100vh - 66px);
+}

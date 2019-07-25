@@ -17,4 +17,11 @@ class ProfilesController < ApplicationController
     @profile = Profile.find(params[:id])
     authorize @profile
   end
+
+  private
+
+  def profile_params
+  params.require(:profile).permit(:current_title, :current_employer)
+
+  end
 end

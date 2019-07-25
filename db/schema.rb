@@ -169,7 +169,7 @@ ActiveRecord::Schema.define(version: 2019_07_24_183001) do
   end
 
   create_table "surveys", force: :cascade do |t|
-    t.string "role"
+    t.boolean "mentee", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

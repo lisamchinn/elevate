@@ -136,6 +136,7 @@ MENTEES = [{
   email: 'lisa@mail.com',
   password: 123456789,
   mentee: true,
+  photo: 'https://images.unsplash.com/photo-1556228852-6d35a585d566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   },
   {
   first_name: 'Alberta',
@@ -143,6 +144,7 @@ MENTEES = [{
   email: 'albie@mail.com',
   password: 123456789,
   mentee: true,
+  photo: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
   },
   {
   first_name: 'Jennifer',
@@ -150,6 +152,7 @@ MENTEES = [{
   email: 'jen@mail.com',
   password: 123456789,
   mentee: true,
+  photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
   },
   {
   first_name: 'Sarah',
@@ -157,6 +160,7 @@ MENTEES = [{
   email: 'sarah@mail.com',
   password: 123456789,
   mentee: true,
+  photo: 'https://images.unsplash.com/photo-1556228852-6bf19d1b1fc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   },
 ]
 
@@ -165,33 +169,36 @@ MENTORS = [{
   last_name: 'Peteraf',
   email: 'peteraf@mail.com',
   password: 123456789,
-  mentee: false
+  mentee: false,
+  photo: 'https://images.unsplash.com/photo-1556228852-6d35a585d566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   },
   {
   first_name: 'Daniella',
   last_name: 'Johnson',
   email: 'daniella@mail.com',
   password: 123456789,
-  mentee: false
+  mentee: false,
+  photo: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
   },
   {
   first_name: 'Carina',
   last_name: 'Smith',
   email: 'carina@mail.com',
   password: 123456789,
-  mentee: false
+  mentee: false,
+  photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
   },
   {
   first_name: 'Leanne',
   last_name: 'Picot',
   email: 'leanne@mail.com',
   password: 123456789,
-  mentee: false
+  mentee: false,
+  photo: 'https://images.unsplash.com/photo-1556228852-6bf19d1b1fc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   },
 ]
 
 MENTEE_PROFILES = [{
-  photo: 'https://images.unsplash.com/photo-1556228852-6d35a585d566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -211,10 +218,10 @@ MENTEE_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895004,
 },
 {
-  photo: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -234,10 +241,10 @@ MENTEE_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895005,
 },
 {
-  photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -257,10 +264,10 @@ MENTEE_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895003,
 },
 {
-  photo: 'https://images.unsplash.com/photo-1556228852-6bf19d1b1fc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -280,12 +287,12 @@ MENTEE_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895002,
 }
 ]
 
 MENTOR_PROFILES = [{
-  photo: 'https://images.unsplash.com/photo-1556228852-6d35a585d566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -305,10 +312,10 @@ MENTOR_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895001,
 },
 {
-  photo: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -328,10 +335,10 @@ MENTOR_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895007,
 },
 {
-  photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -351,10 +358,10 @@ MENTOR_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895008,
 },
 {
-  photo: 'https://images.unsplash.com/photo-1556228852-6bf19d1b1fc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
   current_title: 'CEO',
   current_employer: 'Google',
   current_industry: 'Tech',
@@ -374,7 +381,8 @@ MENTOR_PROFILES = [{
   birthday: Date.today - 21900,
   description: 'hi',
   tagline: 'hi',
-  public: true
+  public: true,
+  phone: 17325895009,
 }
 ]
 
@@ -396,12 +404,17 @@ MESSAGES = [
   {content: 'Hi, how\'s it going?14'},
 ]
 
-
-
 puts "Cleaning database"
-User.destroy_all
-Event.destroy_all
 Match.destroy_all
+EventBooking.destroy_all
+Event.destroy_all
+Profile.destroy_all
+QuestionAnswerPair.destroy_all
+SurveyQuestion.destroy_all
+Survey.destroy_all
+Question.destroy_all
+AnswerOption.destroy_all
+User.destroy_all
 
 puts ""
 puts "Starting seeding process..."
@@ -423,7 +436,7 @@ end
 
 puts "Creating User Profiles (who are mentees)"
   MENTEE_PROFILES.each_with_index do |profile, index|
-    mentee_profile = Profiles.new(profile)
+    mentee_profile = Profile.new(profile)
     mentee_profile.user = User.first(MENTEES.length)[index]
     mentee_profile.save!
     puts " - created #{mentee_profile.user.first_name}'s profile"
@@ -431,7 +444,7 @@ puts "Creating User Profiles (who are mentees)"
 
 puts "Creating User Profiles (who are mentors)"
   MENTOR_PROFILES.each_with_index do |profile, index|
-    mentor_profile = Profiles.new(profile)
+    mentor_profile = Profile.new(profile)
     mentor_profile.user = User.last(MENTORS.length)[index]
     mentor_profile.save!
     puts " - created #{mentor_profile.user.first_name}'s profile"

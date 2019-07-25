@@ -21,7 +21,8 @@ class User < ApplicationRecord
   has_many :event_bookings, dependent: :destroy
   has_many :events, through: :event_bookings
 
-  has_many :messages, through: :matches, dependent: :destroy
+  has_many :messages, through: :matches_as_mentor, dependent: :destroy
+  has_many :messages, through: :matches_as_mentee, dependent: :destroy
 
   validates :first_name, presence: true
   validates :last_name, presence: true

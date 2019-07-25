@@ -18,3 +18,9 @@
 #view-wrapper {
   min-height: calc(100vh - 66px);
 }
+
+.sticky {
+  height: 60vh;
+  position: sticky;
+  top: 50px;
+}

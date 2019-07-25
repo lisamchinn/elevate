@@ -1,14 +1,44 @@
 <div class="container-medium-small">
-<!-- <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="d-flex row">
+  <div class="col-12 col-md-4">
+  <div class="mr-1 sticky">
+    <%= render 'components/card-mentor' %>
+    <%= render 'components/card-edit' %>
+    </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="dashboard-card-transparent d-flex">
+        <div class="dashboard-card-content">
+          <h2>Hello, Margaret!</h2>
+          <h4>Welcome back to Ellevate. Here, you can see what you can do today. </h4>
+        </div>
+        <img src="https://gust.com/marketing_assets/founders/illustrations/illustration-01-95b432defb91396da68559d437fa033701513b827291d2f976466601ab8f2c6f.png" alt="">
+      </div>
 
-<img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-<img class="avatar-dashboard" alt="avatar-medium" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-<img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-<img class="avatar-bordered" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
-<img class="avatar-square" alt="avatar-square" src="https://kitt.lewagon.com/placeholder/users/krokrob" />
-
-<a class="btn btn-solid" href="#">Join the pack</a>
-<a class="btn btn-ghost" href="#">Join the pack</a> -->
-<%= render 'components/card-mentor' %>
+      <%= render 'components/card-greeting' %>
+      <%= render 'components/card-dashboard' %>
+      <div class="dashboard-card d-flex">
+        <div class="dashboard-card-content">
+          <h2>Join the conversation!</h2>
+          <h4>Have you checked out our forums?</h4>
+          <p style="
+          font-style: italic;
+          margin-bottom: 16px;">From topic A to topic B, join in the conversations with our +100 members! </p>
+          <a class="btn btn-solid-small" href="#">View forum</a>
+        </div>
+        <img style="height: 142px" src="https://images.unsplash.com/photo-1556159992-e189f8e50104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+      </div>
+      <div class="dashboard-card-transparent d-flex">
+        <div class="dashboard-card-content">
+          <h2>Your development toolkit</h2>
+          <h4>How to build self-confidence</h4>
+          <p style="
+          font-style: italic;
+          margin-bottom: 16px;">Ask your mentor to go over the toolkit before your next session</p>
+          <a class="btn btn-solid-small" href="#">View toolkit</a>
+        </div>
+        <img style="height: 142px" src="https://images.unsplash.com/photo-1504257365157-1496a50d48f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+      </div>
+    </div>
+  </div>
 </div>

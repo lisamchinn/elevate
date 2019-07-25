@@ -5,4 +5,5 @@ class Question < ApplicationRecord
 
   validates :content, presence: true
   validates :question_type, presence: true
+  enum question_type: { checkbox: 0, dropdown: 1, order: 2 }
 end

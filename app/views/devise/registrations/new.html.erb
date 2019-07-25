@@ -13,6 +13,10 @@
 
   <div class="form-inputs">
 
+    <div class="form-actions">
+      <%= f.button :submit, 'Sign in with Linked In', class:"btn my-5 btn-linkdin form-label btn-block" %>
+    </div>
+
     <%= f.input :first_name,
                 required: true,
                 autofocus: true,
@@ -40,7 +44,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up", class:"btn  my-5 btn-black form-label btn-block" %> %>
+    <%= f.button :submit, "Sign up", class:"btn my-5 btn-black form-label btn-block" %>
   </div>
 <% end %>
 

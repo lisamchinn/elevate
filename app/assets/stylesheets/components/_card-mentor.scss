@@ -1,0 +1,61 @@
+.card-mentor {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  padding: 22px;
+  border-radius: 2px;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  h4 {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 2px;
+  }
+  h6 {
+    font-size: 14px;
+    text-alignt: left;
+  }
+  a {
+    display: block  }
+}
+
+
+.card-mentee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: white;
+  text-align: center;
+  padding: 22px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: dotted 2px black;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+  h6{
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+    color: gray;
+  }
+}

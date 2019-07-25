@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_011652) do
+ActiveRecord::Schema.define(version: 2019_07_25_141950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,15 @@ ActiveRecord::Schema.define(version: 2019_07_25_011652) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "jobs_per_industries", force: :cascade do |t|
+    t.bigint "job_title_id"
+    t.bigint "industry_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["industry_id"], name: "index_jobs_per_industries_on_industry_id"
+    t.index ["job_title_id"], name: "index_jobs_per_industries_on_job_title_id"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -212,6 +221,8 @@ ActiveRecord::Schema.define(version: 2019_07_25_011652) do
 
   add_foreign_key "event_bookings", "events"
   add_foreign_key "event_bookings", "users"
+  add_foreign_key "jobs_per_industries", "industries"
+  add_foreign_key "jobs_per_industries", "job_titles"
   add_foreign_key "messages", "matches"
   add_foreign_key "posts", "forums"
   add_foreign_key "posts", "users"

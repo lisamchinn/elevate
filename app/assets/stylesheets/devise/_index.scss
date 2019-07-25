@@ -7,9 +7,10 @@
 
 .form-container {
   display: flex;
-   justify-content: center;
-   align-items: center;
-
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-height: calc(100vh - 66px)
 }
 
 .btn-black {
@@ -18,10 +19,6 @@
   border-radius: 3px;
   color:white;
   font-size: 16px;
-}
-
-body {
-  background-color: white;
 }
 
 .log-in-header {

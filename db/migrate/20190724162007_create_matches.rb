@@ -3,7 +3,7 @@ class CreateMatches < ActiveRecord::Migration[5.2]
     create_table :matches do |t|
       t.references :mentor, null: false
       t.references :mentee, null: false
-      t.string :status, default: "Pending"
+      t.integer :status, default: 0
 
       t.timestamps
     end

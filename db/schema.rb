@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_141950) do
+ActiveRecord::Schema.define(version: 2019_07_25_193211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_07_25_141950) do
     t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "num_of_tickets"
     t.index ["event_id"], name: "index_event_bookings_on_event_id"
     t.index ["user_id"], name: "index_event_bookings_on_user_id"
   end
@@ -54,7 +55,6 @@ ActiveRecord::Schema.define(version: 2019_07_25_141950) do
     t.string "photo"
     t.string "host"
     t.string "host_company"
-    t.integer "num_of_tickets"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 2019_07_25_141950) do
   create_table "matches", force: :cascade do |t|
     t.bigint "mentor_id", null: false
     t.bigint "mentee_id", null: false
-    t.string "status", default: "Pending"
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["mentee_id"], name: "index_matches_on_mentee_id"
@@ -119,7 +119,6 @@ ActiveRecord::Schema.define(version: 2019_07_25_141950) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "photo"
     t.string "current_title"
     t.string "current_employer"
     t.string "current_industry"
@@ -215,6 +214,7 @@ ActiveRecord::Schema.define(version: 2019_07_25_141950) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "mentee", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

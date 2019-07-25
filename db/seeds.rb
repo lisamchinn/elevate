@@ -328,6 +328,14 @@ POSTS = [ {
 }
 ]
 
+REPLIES = [ {
+  content: "I like the way you think."
+},
+{
+  content: "You might want to talk to a therapist for this one."
+}
+]
+
 puts "Cleaning database"
 Forum.destroy_all
 
@@ -361,6 +369,17 @@ POSTS.each do |post|
   puts " - created #{seed_post.subject}"
 end
 
+puts ""
+puts "Creating Replies"
+50.times do
+  REPLIES.each do |reply|
+    seed_reply = Reply.new(reply)
+    seed_reply.user = User.all.sample
+    seed_reply.post = Post.all.sample
+    seed_reply.save!
+    puts " - created reply #{seed_reply.id}"
+  end
+end
 
 # EVENTS = [ {
 #   title: ,

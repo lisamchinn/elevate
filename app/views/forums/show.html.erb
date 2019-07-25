@@ -2,6 +2,13 @@
 
 <ul>
   <% @posts.each do |post| %>
-  <li><%= post.subject %></li>
+  <h4>Post: <%= post.subject %></h4>
+  <h5>Post Content: <%= post.content %></h5>
+  <h5>Replies:</h5>
+  <ul>
+    <% post.replies.each do |reply| %>
+    <li><%= reply.content %></li>
+    <% end %>
+  </ul>
   <% end %>
 </ul>

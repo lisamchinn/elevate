@@ -1,8 +1,9 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :confirmable, :lockable, :timeoutable, :trackable and
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :omniauthable, omniauth_providers: [:linkedin]
 
   has_one :profile, dependent: :destroy
 
@@ -27,4 +28,15 @@ class User < ApplicationRecord
   # validates :photo, presence: true
   validates :email, presence: true
   validates :password, presence: true
+
+  def self.from_omniauth(auth)
+    puts "auth = #{auth}"
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0, 20]
+      user.first_name = auth.info.first_name
+      user.last_name = auth.info.last_name
+      user.photo = auth.info.picture_url
+    end
+  end
 end

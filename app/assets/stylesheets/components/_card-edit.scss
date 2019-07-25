@@ -1,0 +1,36 @@
+.carousel-button-right{
+    color: white;
+    background: #0da196;
+    border-radius: 50%;
+    font-size: medium;
+    width: 20px;
+    height: 20px;
+    line-height: 17px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    position: relative;
+    right: -25px;
+  &:active {
+    border-color: rgb(226, 226, 226) !important;
+  }
+}
+
+.card-edit {
+    background-color: white;
+    padding: 17px 25px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    text-align: left;
+    margin-top: 20px;
+    position: relative;
+  h4 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+

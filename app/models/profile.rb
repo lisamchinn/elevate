@@ -1,7 +1,6 @@
 class Profile < ApplicationRecord
   belongs_to :user
 
-  validates :photo, presence: true
   validates :current_title, presence: true
   validates :current_employer, presence: true
   validates :current_industry, presence: true

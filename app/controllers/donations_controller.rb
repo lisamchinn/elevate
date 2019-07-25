@@ -1,15 +1,20 @@
 class DonationsController < ApplicationController
   def new
     @donation = Donation.new
+    authorize @donation
   end
 
   def create
     @donation = Donation.new(donation_params)
-    if @donation.save
-      redirect_to root_path
-    else
-      render :new
-    end
+    @donation.state = 'pending'
+    @donation.save!
+    redirect_to new_donation_payment_path(@donation)
+    authorize @donation
+  end
+
+  def show
+    @donation = Donation.where(state: 'paid').find(params[:id])
+    authorize @donation
   end
 
   private

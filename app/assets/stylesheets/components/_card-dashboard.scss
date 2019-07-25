@@ -38,34 +38,6 @@
   }
 }
 
-.dashboard-card-transparent{
-  padding: 20px;
+.transparent{
   background-color: transparent;
-  border-radius: 2px;
-  margin-bottom: 20px;
-  img {
-    height: 120px;
-    width: 120px;
-    object-fit: cover;
-    flex-grow: 0;
-  }
-  h2{
-    margin: 0;
-    margin-bottom: 5px;
-    font-size: 25px;
-  }
-  h4{
-    font-size: 15px;
-    margin-bottom: 0px;
-  }
-  p {
-    margin: 0;
-    margin-bottom: 2px;
-    font-size: 14px;
-  }
-  a{
-    position: absolute;
-    left: 0;
-    bottom:0;
-  }
 }

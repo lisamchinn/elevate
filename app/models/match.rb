@@ -4,4 +4,6 @@ class Match < ApplicationRecord
   has_many :messages
 
   validates :status, presence: true
+
+  enum match_status: {pending: 0, ongoing: 1, canceled: 2}
 end

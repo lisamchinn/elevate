@@ -19,8 +19,10 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
   end
 
-  get '/donate', to: 'donations#new', as: :new_donation
-  post '/donate', to: 'donations#create'
+  resources :donations, only: [:new, :create, :show] do
+    resources :payments, only: [:new, :create]
+  end
+
   get '/events/my_events', to: 'events#my_events', as: :events_my_events
   get '/dashboard', to: 'profiles#dashboard', as: :profiles_dashboard
 end

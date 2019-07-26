@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
+
   has_many :event_bookings, dependent: :destroy
   has_many :users, through: :event_bookings
 

@@ -740,6 +740,7 @@ puts ""
 puts "Creating Users(who are mentees)"
   MENTEES.each do |mentee|
     seed_mentee = User.new(mentee)
+    seed_mentee.remote_photo_url = mentee[:photo]
     seed_mentee.save!
     puts " - created #{seed_mentee.first_name} who is a mentee"
 end
@@ -747,6 +748,7 @@ end
 puts "Creating Users(who are mentors)"
   MENTORS.each do |mentor|
   seed_mentor = User.new(mentor)
+  seed_mentor.remote_photo_url = mentor[:photo]
   seed_mentor.save!
   puts " - created #{seed_mentor.first_name} who is a mentor"
 end
@@ -770,6 +772,7 @@ puts "Creating User Profiles (who are mentors)"
 puts "Creating Event Bookings (Attached to events and users)"
 EVENTS.each do |event|
   seed_event = Event.new(event)
+  seed_event.remote_photo_url = event[:photo]
   seed_event.save!
   puts " - created #{seed_event.title}"
   rand(1..5).times do

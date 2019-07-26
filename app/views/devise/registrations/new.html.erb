@@ -41,6 +41,8 @@
                 required: true,
                 input_html: { autocomplete: "new-password", class: "form-input" },
                 label_html: { class: "form-label" } %>
+     <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
   </div>
 
   <div class="form-actions">

@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.container-big {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+.big-yellow-square {
+  background-color: $yellow;
+  width: 50%;
+  height: 75vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.landing-image img {
+  width: 720;
+  height: 600px;
+  position: absolute;
+  right: 83px;
+  top: 67px;
+}
+
+.cta {
+  width: 300px;
+  height: 600px;
+}

@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_011652) do
+ActiveRecord::Schema.define(version: 2019_07_25_193211) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_07_25_011652) do
     t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "num_of_tickets"
     t.index ["event_id"], name: "index_event_bookings_on_event_id"
     t.index ["user_id"], name: "index_event_bookings_on_user_id"
   end
@@ -54,7 +56,6 @@ ActiveRecord::Schema.define(version: 2019_07_25_011652) do
     t.string "photo"
     t.string "host"
     t.string "host_company"
-    t.integer "num_of_tickets"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -77,10 +78,19 @@ ActiveRecord::Schema.define(version: 2019_07_25_011652) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "jobs_per_industries", force: :cascade do |t|
+    t.bigint "job_title_id"
+    t.bigint "industry_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["industry_id"], name: "index_jobs_per_industries_on_industry_id"
+    t.index ["job_title_id"], name: "index_jobs_per_industries_on_job_title_id"
+  end
+
   create_table "matches", force: :cascade do |t|
     t.bigint "mentor_id", null: false
     t.bigint "mentee_id", null: false
-    t.string "status", default: "Pending"
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["mentee_id"], name: "index_matches_on_mentee_id"
@@ -110,7 +120,6 @@ ActiveRecord::Schema.define(version: 2019_07_25_011652) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "photo"
     t.string "current_title"
     t.string "current_employer"
     t.string "current_industry"
@@ -206,12 +215,15 @@ ActiveRecord::Schema.define(version: 2019_07_25_011652) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "mentee", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "event_bookings", "events"
   add_foreign_key "event_bookings", "users"
+  add_foreign_key "jobs_per_industries", "industries"
+  add_foreign_key "jobs_per_industries", "job_titles"
   add_foreign_key "messages", "matches"
   add_foreign_key "posts", "forums"
   add_foreign_key "posts", "users"

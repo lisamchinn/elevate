@@ -11,3 +11,18 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "devise/index";
+
+
+// MAIN DESGIN
+
+#view-wrapper {
+  min-height: calc(100vh - 66px);
+}
+
+.sticky {
+  height: 90vh;
+  position: sticky;
+  top: 30px;
+}
+

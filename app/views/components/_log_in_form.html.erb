@@ -1,0 +1,10 @@
+<div class="form-group">
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name, placeholder: 'Jane', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :last_name, placeholder: 'Adams', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :email, placeholder: 'youremail@main.com' %>
+  <%= f.input :password %>
+  <%= f.input :remember_me, inline_label: 'Yes, remember me' %>
+  <%= f.button :submit, "Sing In", class: "btn btn-primary" %>
+<% end %>
+</div>

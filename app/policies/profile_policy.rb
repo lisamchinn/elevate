@@ -6,8 +6,7 @@ class ProfilePolicy < ApplicationPolicy
   end
 
   def show?
-    # record.user == user
-    true
+    record.user == user
   end
 
   def update?
@@ -23,7 +22,6 @@ class ProfilePolicy < ApplicationPolicy
   end
 
   def dashboard?
-    # record.user == user
-    true
+    record.user == user
   end
 end

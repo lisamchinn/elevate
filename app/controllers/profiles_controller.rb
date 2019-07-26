@@ -20,8 +20,7 @@ class ProfilesController < ApplicationController
   end
 
   def dashboard
-    @profile = Profile.find(33)
-    # Need to change this profile.find
+    @profile = Profile.find(params[:id])
     authorize @profile
   end
 

@@ -573,6 +573,151 @@ MESSAGES = [
   {content: 'Hi, how\'s it going?14'},
 ]
 
+FORUMS = [
+  {name: "Entrepreneurship"},
+  {name: "Career change"},
+  {name: "Career growth"},
+  {name: "Negotiation strategies"},
+  {name: "Learning how to network"},
+  {name: "Industry-specific skills"},
+  {name: "Dealing with biases in the workplace"},
+  {name: "Developing leadership skills"},
+  {name: "Creating work-life balance"},
+  {name: "Building confidence"}
+]
+
+POSTS = [ {
+  subject: "Post 1",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 2",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 3",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 4",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 5",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 6",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 7",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 8",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 9",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 10",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 11",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 12",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 13",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 14",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 15",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 16",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 17",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 18",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 19",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 20",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 21",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 22",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 23",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 24",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 25",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 26",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 27",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 28",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 29",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 30",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+}
+]
+
+REPLIES = [ {
+  content: "I like the way you think."
+},
+{
+  content: "You deserve a raise."
+},
+
+  content: "This is exactly why a mentor would be so helpful."
+]
+
 puts "Cleaning database"
 Match.destroy_all
 EventBooking.destroy_all
@@ -584,6 +729,9 @@ Survey.destroy_all
 Question.destroy_all
 AnswerOption.destroy_all
 User.destroy_all
+Forum.destroy_all
+Post.destroy_all
+Reply.destroy_all
 
 puts ""
 puts "Starting seeding process..."
@@ -631,6 +779,33 @@ EVENTS.each do |event|
     event_booking = EventBooking.new(user: User.all.sample, event: seed_event, num_of_tickets: 2)
     event_booking.save!
     puts " - created #{event_booking.user.first_name}'s event booking"
+  end
+end
+
+puts "Creating Forums"
+FORUMS.each do |forum|
+  seed_forum = Forum.new(forum)
+  seed_forum.save!
+  puts " - created #{seed_forum.name}"
+end
+
+puts "Creating Posts"
+POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum = Forum.all.sample
+  seed_post.save!
+  puts " - created #{seed_post.subject}"
+end
+
+puts "Creating Replies"
+33.times do
+  REPLIES.each do |reply|
+    seed_reply = Reply.new(reply)
+    seed_reply.user = User.all.sample
+    seed_reply.post = Post.all.sample
+    seed_reply.save!
+    puts " - created reply #{seed_reply.id}"
   end
 end
 
@@ -1176,5 +1351,4 @@ puts "creating answer options for industry questions"
 # match.status = :pending
 
 # if match.pending?
-
 

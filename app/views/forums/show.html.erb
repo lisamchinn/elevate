@@ -1,7 +1,18 @@
 <h1><%= @forum.name %></h1>
 
+<%= simple_form_for [@forum, @post] do |f| %>
+  <%= f.input :subject %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
+<% end %>
+
 <ul>
-  <% @posts.each do |post| %>
-  <li><%= post.subject %></li>
+  <% if !@posts.empty? %>
+    <% @posts.each do |post| %>
+    <h4>Post: <%= link_to post.subject, forum_post_path(@forum, post) %></h4>
+    <h5>Post Content: <%= post.content %></h5>
+    <% end %>
+  <% else %>
+    <h4>No posts for this category</h4>
   <% end %>
 </ul>

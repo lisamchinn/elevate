@@ -1,0 +1,26 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-size: cover;
+  background-position: center;
+  input {
+    font-size: 12px;
+  }
+  button {
+    font-size: 12px;
+    padding: 3px;
+  }
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 59px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}

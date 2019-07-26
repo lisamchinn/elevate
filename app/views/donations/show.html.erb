@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
+  <div class="container-donation">
+    <div class="col-6 donation-form mx-auto">
+      <div class="donation-logo-wrapper">
+        <div class="logo"></div>
+        <h2 class="log-in-header">Ellevate</h2>
+      </div>
+      <div class="p-div donation-paragraph">
+        <p class="log-in-p ">Find a mentor and change your life</p>
+      </div class="mx-auto">
+        <h4>Thank you for making a donation! Your Donation confirmation:</h4>
+          <ul>
+            <li>Status: <%= @donation.state %></li>
+            <li>Amount: <%= humanized_money_with_symbol(@donation.amount) %></li>
+          <ul>
+      </div>
+    </div>
+  </div>
+</div>

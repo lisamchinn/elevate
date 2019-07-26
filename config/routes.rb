@@ -10,7 +10,10 @@ Rails.application.routes.draw do
 
   resources :forums, only: [:index, :show] do
     resources :posts, only: [:show, :create, :update, :destroy]
-      resources :replies, only: [:create]
+  end
+
+  resources :posts, only: [] do
+    resources :replies, only: [:create]
   end
 
   resources :matches, only: [:new, :create] do

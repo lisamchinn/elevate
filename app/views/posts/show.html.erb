@@ -8,11 +8,24 @@
       <% @post.replies.each do |reply| %>
       <li><%= reply.user.first_name %> says: <%= reply.content %></li>
       <% end %>
+        <% if signed_in? %>
+          <%= simple_form_for [@post, @reply] do |f| %>
+          <%= f.input :content %>
+          <%= f.button :submit %>
+          <% end %>
+          <% else %>
+            <p><%= link_to "Sign in to reply", new_user_session_path %> </p>
+        <% end %>
     <% else %>
       <% if signed_in? %>
-        <p><%= link_to "Be the first to reply", forum_replies_path(@forum) %></p>
+        <p>Be the first to reply</p>
+        <%= simple_form_for [@post, @reply] do |f| %>
+        <%= f.input :content %>
+        <%= f.button :submit %>
+        <% end %>
       <% else %>
         <p><%= link_to "Be the first to reply", new_user_session_path %> </p>
       <% end %>
     <% end %>
   </ul>
+

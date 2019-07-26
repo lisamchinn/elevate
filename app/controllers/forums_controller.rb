@@ -8,6 +8,7 @@ class ForumsController < ApplicationController
   def show
     @forum = Forum.find(params[:id])
     @posts = Post.where(forum_id: @forum.id)
+    @post = Post.new
     @replies = Reply.all
     authorize @forum
   end

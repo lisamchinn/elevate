@@ -1,12 +1,7 @@
-class PostPolicy < ApplicationPolicy
-  def show?
-    true
-  end
-
+class ReplyPolicy < ApplicationPolicy
   def create?
     true
   end
-
   class Scope < Scope
     def resolve
       scope.all

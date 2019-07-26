@@ -637,6 +637,7 @@ end
 puts "Creating Matches"
 4.times do |i|
   match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
+  match.save!
   puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
 end
 

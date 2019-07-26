@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
   has_many :event_bookings, dependent: :destroy
   has_many :users, through: :event_bookings
+  mount_uploader :photo, PhotoUploader
 
   validates :title, presence: true
   validates :description, presence: true

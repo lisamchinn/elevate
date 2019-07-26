@@ -1,11 +1,12 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and
+  mount_uploader :photo, PhotoUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:linkedin]
 
-  mount_uploader :photo, PhotoUploader
   has_one :profile, dependent: :destroy
 
   has_many :matches_as_mentor, class_name: 'Match', foreign_key: :mentor_id

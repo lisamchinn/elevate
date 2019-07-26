@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'money-rails'
 gem 'pundit'
+gem 'stripe'
 gem 'omniauth-linkedin-oauth2'
 
 group :development do

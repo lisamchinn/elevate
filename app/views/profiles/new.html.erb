@@ -1,6 +1,43 @@
+
 <h1>Profiles#new</h1>
+<div class="form-container">
+<div class="form-wrapper mt-3">
+  <div class="logo-wrapper">
+    <div class="logo"></div>
+  <h2 class="log-in-header">Ellevate</h2>
+  </div>
+  <div class="p-div">
+  <p class="log-in-p ">Find a mentor and change your life</p>
+  </div>
 <%= simple_form_for @profile do |f| %>
   <%= f.input :current_title %>
   <%= f.input :current_employer %>
+  <%= f.input :current_industry %>
+  <%= f.input :years_in_current_industry %>
+  <%= f.input :previous_title %>
+  <%= f.input :previous_employer %>
+  <%= f.input :previous_industry %>
+  <%= f.input :years_in_previous_industry %>
+  <%= f.input :bachelors_university %>
+  <%= f.input :bachelors_degree %>
+  <%= f.input :year_graduated_bachelors %>
+  <%= f.input :masters_university %>
+  <%= f.input :masters_degree %>
+  <%= f.input :year_graduated_masters %>
+  <%= f.input :doctorate_university %>
+  <%= f.input :doctorate_degree %>
+  <%= f.input :year_graduated_doctorate %>
+  <%= f.input :state, collection: city_names %>
+  <%= f.input :city %>
+  <%= f.input :fav_books %>
+  <%= f.input :fav_quote %>
+  <%= f.input :hobbies %>
+  <%= f.input :phone %>
+  <%= f.input :goals %>
+  <%= f.input :birthday %>
+  <%= f.input :description %>
+  <%= f.input :tagline %>
+  <%= f.input :public %>
   <%= f.button :submit %>
 <% end %>
+</div>

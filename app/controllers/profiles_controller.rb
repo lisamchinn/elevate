@@ -21,7 +21,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-  params.require(:profile).permit(:current_title, :current_employer)
+  params.require(:profile).permit(:current_title, :current_employer, :current_industry, :years_in_current_industry, :previous_title, :previous_employer, :previous_industry, :years_in_previous_industry, :bachelors_university, :bachelors_degree, :year_graduated_bachelors, :masters_university, :masters_degree, :year_graduated_masters, :doctorate_university, :doctorate_degree, :year_graduated_doctorate, :city, :state, :fav_books, :fav_quote, :hobbies, :phone, :goals, :birthday, :description, :tagline, :public)
 
   end
 end

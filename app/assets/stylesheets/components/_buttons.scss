@@ -1,39 +1,41 @@
 .btn-solid {
-    background-color: #dd3b33;
+    color: white;
+    background-color: $black;
     line-height: 1;
     text-align: center;
-    font-size: 16px;
-    padding: 12px 14px;
-    border-radius: 1px;
+    font-size: 17px;
+    padding: 12px 16px;
+    border-radius: 2px;
     border: 1px solid transparent;
     vertical-align: middle;
     cursor: pointer;
     transition: color .25s cubic-bezier(.35,.97,.57,.99),background-color .25s cubic-bezier(.35,.97,.57,.99);
-    color: #fff;
+    font-weight: 300;
     &:hover {
-    color: #dd3b33;
-    background-color: transparent;
-    border: 1px solid #dd3b33;
+    color: white;
+    background-color: rgba(39, 39, 40, 0.7);
+    border: 1px solid $black;
     text-decoration: none;
     }
 }
 
 .btn-ghost {
-  background-color: white;
+  background-color: transparent;
   line-height: 1;
   text-align: center;
-  font-size: 16px;
-  padding: 12px 14px;
-  border-radius: 1px;
-  border: 1px solid #dd3b33;
+  font-size: 17px;
+  padding: 12px 16px;
+  border-radius: 2px;
+  border: 1px solid $black;
   vertical-align: middle;
   cursor: pointer;
   transition: color .25s cubic-bezier(.35,.97,.57,.99),background-color .25s cubic-bezier(.35,.97,.57,.99);
-  color: #dd3b33;
+  color: $black;
+  font-weight: 300;
   &:hover {
-  color: white;
-  background-color: #dd3b33;
-  border: 1px solid #dd3b33;
+  color: $black;
+  background-color: rgba(39, 39, 40, 0.3);
+  border: 1px solid $black;
   text-decoration: none;
   }
 }

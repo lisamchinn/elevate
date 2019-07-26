@@ -1,12 +1,51 @@
-.navbar-lewagon {
+.navbar-ellevate {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  background: transparent;
+  margin-top: 30px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-ellevate-white {
+  background-color: white;
+  margin-top: 15px;
+}
+
+.navbar-ellevate .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-ellevate img {
+  width: 70px;
+  height: 70px;
+  margin-left: 40px;
+  margin-right: 20px;
 }
+
+.navbar-links a {
+  text-decoration: none;
+  color: $black;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.navbar-image-and-logo > p {
+  font-size: 30px;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  font-weight: 400;
+}
+
+.sign-up-button {
+  margin-right: 45px;
+  margin-left: 3px;
+}
+
+
+// @media (min-width: 992px) {
+//   .greeting-card {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// }

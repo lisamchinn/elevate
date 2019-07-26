@@ -1,4 +1,15 @@
 <div class="container-medium-small">
+  <div class="dashboard-welcome d-flex flex-row">
+    <div class="content col-6">
+      <h2>Hello, <%= @profile.user.first_name.capitalize %>!</h2>
+      <h4>Welcome back to Ellevate. Here, you can see what you can do today. </h4>
+    </div>
+  <%#= image_tag('enter.svg') %>
+    <div class="col-6">
+      <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
+    </div>
+  </div>
+
   <div class="d-flex row">
     <div class="col-12 col-md-3">
       <div class="mr-1 sticky">
@@ -22,14 +33,6 @@
       </div>
     </div>
     <div class="col-12 col-md-9">
-      <div class="dashboard-card transparent d-flex">
-        <div class="dashboard-card-content">
-          <h2>Hello, <%= @profile.user.first_name.capitalize %>!</h2>
-          <h4>Welcome back to Ellevate. Here, you can see what you can do today. </h4>
-        </div>
-        <%#= image_tag('enter.svg') %>
-        <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
-      </div>
       <%= render 'components/card-greeting', profile: @profile %>
       <h4 class="dashboard-title">Your upcoming events</h4>
       <% @profile.user.events.each do |event| %>

@@ -1,8 +1,33 @@
 .dashboard-card-content {
-  flex-grow: 1;
   text-align: left;
   margin-right: 20px;
   position: relative;
+  flex-grow: 1;
+}
+
+.dashboard-welcome {
+  height: 250px;
+  margin-bottom: 71px;
+  background-color: #EAD094;
+  border-radius: 3px;
+  img {
+    height: 123%;
+    width: 110%;
+    margin-bottom: -5px;
+    position: absolute;
+    top: -32px;
+  }
+  .content {
+    padding-left: 20px;
+    margin-top: 50px;
+  }
+  h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 20px;
+  }
 }
 
 .dashboard-card {

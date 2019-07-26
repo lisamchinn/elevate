@@ -69,26 +69,23 @@
   display: flex;
   justify-content: space-around;
   margin: 0, auto;
+  width: 1000px;
 }
 
 .image-collage {
-  position: relative;
 }
 
 .image-1 img {
-  position: absolute;
   width: 228px;
   height: 228px;
 }
 
 .image-2 img {
-  position: absolute;
   width: 355px;
   height: 302px;
 }
 
 .image-3 img {
-  position: absolute;
   width: 302px;
   height: 302px;
 }

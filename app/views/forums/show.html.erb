@@ -1,14 +1,21 @@
 <h1><%= @forum.name %></h1>
+<% if signed_in? %>
+  <%= simple_form_for @post do |f| %>
+    <%= f.input :subject %>
+    <%= f.input :content %>
+    <%= f.button :submit %>
+  <% end %>
+<% else %>
+  <%= link_to "Sign in to post", new_user_session_path %>
+<% end %>
 
 <ul>
-  <% @posts.each do |post| %>
-  <h4>Post: <%= post.subject %></h4>
-  <h5>Post Content: <%= post.content %></h5>
-  <h5>Replies:</h5>
-  <ul>
-    <% post.replies.each do |reply| %>
-    <li><%= reply.content %></li>
+  <% if !@posts.empty? %>
+    <% @posts.each do |post| %>
+    <h4>Post: <%= link_to post.subject, forum_post_path(@forum, post) %></h4>
+    <h5>Post Content: <%= post.content %></h5>
     <% end %>
-  </ul>
+  <% else %>
+    <h4>No posts for this category</h4>
   <% end %>
 </ul>

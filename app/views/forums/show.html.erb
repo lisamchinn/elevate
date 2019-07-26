@@ -6,21 +6,13 @@
   <%= f.button :submit %>
 <% end %>
 
-<div class="col-12 col-md-9">
-  <div class="dashboard-card transparent d-flex">
-    <% if !@posts.empty? %>
-      <% @posts.each do |post| %>
-        <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
-        <div class="dashboard-card-content">
-          <h4>Post: <%= link_to post.subject, forum_post_path(@forum, post) %></h4>
-          <h5>Post Content: <%= post.content %></h5>
-        </div>
-        <%#= image_tag('enter.svg') %>
-      <% end %>
-    <% else %>
-      <div class="dashboard-card-content">
-        <h4>No posts for this category</h4>
-      </div>
+<ul>
+  <% if !@posts.empty? %>
+    <% @posts.each do |post| %>
+    <h4>Post: <%= link_to post.subject, forum_post_path(@forum, post) %></h4>
+    <h5>Post Content: <%= post.content %></h5>
     <% end %>
-  </div>
-</div>
+  <% else %>
+    <h4>No posts for this category</h4>
+  <% end %>
+</ul>

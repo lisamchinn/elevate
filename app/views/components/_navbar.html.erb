@@ -1,0 +1,19 @@
+<div class="navbar-ellevate navbar navbar-expand-sm mt-30 sticky-top">
+  <div class="navbar-image-and-logo d-flex align-items-center">
+      <%= image_tag(asset_path('logo_ellevatev1.jpg'), class: "avatar logo") %>
+      <p>Ellevate</p>
+  </div>
+  <div class="navbar-links-and-buttons d-flex align-items-center">
+    <div class="navbar-links d-flex justify-space-around">
+      <%= link_to "About", root_path, class:"px-3" %>
+      <%= link_to "Toolkit", root_path, class:"px-3" %>
+      <%= link_to "Events", root_path, class:"px-3" %>
+      <%= link_to "Forums", root_path, class:"px-3" %>
+      <%= link_to "Become a mentor", root_path, class:"px-3" %>
+    </div>
+    <div class="navbar-buttons d-flex">
+      <a class="btn-ghost ml-3 mr-3" href="">Log In</a> <!-- href will be /users/sign_in -->
+      <a class="sign-up-button btn-solid" href="">Sign Up</a> <!-- href will be /users/sign_up -->
+    </div>
+  </div>
+</div>

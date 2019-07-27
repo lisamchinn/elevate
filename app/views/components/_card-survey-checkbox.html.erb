@@ -1,5 +1,8 @@
 <% @question.answer_options.each do |option| %>
-  <ul>
-    <li><%= option.content %></li>
-  </ul>
+  <span id="A-#{@question.id}-#{option.id}"><%= option.content %></span>
 <% end %>
+
+<form action="user_answers" method="post">
+  <input type="text">
+  <input type="submit">
+</form>

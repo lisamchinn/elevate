@@ -12,7 +12,10 @@
     <%= link_to "View Profile", profile_path(profile.user.mentor_profile), class: "btn btn-ghost small mt-2 mb-1" %>
   </div>
   <div class="card-link-wrapper">
-    <%= link_to "End Mentorship", root_path, class: "btn btn-solid small mt-2 mb-1"%>
+    <%= link_to "Message her", match_messages_path(profile.user.mentor_profile), class: "btn btn-solid small mt-2 mb-1" %>
+  </div>
+  <div class="card-link-wrapper">
+    <%= link_to "End Mentorship", root_path, class: "btn btn-ghost small mt-2 mb-1"%>
   </div>
 </div>
 

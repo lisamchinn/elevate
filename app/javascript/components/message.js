@@ -41,9 +41,9 @@ $(document).ready(() => {
   let current_user = $('.chat-box').data("current_user")
 
   chatChannel.bind('new', function(data) {
-    notification(data);
     let sender = data.user_id == current_user ? "me" : "her"
     if (data.match_id == match_id) {
+
       updateChat(data, sender);
       let chatBox = document.querySelector('.chat-box');
       chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;

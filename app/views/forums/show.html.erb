@@ -1,5 +1,12 @@
 <h1><%= @forum.name %></h1>
 
+<form class="form-inline" action="<%= forum_path(@forum) %>" method='get'>
+  <div class="search-form-control form-group">
+    <input class="form-control string required text-black" type="text" name="search" placeholder="Search within <%= @forum.name %>">
+    <button name="button" type="submit"><i class="fas fa-search"></i></button>
+  </div>
+</form>
+
 <%= simple_form_for [@forum, @post] do |f| %>
   <%= f.input :subject %>
   <%= f.input :content %>
@@ -7,12 +14,17 @@
 <% end %>
 
 <ul>
-  <% if !@posts.empty? %>
+  <% if @results.nil? && !@posts.empty?%>
     <% @posts.each do |post| %>
     <h4>Post: <%= link_to post.subject, forum_post_path(@forum, post) %></h4>
     <h5>Post Content: <%= post.content %></h5>
+    <% end %>
+  <% elsif !@results.nil? %>
+    <% @results.each do |result| %>
+    <h4>Post: <%= link_to result.subject, forum_post_path(@forum, result) %></h4>
     <% end %>
   <% else %>
     <h4>No posts for this category</h4>
   <% end %>
 </ul>
+<%= link_to "Back to Categories", forums_path %>

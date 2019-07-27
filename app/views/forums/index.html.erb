@@ -1,6 +1,23 @@
 <h1>Forum Index</h1>
-<ul>
-  <% @forums.each do |forum| %>
-  <li><%= link_to forum.name, forum_path(forum) %></li>
-  <% end %>
-</ul>
+<form class="form-inline" action="/forums/" method='get'>
+  <div class="search-form-control form-group">
+    <input class="form-control string required text-black" type="text" name="search" placeholder="Search all forums...">
+    <button name="button" type="submit"><i class="fas fa-search"></i></button>
+  </div>
+</form>
+
+<% if !@posts.nil? %>
+  <%= link_to "Back to Forums", forums_path %>
+  <ul>
+    <% @posts.each do |post| %>
+    <li><%= link_to "#{post.subject} Forum: #{post.forum.name}", forum_post_path(post.forum, post) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <ul>
+    <% @forums.each do |forum| %>
+    <li><%= link_to forum.name, forum_path(forum) %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= link_to "Back to home", root_path %>

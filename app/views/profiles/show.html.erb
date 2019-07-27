@@ -1,10 +1,59 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
-<div class="profile-wrapper">
-<div class="profile-card">
-<img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-<h1><%= @user.first_name + " " + @user.last_name%></h1>
-<h2><%= @profile.current_title + " " + @profile.current_employer %></h2>
-<p><%= @profile.description %></p>
-</div>
+<div class="container big-cont">
+  <div class="row">
+    <div class="profile-wrapper">
+      <div class="profile-avatar">
+       <%= cl_image_tag current_user.photo, class:"avatar-large avatar-image-show" %>
+     </div>
+     <div class="barr">
+     </div>
+     <div class="profile-data">
+      <h1><%= @user.first_name + " " + @user.last_name%></h1>
+      <h3><%= @profile.current_title + " " + @profile.current_employer %></h3>
+      <p><%= @profile.description %></p>
+      <a class="btn btn-ghost" href="#">Send a Message</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <div class="background-card">
+        <h2>Experience</h2>
+        <h3><%= @profile.current_title + " at " + @profile.current_employer %></h3>
+        <p><%= @profile.years_in_current_industry.to_s + " years of experince" %> </p>
+      </div>
+
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="background-card">
+        <h2>Experience</h2>
+        <h3><%= @profile.previous_title + " at " + @profile.previous_employer %></h3>
+        <p><%= @profile.years_in_current_industry.to_s + " years of experince" %> </p>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="background-card">
+        <h2>Education</h2>
+        <h3><%= @profile.masters_degree %></h3>
+        <h4><%= @profile.masters_university %></h4>
+        <h4><%= @profile.year_graduated_masters %></h4>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="background-card">
+        <h2>Education</h2>
+        <h3><%= @profile.bachelors_degree %></h3>
+        <h4><%= @profile.bachelors_university %></h4>
+        <h4><%= @profile.year_graduated_bachelors %></h4>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="background-card">
+        <p><%= @profile.fav_quote %></p>
+      </div>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="background-card">
+        <p><%= @profile.goals %></p>
+      </div>
+    </div>
+  </div>
 </div>

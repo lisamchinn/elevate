@@ -389,6 +389,8 @@ MENTEE_PROFILES = [{
   tagline: 'hi',
   public: true,
   phone: 17325895004,
+  fav_quote: "Al que madruga Dios lo ayuda",
+  goals: "Became the first female president of USA",
 },
 {
   current_title: 'CEO',

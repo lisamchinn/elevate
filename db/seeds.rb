@@ -578,6 +578,7 @@ Match.destroy_all
 EventBooking.destroy_all
 Event.destroy_all
 Profile.destroy_all
+UserAnswer.destroy_all
 QuestionAnswerPair.destroy_all
 SurveyQuestion.destroy_all
 Survey.destroy_all
@@ -631,11 +632,11 @@ EVENTS.each do |event|
   end
 end
 
-puts "Creating Matches"
-4.times do |i|
-  match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
-  puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
-end
+# puts "Creating Matches"
+# 4.times do |i|
+#   match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
+#   puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
+# end
 
 INDUSTRIES.each do |ind|
   industry = Industry.new(ind)
@@ -985,7 +986,7 @@ question = Question.new({ content: "I would like a mentor that works in the foll
 question.save!
 
 puts "creating questions + answer options for industry questions mentee survey"
-Industry.all.each do |ind|
+Industry.first(10).each do |ind|
   answer = AnswerOption.new(content: ind.name)
   answer.save!
   puts "created answer for industry question mentee survey"
@@ -1003,7 +1004,7 @@ question = Question.new({ content: "I would like a mentor who has held the follo
 question.save!
 
 puts "creating quesitons + answer options for Job Title question mentor survey"
-JobTitle.all.each do |j|
+JobTitle.first(10).each do |j|
   answer = AnswerOption.new(content: j.title)
   answer.save!
   puts "created answer for job title question"
@@ -1021,7 +1022,7 @@ question = Question.new({ content: "I would like a mentee that works in the foll
 question.save!
 
 puts "creating answer options for industry questions"
-Industry.all.each do |ind|
+Industry.first(10).each do |ind|
   answer = AnswerOption.new(content: ind.name)
   answer.save!
   puts "creating answer options for industry questions"
@@ -1038,7 +1039,7 @@ question = Question.new({ content: "I would like a mentee who has held the follo
 question.save!
 
 puts "creating answer options for Job Title question"
-JobTitle.all.each do |j|
+JobTitle.first(10).each do |j|
   answer = AnswerOption.new(content: j.title)
   answer.save!
   puts "creating answer options for industry questions"

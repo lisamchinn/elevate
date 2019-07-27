@@ -1,12 +1,12 @@
 // Specific CSS for your home-page
 .container-big {
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-one {
+  display: flex;
   width: 100%;
   height: 100vh;
 }
@@ -18,23 +18,25 @@
   position: absolute;
   right: 0;
   top: 0;
+  z-index: -1;
 }
 
 .landing-image img {
   width: 720;
   height: 560px;
-  position: absolute;
+  // position: absolute;
   right: 83px;
-  top: 67px;
+  // top: 67px;
   object-fit: cover;
 }
 
 .cta {
-  width: 400px;
+  // width: 400px;
   height: 600px;
-  position: absolute;
   left: 158px;
   top: 160px;
+  margin: auto;
+  padding: 0 4em;
 }
 
 .cta h1 {
@@ -63,6 +65,11 @@
 
 .section-two {
   background-color: white;
+  padding: 0 5em;
+}
+
+.section-two-text {
+  width: 40%;
 }
 
 .section-two-images-and-text {
@@ -73,14 +80,24 @@
 }
 
 .image-collage {
+  position: relative;
+  height: 35em;
+  width: 60%;
 }
 
 .image-1 img {
-  width: 228px;
+  position: absolute;
+  top: 20em;
+  z-index: 3;
+  width: 260px;
   height: 228px;
 }
 
 .image-2 img {
+  position: absolute;
+  top: 10em;
+  left: 15em;
+  z-index: 2;
   width: 355px;
   height: 302px;
 }

@@ -1,0 +1,31 @@
+<h1><%= @post.subject %></h1>
+<p>by <%= @post.user.first_name %></p>
+<h6><%= @post.content %></h6>
+
+<h5>Replies:</h5>
+  <ul>
+    <% if !@post.replies.empty? %>
+      <% @post.replies.each do |reply| %>
+      <li><%= reply.user.first_name %> says: <%= reply.content %></li>
+      <% end %>
+        <% if signed_in? %>
+          <%= simple_form_for [@post, @reply] do |f| %>
+          <%= f.input :content %>
+          <%= f.button :submit %>
+          <% end %>
+          <% else %>
+            <p><%= link_to "Sign in to reply", new_user_session_path %> </p>
+        <% end %>
+    <% else %>
+      <% if signed_in? %>
+        <p>Be the first to reply</p>
+        <%= simple_form_for [@post, @reply] do |f| %>
+        <%= f.input :content %>
+        <%= f.button :submit %>
+        <% end %>
+      <% else %>
+        <p><%= link_to "Be the first to reply", new_user_session_path %> </p>
+      <% end %>
+    <% end %>
+  </ul>
+

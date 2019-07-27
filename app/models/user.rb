@@ -1,9 +1,11 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and
+  mount_uploader :photo, PhotoUploader
+
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:linkedin]
+  :recoverable, :rememberable, :validatable,
+  :omniauthable, omniauth_providers: [:linkedin]
 
   has_one :profile, dependent: :destroy
 
@@ -47,5 +49,13 @@ class User < ApplicationRecord
 
   def available
     matches_as_mentor.empty?
+
+  def mentor_profile
+    matches_as_mentee.first.mentor.profile
+  end
+
+  def mentee_profile
+    matches_as_mentor.first.mentee.profile
+
   end
 end

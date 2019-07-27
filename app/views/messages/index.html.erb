@@ -36,9 +36,12 @@
               </div>
             <% end %>
 
-            <div class="field">
+            <div class="chat-box chat-bubble-wrapper head d-flex flex-row chat-container me">
              <%= form.text_field :content, id: :message, class: "form-control", required: true, placeholder: "Type a message..." %>
              <%= form.hidden_field :identifier, id: :identifier, value: current_user.identifier %>
+             <div class="chat-image d-flex flex-column align-items-center me">
+                <%= cl_image_tag @match.mentee.photo %>
+              </div>
             </div>
           <% end %>
 
@@ -47,8 +50,8 @@
 
              <div class="chat-bubble-wrapper">
                <div class="chat-bubble parking-share">
-                 <div class="chat-username">Parking Share</div>
-                 <div class="chat-message">Your chat is here!</div>
+                 <div class="chat-username">Ellevate</div>
+                 <div class="chat-message">Congratulations! You have just been connected to a mentor at Ellevate. Now it's the time to send your mentor a message! You can start by introducing yourself and your background. You can even propose a short call with her. Good luck!</div>
                </div>
                <div class="chat-timestamp her"><%= Time.now.strftime("%%b %e, %l:%M %p") %></div>
              </div>

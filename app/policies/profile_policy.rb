@@ -20,4 +20,8 @@ class ProfilePolicy < ApplicationPolicy
   def edit?
     record.user == user
   end
+
+  def dashboard?
+    record.user == user
+  end
 end

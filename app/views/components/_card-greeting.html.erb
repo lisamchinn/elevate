@@ -2,9 +2,9 @@
   <img class="greeting-image" src="<%= asset_path('profile.svg') %>">
   <div class="greeting-info-card">
     <h2>Complete your profile</h2>
-    <p>Your profile is 75% complete. When your profile is more complete, we can give you better matchings! </p>
+    <p>When your profile is more complete, we can give you better matchings! </p>
     <div>
-      <a class="btn btn-solid-small " href="#">My profile</a>
+      <%= link_to "My profile", profile_path(profile), class: "btn btn-solid-small" %>
     </div>
   </div>
 

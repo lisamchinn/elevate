@@ -42,4 +42,12 @@ class User < ApplicationRecord
       user.photo = auth.info.picture_url
     end
   end
+
+  def mentor_profile
+    matches_as_mentee.first.mentor.profile
+  end
+
+  def mentee_profile
+    matches_as_mentor.first.mentee.profile
+  end
 end

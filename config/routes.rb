@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'profiles/index'
-  get 'profiles/show'
   devise_for :users, controllers: {omniauth_callbacks: 'authorizations'}
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -12,7 +10,10 @@ Rails.application.routes.draw do
 
   resources :forums, only: [:index, :show] do
     resources :posts, only: [:show, :create, :update, :destroy]
-      resources :replies, only: [:create]
+  end
+
+  resources :posts, only: [] do
+    resources :replies, only: [:create]
   end
 
   resources :matches, only: [:new, :create] do

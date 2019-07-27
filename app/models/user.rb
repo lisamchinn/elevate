@@ -40,4 +40,12 @@ class User < ApplicationRecord
       user.photo = auth.info.picture_url
     end
   end
+
+  def self.available
+    self.where(mentee: false).select { |mentor| mentor.available }
+  end
+
+  def available
+    matches_as_mentor.empty?
+  end
 end

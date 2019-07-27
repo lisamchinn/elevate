@@ -1,16 +1,18 @@
 class MatchesController < ApplicationController
   def new
-    @match = Match.new
-    @user = User.where (#points matches the points that the mentee has#)
-    authorize @match
+    Match.get_match(6).each do |mentor|
+      @match = Match.new(mentee: current_user, mentor: mentor)
+      authorize @match
+      @matches << @match
+    end
   end
 
   def create
     @match = Match.new(match_params)
-    authorize @match
     @match.mentee = current_user
+    authorize @match
     if @match.save
-      redirect_to match_messages_path
+      redirect_to root_path
     else
       render :new
     end

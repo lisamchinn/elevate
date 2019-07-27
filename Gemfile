@@ -21,8 +21,8 @@ gem 'stripe'
 gem 'omniauth-linkedin-oauth2'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
+gem 'faker'
 gem 'pusher'
-
 
 group :development do
   gem 'web-console', '>= 3.3.0'

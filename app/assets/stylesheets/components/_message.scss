@@ -4,6 +4,12 @@
  position: relative;
  height: 100%;
  padding-bottom: 7px;
+
+  img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+ }
  .chat-box {
    padding: 1.5em;
    height: 100%;
@@ -12,16 +18,17 @@
    .chat-bubble-wrapper {
      padding-bottom: 1em;
      width: 100%;
-     display: flex;
-     flex-direction: column;
+     // display: flex;
+     // flex-direction: column;
      .chat-timestamp {
        display: flex;
        font-size: 13px;
-       &.me {
+       &.her {
          justify-content: flex-end;
        }
      }
      .chat-bubble {
+       flex-grow: 1;
        border-radius: 5px;
        padding: 0.5em;
        box-shadow: 4px 7px 8px -11px #000000;
@@ -30,16 +37,18 @@
        display: flex;
        flex-direction: column;
        flex: auto;
+       min-height: 100px;
+       padding: 13px;
 
        &.me {
          background-color: #DCF8C5;
-         align-self: flex-end;
+         align-self: flex-start;
          font-family: 'Raleway';
 
        }
        &.her {
          background-color: #f4f4f4;
-         align-self: flex-start;
+         align-self: flex-end;
          font-family: 'Raleway';
 
        }
@@ -70,3 +79,4 @@
    }
  }
 }
+

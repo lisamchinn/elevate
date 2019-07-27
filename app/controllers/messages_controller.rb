@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_match
 
   def index
-    @messages = policy_scope(Message).where(match: @match)
+    @messages = policy_scope(Message).where(match: @match).order(created_at: :desc)
     @message = Message.new
     authorize @match, :is_match?
   end

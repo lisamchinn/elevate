@@ -1,9 +1,11 @@
-<div class="chat-bubble-wrapper">
+<div class="chat-bubble-wrapper d-flex flex-row">
  <% sender = message.user == current_user ? "me" : "her" %>
- <div class="chat-bubble <%= sender %>">
-   <div class="chat-username"><%= message.user.identifier %></div>
-   <div class="chat-message"><%= message.content %></div>
- </div>
-
- <div class="chat-timestamp <%= sender %>"><%= message.created_at.strftime("%m-%e-%Y %H:%M") %></div>
+   <div class="chat-container d-flex flex-column align-items-center mr-3 <%= sender %>">
+      <%= cl_image_tag message.user.photo %>
+       <div class="chat-username"><%= message.user.identifier %></div>
+    </div>
+    <div class="chat-bubble d-flex flex-column justify-content-between <%= sender %>">
+    <div class="chat-message"><%= message.content %></div>
+    <div class="chat-timestamp <%= sender %>"><%= message.created_at.strftime("%b %e, %l:%M %p") %></div>
+  </div>
 </div>

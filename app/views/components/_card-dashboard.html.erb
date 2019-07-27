@@ -3,7 +3,7 @@
     <h4><%= event.title %></h4>
     <p><i class="fas fa-map-marker-alt mr-3"></i><%= event.address %></p>
     <p><i class="far fa-calendar-alt mr-3"></i><%= event.date.strftime('%A, %d %b %Y') %>, <%= event.start_time.strftime('%l:%M %p') %> - <%= event.end_time.strftime('%l:%M %p') %></p>
-    <%= link_to "View event", event_path(event), class: "btn btn-solid-small"%>
+    <%= link_to "View event", event_path(event), class: "btn btn-ghost small"%>
   </div>
   <%= cl_image_tag event.photo %>
 </div>

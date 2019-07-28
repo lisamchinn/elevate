@@ -1,13 +1,19 @@
 <div class="card-mentor">
   <h4>Your Mentor</h4>
   <div class="d-flex my-2">
-    <img src="https://media.licdn.com/dms/image/C4D03AQF9b8nVFkWFKA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=_rJSaxYuNgL5s3NfX1BjvbRmKfVeblL1uj0vnBosz1Q" />
-    <div class="ml-2">
-      <h6 class="font-weight-bold my-0">Deborah Choi</h6>
-      <h6 class="my-0">CEO at Google, Inc.</h6>
-      <h6 class="mt-0">San Francisco, USA</h6>
+    <%= cl_image_tag profile.user.mentor_profile.user.photo, class: "round" %>
+    <div class="ml-2 flex-column d-flex align-items-start">
+      <h6 class="font-weight-bold my-0"><%= profile.user.mentor_profile.user.first_name %> <%= profile.user.mentor_profile.user.last_name %></h6>
+      <p class="my-0"><%= profile.user.mentor_profile.current_title %> at <%= profile.user.mentor_profile.current_employer %></p>
+      <p class="mt-0"><%= profile.user.mentor_profile.city %>, <%= profile.user.mentor_profile.state %></p>
     </div>
   </div>
-  <a class="btn btn-ghost-small mt-2 mb-1" href="#">View Profile</a>
-  <a class="btn btn-ghost-small mb-2 mt-1" href="#">End Mentorship</a>
+  <div class="card-link-wrapper">
+    <%= link_to "View Profile", profile_path(profile.user.mentor_profile), class: "btn btn-ghost small mt-2 mb-1" %>
+  </div>
+  <div class="card-link-wrapper">
+    <%= link_to "End Mentorship", root_path, class: "btn btn-solid small mt-2 mb-1"%>
+  </div>
 </div>
+
+

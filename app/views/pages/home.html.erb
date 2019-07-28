@@ -1,56 +1,77 @@
-<div class="container-medium-small">
-  <div class="d-flex row">
-    <div class="col-12 col-md-3">
-      <div class="mr-1 sticky">
-        <div class="card-mentee">
-            <div class="circle">
-              <img src="https://media.licdn.com/dms/image/C4E03AQFGluTfOTVoEA/profile-displayphoto-shrink_200_200/0?e=1569456000&v=beta&t=B_Sq5VGJ2xnOD3mL0Z7__M80bFhQtktRHisWUjxMP-Q" />
-            </div>
-            <div>
-              <h6 class="font-weight-bold my-0">Alberta Lowe</h6>
-              <p class="my-0">Student at Le Wagon</p>
-              <p class="mt-0 mb-2">Buenos Aires, Argentina</p>
-            </div>
-          </div>
+<div class="container-big">
 
-          <%= render 'components/card-mentor' %>
-          <%= render 'components/card-edit' %>
-        </div>
-      </div>
-      <div class="col-12 col-md-9">
-        <div class="dashboard-card transparent d-flex">
-          <div class="dashboard-card-content">
-            <h2>Hello, Margaret!</h2>
-            <h4>Welcome back to Ellevate. Here, you can see what you can do today. </h4>
-          </div>
-          <%#= image_tag('enter.svg') %>
-          <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
-        </div>
-
-        <%= render 'components/card-greeting' %>
-        <%= render 'components/card-dashboard' %>
-        <div class="dashboard-card d-flex">
-          <div class="dashboard-card-content">
-            <h2>Join the conversation!</h2>
-            <h4>Have you checked out our forums?</h4>
-            <p style="
-            font-style: italic;
-            margin-bottom: 16px;">From topic A to topic B, join in the conversations with our +100 members! </p>
-            <a class="btn btn-solid-small" href="#">View forum</a>
-          </div>
-          <img src="https://images.unsplash.com/photo-1556159992-e189f8e50104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
-        </div>
-        <div class="dashboard-card transparent d-flex">
-          <div class="dashboard-card-content">
-            <h2>Your development toolkit</h2>
-            <h4>How to build self-confidence</h4>
-            <p style="
-            font-style: italic;
-            margin-bottom: 16px;">Ask your mentor to go over the toolkit before your next session</p>
-            <a class="btn btn-solid-small" href="#">View toolkit</a>
-          </div>
-          <img src="https://images.unsplash.com/photo-1504257365157-1496a50d48f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
-        </div>
+  <div class="section-one">
+    <div class="big-yellow-square"></div>
+    <div class="cta">
+      <h1>Mentorship is the key to our success</h1>
+      <h6 class="mt-50">We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.</h6>
+      <div class="landing-buttons">
+        <%= link_to root_path do %>
+          <p class="btn btn-solid">Start Now</p>
+        <% end %>
+        <%= link_to root_path do %>
+          <p class="btn btn-ghost">See mentors</p>
+        <% end %>
       </div>
     </div>
+
+    <div class="landing-image">
+      <img src="https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="two women laughing" width=720>
+    </div>
   </div>
+
+  <div class="section-two">
+
+    <div class="header d-flex align-items-center">
+      <h2 class="text-align-center mx-auto">Why mentorship?</h2>
+    </div>
+
+    <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
+
+      <div class="image-collage">
+        <h5>People</h5>
+        <div class="image-1">
+         <img src="https://images.unsplash.com/photo-1526658904499-9f2b473928f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman1">
+        </div>
+
+        <div class="image-2">
+         <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
+        </div>
+
+        <div class="image-3">
+          <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
+        </div>
+      </div>
+
+      <div class="section-two-text">
+        <p>When one of our members was struggling to find a job, for example, our Circle jumped in to help with interview prep and to make introductions.”</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="section-three">
+
+    <div class="header d-flex align-items-center">
+      <h2 class="text-align-center mx-auto">How Ellevate Works</h2>
+    </div>
+
+    <div class="section-two-images-and-text d-flex justify-space-around align-items-center"></div>
+
+      <div class="image-collage">
+        <h5>People</h5>
+      </div>
+
+      <div class="section-two-text">
+        <p>When one of our members was struggling to find a job, for example, our Circle jumped in to help with interview prep and to make introductions.”</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+<!-- https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg -->

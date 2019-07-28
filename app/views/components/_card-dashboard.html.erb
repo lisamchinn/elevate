@@ -1,11 +1,9 @@
-<div class="dashboard-card transparent d-flex">
+<div class="dashboard-card d-flex">
   <div class="dashboard-card-content">
-    <h2>Your upcoming events</h2>
-    <h4>Women mentoring program</h4>
-    <p style="
-    font-style: italic;
-    margin-bottom: 13px;">at Venue A, San Francisco, 16.00 - 17.00 EST</p>
-    <a class="btn btn-solid-small" href="#">View event</a>
+    <h4><%= event.title %></h4>
+    <p><i class="fas fa-map-marker-alt mr-3"></i><%= event.address %></p>
+    <p><i class="far fa-calendar-alt mr-3"></i><%= event.date.strftime('%A, %d %b %Y') %>, <%= event.start_time.strftime('%l:%M %p') %> - <%= event.end_time.strftime('%l:%M %p') %></p>
+    <%= link_to "View event", event_path(event), class: "btn btn-ghost small"%>
   </div>
-  <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+  <%= cl_image_tag event.photo %>
 </div>

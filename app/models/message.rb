@@ -10,6 +10,8 @@ class Message < ApplicationRecord
   after_create :notify_pusher, on: :create
 
   def notify_pusher
-    Pusher.trigger("message", "new", self.as_json)
+    json = as_json
+    json["avatar_url"] = user.photo.url
+    Pusher.trigger("message", "new", json)
   end
 end

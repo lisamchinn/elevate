@@ -1,18 +1,26 @@
 <div class="card-mentor">
-  <h4>Your Mentor</h4>
+  <% if current_user.mentee %>
+    <h4>Your Mentor</h4>
+  <% else %>
+    <h4>Your Mentee</h4>
+  <% end  %>
   <div class="d-flex my-2">
-    <%= cl_image_tag profile.user.mentor_profile.user.photo, class: "round" %>
+    <%= cl_image_tag @counterparty_profile.user.photo, class: "round" %>
     <div class="ml-2 flex-column d-flex align-items-start">
-      <h6 class="font-weight-bold my-0"><%= profile.user.mentor_profile.user.first_name %> <%= profile.user.mentor_profile.user.last_name %></h6>
-      <p class="my-0"><%= profile.user.mentor_profile.current_title %> at <%= profile.user.mentor_profile.current_employer %></p>
-      <p class="mt-0"><%= profile.user.mentor_profile.city %>, <%= profile.user.mentor_profile.state %></p>
+      <h6 class="font-weight-bold my-0"><%= @counterparty_profile.user.first_name %> <%= @counterparty_profile.user.last_name %></h6>
+      <p class="my-0"><%= @counterparty_profile.current_title %> at <%= @counterparty_profile.current_employer %></p>
+      <p class="mt-0"><%= @counterparty_profile.city %>, <%= @counterparty_profile.state %></p>
     </div>
   </div>
   <div class="card-link-wrapper">
-    <%= link_to "View Profile", profile_path(profile.user.mentor_profile), class: "btn btn-ghost small mt-2 mb-1" %>
+    <%= link_to "View Profile", profile_path(@counterparty_profile), class: "btn btn-ghost small mt-2 mb-1" %>
   </div>
   <div class="card-link-wrapper">
-    <%= link_to "Message her", match_messages_path(profile.user.mentor_profile), class: "btn btn-solid small mt-2 mb-1" %>
+    <% if current_user.mentee %>
+      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentee.first), class: "btn btn-solid small mt-2 mb-1" %>
+    <% else %>
+      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentor.first), class: "btn btn-solid small mt-2 mb-1" %>
+    <% end %>
   </div>
   <div class="card-link-wrapper">
     <%= link_to "End Mentorship", root_path, class: "btn btn-ghost small mt-2 mb-1"%>

@@ -20,7 +20,14 @@ class ProfilesController < ApplicationController
   end
 
   def dashboard
-    @profile = Profile.find(2)
+    @profile = current_user.profile
+
+    if current_user.mentee
+      @counterparty_profile = current_user.matches_as_mentee.first.mentor.profile
+    else
+      @counterparty_profile = current_user.matches_as_mentor.first.mentee.profile
+    end
+
     authorize @profile
   end
 

@@ -5,15 +5,16 @@
         <div class="card-mentor">
           <h4>You are chatting with </h4>
           <div class="d-flex my-2">
-            <%= cl_image_tag @match.mentor.photo, class: "round" %>
+
+            <%= cl_image_tag @counterparty.photo, class: "round" %>
             <div class="ml-2 flex-column d-flex align-items-start">
-              <h6 class="font-weight-bold my-0"><%= @match.mentor.first_name %> <%= @match.mentor.last_name %></h6>
-              <p class="my-0"><%= @match.mentor.profile.current_title %> at <%= @match.mentor.profile.current_employer %></p>
-              <p class="mt-0"><%= @match.mentor.profile.city %>, <%= @match.mentor.profile.state %></p>
+              <h6 class="font-weight-bold my-0"><%= @counterparty.first_name %> <%= @counterparty.last_name %></h6>
+              <p class="my-0"><%= @counterparty.profile.current_title %> at <%= @counterparty.profile.current_employer %></p>
+              <p class="mt-0"><%= @counterparty.profile.city %>, <%= @counterparty.profile.state %></p>
             </div>
           </div>
           <div class="card-link-wrapper">
-            <%= link_to "View Profile", profile_path(@match.mentor.profile), class: "btn btn-ghost-small mt-2 mb-1" %>
+            <%= link_to "View Profile", profile_path(@counterparty.profile), class: "btn btn-ghost-small mt-2 mb-1" %>
           </div>
           <div class="card-link-wrapper">
             <%= link_to "End Mentorship", root_path, class: "btn btn-ghost-small mt-2 mb-1"%>
@@ -40,20 +41,24 @@
              <%= form.text_field :content, id: :message, class: "form-control", required: true, placeholder: "Type a message..." %>
              <%= form.hidden_field :identifier, id: :identifier, value: current_user.identifier %>
              <div class="chat-image d-flex flex-column align-items-center me">
-                <%= cl_image_tag @match.mentee.photo %>
+                <%= cl_image_tag current_user.photo %>
               </div>
             </div>
           <% end %>
 
           <div class="chat-box" data-match_id="<%= @match.id %>" data-current_user="<%= current_user.id %>">
-           <% if @messages.empty? %>
+           <% if @messages.empty?  %>
 
              <div class="chat-bubble-wrapper">
                <div class="chat-bubble ellevate">
                  <div class="chat-message">
+                  <% if current_user.mentee? %>
 
-
-                 Congratulations! You have just been connected to a mentor at Ellevate. Now it's the time to send your mentor a message! You can start by introducing yourself and your background. You can even propose a short call with her. Good luck! - Ellevate</div>
+                 Congratulations! You have just been connected to a mentor at Ellevate. Now it's the time to send your mentor a message! You can start by introducing yourself and your background. You can even propose a short call with her. Good luck! - Ellevate
+                 <% else %>
+                 Congratulations! You have just been matched to a mentee. She will usually start the conversation, but please feel free to reach out to her!  - Ellevate
+                 <% end  %>
+               </div>
                  <div class="chat-timestamp her"><%= Time.now.strftime("%b %e, %l:%M %p") %></div>
                </div>
 

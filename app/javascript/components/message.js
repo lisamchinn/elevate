@@ -7,17 +7,21 @@ $(document).ready(() => {
       return `${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
     };
 
-    $('.chat-box').append(`
-      <div class="chat-bubble-wrapper">
-        <div class="chat-bubble ${sender}">
-          <div class="chat-username">${data.identifier}</div>
-          <div class="chat-message">${data.content}</div>
-        </div>
+    $('.chat-box').prepend(`
 
-        <div class="chat-timestamp  ${sender}">${dateFormat((new Date(data.created_at)), 'mm-dd-yyyy HH:MM')}</div>
+      <div class="chat-bubble-wrapper d-flex chat-container ${sender}">
+       <div class="chat-image d-flex flex-column align-items-center ${sender}">
+          <img src="${data.avatar_url}">
+        </div>
+        <div class="chat-bubble d-flex flex-column justify-content-between ${sender}">
+          <div class="chat-message">${data.content}</div>
+          <div class="chat-timestamp ${sender}">${dateFormat((new Date(data.created_at)), 'mm-dd-yyyy HH:MM')}</div>
+        </div>
       </div>
+
     `);
   };
+
 
   $('#chat-form').on('ajax:success', function(data) {
     $('#chat-form')[0].reset();

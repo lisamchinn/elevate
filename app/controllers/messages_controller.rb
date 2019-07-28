@@ -2,6 +2,12 @@ class MessagesController < ApplicationController
   before_action :set_match
 
   def index
+    if current_user == @match.mentor
+      @counterparty = @match.mentee
+    else
+      @counterparty = @match.mentor
+    end
+
     @messages = policy_scope(Message).where(match: @match).order(created_at: :desc)
     @message = Message.new
     authorize @match, :is_match?

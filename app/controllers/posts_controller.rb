@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :search]
 
   def show
+    @forums = Forum.all
     @forum = Forum.find(params[:forum_id])
     @post = Post.find(params[:id])
     @reply = Reply.new

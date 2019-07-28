@@ -1,30 +1,52 @@
-<h1><%= @forum.name %></h1>
+<h1 style="text-align: center;"><%= @forum.name %></h1>
 
-<form class="form-inline" action="<%= forum_path(@forum) %>" method='get'>
-  <div class="search-form-control form-group">
-    <input class="form-control string required text-black" type="text" name="search" placeholder="Search within <%= @forum.name %>">
-    <button name="button" type="submit"><i class="fas fa-search"></i></button>
+<div class="d-flex justify-content-center">
+  <form class="form-inline" action="<%= forum_path(@forum) %>" method='get'>
+    <div class="search-form-control form-group">
+      <input class="form-control string required text-black" style="width: 320px;" type="text" name="search" placeholder="Search within <%= @forum.name %>...">
+      <button name="button" type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+</div>
+
+<div class="container pt-5 ml-0">
+  <div class="row">
+    <div class="col-3 sticky">
+      <ul>
+        <% @forums.each do |forum| %>
+        <li><%= link_to forum.name, forum_path(forum) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-9">
+      <%= simple_form_for [@forum, @post] do |f| %>
+      <%= f.input :subject %>
+      <%= f.input :content %>
+      <%= f.button :submit %>
+      <% end %>
+
+      <ul>
+      <% if @results.nil? && !@posts.empty?%>
+        <% @posts.each do |post| %>
+        <h4><%= render 'components/card-post', post: post %></h4>
+        <% end %>
+      <% elsif @results.nil? && @posts.empty? %>
+        <h4>No posts for this category</h4>
+      <% elsif !@results.nil? %>
+        <% if @results.empty? %>
+          <h6>No results for this search :(</h6>
+        <% elsif @results.count == 1 %>
+          <h6>Your search returned 1 result!</h6>
+          <h4><%= render 'components/card-post', post: @results.first %></h4>
+        <% else %>
+          <h6>Your search returned <%= @results.count %> results!</h6>
+          <% @results.each do |result| %>
+          <h4><%= render 'components/card-post', post: @result %></h4>
+          <% end %>
+        <% end %>
+      <% end %>
+      </ul>
+      <%= link_to "Back to Categories", forums_path %>
+    </div>
   </div>
-</form>
-
-<%= simple_form_for [@forum, @post] do |f| %>
-  <%= f.input :subject %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
-
-<ul>
-  <% if @results.nil? && !@posts.empty?%>
-    <% @posts.each do |post| %>
-    <h4>Post: <%= link_to post.subject, forum_post_path(@forum, post) %></h4>
-    <h5>Post Content: <%= post.content %></h5>
-    <% end %>
-  <% elsif !@results.nil? %>
-    <% @results.each do |result| %>
-    <h4>Post: <%= link_to result.subject, forum_post_path(@forum, result) %></h4>
-    <% end %>
-  <% else %>
-    <h4>No posts for this category</h4>
-  <% end %>
-</ul>
-<%= link_to "Back to Categories", forums_path %>
+</div>

@@ -1,0 +1,54 @@
+.forum-card-cat {
+  text-align: left;
+  position: relative;
+}
+
+.forum-card {
+  width: 800px;
+  height: 80px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  margin-bottom: 7px;
+  img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    flex-grow: 0;
+  }
+  h4{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px;
+  }
+  a {
+    justify-content: left;
+    width: 300px;
+    color: black;
+  }
+}
+
+.forum-card:hover {
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+#card-latest {
+  color: black;
+  display: flex;
+  width: 400px;
+  div {
+  align-self: center;
+  }
+  p {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+}
+

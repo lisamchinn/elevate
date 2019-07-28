@@ -1,0 +1,9 @@
+<div class="reply-card-op d-flex">
+  <div class="reply-info-card-op d-flex">
+    <div>
+      <%= cl_image_tag reply.user.photo, class: "avatar" %>
+      <%= reply.user.first_name %>
+    </div>
+      <%= reply.content %>
+  </div>
+</div>

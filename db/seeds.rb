@@ -586,136 +586,79 @@ FORUMS = [
   {name: "Building confidence"}
 ]
 
-POSTS = [ {
-  subject: "Post 1",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+ENTREPRENEURSHIP_POSTS = [ {
+  subject: "Entrepreneurs, what do you do and how did you get there?",
+  content: "I have wanted to venture out on my own but find little guidance for women. The last time I picked up a book that I thought would help, it didn't. It was called Lean In and it was aimed towards mothers in the business field. I am 22, single, no children and looking for guidance from those more experienced. So what do you do and what motivated you?"
 },
 {
-  subject: "Post 2",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+  subject: "Ladies working from home - what are your top pain points with running your own business?",
+  content: "I'm hoping to launch a business soon, so I'd like to know what I'm in for!"
 },
 {
-  subject: "Post 3",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 4",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 5",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 6",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 7",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 8",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 9",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 10",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 11",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 12",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 13",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 14",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 15",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 16",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 17",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 18",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 19",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 20",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 21",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 22",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 23",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 24",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 25",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 26",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 27",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 28",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 29",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 30",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+  subject: "Calling entrepreneurs!",
+  content: "1: When did you start your company? 2: What do you do? 3: What are some challenges you face, particularly associated with being a (female) entrepreneur? "
 }
 ]
 
-REPLIES = [ {
-  content: "I like the way you think."
+ENTREPRENEURSHIP_REPLIES_ONE = [ {
+  content: "I am the cofounder of a software development consultancy building system integration solutions with a focus on startups and growth-stage companies. I agree with you, there are very few women who identify as entrepreneurs, and even fewer who found tech companies! I'm hoping to see women within the younger generations fill that gap. What business are you hoping to start?"
 },
 {
-  content: "You deserve a raise."
+  content: "I own and operate a company that I started from the ground up - $2,000 investment, started in a spare room in my home, added online, now have a brick & mortar and online business that sometimes gets so freaking busy that it kind of boggles my mind. I've had this concept for almost five years, my background is in corporate retail/planning & allocation/supply chain. I'm 36, married, no kids (no thanks), absolutely loving what I do and working hard to build this brand and concept to potentially franchise."
 },
+{
+  content: "I run a screen print shop and two sister Apparel companies. My parents started one Apparel company and we just grew from there. I started one on my own. I was a zookeeper, got pregnant, needed to make money doing something else but wanted to stay in the same type of work (conservation) so I make clothes and donate to conservation. Best decision ever."
+},
+{
+  content: "I am 21, and the co-founder of a venture backed tech startup. I handle customer success, PR and internal logistics. Honestly, entrepreneurship is not something you can learn from a book. I have a completely non conventional bg and I just started this with my co-founders. Just find people around you who are ambitious and passionate about problem solving and starting building products. That is the best way."
+},
+{
+  content: "Hello! I stay motivated because...well I have a car payment to make haha. No, I really love what I do and I love that I get to do it on my own terms. I can accept the clients I think would be good to work with, and luckily I've had a really good go with that. One of my current clients I got off of this forum has been an absolute gem to work with. I built my model on integrity, which the prior agency I worked for lacked severely. That made me want to do things \"the right way\" and help others."
+}
+]
 
-  content: "This is exactly why a mentor would be so helpful."
+ENTREPRENEURSHIP_REPLIES_TWO = [ {
+  content: "Never really having time “off”. The business is always in the back of my mind. Even outside of typical business hours I constantly check my emails and respond to clients. I’ve recently turned business notifications off on my phone which has helped a lot, but it’s still always in my mind"
+},
+{
+  content: "Constant interruptions from kids and/or the phone. When I work, concentration for certain processes is paramount, and while the older two kids know to leave me alone when I have a torch going (I make jewelry), the littlest starts shouting questions from the living room while running into my workspace. "
+},
+{
+  content: "Still haven't figured out how to get ahead enough to afford health insurance (US)."
+},
+{
+  content: "Oh lord, I could have made this post, I feel every one of these. Time zones mean I don't really stop working at a certain time (clients worldwide) so the idea of a break or time off, or a vacation is so guilt-inducing. I have enough hotel and airline points for a free vacation and it still is like...but what if."
+},
+{
+  content: "I'd have to agree with all these points. I literally have to force myself to \"plug-out\" and take a breather sometimes—it's non-stop which in itself is a blessing when so many have no work but all 3 points above can be completely overwhelming."
+}
+]
+
+ENTREPRENEURSHIP_REPLIES_THREE = [ {
+  content: "1. Last winter.
+  2. I am blogger and dog nutritionist. (Online business)
+  3. None I can think of, to be honest. I haven't been met with any gender based challenges thus far. Considering the nature of my business, I don't think I will see much."
+},
+{
+  content: "1. I've been a Consultant IT Tech for the last 3/4 years.
+  2.I work with companies that have a technical project to roll out that is more work than their normal IT dept can deal with. Help them to automate repetitive tasks, plan a solution, implement it & train users.
+  3.Ideally I'd like to start doing this more for small businesses, solo business people & entrepreneurs like me. So website reviews, one-to-one advice on how they can make their idea a reality, even when starting from limited resources. The challenges are growing a network and becoming known for good advice."
+},
+{
+  content: "1. May, 2012
+  2. I'm running an educational consulting firm that helps students through the college admissions process and college students figure out what they want to be when they grow up.
+  3. Getting taken seriously is the hardest, I think. I'm currently working my day job as my business gains traction and I can't tell you how many people at work tell me I'm wasting my time or that I'll fail. After all, I'm supposed to be home taking care of my daughter and not working in the eyes of my coworkers (I'm in a male dominated, old school industry)."
+},
+{
+  content: "I work for my mother, but technically she started the business so I will reference our conversation in the matter.
+
+  1. We bought a website in 2008 and started an s corp. in 2009 we became active.
+  2. A service business. We access or help insurance adjusters access steep and tall homes/buildings.
+  3. In a predominantly male market it's hard to be taken professionally. Man times the clients are older than myself and my mother and have been in the industry for years. Since we are at the bottom of the totem pole offering services, we get yelled at when things don't go right. Sometimes it's even a typo in their end in the request form. Although most of the men are very polite, we often run into men being rude after discovering the business is run by women. I assume a woman who owns a construction company would be treated the same."
+},
+{
+  content: "1. I started an online store in 2010 and sold it late 2012. While managing it (I sold fertility/maternity products mostly) I got an idea for a product for pregnant women so I started a company (August 2011) and after lots of trouble with finding and dealing with manufacturers the product is finally ready and is being shipped overseas to us, we´ll launch the website in a few weeks hopefully. 2. I'm the CEO and co-founder. An acquaintance (another woman) is the other founder and she's in sales. So far I've been in charge of designing the product, contacting factories and agents, raising money, dealing with graphic designers, setting up the website and probably a lot of other things I'm forgetting. 3. I come from a pretty gender equal country and must say that being a woman has mostly opened doors for me, for example I've received 2 grants and 1 business loan only available for women."
+}
 ]
 
 puts "Cleaning database"
@@ -789,24 +732,38 @@ FORUMS.each do |forum|
   puts " - created #{seed_forum.name}"
 end
 
-puts "Creating Posts"
-POSTS.each do |post|
+puts "Creating Entrepreneurship Posts"
+ENTREPRENEURSHIP_POSTS.each do |post|
   seed_post = Post.new(post)
   seed_post.user = User.all.sample
-  seed_post.forum = Forum.all.sample
+  seed_post.forum_id = Forum.where(name: "Entrepreneurship").first.id
   seed_post.save!
-  puts " - created #{seed_post.subject}"
+  puts " - created #{seed_post.forum.name} post"
 end
 
 puts "Creating Replies"
-33.times do
-  REPLIES.each do |reply|
-    seed_reply = Reply.new(reply)
-    seed_reply.user = User.all.sample
-    seed_reply.post = Post.all.sample
-    seed_reply.save!
-    puts " - created reply #{seed_reply.id}"
-  end
+ENTREPRENEURSHIP_REPLIES_ONE.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+ENTREPRENEURSHIP_REPLIES_TWO.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[1].id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+ENTREPRENEURSHIP_REPLIES_THREE.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[2].id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
 end
 
 puts "Creating Matches"

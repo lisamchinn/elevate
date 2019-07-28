@@ -6,10 +6,12 @@ class ForumsController < ApplicationController
       @posts = policy_scope(Post).global_search(params[:search])
     else
       @forums = policy_scope(Forum)
+      @forum_posts = policy_scope(Post)
     end
   end
 
   def show
+    @forums = policy_scope(Forum)
     @forum = Forum.find(params[:id])
     if params[:search].present?
       posts = policy_scope(Post).global_search(params[:search])

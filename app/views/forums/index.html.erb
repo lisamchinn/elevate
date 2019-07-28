@@ -1,23 +1,38 @@
-<h1>Forum Index</h1>
-<form class="form-inline" action="/forums/" method='get'>
-  <div class="search-form-control form-group">
-    <input class="form-control string required text-black" type="text" name="search" placeholder="Search all forums...">
-    <button name="button" type="submit"><i class="fas fa-search"></i></button>
-  </div>
-</form>
+<h1 style="text-align: center;">Forums</h1>
 
-<% if !@posts.nil? %>
-  <%= link_to "Back to Forums", forums_path %>
-  <ul>
-    <% @posts.each do |post| %>
-    <li><%= link_to "#{post.subject} Forum: #{post.forum.name}", forum_post_path(post.forum, post) %></li>
+<div class="d-flex justify-content-center" style="margin-bottom: 10px;">
+  <form class="form-inline" action="/forums/" method='get'>
+    <div class="search-form-control form-group">
+      <input class="form-control string required text-black" style="width: 320px;" type="text" name="search" placeholder="Search all forums...">
+      <button name="button" type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+</div>
+
+<div class="d-flex justify-content-center" style="min-height: 500px;">
+  <% if !@posts.nil? %>
+    <% if @posts.empty? %>
+      <h4>No results for this search :(</h4>
+    <% elsif @posts.count == 1 %>
+      <h4>Your search returned 1 result!</h4>
+      <%= render 'components/card-post', post: @posts.first %>
+    <% else %>
+      <ul>
+        <h4>Your search returned <%= @posts.count %> results!</h4>
+        <% @posts.each do |post| %>
+          <%= render 'components/card-post', post: post %>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-<% else %>
-  <ul>
-    <% @forums.each do |forum| %>
-    <li><%= link_to forum.name, forum_path(forum) %></li>
-    <% end %>
-  </ul>
-<% end %>
-<%= link_to "Back to home", root_path %>
+    <%= link_to "Back to Forums", forums_path %>
+  <% else %>
+    <ul>
+      <% @forums.each do |forum| %>
+        <%= render 'components/card-forum-cat', forum: forum, posts: @forum_posts %>
+      <% end %>
+    </ul>
+</div>
+<div class="d-flex justify-content-center">
+    <%= link_to "Back to home", root_path %>
+</div>
+  <% end %>

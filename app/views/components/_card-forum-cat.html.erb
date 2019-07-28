@@ -1,0 +1,26 @@
+<div class="forum-card d-flex">
+  <div class="row" style="width: 800px;">
+    <div class="col-6 d-flex p-0" style="border-right: 0.5px solid lightgrey;">
+      <div class="forum-card-cat justify-content-center">
+        <a href="<%= forum_path(forum) %>">
+        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+        </a>
+      </div>
+      <a href="<%= forum_path(forum) %>" style="display: flex;align-items: center;justify-content: center;">
+        <div>
+          <h4><%= forum.name %></h4>
+        </div>
+      </a>
+    </div>
+        <a href="<%= forum_post_path(forum, @forum_posts.where(forum: forum).last) %>" id="card-latest">
+          <div class="align-self-start pt-1 px-2">
+            <p>Latest post</p>
+          </div>
+          <div class="col-6">
+            <h5>
+              <%= "#{@forum_posts.where(forum: forum).last.subject unless @forum_posts.where(forum: forum).last.nil?}" %>
+            </h5>
+          </div>
+        </a>
+  </div>
+</div>

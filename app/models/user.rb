@@ -50,4 +50,12 @@ class User < ApplicationRecord
   def mentee_profile
     matches_as_mentor.first.mentee.profile
   end
+
+  def full_name
+    "#{first_name.capitalize} #{last_name.capitalize}"
+  end
+
+  def identifier
+    full_name
+  end
 end

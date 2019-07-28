@@ -637,7 +637,7 @@ MENTOR_PROFILES = [
  city: 'Redwood City',
  state: 'CA',
  fav_books: 'The Last Girl by Nadia Murad and Becoming by Michelle Obama',
- hobbies: 'Mountain climbing'
+ hobbies: 'Mountain climbing',
  birthday: Date.new(1972, 9, 19),
  fav_quote: 'The reasonable man adapts himself to the world; the unreasonable one persists in trying to adapt the world to himself. Therefore, all progress depends on the unreasonable man.',
  public: true,

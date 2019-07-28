@@ -1,4 +1,5 @@
 import "bootstrap";
+import "../components/message";
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();

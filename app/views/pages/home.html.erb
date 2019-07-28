@@ -137,29 +137,51 @@
 
   <div class="section-four">
 
-    <div class="header mt-5">
-      <h2>Our Mentors</h2>
+    <div>
+      <div class="header-four">
+        <h2>Our Mentors</h2>
+      </div>
     </div>
 
     <div class="mentors">
-      <div class="mentor-card">
-        <img src="" alt="">
-        <h6></h6>
-        <p></p>
-        <p></p>
+
+      <div class="mentor-card-with-button">
+        <div class="mentor-card">
+          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
+          <h6>JULIE SHACKFORD</h6>
+          <p>HEAD COACH W&M</p>
+          <p>Williamsburg, VA</p>
+        </div>
+        <div class="mentor-button">
+          <%= link_to "See Profile", root_path, class: "btn-solid"%>
+        </div>
       </div>
-      <div class="mentor-card">
-        <img src="" alt="">
-        <h6></h6>
-        <p></p>
-        <p></p>
+
+      <div class="mentor-card-with-button">
+        <div class="mentor-card">
+          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
+          <h6>Julie Shackford</h6>
+          <p>Head Coach W&M</p>
+          <p>Williamsburg, VA</p>
+        </div>
+        <div class="mentor-button">
+          <%= link_to "See Profile", root_path, class: "btn-solid"%>
+        </div>
       </div>
-         <div class="mentor-card">
-        <img src="" alt="">
-        <h6></h6>
-        <p></p>
-        <p></p>
+
+      <div class="mentor-card-with-button">
+        <div class="mentor-card">
+          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
+          <h6><%= @mentors.first.first_name + " " + @mentors.first.last_name%></h6>
+          <p>Head Coach W&M</p>
+          <p>Williamsburg, VA</p>
+        </div>
+        <div class="mentor-button">
+          <%= link_to "See Profile", root_path, class: "btn-solid"%>
+        </div>
       </div>
+
+
 
     </div>
 

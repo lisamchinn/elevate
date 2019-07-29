@@ -7,8 +7,9 @@
 
 .section-one {
   display: flex;
+  align-items: center;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
 
 .big-yellow-square {
@@ -38,6 +39,7 @@
   top: 160px;
   margin: auto;
   padding: 0 6em;
+  padding-top: 110px;
 }
 
 .cta h1 {
@@ -68,10 +70,17 @@
   background-color: white;
   padding: 0 5em;
   width: 100%;
+  height: 100vh;
 }
 
 .section-two-text {
-  width: 40%;
+  width: 50%;
+  h6 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 20px;
+  }
 }
 
 .section-two-images-and-text {
@@ -99,15 +108,16 @@
   position: absolute;
   top: 10em;
   left: 15em;
-  z-index: 2;
+  z-index: 3;
   width: 355px;
   height: 302px;
 }
 
 .image-3 img {
-  width: 302px;
-  height: 302px;
+  width: 250px;
+  height: 200px;
 }
+
 
 .section-three {
   width: 100%;
@@ -125,7 +135,7 @@
 .header-three h2 {
   font-weight: 100;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .header-paragraph-three {
@@ -246,7 +256,7 @@
 .header-four h2 {
   font-weight: 100;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .mentors {
@@ -264,6 +274,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .mentor-card {
   h6 {
     text-align: center;
@@ -285,8 +296,58 @@
   margin-bottom: 40px;
 }
 
+.section-five {
+  width: 100%;
+  background-color: $cream;
+  display: flex;
+  flex-direction: column;
+}
 
+.header-five {
+  width: 100%;
+  background-color: transparent;
+  margin: 0, auto;
+}
 
+.header-five h2 {
+  font-weight: 100;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.community {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+}
+
+.community-card {
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.comm-card-button {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
 
 

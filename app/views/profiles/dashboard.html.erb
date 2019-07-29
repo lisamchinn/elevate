@@ -38,11 +38,24 @@
     <div class="col-12 col-md-9">
       <%= render 'components/card-greeting', profile: @profile %>
       <h4 class="dashboard-title">Your upcoming events</h4>
-      <% @profile.user.events.each do |event| %>
-        <% unless event.date.past?  %>
-          <%= render 'components/card-dashboard', event: event %>
+      <% if !@profile.user.events.empty? %>
+        <% @profile.user.events.each do |event| %>
+          <% unless event.date.past?  %>
+            <%= render 'components/card-dashboard', event: event %>
+          <% else %>
+            <div class="greeting-card d-flex">
+              <img class="greeting-image" src="<%= asset_path('events.svg') %>">
+              <div class="greeting-info-card">
+                <h2>Sign up to one of our events!</h2>
+                <p>Meet other enthusiastic and aspiring women like yourselves in one of our +100 events, and get inspired! </p>
+              <div>
+                <%= link_to "View events", events_path, class: "btn btn-solid small" %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       <% end %>
+    </div>
 
       <% if current_user.mentee  %>
         <h4 class="dashboard-title">Your development toolkit </h4>
@@ -85,3 +98,4 @@
     </div>
   </div>
 </div>
+<% console %>

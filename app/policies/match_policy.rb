@@ -8,4 +8,8 @@ class MatchPolicy < ApplicationPolicy
   def is_match?
     user == record.mentor || user == record.mentee
   end
+
+  def new?
+    true
+  end
 end

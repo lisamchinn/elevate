@@ -1,12 +1,25 @@
 <div class="container-medium-small">
   <div class="row matches-text">
-    <h1>Here are your matched mentors!</h1>
+    <h4>Here are your matched mentors</h4>
   </div>
   <div class="row justify-content-start">
-    <% @matches.each do |match|  %>
       <div class="col-4 my-2">
-        <%= render 'components/card-match', match: @match  %>
+        <%= render 'components/card-match'  %>
       </div>
-    <% end %>
+      <div class="col-4 my-2">
+        <%= render 'components/card-match'  %>
+      </div>
+      <div class="col-4 my-2">
+        <%= render 'components/card-match'  %>
+      </div>
+      <div class="col-4 my-2">
+        <%= render 'components/card-match'  %>
+      </div>
+      <div class="col-4 my-2">
+        <%= render 'components/card-match'  %>
+      </div>
+      <div class="col-4 my-2">
+        <%= render 'components/card-match'  %>
+      </div>
   </div>
 </div>

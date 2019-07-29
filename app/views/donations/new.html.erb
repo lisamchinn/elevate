@@ -10,7 +10,7 @@
         <%= f.input :donor_email, class: "form-control mt-5", placeholder: 'Your email address', label: false %>
         <h4> Input your support amount: </h4>
         <span class="mb-2">$USD</span>
-        <%= f.input :amount, class: "form-control", placeholder: '$20', label: false %>
+        <%= f.input :amount, class: "form-control", html_input: { value: '$20' }, label: false %>
         <%= f.button :submit, class: "btn btn-solid" %>
         <% end %>
       </div>

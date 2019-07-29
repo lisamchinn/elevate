@@ -1,33 +1,31 @@
-.container-profile-show {
+.big-cont {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 820px;
   h1 {
-  font-size: 18px;
+  font-size: 28px;
+}
 }
 
-
-
-}
 .big-cont {
 
   h2 {
-  font-size: 14px;
-  text-decoration: underline;
+  font-size: 21px;
 }
 h3 {
-  font-size: 12px;
+  font-size: 18px;
   font-style: bold;
+  color: grey;
 }
 
 h4 {
-  font-size: 10px;
+  font-size: 16px;
 }
 
 p {
-  font-size: 10px;
+  font-size: 14px;
+  color: black;
 }
 width: 700px;
 margin-bottom: 25px;
@@ -37,7 +35,6 @@ margin-bottom: 25px;
     display: flex;
   text-align: center;
   justify-content: space-around;
-  margin: 5px;
   margin-top: 20px;
   width: 700px;
   background-color: white;
@@ -57,9 +54,9 @@ margin-bottom: 25px;
 
 }
 .barr {
-  width: 2px;
-  height: 100%;
-  background-color: black;
+  width: 1px;
+  height: 120px;
+  background-color: #c5c5c5;
 }
 
 .btn-width {
@@ -82,10 +79,60 @@ margin-bottom: 25px;
    background-color: white;
    padding: 25px;
    box-shadow: 2px 2px 4px grey;
-   margin: 5px;
+h2 {
+    font-size: 17px;
+}
+h3 {
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+h4 {
+  font-size: 14px;
+
+}
+p {
+  font-size: 13px;
+  margin-bottom: 11px;
+
+
+}
+margin-top: 10px;
 }
 
 
 .avatar-image-show {
   object-fit: cover;
+}
+
+.horizontal-bar {
+  width: 200px;
+  height:1px;
+  background-color: grey;
+}
+
+.card-margin-right {
+  margin-right: 10px;
+}
+
+.card-shadow {
+   background-color: white;
+   box-shadow: 2px 2px 4px grey;
+   margin-top: 4px;
+   padding: 20px;
+}
+
+.min-height-card {
+  min-height: 120px;
+  h4 {
+  text-align: center;
+   font-size: 13px;
+  margin-top: 4px;
+  }
+}
+
+.goals-cont {
+   h4 {
+  text-align: center;
+  }
 }

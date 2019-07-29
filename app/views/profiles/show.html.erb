@@ -4,11 +4,11 @@
     <div class="col-12">
       <div class="profile-wrapper d-flex justify-content-center align-items-center">
         <div class="profile-avatar">
-         <%= cl_image_tag current_user.photo, class:"avatar-large avatar-image-show" %>
+         <%= cl_image_tag @profile.user.photo, class:"avatar-large avatar-image-show" %>
         </div>
         <div class="barr"></div>
         <div class="profile-data">
-          <h1><%= @user.first_name + " " + @user.last_name%></h1>
+          <h1><%= @profile.user.first_name + " " + @profile.user.last_name%></h1>
           <h3><%= @profile.current_title + "  at  " + @profile.current_employer %></h3>
           <p><%= @profile.tagline %></p>
         </div>
@@ -18,7 +18,7 @@
 
   <div class="row w-100">
     <div class="col-12 col-md-6 px-0">
-      <div class="background-card card-margin-right">
+      <div class="background-card education card-margin-right">
         <h2>Education</h2>
         <div class="horizontal-bar"></div>
         <div class=""></div>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="col-12 col-md-6 px-0">
-      <div class="background-card">
+      <div class="background-card education">
         <h2 >Experience</h2>
         <div class="horizontal-bar"></div>
         <div class=""></div>

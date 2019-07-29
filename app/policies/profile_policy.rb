@@ -6,10 +6,10 @@ class ProfilePolicy < ApplicationPolicy
   end
 
   def show?
-    record.user == user ||
-      record.user.mentees.include?(user) ||
-      record.user.mentors.include?(user)
-    # true
+    # record.user == user ||
+    #   record.user.mentees.include?(user) ||
+    #   record.user.mentors.include?(user)
+    true
   end
 
   def update?

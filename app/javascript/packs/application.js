@@ -1,4 +1,5 @@
 import "bootstrap";
+import "../components/message";
 
 const form = document.getElementById("submit_answers");
 
@@ -88,3 +89,8 @@ var cols = document.querySelectorAll('#columns .column');
 [].forEach.call(cols, addDnDHandlers);
 
 
+import { moveLogo } from '../components/navbar';
+moveLogo();
+
+import { initDefaultDonationValue } from '../components/init_default_donation_amount';
+initDefaultDonationValue();

@@ -1,4 +1,6 @@
 // Graphical variables
+@import "fonts/index";
+
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
@@ -33,7 +35,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 500;
+  font-weight: 100;
   font-size: 52px;
 }
 
@@ -54,10 +56,10 @@ h5 {
 
 h6 {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 p {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 16px;
 }

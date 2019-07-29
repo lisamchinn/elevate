@@ -98,13 +98,14 @@ ActiveRecord::Schema.define(version: 2019_07_27_160824) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer "sender_id"
-    t.integer "receiver_id"
+    t.bigint "user_id"
+    t.string "identifier"
     t.text "content"
     t.bigint "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["match_id"], name: "index_messages_on_match_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -225,6 +226,7 @@ ActiveRecord::Schema.define(version: 2019_07_27_160824) do
   add_foreign_key "jobs_per_industries", "industries"
   add_foreign_key "jobs_per_industries", "job_titles"
   add_foreign_key "messages", "matches"
+  add_foreign_key "messages", "users"
   add_foreign_key "posts", "forums"
   add_foreign_key "posts", "users"
   add_foreign_key "profiles", "users"

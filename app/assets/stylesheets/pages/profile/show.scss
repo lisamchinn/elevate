@@ -1,10 +1,146 @@
-.profile-wrapper{
+.big-cont {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+  font-size: 28px;
+}
+}
+
+.big-cont {
+
+  h2 {
+  font-size: 21px;
+}
+h3 {
+  font-size: 18px;
+  font-style: bold;
+  color: grey;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+  color: black;
+}
+width: 700px;
+margin-bottom: 25px;
+}
+
+.profile-wrapper {
+    display: flex;
   text-align: center;
   justify-content: space-around;
+  margin-top: 20px;
+  width: 700px;
+  background-color: white;
+  padding: 25px;
+   box-shadow: 2px 2px 4px grey;
 
 }
 
-.profile-card {
-  width: 300px;
+.profile-avatar {
+  width: 145px;
+  flex-grow:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+
+
+}
+.barr {
+  width: 1px;
+  height: 120px;
+  background-color: #c5c5c5;
+}
+
+.btn-width {
+  width: 50px;
+}
+
+.profile-data {
+  flex-grow:1;
+  padding-left: 35px;
+    text-align: left;
+
+}
+
+.experience-education-wrapper {
+
+  margin:20px;
+}
+
+.background-card {
+   background-color: white;
+   padding: 25px;
+   box-shadow: 2px 2px 4px gray;
+   &.education {
+    min-height: 380px;
+   }
+h2 {
+    font-size: 17px;
+    margin-top: 8px;
+}
+h3 {
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+h4 {
+  font-size: 14px;
+
+}
+p {
+  font-size: 13px;
+  margin-bottom: 11px;
+
+
+}
+margin-top: 10px;
+}
+
+
+.avatar-image-show {
+  object-fit: cover;
+}
+
+.horizontal-bar {
+  width: 200px;
+  height:1px;
+  background-color: grey;
+}
+
+.card-margin-right {
+  margin-right: 10px;
+}
+
+.card-shadow {
+   background-color: white;
+   box-shadow: 2px 2px 4px grey;
+   margin-top: 4px;
+   padding: 20px;
+}
+
+.min-height-card {
+  min-height: 140px;
+  h4 {
+  text-align: center;
+   font-size: 13px;
+  margin-top: 4px;
+  }
+}
+
+.goals-cont {
+   h4 {
+  text-align: center;
+  }
+}
+
+.margin-top-experience {
+  margin-top: 40px !important;
 }

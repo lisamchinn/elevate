@@ -35,8 +35,6 @@ const moveLogo = () => {
 export { moveLogo };
 
 
-
-
         // move('.logo')
         //   .to(500, 200)
         //   .rotate(180)

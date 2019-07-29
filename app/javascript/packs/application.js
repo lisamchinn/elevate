@@ -20,13 +20,8 @@ if (form) {
   })
 }
 
-// import { initUpdateNavbarOnScroll } from '../components/navbar';
-// initUpdateNavbarOnScroll();
-
-
-// import { moveLogo } from '../components/navbar';
-// moveLogo();
-
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();
 
 var dragSrcEl = null;
 function handleDragStart(e) {
@@ -91,6 +86,9 @@ var cols = document.querySelectorAll('#columns .column');
 
 import { moveLogo } from '../components/navbar';
 moveLogo();
+
+// import { moveLogo } from '../components/navbar';
+// moveLogo();
 
 import { initDefaultDonationValue } from '../components/init_default_donation_amount';
 initDefaultDonationValue();

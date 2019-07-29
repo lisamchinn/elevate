@@ -36,7 +36,7 @@ class UserAnswersController < ApplicationController
     @next_question = survey.questions[position_of_question + 1]
     if (position_of_question + 1) == survey.questions.length
       if current_user.mentee == true
-        redirect_to new_matches_path
+        redirect_to new_match_path
       else
         redirect_to root_path
       end

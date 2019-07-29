@@ -7,8 +7,11 @@
   def create
     @donation = Donation.new(donation_params)
     @donation.state = 'pending'
-    @donation.save!
-    redirect_to new_donation_payment_path(@donation)
+    if @donation.save
+      redirect_to new_donation_payment_path(@donation)
+    else
+      render :new
+    end
     authorize @donation
   end
 

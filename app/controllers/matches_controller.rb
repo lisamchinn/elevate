@@ -1,9 +1,12 @@
 class MatchesController < ApplicationController
+  include MatchesHelper
+
   def new
-    Match.get_match(6).each do |mentor|
-      @match = Match.new(mentee: current_user, mentor: mentor)
-      authorize @match
-      @matches << @match
+    @matches = []
+    get_match(6, current_user).each do |mentor|
+      match_mentor = Match.new(mentee: current_user, mentor: User.find(mentor))
+      authorize match_mentor
+      @matches << match_mentor
     end
   end
 

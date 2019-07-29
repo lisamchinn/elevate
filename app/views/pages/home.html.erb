@@ -23,23 +23,51 @@
     <div class="header d-flex align-items-center">
       <h2 class="text-align-center mx-auto">Why mentorship?</h2>
     </div>
-    <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
-      <div class="image-collage">
-        <div class="image-1">
-         <img src="https://images.unsplash.com/photo-1526658904499-9f2b473928f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman1">
+
+    <div id="carouselExampleControls-a" class="carousel slide" data-interval="false">
+      <div class="carousel-inner carousel-container">
+
+        <div class="carousel-item active">
+          <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
+            <div class="image-collage">
+              <div class="image-2">
+               <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
+              </div>
+              <div class="image-3">
+                <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
+              </div>
+            </div>
+            <div class="section-two-text">
+              <%= image_tag(asset_path('left-quote (1).png')) %>
+              <h6 class="px-4">When I wanted to change industry and look for a job, for example, my mentor jumped in to help with interview prep and to make introductions.”</h6>
+              <p class="px-4">-Alberta Lowe</p>
+            </div>
+          </div>
         </div>
-        <div class="image-2">
-         <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
-        </div>
-        <div class="image-3">
-          <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
+
+        <div class="carousel-item">
+          <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
+            <div class="image-collage">
+              <div class="image-1">
+               <img src="https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80" alt="photo of woman2">
+              </div>
+            </div>
+            <div class="section-two-text">
+              <%= image_tag(asset_path('left-quote (1).png')) %>
+              <h6 class="px-4">I’m such an introvert, but talking to my mentor has made things totally different for me. It has definitely helped build my confidence. Now I can actually say that I’m a leader.”</h6>
+              <p class="px-4">-Lisa Chinn</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="section-two-text">
-        <%= image_tag(asset_path('left-quote (1).png')) %>
-        <h6 class="px-4">When one of our members was struggling to find a job, for example, our Circle jumped in to help with interview prep and to make introductions.”</h6>
-        <p class="px-4">-Alberta Lowe</p>
-      </div>
+      <a class="d-flex justify-content-start" href="#carouselExampleControls-a" role="button" data-slide="prev">
+        <span class="carousel-button-left"><</span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="d-flex justify-content-end" href="#carouselExampleControls-a" role="button" data-slide="next">
+        <span class="carousel-button-right">></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 
@@ -142,52 +170,58 @@
 
     <div class="mentors">
       <div class="col-4 my-2">
-        <div class="mentor-card-container">
-          <div class="mentor-card">
-            <img src="https://media.wired.com/photos/592659ec8d4ebc5ab8069f4d/master/w_1600,c_limit/OptionBTA-1.jpg">
-            <h6>Sheryl Sandberg</h6>
-            <p>COO at Facebook</p>
-            <p>San Francisco, CA</p>
+        <%= link_to profile_path(7), target: "_blank" do %>
+          <div class="mentor-card-container">
+            <div class="mentor-card">
+              <img src="https://media.wired.com/photos/592659ec8d4ebc5ab8069f4d/master/w_1600,c_limit/OptionBTA-1.jpg">
+              <h6>Sheryl Sandberg</h6>
+              <p>COO at Facebook</p>
+              <p>San Francisco, CA</p>
+            </div>
+            <div class="mentor-tagline">
+              <p>"We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world."</p>
+            </div>
+            <div class="match-button">
+              <%= link_to "View Profile", profile_path(7), class: "btn-solid small"%>
+            </div>
           </div>
-          <div class="mentor-tagline">
-            <p>"We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world."</p>
-          </div>
-          <div class="match-button">
-            <%= link_to "View Profile", root_path, class: "btn-solid small"%>
-          </div>
-        </div>
+        <% end %>
       </div>
       <div class="col-4 my-2">
-        <div class="mentor-card-container">
-          <div class="mentor-card">
-            <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fmaddieberg%2Ffiles%2F2018%2F07%2Fwhitney.jpg">
-            <h6>Whitney Wolfe</h6>
-            <p>Founder and CEO at Bumble</p>
-            <p>Austin, TX</p>
+        <%= link_to profile_path(7), target: "_blank" do %>
+          <div class="mentor-card-container">
+            <div class="mentor-card">
+              <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fmaddieberg%2Ffiles%2F2018%2F07%2Fwhitney.jpg">
+              <h6>Whitney Wolfe</h6>
+              <p>Founder and CEO at Bumble</p>
+              <p>Austin, TX</p>
+            </div>
+            <div class="mentor-tagline">
+              <p>"Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same trajectory"</p>
+            </div>
+            <div class="match-button">
+              <%= link_to "View Profile", profile_path(7), class: "btn-solid small"%>
+            </div>
           </div>
-          <div class="mentor-tagline">
-            <p>"Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same trajectory"</p>
-          </div>
-          <div class="match-button">
-            <%= link_to "View Profile", root_path, class: "btn-solid small"%>
-          </div>
-        </div>
+        <% end %>
       </div>
       <div class="col-4 my-2">
-        <div class="mentor-card-container">
-          <div class="mentor-card">
-            <img src="https://smedia2.intoday.in/btmt/images/stories/kirthiga-reddy-facebook_660_090915064745.jpg">
-            <h6>Khirtiga Reddy</h6>
-            <p>Venture Partner at Softbank</p>
-            <p>Los Altos, CA</p>
+        <%= link_to profile_path(7), target: "_blank" do %>
+          <div class="mentor-card-container">
+            <div class="mentor-card">
+              <img src="https://smedia2.intoday.in/btmt/images/stories/kirthiga-reddy-facebook_660_090915064745.jpg">
+              <h6>Khirtiga Reddy</h6>
+              <p>Venture Partner at Softbank</p>
+              <p>Los Altos, CA</p>
+            </div>
+            <div class="mentor-tagline">
+              <p>"Technology executive with over 20 years of experience building high-growth global businesses in roles spanning Sales, Marketing, Operations, Product Management and Engineering."</p>
+            </div>
+            <div class="match-button">
+              <%= link_to "View Profile", profile_path(7), class: "btn-solid small"%>
+            </div>
           </div>
-          <div class="mentor-tagline">
-            <p>"Technology executive with over 20 years of experience building high-growth global businesses in roles spanning Sales, Marketing, Operations, Product Management and Engineering."</p>
-          </div>
-          <div class="match-button">
-            <%= link_to "View Profile", root_path, class: "btn-solid small"%>
-          </div>
-        </div>
+        <% end  %>
       </div>
     </div>
   </div>
@@ -228,16 +262,9 @@
           <%= link_to "See All Workshops", root_path, class: "btn-ghost-solid"%>
         </div>
       </div>
-
-</div>
-
-
-
     </div>
-
   </div>
-
-
+  </div>
 </div>
 
 

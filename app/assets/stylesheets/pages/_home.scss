@@ -98,19 +98,20 @@
 
 .image-1 img {
   position: absolute;
-  top: 20em;
-  z-index: 3;
-  width: 260px;
-  height: 228px;
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  left: 100px;
 }
 
 .image-2 img {
   position: absolute;
-  top: 10em;
+  top: 5em;
   left: 15em;
   z-index: 3;
   width: 355px;
   height: 302px;
+  object-fit: cover;
 }
 
 .image-3 img {

@@ -1,25 +1,14 @@
 <div class="container-medium-small">
   <div class="row matches-text">
     <h4>Here are your matched mentors</h4>
+    <p>Please review each of their profiles before sending a request to one of them</p>
   </div>
   <div class="row justify-content-start">
+    <% @matches = Match.all %>
+    <% @matches.each do |match| %>
       <div class="col-4 my-2">
-        <%= render 'components/card-match'  %>
+        <%= render 'components/card-match', match: match %>
       </div>
-      <div class="col-4 my-2">
-        <%= render 'components/card-match'  %>
-      </div>
-      <div class="col-4 my-2">
-        <%= render 'components/card-match'  %>
-      </div>
-      <div class="col-4 my-2">
-        <%= render 'components/card-match'  %>
-      </div>
-      <div class="col-4 my-2">
-        <%= render 'components/card-match'  %>
-      </div>
-      <div class="col-4 my-2">
-        <%= render 'components/card-match'  %>
-      </div>
+    <% end  %>
   </div>
 </div>

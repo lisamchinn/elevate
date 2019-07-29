@@ -1,15 +1,17 @@
+<%= link_to profile_path(match.mentor.profile), target: "_blank" do %>
 <div class="mentor-card-container large">
   <div class="mentor-card">
-    <img src="https://media.wired.com/photos/592659ec8d4ebc5ab8069f4d/master/w_1600,c_limit/OptionBTA-1.jpg">
-    <h6>Sheryl Sandberg</h6>
-    <p>CEO at Google.Inc</p>
-    <p>San Francisco, CA</p>
+    <%= cl_image_tag match.mentor.photo %>
+    <h6><%= match.mentor.first_name %> <%= match.mentor.last_name %></h6>
+    <p><%= match.mentor.profile.current_title %> at <%= match.mentor.profile.current_employer %></p>
+    <p><%= match.mentor.profile.city %>, <%= match.mentor.profile.state %></p>
   </div>
   <div class="mentor-tagline">
-    <p>"We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world."</p>
+    <p>"<%= match.mentor.profile.tagline %>"</p>
   </div>
   <div class="match-button">
-    <%= link_to "View Profile", root_path, class: "btn-ghost small"%>
-    <%= link_to "Match with her", root_path, class: "btn-solid small"%>
+    <%= link_to "View Profile", profile_path(match.mentor.profile), class: "btn-ghost small"%>
+    <%= link_to "Match with her", matches_path, class: "btn-solid small"%>
   </div>
 </div>
+<% end %>

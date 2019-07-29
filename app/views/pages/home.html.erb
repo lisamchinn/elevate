@@ -169,60 +169,27 @@
     </div>
 
     <div class="mentors">
-      <div class="col-4 my-2">
-        <%= link_to profile_path(7), target: "_blank" do %>
-          <div class="mentor-card-container">
-            <div class="mentor-card">
-              <img src="https://media.wired.com/photos/592659ec8d4ebc5ab8069f4d/master/w_1600,c_limit/OptionBTA-1.jpg">
-              <h6>Sheryl Sandberg</h6>
-              <p>COO at Facebook</p>
-              <p>San Francisco, CA</p>
-            </div>
-            <div class="mentor-tagline">
-              <p>"We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world."</p>
-            </div>
-            <div class="match-button">
-              <%= link_to "View Profile", profile_path(7), class: "btn-solid small"%>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-4 my-2">
-        <%= link_to profile_path(7), target: "_blank" do %>
-          <div class="mentor-card-container">
-            <div class="mentor-card">
-              <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fmaddieberg%2Ffiles%2F2018%2F07%2Fwhitney.jpg">
-              <h6>Whitney Wolfe</h6>
-              <p>Founder and CEO at Bumble</p>
-              <p>Austin, TX</p>
-            </div>
-            <div class="mentor-tagline">
-              <p>"Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same trajectory"</p>
-            </div>
-            <div class="match-button">
-              <%= link_to "View Profile", profile_path(7), class: "btn-solid small"%>
+      <% @mentors = User.select { |user| !user.mentee } %>
+        <% @mentors.sample(3).each do |mentor| %>
+          <%= link_to profile_path(mentor), target: "_blank" do %>
+          <div class="col-4 my-2">
+            <div class="mentor-card-container">
+              <div class="mentor-card">
+                <%= cl_image_tag mentor.photo  %>
+                <h6><%= mentor.first_name %> <%= mentor.last_name %></h6>
+                <p><%= mentor.profile.current_title %> at <%= mentor.profile.current_employer %></p>
+                <p><%= mentor.profile.city %>, <%= mentor.profile.state %></p>
+              </div>
+              <div class="mentor-tagline">
+                <p>"<%= mentor.profile.tagline %>"</p>
+              </div>
+              <div class="match-button">
+                <%= link_to "View Profile", profile_path(mentor), class: "btn-solid small"%>
+              </div>
             </div>
           </div>
         <% end %>
-      </div>
-      <div class="col-4 my-2">
-        <%= link_to profile_path(7), target: "_blank" do %>
-          <div class="mentor-card-container">
-            <div class="mentor-card">
-              <img src="https://smedia2.intoday.in/btmt/images/stories/kirthiga-reddy-facebook_660_090915064745.jpg">
-              <h6>Khirtiga Reddy</h6>
-              <p>Venture Partner at Softbank</p>
-              <p>Los Altos, CA</p>
-            </div>
-            <div class="mentor-tagline">
-              <p>"Technology executive with over 20 years of experience building high-growth global businesses in roles spanning Sales, Marketing, Operations, Product Management and Engineering."</p>
-            </div>
-            <div class="match-button">
-              <%= link_to "View Profile", profile_path(7), class: "btn-solid small"%>
-            </div>
-          </div>
-        <% end  %>
-      </div>
+      <% end %>
     </div>
   </div>
 

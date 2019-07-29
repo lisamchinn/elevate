@@ -540,7 +540,7 @@ MENTOR_PROFILES = [
   phone: 11758950024,
 },
 {
-  current_title: 'Senior Partner and Managing Director',
+  current_title: 'Senior Partner',
   current_employer: 'Boston Consulting Group',
   current_industry: 'Management Consulting',
   years_in_current_industry: 35,

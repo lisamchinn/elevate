@@ -305,7 +305,7 @@ MENTEES = [{
   email: 'lisa@mail.com',
   password: 123456789,
   mentee: true,
-  photo: 'https://images.unsplash.com/photo-1556228852-6d35a585d566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+  photo: 'https://media.licdn.com/dms/image/C4E03AQFpRrFvbFbGSA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=O4LBdDgP2U1p9eqoIJa8vXn0Og9TKVqxV50Ui4GEJb4',
   },
   {
   first_name: 'Alberta',
@@ -313,7 +313,7 @@ MENTEES = [{
   email: 'albie@mail.com',
   password: 123456789,
   mentee: true,
-  photo: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
+  photo: 'https://media.licdn.com/dms/image/C4E03AQFGluTfOTVoEA/profile-displayphoto-shrink_200_200/0?e=1569456000&v=beta&t=B_Sq5VGJ2xnOD3mL0Z7__M80bFhQtktRHisWUjxMP-Q',
   },
   {
   first_name: 'Jennifer',
@@ -321,7 +321,7 @@ MENTEES = [{
   email: 'jen@mail.com',
   password: 123456789,
   mentee: true,
-  photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+  photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
   },
   {
   first_name: 'Sarah',
@@ -329,17 +329,17 @@ MENTEES = [{
   email: 'sarah@mail.com',
   password: 123456789,
   mentee: true,
-  photo: 'https://images.unsplash.com/photo-1556228852-6bf19d1b1fc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+  photo: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80',
   },
 ]
 
 MENTORS = [{
-  first_name: 'Sarah',
-  last_name: 'Peteraf',
-  email: 'peteraf@mail.com',
+  first_name: 'Sheryl',
+  last_name: 'Sandberg',
+  email: 'sheryl@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://images.unsplash.com/photo-1556228852-6d35a585d566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+  photo: 'https://media.wired.com/photos/592659ec8d4ebc5ab8069f4d/master/w_1600,c_limit/OptionBTA-1.jpg',
   },
   {
   first_name: 'Daniella',
@@ -347,214 +347,392 @@ MENTORS = [{
   email: 'daniella@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
+  photo: 'https://media.licdn.com/dms/image/C4D03AQH4HpK0mbQp4w/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=Y9liVK_EwAqGNZIuI6R0g9ex8WhpcLG_YmG3dJse0bg',
   },
   {
-  first_name: 'Carina',
-  last_name: 'Smith',
-  email: 'carina@mail.com',
+  first_name: 'Whitney',
+  last_name: 'Wolfe',
+  email: 'whitney@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+  photo: 'https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fmaddieberg%2Ffiles%2F2018%2F07%2Fwhitney.jpg',
   },
   {
-  first_name: 'Leanne',
-  last_name: 'Picot',
-  email: 'leanne@mail.com',
+  first_name: 'Kirthiga',
+  last_name: 'Reddy',
+  email: 'kirthiga@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://images.unsplash.com/photo-1556228852-6bf19d1b1fc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+  photo: 'https://smedia2.intoday.in/btmt/images/stories/kirthiga-reddy-facebook_660_090915064745.jpg',
   },
+  {
+  first_name: 'Lillian',
+  last_name: 'Chabe',
+  email: 'lillianchabe@mail.com',
+  password: 123456789,
+  mentee: false,
+  photo: 'https://images.unsplash.com/photo-1513732822839-24f03a92f633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80',
+  },
+  {
+   first_name: 'Margaret',
+   last_name: 'Mayer',
+   email: 'margaretmayer@mail.com',
+   password: 123456789,
+   mentee: false,
+   photo: 'https://images.unsplash.com/photo-1548260435-f3e7ec40e513?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80',
+   },
+  {
+ first_name: 'Irene',
+ last_name: 'Abadi',
+ email: 'ireneabadi@mail.com',
+ password: 123456789,
+ mentee: false,
+ photo: 'https://images.unsplash.com/photo-1544817747-b11e3e3b6ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+ },
+ {
+ first_name: 'Julia',
+ last_name: 'Adams',
+ email: 'juliaadams@mail.com',
+ password: 123456789,
+ mentee: false,
+ photo: 'https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1312&q=80',
+ },
 ]
+
 
 MENTEE_PROFILES = [{
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
+  current_title: 'President and Founder',
+  current_employer: 'GnoKids',
+  current_industry: 'Education',
+  years_in_current_industry: 8,
+  previous_title: 'English Second Language Teacher',
+  previous_employer: 'AEON',
+  previous_industry: 'Education',
+  years_in_previous_industry: 8,
   bachelors_university: 'Princeton',
   bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
+  year_graduated_bachelors: 1986,
   masters_university: 'MIT',
   masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
+  year_graduated_masters: 1990,
   city: 'East Brunswick',
   state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+  fav_books: 'Handmaids Tale by Margaret Atwood, Becoming by Michelle Obama, Time Travellers Wife by Audrey Heburn, Sapiens by Yuval Noah Harrari.',
+  fav_quote: 'Set your goals high and do nothing until you get there - Anonymous',
+  hobbies: 'Rock climbing, playing soccer, reading books, coding',
+  goals: 'Be a product manager or founder in a edu-tech company, summitting Mount Everest',
+  birthday: Date.new(1986, 9, 1),
+  description: 'I am from the US, and spent the last 7 years living and working in Tokyo. I have been working & traveling for the last year and a half, and I am interested in learning to code to hopefully to start my own education-related company in the near future.',
+  tagline: 'Passionate educator with +8 years experience of leading a school. Would like to enter the tech industry and is looking for a mentor to guide her.',
   public: true,
-  phone: 17325895004,
-  fav_quote: "Al que madruga Dios lo ayuda",
-  goals: "Became the first female president of USA",
+  phone: 11758950024,
 },
 {
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
-  bachelors_university: 'Princeton',
-  bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
-  masters_university: 'MIT',
-  masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
-  city: 'East Brunswick',
-  state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+  current_title: 'Incoming Associate',
+  current_employer: 'Boston Consulting Group',
+  current_industry: 'Management Consulting',
+  years_in_current_industry: 1,
+  previous_title: 'Strategic Insights and Market Intelligence Intern',
+  previous_employer: 'Roche Diagnostics',
+  previous_industry: 'Pharmaceutical',
+  years_in_previous_industry: 1,
+  bachelors_university: 'Hong Kong University of Science and Technology',
+  bachelors_degree: 'Bachelor of Arts (B.A) in Economics and Management',
+  year_graduated_bachelors: 2015,
+  masters_university: 'University of St. Gallen, Switzerland',
+  masters_degree: 'Masters of Arts (M.A) in Strategy and International Management',
+  year_graduated_masters: 2019,
+  city: 'New York',
+  state: 'NY',
+  fav_books: 'Leonardo Da Vinci by Walter Isaacson, Sapiens by Yuval Noah Harrari, Shoe Dog by Phil Knight, I am Malala by Malala Yousafzai.',
+  fav_quote: 'Whatever you are, be a good one - Abraham Lincoln',
+  hobbies: 'Doing yoga, reading books, playing tennis and golf',
+  goals: 'Be a management consultant specializing in healthcare practice and hopefully exiting to the health-tech industry in the future.',
+  birthday: Date.new(1993, 6, 8),
+  description: 'Alberta is passionate about problem solving and communicating with people. She has had working experience in consumer goods, retail, and healthcare in international settings (Hong Kong, Indonesia, USA, Switzerland, Middle East). She enjoys cross-cultural collaboration and her leadership experience includes founding title at Women in Leadership and presidency at Nash Business Cohort Community in HKUST. Alberta is interested in management consulting, healthcare, and third-wave coffee. ',
+  tagline: 'Business management student who is about to enter management consulting industry. Looking for a mentor in the consulting industry to guide her.',
   public: true,
-  phone: 17325895005,
+  phone: 91154568986,
 },
 {
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
-  bachelors_university: 'Princeton',
-  bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
-  masters_university: 'MIT',
-  masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
-  city: 'East Brunswick',
-  state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+  current_title: 'Co-founder',
+  current_employer: 'Elphy',
+  current_industry: 'Technology',
+  years_in_current_industry: 1,
+  previous_title: 'Senior Product Manager',
+  previous_employer: 'TechAd Limited, a Google Company',
+  previous_industry: 'Advertising Technology',
+  years_in_previous_industry: 3,
+  bachelors_university: 'Boston College',
+  bachelors_degree: 'Bachelor of Arts (B.A) in Economics and Management',
+  year_graduated_bachelors: 2015,
+  masters_university: 'HEC Paris',
+  masters_degree: 'Masters of Arts (M.A) in Entrepreneurship',
+  year_graduated_masters: 2019,
+  city: 'San Francisco',
+  state: 'CA',
+  fav_books: 'Steve Jobs by Walter Isaacson,
+Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future by Ashlee Vance,
+We Should All Be Feminists by
+Adichie Chimamanda Ngozi',
+  fav_quote: 'Be like water, my friend - Bruce Lee',
+  hobbies: 'Drawing, doing yoga, coding, and cooking',
+  goals: 'I want to successfully launch Elpha, grow the company and hopefully go public.',
+  birthday: Date.new(1990, 4, 11),
+  description: 'Experienced at managing projects and products. I was responsible for launching +10 medium-to-large features which are used by hundreds of customers. I thrive in an environment where I had to translate between customers needs into technological features. I enjoyed coding with Ruby, mySQL, JavaScript, and React. ',
+  tagline: 'Currently working on Elphy, a startup focused on helping women gain management skills. I am looking for a mentor that can guide me to successfuly launch and grow this product.',
   public: true,
-  phone: 17325895003,
+  phone: 41765715598,
 },
 {
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
-  bachelors_university: 'Princeton',
-  bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
-  masters_university: 'MIT',
-  masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
-  city: 'East Brunswick',
-  state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+  current_title: 'Investment Associate',
+  current_employer: 'SoftBank. Inc',
+  current_industry: 'Private Equity',
+  years_in_current_industry: 1,
+  previous_title: 'Greater China Equities Associate',
+  previous_employer: 'Goldman Sachs',
+  previous_industry: 'Investment Banking',
+  years_in_previous_industry: 3,
+  bachelors_university: 'Georgetown University',
+  bachelors_degree: 'Bachelor of Arts (B.A) in International Economics, Magna Cum Laude',
+  year_graduated_bachelors: 2013,
+  masters_university: 'Harvard University',
+  masters_degree: 'Masters in Business Administration (MBA), Distinction',
+  year_graduated_masters: 2019,
+  city: 'Boston',
+  state: 'MA',
+  fav_books: 'Competing Against Luck by Clayton Christensen, Age of Ambition by Evan Osnos, Poor Economics by Abhijit Banerjee',
+  fav_quote: 'What would you do if you weren not afraid? - Sheryl Sandberg',
+  hobbies: 'Writing calligraphy, reading books, axe-throwing, and swimming.',
+  goals: 'To achieve a partnership position in private equity within the next 10 years. I am looking for a mentor who can help me navigate the industry.',
+  birthday: Date.new(1989, 11, 11),
+  description: 'Named one of the top Investment Banker by BusinessWeek in 2007. A graduate of the University of Georgetown. Advised 100+ international startups on their US growth strategy.',
+  tagline: 'Passionate about transforming China in the next decade, I am looking for female mentors who can help me go further in the private equity sector of China.',
   public: true,
-  phone: 17325895002,
+  phone: 551298768791,
 }
 ]
 
-MENTOR_PROFILES = [{
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
-  bachelors_university: 'Princeton',
-  bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
-  masters_university: 'MIT',
-  masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
-  city: 'East Brunswick',
-  state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+MENTOR_PROFILES = [
+  {
+  current_title: 'Chief Operating Officer',
+  current_employer: 'Facebook',
+  current_industry: 'Networking Technology',
+  years_in_current_industry: 12,
+  previous_title: 'Vice President, Global Online Sales & Operations',
+  previous_employer: 'Google',
+  previous_industry: 'Advertising Technology',
+  years_in_previous_industry: 7,
+  bachelors_university: 'Harvard University',
+  bachelors_degree: 'BA, Economics',
+  year_graduated_bachelors: 1991,
+  masters_university: 'Harvard University',
+  masters_degree: 'Masters in Business Administration (MBA)',
+  year_graduated_masters: 1995,
+  city: 'San Francisco Bay Area',
+  state: 'CA',
+  fav_books: 'Lean In by Sheryl Sandberg, Original by Adam Grant, Option B by Sheryl Sandberg and Adam Grant',
+  hobbies: 'Writing, giving TED Talks',
+  birthday: Date.new(1969, 8, 28),
+  description: 'There is no perfect fit when you are looking for the next big thing to do. You have to take opportunities and make an opportunity fit for you, rather than the other way around. The ability to learn is the most important quality a leader can have.',
+  tagline: 'We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.',
   public: true,
-  phone: 17325895001,
+  phone: 11758950024,
 },
 {
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
-  bachelors_university: 'Princeton',
-  bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
-  masters_university: 'MIT',
-  masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
-  city: 'East Brunswick',
-  state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+  current_title: 'Senior Partner and Managing Director',
+  current_employer: 'Boston Consulting Group',
+  current_industry: 'Management Consulting',
+  years_in_current_industry: 35,
+  previous_title: 'Vice President',
+  previous_employer: 'Booz & Company',
+  previous_industry: 'Management Consulting',
+  years_in_previous_industry: 6,
+  bachelors_university: 'McGill University',
+  bachelors_degree: 'Management / Finance Treasury',
+  year_graduated_bachelors: 1997,
+  masters_university: 'University of Montreal',
+  masters_degree: 'M.Sc., Business Administration - Health Care',
+  year_graduated_masters: 1998,
+  doctorate_university: 'Université de Montréal - HEC Montréal',
+  doctorate_degree: 'Ph.D., Strategic Management',
+  year_graduated_doctorate: 2007,
+  city: 'Los Angeles',
+  state: 'CA',
+  fav_books: 'In Search of Lost Time by Marcel Proust, Don Quixote by Miguel de Cervantes',
+  fav_quote: 'All that we see or seem is but a dream within a dream - Edgar Allan Poe',
+  hobbies: 'Acrobatics, acting, and beatboxing',
+  birthday: Date.new(1969, 8, 11),
+  description: 'Daniela is a healthcare and technology expert working with clients in different continents to help them transform their businesses. She focuses on strategy design and implementation, organization design, operational excellence, and innovation management. She leads BCG social impact activities in the Middle East working with different global and local NGOs.',
+  tagline: 'Experienced healthcare and management expert, eager to help young professionals pursuing the health-tech consulting path',
   public: true,
-  phone: 17325895007,
+  phone: 1987233118,
 },
 {
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
-  bachelors_university: 'Princeton',
-  bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
-  masters_university: 'MIT',
-  masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
-  city: 'East Brunswick',
-  state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+  current_title: 'Founder and CEO',
+  current_employer: 'Bumble',
+  current_industry: 'Social Networking Tech',
+  years_in_current_industry: 4,
+  previous_title: 'VP Marketing and Co-Founder',
+  previous_employer: 'Tinder',
+  previous_industry: 'Social Networking Tech',
+  years_in_previous_industry: 2,
+  bachelors_university: 'Southern Methodist University',
+  bachelors_degree: 'Chemical Engineering',
+  year_graduated_bachelors: 2000,
+  city: 'Austin',
+  state: 'TX',
+  fav_books: 'The Adventures of Huckleberry Finn by Mark Twain, Lolita by Vladimir Nabokov, Wuthering Heights by Emily Brontë',
+  fav_quote: 'Do not mind anything that anyone tells you about anyone else. Judge everyone and everything for yourself - Henry James',
+  hobbies: 'Karaoke, karate, listening to music',
+  goals: 'Launch the next version of Bumble within the next 5 years',
+  birthday: Date.new(1980, 1, 21),
+  description: 'Whitney is an entrepreneur who has launched two of the largest dating app in the world. She has experience in leading +100 team around the world and is known for her prowess in identifying customer insights, creativity, speed to execution, and detailed attention to customer experience.',
+  tagline: 'Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same trajectory.',
   public: true,
-  phone: 17325895008,
+  phone: 1986613118,
 },
 {
-  current_title: 'CEO',
-  current_employer: 'Google',
-  current_industry: 'Tech',
-  years_in_current_industry: 15,
-  previous_title: 'CEO',
-  previous_employer: 'Amazon',
-  previous_industry: 'Tech',
-  years_in_previous_industry: 10,
-  bachelors_university: 'Princeton',
-  bachelors_degree: 'Psychology',
-  year_graduated_bachelors: '1986',
-  masters_university: 'MIT',
-  masters_degree: 'Computer Science',
-  year_graduated_masters: '1990',
-  city: 'East Brunswick',
-  state: 'NJ',
-  birthday: Date.today - 21900,
-  description: 'hi',
-  tagline: 'hi',
+  current_title: 'Venture Partner',
+  current_employer: 'Softbank Investment Advisors',
+  current_industry: 'Technology Ventures',
+  years_in_current_industry: 2,
+  previous_title: 'Managing Global Client Partner and Emerging Markets Lead, Global Partnerships',
+  previous_employer: 'Facebook',
+  previous_industry: 'Social Networking Tech',
+  years_in_previous_industry: 8,
+  bachelors_university: 'Syracuse University, ',
+  bachelors_degree: 'B.A in Computer Engineering',
+  year_graduated_bachelors: 1992,
+  masters_university: 'Stanford University Graduate School of Business',
+  masters_degree: 'Masters in Business Administration (MBA)',
+  year_graduated_masters: 2003,
+  city: 'Los Altos',
+  state: 'CA',
+  fav_books: 'Pride and Prejudice by Jane Austen, The Catcher in the Rye by J. D. Salinger, Anna Karenina by Leo Tolstoy',
+  fav_quote: 'You can not shake hands with a clenched fist - Indira Gandhi',
+  hobbies: 'Creative writing, sculpting, reading books',
+  goals: 'Lead Softbank global marketing initiatives and grow the Southeast Asian offices',
+  birthday: Date.new(1970, 4, 19),
+  description: 'Kirthiga is an American businesswoman and venture partner for the US$100 billion Vision Fund from Softbank. She is the first female investing partner of Softbank and the former managing director of Facebook Asia. She has the distinction of being the first employee of the social media giant in India and has been one of the leading forces behind its expansive growth in the country.',
+  tagline: 'Technology executive with over 20 years of experience building high-growth global businesses in roles spanning Sales, Marketing, Operations, Product Management and Engineering. ',
   public: true,
-  phone: 17325895009,
-}
+  phone: 108711228891,
+},
+{
+ current_title: 'Chief Technology Officer',
+ current_employer: 'Oracle',
+ current_industry: 'Computer Hardware and Software Developer',
+ years_in_current_industry: 9,
+ previous_title: 'VP of Engineering',
+ previous_employer: 'Intel',
+ previous_industry: 'Semiconductor Manufacturing',
+ years_in_previous_industry: 5,
+ bachelors_university: 'Princeton University',
+ bachelors_degree: 'BA, Engineering',
+ year_graduated_bachelors: 1993,
+ masters_university: 'Princeton University',
+ masters_degree: 'Masters in Business Administration (MBA)',
+ year_graduated_masters: 1996,
+ city: 'Redwood City',
+ state: 'CA',
+ fav_books: 'The Last Girl by Nadia Murad and Becoming by Michelle Obama',
+ hobbies: 'Mountain climbing',
+ birthday: Date.new(1972, 9, 19),
+ fav_quote: 'The reasonable man adapts himself to the world; the unreasonable one persists in trying to adapt the world to himself. Therefore, all progress depends on the unreasonable man.',
+ public: true,
+ phone: 11764950328,
+ goals:'Improve my communication skills and learn to speak mandarin',
+ description:'Success happens when good people with good intentions cooperate and work together over a shared interest. Believing that people are basically good is what fuels most inspired individuals. Cynics and pessimists do not change the world.',
+ tagline: 'The price of inaction is far greater than the cost of a mistake',
+},
+{
+ current_title: 'Chief Executive Officer',
+ current_employer: 'Quibi',
+ current_industry: 'Entertainment',
+ years_in_current_industry: 5,
+ previous_title: 'Chief Executive Officer',
+ previous_employer: 'Hewlett Packard Enterprise',
+ previous_industry: 'Computer Hardware',
+ years_in_previous_industry:4,
+ bachelors_university: 'Stanford University',
+ bachelors_degree: 'BA, Engineering',
+ year_graduated_bachelors: 1999,
+ masters_university: 'Stanford University',
+ masters_degree: 'Masters in Business Administration (MBA)',
+ year_graduated_masters: 2003,
+ city: 'Los Angeles',
+ state: 'CA',
+ fav_books: 'Start with Why by Simon Sinek and Mindset  by Carol Dweck',
+ hobbies: 'Biking',
+ birthday: Date.new(1981, 4, 11),
+ fav_quote: 'It is better to fail in originality than to succeed in imitation.',
+ public: true,
+ phone: 1153495039837,
+ goals:'Write my first book and achieve financial independence',
+ description:'It is fair to characterise me as competitive and determined, but anyone who works with me will attest to the fact I believe very strongly in the notion of servant leadership.',
+ tagline: 'Parenting is one of the best management training programs there is.',
+},
+{
+ current_title: 'Chief Executive Officer',
+ current_employer: 'Douglas Elliman Real Estate',
+ current_industry: 'Real Estate',
+ years_in_current_industry: 6,
+ previous_title: 'Chief Operating Officer',
+ previous_employer: 'Dolly Lenz Real Estate',
+ previous_industry: 'Real Estate',
+ years_in_previous_industry:4,
+ bachelors_university: 'Harvard University',
+ bachelors_degree: 'BA, Economics',
+ year_graduated_bachelors: 1998,
+ masters_university: 'Stanford University',
+ masters_degree: 'Masters in Finance',
+ year_graduated_masters: 2004,
+ doctorate_university:'Harvard University',
+ doctorate_degree:'PhD in Economics',
+ year_graduated_doctorate: 2009,
+ city: 'New York City',
+ state: 'NY',
+ fav_books: 'Rework by Jason Fried, The Intelligent Investor by Benjamin Graham and The Real Estate Game by William J. Poorvu',
+ hobbies: 'Bikram Yoga',
+ birthday: Date.new(1979, 7, 1),
+ fav_quote: 'Do not mind anything that anyone tells you about anyone else. Judge everyone and everything for yourself.',
+ public: true,
+ phone: 1156325339639,
+ goals:'Win The Nobel Memorial Prize in Economic Sciences',
+ description:'The foundation of a strong economy and job creation begins with providing every child in America with the best possible education, including students with disabilities',
+ tagline: 'Creating more and better jobs is how you build a strong economy',
+},
+{
+ current_title: 'Chief Executive Officer',
+ current_employer: 'Cisco Systems',
+ current_industry: 'Technology',
+ years_in_current_industry: 8,
+ previous_title: 'Senior Vice President',
+ previous_employer: 'Apple Inc',
+ previous_industry: 'Computer hardware and software manufacturing',
+ years_in_previous_industry: 9,
+ bachelors_university: 'Massachusetts Institute of Technology',
+ bachelors_degree: 'BA, Engineering',
+ year_graduated_bachelors: 1999,
+ masters_university: 'Stanford University',
+ masters_degree: 'Masters in Business Administration (MBA)',
+ year_graduated_masters: 2003,
+ doctorate_university:'Harvard University',
+ doctorate_degree:'PhD in Finance',
+ year_graduated_doctorate: 2009,
+ city: 'San Jose',
+ state: 'CA',
+ fav_books: 'Homo Deus: A Brief History of Tomorrow by Yuval Noah and The Second Machine Age by Erik Brynjolfsson and Andrew McAfee',
+ hobbies: 'Chess',
+ birthday: Date.new(1979, 2, 16),
+ fav_quote: 'Success in creating AI would be the biggest event in human history. Unfortunately, it might also be the last, unless we learn how to avoid the risks.',
+ public: true,
+ phone: 1156325339639,
+ goals: 'Win The Fields Medal',
+ description: 'I believe people are basically good. I recognize and respect everyone as a unique individual. I believe everyone has something to contribute. I encourage people to treat others the way they want to be treated. I believe that an honest, open environment can bring out the best in people',
+ tagline: 'Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.',
+},
 ]
 
 MESSAGES = [
@@ -575,6 +753,151 @@ MESSAGES = [
   {content: 'Hi, how\'s it going?14'},
 ]
 
+FORUMS = [
+  {name: "Entrepreneurship"},
+  {name: "Career change"},
+  {name: "Career growth"},
+  {name: "Negotiation strategies"},
+  {name: "Learning how to network"},
+  {name: "Industry-specific skills"},
+  {name: "Dealing with biases in the workplace"},
+  {name: "Developing leadership skills"},
+  {name: "Creating work-life balance"},
+  {name: "Building confidence"}
+]
+
+POSTS = [ {
+  subject: "Post 1",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 2",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 3",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 4",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 5",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 6",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 7",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 8",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 9",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 10",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 11",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 12",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 13",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 14",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 15",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 16",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 17",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 18",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 19",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 20",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 21",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 22",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 23",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 24",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 25",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 26",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 27",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 28",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 29",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+},
+{
+  subject: "Post 30",
+  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+}
+]
+
+REPLIES = [ {
+  content: "I like the way you think."
+},
+{
+  content: "You deserve a raise."
+},
+
+  content: "This is exactly why a mentor would be so helpful."
+]
+
 puts "Cleaning database"
 Match.destroy_all
 EventBooking.destroy_all
@@ -586,6 +909,9 @@ Survey.destroy_all
 Question.destroy_all
 AnswerOption.destroy_all
 User.destroy_all
+Forum.destroy_all
+Post.destroy_all
+Reply.destroy_all
 
 puts ""
 puts "Starting seeding process..."
@@ -636,9 +962,37 @@ EVENTS.each do |event|
   end
 end
 
+puts "Creating Forums"
+FORUMS.each do |forum|
+  seed_forum = Forum.new(forum)
+  seed_forum.save!
+  puts " - created #{seed_forum.name}"
+end
+
+puts "Creating Posts"
+POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum = Forum.all.sample
+  seed_post.save!
+  puts " - created #{seed_post.subject}"
+end
+
+puts "Creating Replies"
+33.times do
+  REPLIES.each do |reply|
+    seed_reply = Reply.new(reply)
+    seed_reply.user = User.all.sample
+    seed_reply.post = Post.all.sample
+    seed_reply.save!
+    puts " - created reply #{seed_reply.id}"
+  end
+end
+
 puts "Creating Matches"
 4.times do |i|
   match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
+  match.save!
   puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
 end
 
@@ -1177,5 +1531,4 @@ puts "creating answer options for industry questions"
 # match.status = :pending
 
 # if match.pending?
-
 

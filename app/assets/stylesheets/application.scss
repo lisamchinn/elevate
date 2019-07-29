@@ -1,4 +1,6 @@
 // Graphical variables
+@import "fonts/index";
+
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
@@ -24,6 +26,40 @@
 .sticky {
   height: 90vh;
   position: sticky;
-  top: 30px;
+  top: 108px;
 }
 
+h1 {
+  font-weight: 100;
+  font-size: 62px;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 52px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 44px;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 36px;
+}
+
+h5 {
+  font-weight: 100;
+  font-size: 28px;
+}
+
+h6 {
+  font-weight: 100;
+  font-size: 18px;
+}
+
+p {
+  font-weight: 100;
+  font-size: 16px;
+}

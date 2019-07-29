@@ -4,8 +4,8 @@ class User < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:linkedin]
+  :recoverable, :rememberable, :validatable,
+  :omniauthable, omniauth_providers: [:linkedin]
 
   has_one :profile, dependent: :destroy
 
@@ -41,5 +41,21 @@ class User < ApplicationRecord
       user.last_name = auth.info.last_name
       user.photo = auth.info.picture_url
     end
+  end
+
+  def mentor_profile
+    matches_as_mentee.first.mentor.profile
+  end
+
+  def mentee_profile
+    matches_as_mentor.first.mentee.profile
+  end
+
+  def full_name
+    "#{first_name.capitalize} #{last_name.capitalize}"
+  end
+
+  def identifier
+    full_name
   end
 end

@@ -1,20 +1,52 @@
 .footer {
-  background: black;
+  background: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 450px;
   padding: 0px 50px;
+  padding-bottom: 50px;
   color: rgba(0,0,0,0.3);
+  margin-top: 40px;
+}
+
+.all-footer-info {
+  padding-top: 50px;
 }
 
 .footer-links a {
-  color: white;
+  color: #818181;
 }
 .footer-links a:hover {
   color: white;
-  text-decoration: var(--font-link-text-decoration-hover, underline);
+  //
+  text-decoration: none;
 }
-.footer .fa-heart {
-  color: #D23333;
+
+.background-black {
+  background-color: $black;
 }
+
+.contact-info i {
+  color: #818181;
+}
+
+.contact-info p {
+  color: #818181;
+}
+
+.footer-quote p {
+  color: #818181;
+}
+
+.soc-media-icons {
+  color: $green;
+  font-size: 18px;
+}
+
+.footer-final-link p {
+  color: $green;
+}
+
+
+

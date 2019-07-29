@@ -1,0 +1,117 @@
+.chat-wrapper {
+ display: flex;
+ flex-direction: column;
+ position: relative;
+ height: 100%;
+ padding-bottom: 7px;
+  img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+ }
+
+ .chat-box {
+   padding: 1.5em;
+   height: 100%;
+   overflow-y: scroll;
+   overflow-x: hidden;
+
+    &.form-control {
+      height: 100px;
+      background-color: white;
+    }
+
+   .chat-bubble-wrapper {
+     padding-bottom: 2em;
+     width: 100%;
+     // display: flex;
+     // flex-direction: column;
+      .head {
+        padding-bottom: 20px;
+        border-bottom: 1px solid gray;
+       }
+
+     .chat-timestamp {
+       display: flex;
+       font-size: 13px;
+     }
+     .chat-bubble {
+       flex-grow: 1;
+       border-radius: 5px;
+       padding: 0.5em;
+       box-shadow: 4px 7px 8px -11px #000000;
+       text-overflow: ellipsis;
+       min-width: 10em;
+       display: flex;
+       flex-direction: column;
+       flex: auto;
+       min-height: 100px;
+       padding: 13px;
+
+       &.me {
+         background-color: transparent;
+         align-self: flex-start;
+         border: 0.5px solid #c0bcbc;
+
+       }
+       &.her {
+         background-color: #ECD294;
+         align-self: flex-end;
+          border: 0.5px solid #c0bcbc;
+
+       }
+       &.ellevate {
+         align-self: flex-start;
+         background-color: #262627;
+         color: white;
+       }
+       .chat-username {
+         font-size: 0.7em;
+         color: black;
+         font-weight: bold;
+       }
+       .chat-message {
+         font-size: 1em;
+       }
+     }
+   }
+ }
+
+ #chat-form {
+   // position: absolute;
+   // bottom: 37px;
+   width: 100%;
+   #message {
+     background-color: white;
+     border-radius: 4px;
+     box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+     height: 100px;
+   }
+ }
+}
+
+.chat-container {
+  &.me {
+    flex-direction: row-reverse;
+  }
+  &.her {
+    flex-direction: row;
+  }
+}
+
+.chat-image {
+  &.me {
+    margin-left: 10px;
+  }
+  &.her {
+    margin-right: 10px;
+  }
+  img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  }
+}
+

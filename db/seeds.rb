@@ -877,22 +877,28 @@ JOB_TITLES = [
   {title: 'Writer'},
 ]
 
+  puts "Cleaning database"
 
-puts "Cleaning database"
-Match.destroy_all
-EventBooking.destroy_all
-Event.destroy_all
-Profile.destroy_all
-UserAnswer.destroy_all
-QuestionAnswerPair.destroy_all
-SurveyQuestion.destroy_all
-Survey.destroy_all
-Question.destroy_all
-AnswerOption.destroy_all
-User.destroy_all
-Forum.destroy_all
-Post.destroy_all
-Reply.destroy_all
+if Rails.env == "development"
+  Message.destroy_all
+  Industry.destroy_all
+  JobTitle.destroy_all
+  Donation.destroy_all
+  Match.destroy_all
+  EventBooking.destroy_all
+  Event.destroy_all
+  Profile.destroy_all
+  UserAnswer.destroy_all
+  QuestionAnswerPair.destroy_all
+  SurveyQuestion.destroy_all
+  Survey.destroy_all
+  Question.destroy_all
+  AnswerOption.destroy_all
+  User.destroy_all
+  Forum.destroy_all
+  Post.destroy_all
+  Reply.destroy_all
+end
 
 puts ""
 puts "Starting seeding process..."
@@ -1312,7 +1318,7 @@ MENTOR_QUESTIONS.each do |q|
   puts "survey questions mentor - #{survey_question.id}"
 end
 
-puts "special"
+puts "special mentee question"
 question = Question.new({ content: "I would like a mentor that works in the following industry (choose 1)", question_type: 0})
 question.save!
 
@@ -1345,11 +1351,14 @@ end
 
 survey_question = SurveyQuestion.new(survey: mentee_survey, question: question)
 survey_question.save!
+
 puts "survey questions mentor"
 
-puts "special"
+puts "special question for mentor"
 question = Question.new({ content: "I would like a mentee that works in the following industry (choose 1)", question_type: 0})
 question.save!
+mentor_questions_array << question
+
 
 puts "creating answer options for industry questions"
 Industry.all.each do |ind|
@@ -1367,6 +1376,8 @@ puts "creating answer options for industry questions"
 
 question = Question.new({ content: "I would like a mentee who has held the following position", question_type: 0 })
 question.save!
+mentor_questions_array << question
+
 
 puts "creating answer options for Job Title question"
 JobTitle.all.each do |j|
@@ -1389,9 +1400,9 @@ MENTOR_ANSWERS = [
     [2, 1],
     [1, 3, 2, 4],
     [10, 7, 4, 6, 8, 5, 3, 2, 9, 1],
-    [9, 2, 4, 7, 1, 11, 6, 5, 3, 8],
+    [9, 10, 2, 4, 7, 1, 11, 6, 5, 3, 8],
     [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
+    [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 0, 1, 1, 0, 0],
@@ -1401,7 +1412,7 @@ MENTOR_ANSWERS = [
     [6, 5, 3, 10, 7, 8, 4, 2, 1, 9],
     [7, 8, 9, 5, 1, 6, 10, 11, 4, 2, 3],
     [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 0, 0, 0, 0, 1],
@@ -1411,7 +1422,7 @@ MENTOR_ANSWERS = [
     [1, 10, 2, 4, 5, 3, 6, 7, 8, 9],
     [11, 9, 5, 10, 8, 3, 4, 6, 7, 2, 1],
     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
-    [0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 1, 0, 0, 0, 0],
@@ -1421,7 +1432,7 @@ MENTOR_ANSWERS = [
     [8, 7, 5, 3, 10, 6, 4, 2, 9, 1],
     [1, 4, 7, 8, 2, 9, 10, 3, 11, 6, 5],
     [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,],
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
   ],
   [
     [0, 1, 0, 0, 0, 0],
@@ -1442,16 +1453,6 @@ MENTOR_ANSWERS = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
     [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-  ],
-  [
-    [1, 0, 0, 0, 0, 0],
-    [0, 1, 0, 0, 0],
-    [1, 2],
-    [4, 3, 2, 1],
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-    [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 0, 0, 1, 0, 0],
@@ -1475,15 +1476,19 @@ MENTOR_ANSWERS = [
   ],
 ]
 
+puts "creating answer options for 8 mentors"
+
 User.where(mentee: false).each_with_index do |mentor, ma_index|
   mentor_questions_array.each_with_index do |mentor_question, q_index|
     mentor_question.question_answer_pairs.each_with_index do |mentor_q_a_p, qa_index|
       user_answer = UserAnswer.new(user: mentor, question_answer_pair: mentor_q_a_p, value: MENTOR_ANSWERS[ma_index][q_index][qa_index])
       user_answer.save!
-      puts "creating user_answers - #{mentor.first_name}, #{mentor_question.content}, #{mentor_question.answer_option.content} - #{user_answer.id}"
+      puts "- mentor: #{mentor.first_name} / question: #{mentor_question.content} / answer: #{user_answer.question_answer_pair.answer_option.content} - value: #{user_answer.value} "
     end
   end
 end
+
+puts " #{UserAnswer.count} USER ANSWERS"
 
 
 

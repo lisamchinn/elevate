@@ -55,6 +55,12 @@ class User < ApplicationRecord
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
 
+  def get_match
+    return matches_as_mentee.first if matches_as_mentee.count.positive?
+    return matches_as_mentor.first if matches_as_mentor.count.positive?
+    nil
+  end
+
   def identifier
     full_name
   end

@@ -1,10 +1,79 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
-<div class="profile-wrapper">
-<div class="profile-card">
-<img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-<h1><%= @user.first_name + " " + @user.last_name%></h1>
-<h2><%= @profile.current_title + " " + @profile.current_employer %></h2>
-<p><%= @profile.description %></p>
-</div>
+<div class="container big-cont px-0">
+
+  <div class="row">
+    <div class="col-12">
+      <div class="profile-wrapper d-flex justify-content-center align-items-center">
+        <div class="profile-avatar">
+         <%= cl_image_tag current_user.photo, class:"avatar-large avatar-image-show" %>
+        </div>
+        <div class="barr"></div>
+        <div class="profile-data">
+          <h1><%= @user.first_name + " " + @user.last_name%></h1>
+          <h3><%= @profile.current_title + "  at  " + @profile.current_employer %></h3>
+          <p><%= @profile.tagline %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row w-100">
+    <div class="col-12 col-md-6 px-0">
+      <div class="background-card card-margin-right">
+        <h2>Education</h2>
+        <div class="horizontal-bar"></div>
+        <div class=""></div>
+        <h3><%= @profile.masters_degree %></h3>
+        <h4><%= @profile.masters_university %></h4>
+        <p><%= "Graduated in " +  @profile.year_graduated_masters.to_s + "." %></p>
+
+        <h2 class = "margin-top-experience">Education</h2>
+        <div class="horizontal-bar"></div>
+        <h3><%= @profile.bachelors_degree %></h3>
+        <h4><%= @profile.bachelors_university %></h4>
+        <p><%= "Graduated in " + @profile.year_graduated_bachelors.to_s + "." %></p>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 px-0">
+      <div class="background-card">
+        <h2 >Experience</h2>
+        <div class="horizontal-bar"></div>
+        <div class=""></div>
+        <h3><%= @profile.current_title %></h3>
+        <h4><%= @profile.current_employer %></h4>
+        <p><%= @profile.years_in_current_industry.to_s + " years of experience." %></hp>
+        <h2 class = "margin-top-experience" >Experience</h2>
+        <div class="horizontal-bar"></div>
+        <h3><%= @profile.previous_title %></h3>
+        <h4><%= @profile.previous_employer %></h4>
+        <p><%= @profile.years_in_previous_industry.to_s + " years of experience." %></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row w-100">
+    <div class="col-12 col-md-12 px-0">
+       <div class="background-card goals-cont">
+        <h3>Goals:</h3>
+        <h4><%= @profile.goals %></h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="row w-100">
+    <div class="col-12 col-md-6 px-0">
+      <div class="background-card card-margin-right min-height-card">
+        <h3>Favourite books:</h3>
+        <h4><%= @profile.fav_books %></h4>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6 px-0">
+      <div class="background-card min-height-card">
+        <h3>Favourite quote:</h3>
+        <h4><%= @profile.fav_quote %></h4>
+      </div>
+    </div>
+  </div>
 </div>

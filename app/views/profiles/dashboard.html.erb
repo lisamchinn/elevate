@@ -4,12 +4,12 @@
       <h2>Hello, <%= @profile.user.first_name.capitalize %>!</h2>
       <h4>Welcome back to Ellevate. Here, you can see what you can do today. </h4>
     </div>
-  <%#= image_tag('enter.svg') %>
+    <%#= image_tag('enter.svg') %>
     <div class="col-6">
       <% if current_user.mentee %>
-        <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
+      <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
       <% else  %>
-        <img src="<%= asset_path('gravitas_green.svg') %>" alt="">
+      <img src="<%= asset_path('gravitas_green.svg') %>" alt="">
       <% end  %>
     </div>
   </div>
@@ -26,76 +26,74 @@
             <div>
               <h6 class="font-weight-bold my-0"><%= @profile.user.first_name.capitalize %>
                 <%= @profile.user.last_name.capitalize %></h6>
-              <p class="my-0"><%= @profile.current_title%> at <%= @profile.current_employer %></p>
-              <p class="mt-0 mb-2"><%= @profile.city %>, <%= @profile.state %></p>
-            </div>
-          </div>
-        <% end %>
-        </div>
-        <%= render 'components/card-mentor', profile: @profile %>
-      </div>
-    </div>
-    <div class="col-12 col-md-9">
-      <%= render 'components/card-greeting', profile: @profile %>
-      <h4 class="dashboard-title">Your upcoming events</h4>
-      <% if !@profile.user.events.empty? %>
-        <% @profile.user.events.each do |event| %>
-          <% unless event.date.past?  %>
-            <%= render 'components/card-dashboard', event: event %>
-          <% else %>
-            <div class="greeting-card d-flex">
-              <img class="greeting-image" src="<%= asset_path('events.svg') %>">
-              <div class="greeting-info-card">
-                <h2>Sign up to one of our events!</h2>
-                <p>Meet other enthusiastic and aspiring women like yourselves in one of our +100 events, and get inspired! </p>
-              <div>
-                <%= link_to "View events", events_path, class: "btn btn-solid small" %>
+                <p class="my-0"><%= @profile.current_title%> at <%= @profile.current_employer %></p>
+                <p class="mt-0 mb-2"><%= @profile.city %>, <%= @profile.state %></p>
               </div>
             </div>
-          <% end %>
-        <% end %>
-      <% end %>
-    </div>
-
-      <% if current_user.mentee  %>
-        <h4 class="dashboard-title">Your development toolkit </h4>
-        <div class="dashboard-card d-flex">
-          <div class="dashboard-card-content">
-            <h4>How to build self-confidence</h4>
-            <p style="
-            font-style: italic;
-            margin-bottom: 16px;">Ask your mentor to go over the toolkit before your next session</p>
-            <a class="btn btn-ghost small" href="#">View toolkit</a>
+            <% end %>
           </div>
-          <img src="https://images.unsplash.com/photo-1504257365157-1496a50d48f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+          <%= render 'components/card-mentor', profile: @profile %>
         </div>
-      <% else  %>
-        <h4 class="dashboard-title">Your mentee's development toolkit </h4>
-        <div class="dashboard-card d-flex">
-          <div class="dashboard-card-content">
-            <h4>How to build self-confidence</h4>
-            <p style="
-            font-style: italic;
-            margin-bottom: 16px;">Ask your mentee to go over the toolkit before your next session</p>
-            <a class="btn btn-ghost small" href="#">View toolkit</a>
-          </div>
-          <img src="https://images.unsplash.com/photo-1504257365157-1496a50d48f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
-        </div>
-      <% end  %>
-
-      <h4 class="dashboard-title">Join the conversation! </h4>
-      <div class="dashboard-card d-flex">
-        <div class="dashboard-card-content">
-          <h4>Have you checked out our forums?</h4>
-          <p style="
-          font-style: italic;
-          margin-bottom: 16px;">From topic A to topic B, join in the conversations with our +100 members! </p>
-          <%= link_to "View forum", forums_path, class: "btn btn-ghost small"  %>
-        </div>
-        <img src="https://images.unsplash.com/photo-1556159992-e189f8e50104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
       </div>
+      <div class="col-12 col-md-9">
+        <%= render 'components/card-greeting', profile: @profile %>
+        <h4 class="dashboard-title">Your upcoming events</h4>
+        <% if !@profile.user.events.empty? %>
+        <% @profile.user.events.each do |event| %>
+        <% unless event.date.past?  %>
+        <%= render 'components/card-dashboard', event: event %>
+        <% else %>
+        <div class="greeting-card d-flex">
+          <img class="greeting-image" src="<%= asset_path('events.svg') %>">
+          <div class="greeting-info-card">
+            <h2>Sign up to one of our events!</h2>
+            <p>Meet other enthusiastic and aspiring women like yourselves in one of our +100 events, and get inspired! </p>
+            <div>
+              <%= link_to "View events", events_path, class: "btn btn-solid small" %>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
+          <% end %>
 
+        <% if current_user.mentee  %>
+          <h4 class="dashboard-title">Your development toolkit </h4>
+          <div class="dashboard-card d-flex">
+            <div class="dashboard-card-content">
+              <h4>How to build self-confidence</h4>
+              <p style="
+              font-style: italic;
+              margin-bottom: 16px;">Ask your mentor to go over the toolkit before your next session</p>
+              <a class="btn btn-ghost small" href="#">View toolkit</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1504257365157-1496a50d48f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+          </div>
+        <% else  %>
+          <h4 class="dashboard-title">Your mentee's development toolkit </h4>
+          <div class="dashboard-card d-flex">
+            <div class="dashboard-card-content">
+              <h4>How to build self-confidence</h4>
+              <p style="
+              font-style: italic;
+              margin-bottom: 16px;">Ask your mentee to go over the toolkit before your next session</p>
+              <a class="btn btn-ghost small" href="#">View toolkit</a>
+            </div>
+            <img src="https://images.unsplash.com/photo-1504257365157-1496a50d48f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+          </div>
+        <% end  %>
+
+        <h4 class="dashboard-title">Join the conversation! </h4>
+        <div class="dashboard-card d-flex">
+          <div class="dashboard-card-content">
+            <h4>Have you checked out our forums?</h4>
+            <p style="
+            font-style: italic;
+            margin-bottom: 16px;">From topic A to topic B, join in the conversations with our +100 members! </p>
+            <%= link_to "View forum", forums_path, class: "btn btn-ghost small"  %>
+          </div>
+          <img src="https://images.unsplash.com/photo-1556159992-e189f8e50104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<% console %>

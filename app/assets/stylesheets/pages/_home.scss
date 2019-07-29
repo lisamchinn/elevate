@@ -96,6 +96,10 @@
   width: 60%;
 }
 
+.image-container {
+
+}
+
 .image-1 img {
   position: absolute;
   width: 500px;
@@ -117,7 +121,15 @@
 .image-3 img {
   width: 250px;
   height: 200px;
+  object-fit: cover;
 }
+
+.image-4 img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
 
 
 .section-three {

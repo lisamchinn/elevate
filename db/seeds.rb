@@ -347,7 +347,7 @@ MENTORS = [{
   email: 'daniella@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80',
+  photo: 'https://media.licdn.com/dms/image/C4D03AQH4HpK0mbQp4w/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=Y9liVK_EwAqGNZIuI6R0g9ex8WhpcLG_YmG3dJse0bg',
   },
   {
   first_name: 'Whitney',

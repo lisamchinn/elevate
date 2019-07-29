@@ -7,15 +7,12 @@ class Match < ApplicationRecord
   enum status: { pending: 0, ongoing: 1, canceled: 2 }
 
   def get_match
-
     mentee_structure = Survey.structure("mentee", mentee)
-
     scores = User.available.map do |m|
       mentor_structure = Survey.structure(mentor, m)
       { mentor_id: m.id, score: Match.score(mentee_structure, mentor_structure) }
       # { mentor_id: 1, score: 0 }
     end
-
     # return a list of available mentos
     # return scores.sort_by { |match| match[:score] }.first(amount)
     return scores
@@ -33,8 +30,7 @@ class Match < ApplicationRecord
     if question_type == 'checkbox'
       mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs }.sum * 3
     else
-      0
-      # mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs * (mentor_answers.length - i) }.sum
+      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs * (mentor_answers.length - i) }.sum
     end
   end
 end

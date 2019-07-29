@@ -49,6 +49,7 @@ class User < ApplicationRecord
 
   def available
     matches_as_mentor.empty?
+  end
 
   def mentor_profile
     matches_as_mentee.first.mentor.profile
@@ -56,6 +57,5 @@ class User < ApplicationRecord
 
   def mentee_profile
     matches_as_mentor.first.mentee.profile
-
   end
 end

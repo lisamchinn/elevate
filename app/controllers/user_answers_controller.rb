@@ -17,6 +17,20 @@ class UserAnswersController < ApplicationController
       authorize user_answer
       user_answer.save!
     end
+    next_question
+  end
+
+  def special_question
+    params["user_answers"].split("-").each_with_index do |question_answer_pair, index|
+      q_a_p = QuestionAnswerPair.find(question_answer_pair.to_i)
+      user_answer = UserAnswer.new(question_answer_pair: q_a_p, user: current_user, value: index + 1)
+      authorize user_answer
+      user_answer.save!
+    end
+    next_question
+  end
+
+  def next_question
     survey = @question.survey
     position_of_question = survey.questions.index(@question)
     @next_question = survey.questions[position_of_question + 1]
@@ -30,33 +44,11 @@ class UserAnswersController < ApplicationController
       redirect_to @next_question
     end
   end
-
-  def special_question
-
-  end
 end
 
-
- # def create
- #    @skill = Skill.new(skill_params)
- #    authorize @skill
- #    @skill.user = current_user
- #    if @skill.save
- #      redirect_to skill_path(@skill)
- #    else
- #      render :new
- #    end
- #  end
+# role = current_user.mentee ? "mentee" : "mentor"
+# survey = Survey.find_by(role: role)
+# position_of_question = survey.survey_questions.map{|sq| sq.question}.index(@question)
 
 
-  #   raise
-  #   @user_answer = UserAnswer.new(user_answer_params)
-  #   authorize @user_answer
-  #   @user_answer.user == current_user
-  #   if @user_answer.save && @user_answer.question isnt the last
-  #     redirect_to question_path(@question) (how do i make it the NEXT question?)
-  #   elsif @user_answer.save && @user.answer.question is the last
-  #     redirect_to "matches/new"
-  #   else
-  #     render the form again
-  # end
+

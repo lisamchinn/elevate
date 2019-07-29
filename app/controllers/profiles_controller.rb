@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
-    @user = User.find(params[:id])
+    @user = current_user
     authorize @profile
   end
 
@@ -20,7 +20,14 @@ class ProfilesController < ApplicationController
   end
 
   def dashboard
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profile
+
+    if current_user.mentee
+      @counterparty_profile = current_user.matches_as_mentee.first.mentor.profile
+    else
+      @counterparty_profile = current_user.matches_as_mentor.first.mentee.profile
+    end
+
     authorize @profile
   end
 

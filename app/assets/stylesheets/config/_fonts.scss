@@ -1,8 +1,10 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
 // Define fonts for body and headers
-$body-font: "Roboto", "Helvetica", "sans-serif";
-$headers-font: "Roboto", "Helvetica", "sans-serif";
+$body-font: "Apercu Regular", "Helvetica", "sans-serif";
+$headers-font: "Apercu Regular", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -13,3 +15,5 @@ $headers-font: "Roboto", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+

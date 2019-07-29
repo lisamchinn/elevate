@@ -14,58 +14,212 @@
         <% end %>
       </div>
     </div>
-
     <div class="landing-image">
       <img src="https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="two women laughing" width=720>
     </div>
   </div>
 
   <div class="section-two">
-
     <div class="header d-flex align-items-center">
       <h2 class="text-align-center mx-auto">Why mentorship?</h2>
     </div>
-
     <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
-
       <div class="image-collage">
-        <h5>People</h5>
         <div class="image-1">
          <img src="https://images.unsplash.com/photo-1526658904499-9f2b473928f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman1">
         </div>
-
         <div class="image-2">
          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
         </div>
-
         <div class="image-3">
           <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
         </div>
       </div>
-
       <div class="section-two-text">
-        <p>When one of our members was struggling to find a job, for example, our Circle jumped in to help with interview prep and to make introductions.”</p>
+        <%= image_tag(asset_path('left-quote (1).png')) %>
+        <h6 class="px-4">When one of our members was struggling to find a job, for example, our Circle jumped in to help with interview prep and to make introductions.”</h6>
+        <p class="px-4">-Alberta Lowe</p>
       </div>
-
     </div>
-
   </div>
 
   <div class="section-three">
 
-    <div class="header d-flex align-items-center">
-      <h2 class="text-align-center mx-auto">How Ellevate Works</h2>
+    <div class="header-three">
+      <h2>How Ellevate Works</h2>
     </div>
 
-    <div class="section-two-images-and-text d-flex justify-space-around align-items-center"></div>
+    <div class="header-paragraph-three">
+       <p>We provide all the materials you need - including skill-building videos, discussion guides, and worksheets on topics from negotiating your salary to discovering your strengths. #LetsEllevateEachOther</p>
+    </div>
 
-      <div class="image-collage">
-        <h5>People</h5>
+    <div class="how-ellevate-works-info">
+      <div class="icon-and-info">
+        <%= image_tag(asset_path('coffee.png')) %>
+        <h6>Our Matching Algorithm</h6>
+        <p>Our matching algorithm works to match you with the best possible mentor for your needs. Blah blah blah blah blah</p>
+      </div>
+      <div class="icon-and-info">
+        <%= image_tag(asset_path('calendar.png')) %>
+        <h6>Regular Meetings</h6>
+        <p>Meet with your mentor at least bi-weekly for three months. Research supports that this amount of regularity works best.</p>
+      </div>
+      <div class="icon-and-info">
+        <%= image_tag(asset_path('save (2).png')) %>
+        <h6>Mentors are everywhere.</h6>
+        <p>We’re a community of women who meet in nearly every country and at some of the largest companies.</p>
+      </div>
+      <div class="icon-and-info">
+        <%= image_tag(asset_path('bar-chart.png')) %>
+        <h6>Mentorship Works</h6>
+        <p>86% of women in Circles say their group has made a positive impact on their life. Blah blah blah blah blah blah.</p>
+      </div>
+    </div>
+
+    <div class="how-ellevate-works-video-and-steps">
+      <div class="ellevate-video">
+        <iframe width="550" height="400" src="https://www.youtube.com/embed/R1qVPWEleRY">
+        </iframe>
       </div>
 
-      <div class="section-two-text">
-        <p>When one of our members was struggling to find a job, for example, our Circle jumped in to help with interview prep and to make introductions.”</p>
+      <div class="ellevate-steps">
+        <h5>Getting started is easy</h5>
+
+        <div class="all-steps">
+          <div class="card-step">
+            <div class="step-number">
+              <p>Step 1:</p>
+            </div>
+            <div class="step-text">
+              <h4>Take the Survey</h4>
+              <p>We recommend small groups of 8 to 12 women—but many Circles start off with even fewer members.</p>
+            </div>
+          </div>
+
+          <div class="card-step">
+            <div class="step-number">
+              <p>Step 2:</p>
+            </div>
+            <div class="step-text">
+              <h4>Get Matched Immediately</h4>
+              <p>Circles can meet anywhere—at work, home, a nearby coffee shop, or online.</p>
+            </div>
+          </div>
+
+          <div class="card-step">
+            <div class="step-number">
+              <p>Step 3:</p>
+            </div>
+            <div class="step-text">
+              <h4>Choose a Mentor</h4>
+              <p>Choose from dozens of meeting guides on topics from networking to negotiating.</p>
+            </div>
+          </div>
+
+          <div class="card-step">
+            <div class="step-number">
+              <p>Step 4:</p>
+            </div>
+            <div class="step-text">
+              <h4>Send a message to your mentor</h4>
+              <p>We recommend small groups of 8 to 12 women—but many Circles start off with even fewer members.</p>
+            </div>
+          </div>
+        </div>
+        <div class="steps-button">
+          <%= link_to "Take the Survey", root_path, class: "btn-solid"%>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <div class="section-four">
+    <div>
+      <div class="header-four">
+        <h2>Our Mentors</h2>
+      </div>
+    </div>
+
+    <div class="mentors">
+
+      <div class="mentor-card-with-button">
+        <div class="mentor-card">
+          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
+          <h6>JULIE SHACKFORD</h6>
+          <p>HEAD COACH W&M</p>
+          <p>Williamsburg, VA</p>
+        </div>
+        <div class="mentor-button">
+          <%= link_to "See Profile", root_path, class: "btn-solid"%>
+        </div>
+      </div>
+
+      <div class="mentor-card-with-button">
+        <div class="mentor-card">
+          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
+          <h6>Julie Shackford</h6>
+          <p>Head Coach W&M</p>
+          <p>Williamsburg, VA</p>
+        </div>
+        <div class="mentor-button">
+          <%= link_to "See Profile", root_path, class: "btn-solid"%>
+        </div>
+      </div>
+
+      <div class="mentor-card-with-button">
+        <div class="mentor-card">
+          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
+          <h6><%= @mentors.first.first_name + " " + @mentors.first.last_name%></h6>
+          <p>Head Coach W&M</p>
+          <p>Williamsburg, VA</p>
+        </div>
+        <div class="mentor-button">
+          <%= link_to "See Profile", root_path, class: "btn-solid"%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-five">
+
+    <div>
+      <div class="header-five">
+        <h2>Join the Ellevate Community</h2>
+      </div>
+    </div>
+
+    <div class="community">
+
+      <div class="com-card-and-button">
+        <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
+          EVENTS
+        </div>
+        <div class="comm-card-button">
+          <%= link_to "See All Events", root_path, class: "btn-ghost-solid"%>
+        </div>
+      </div>
+
+      <div class="com-card-and-button">
+        <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+          FORUMS
+        </div>
+        <div class="comm-card-button">
+          <%= link_to "See All Forums", root_path, class: "btn-ghost-solid"%>
+        </div>
+      </div>
+
+      <div class="com-card-and-button">
+        <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1556565681-306458ef93cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
+          WORKSHOPS
+        </div>
+        <div class="comm-card-button">
+          <%= link_to "See All Workshops", root_path, class: "btn-ghost-solid"%>
+        </div>
+      </div>
+
+</div>
+
+
 
     </div>
 
@@ -73,5 +227,25 @@
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg -->

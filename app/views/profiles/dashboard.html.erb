@@ -6,7 +6,7 @@
     </div>
     <%#= image_tag('enter.svg') %>
     <div class="col-6">
-      <% if current_user.mentee %>
+      <% if @counterparty_profile %>
         <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
       <% else  %>
         <img src="<%= asset_path('gravitas_green.svg') %>" alt="">
@@ -32,7 +32,9 @@
             </div>
           <% end %>
         </div>
-        <%= render 'components/card-mentor', profile: @profile %>
+        <% if @counterparty_profile %>
+          <%= render 'components/card-mentor', profile: @profile %>
+        <% end  %>
       </div>
     </div>
 

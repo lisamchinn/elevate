@@ -34,6 +34,8 @@
         </div>
         <% if @counterparty_profile %>
           <%= render 'components/card-mentor', profile: @profile %>
+        <% else %>
+          <%= render 'components/card-take-survey', profile: @profile, question_mentee: @question_mentee, question_mentor: @question_mentor %>
         <% end  %>
       </div>
     </div>

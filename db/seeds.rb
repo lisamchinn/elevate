@@ -688,15 +688,15 @@ MENTOR_PROFILES = [
 
 FORUMS = [
   {name: "Entrepreneurship"},
-  {name: "Career change"},
-  {name: "Career growth"},
-  {name: "Negotiation strategies"},
-  {name: "Learning how to network"},
-  {name: "Industry-specific skills"},
+  {name: "Career Change"},
+  {name: "Career Growth"},
+  {name: "Negotiation Strategies"},
+  {name: "Learning How to Network"},
+  {name: "Industry-Specific Skills"},
   {name: "Handling Workplace Biases"},
-  {name: "Developing leadership skills"},
-  {name: "Creating work-life balance"},
-  {name: "Building confidence"}
+  {name: "Developing Leadership Skills"},
+  {name: "Creating Work-Life Balance"},
+  {name: "Building Confidence"}
 ]
 
 ENTREPRENEURSHIP_POSTS = [ {
@@ -1164,7 +1164,7 @@ puts "Creating Industry-specific Skills Posts"
 INDUSTRY_SPECIFIC_SKILLS_POSTS.each do |post|
   seed_post = Post.new(post)
   seed_post.user = User.all.sample
-  seed_post.forum_id = Forum.where(name: "Industry-specific Skills").first.id
+  seed_post.forum_id = Forum.where(name: "Industry-Specific Skills").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
 end
@@ -1173,7 +1173,7 @@ puts "Creating Industry-specific Skills Replies"
 INDUSTRY_SPECIFIC_SKILLS_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
   seed_reply.user = User.all.sample # need to make sure user doesn't match post user
-  seed_reply.post_id = Post.where(forum: Forum.where(name: "Industry-specific Skills")).first.id
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Industry-Specific Skills")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
 end

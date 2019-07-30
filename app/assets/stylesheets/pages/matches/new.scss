@@ -70,4 +70,46 @@
     display: block;
     margin-bottom: 10px;
   }
+  .btn-ghost {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+    .btn-solid {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+.modal-background {
+  background-color: #F5F1EA;
+  .small-container {
+    width: 800px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .profile-wrapper {
+    display: -webkit-box;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 2px 2px 4px grey;
+    flex-grow: 1;
+    margin-left: 0;
+    h1 {
+    font-size: 40px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
 }

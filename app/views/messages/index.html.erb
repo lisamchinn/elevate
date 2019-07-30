@@ -51,14 +51,15 @@
 
              <div class="chat-bubble-wrapper">
                <div class="chat-bubble ellevate">
-                 <div class="chat-messagen                   <% if current_user.mentee? %>
+                 <div class="chat-message">
+                 <% if current_user.mentee? %>
 
                  Congratulations! You have just been connected to a mentor at Ellevate. Now it's the time to send your mentor a message! You can start by introducing yourself and your background. You can even propose a short call with her. Good luck! - Ellevate
                  <% else %>
                  Congratulations! You have just been matched to a mentee. She will usually start the conversation, but please feel free to reach out to her!  - Ellevate
                  <% end  %>
                </div>
-                 <div class="chat-timestamp her"><%= Time.now.strftime("%b %e, %l:%M %p") %></div>
+                 <div class="chat-timestamp her mt-2"><%= Time.now.strftime("%b %e, %l:%M %p") %></div>
                </div>
 
              </div>

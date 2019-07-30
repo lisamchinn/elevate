@@ -1,18 +1,71 @@
-<h1><%= @forum.name %></h1>
+<div class="forum-show-container">
+  <div class="row">
+    <div class="col-3 sticky pt-5 mt-2" style="height: 400px;">
+      <ul style="list-style-type: none;">
+        <% @forums.each do |forum| %>
+        <li><%= link_to forum.name, forum_path(forum) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-9 pt-5 pl-4 pr-5" style="border-left: 0.5px solid lightgrey;">
+      <h1 style="text-align: center;"><%= @forum.name %></h1>
 
-<%= simple_form_for [@forum, @post] do |f| %>
-  <%= f.input :subject %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
-<% end %>
+      <div class="d-flex justify-content-center">
+        <form class="form-inline" action="<%= forum_path(@forum) %>" method='get'>
+          <div class="search-form-control form-group">
+            <input class="form-control string required text-black" style="width: 320px;" type="text" name="search" placeholder="Search within <%= @forum.name %>...">
+            <button name="button" type="submit"><i class="fas fa-search"></i></button>
+          </div>
+        </form>
+      </div>
 
-<ul>
-  <% if !@posts.empty? %>
-    <% @posts.each do |post| %>
-    <h4>Post: <%= link_to post.subject, forum_post_path(@forum, post) %></h4>
-    <h5>Post Content: <%= post.content %></h5>
-    <% end %>
-  <% else %>
-    <h4>No posts for this category</h4>
-  <% end %>
-</ul>
+      <div class="d-flex justify-content-center pt-3">
+        <ul style="list-style-type: none;">
+        <% if @results.nil? && !@posts.empty?%>
+          <div class="pb-3" style="width: 800px;">
+          <%= simple_form_for [@forum, @post] do |f| %>
+          <%= f.input :subject %>
+          <%= f.input :content %>
+          <%= f.button :submit %>
+          <% end %>
+          </div>
+          <% @posts.each do |post| %>
+          <li><%= render 'components/card-post', post: post %></li>
+          <% end %>
+        <% elsif @results.nil? && @posts.empty? %>
+          <p>No posts for this category</p>
+        <% elsif !@results.nil? %>
+          <% if @results.empty? %>
+            <div class="d-flex justify-content-center pt-3">
+              <p class="pt-3" style="text-align: center;font-size: 18px;">No results for this search :(</p>
+            </div>
+          <% elsif @results.count == 1 %>
+            <div class="d-flex justify-content-center pt-3">
+              <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned 1 result!</p>
+            </div>
+            <div class="d-flex justify-content-center pt-3">
+              <li><%= render 'components/card-post', post: @results.first %></li>
+            </div>
+          <% else %>
+            <div>
+              <div>
+                <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned <%= @results.count %> results!</p>
+              </div>
+              <div class="d-flex justify-content-center pt-3">
+                <ul>
+                  <% @results.each do |result| %>
+                    <span><%= render 'components/card-post', post: result %></span>
+                  <% end %>
+                </ul>
+              </div>
+             </div>
+          <% end %>
+        <% end %>
+        </ul>
+      </div>
+      <div class="d-flex justify-content-center pt-3">
+        <span><%= link_to "Back to Categories", forums_path %></span>
+      </div>
+    </div>
+  </div>
+</div>

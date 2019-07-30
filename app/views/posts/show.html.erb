@@ -1,31 +1,45 @@
-<h1><%= @post.subject %></h1>
-<p>by <%= @post.user.first_name %></p>
-<h6><%= @post.content %></h6>
+<div class="forum-show-container">
+  <div class="row">
+    <div class="col-3 sticky pt-5 mt-2" style="height: 400px;">
+      <ul style="list-style-type: none;">
+        <% @forums.each do |forum| %>
+        <li><%= link_to forum.name, forum_path(forum) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-9 pt-5 pl-4 pr-5" style="border-left: 0.5px solid lightgrey;">
+      <h2><%= @post.subject %></h2>
+      <p><%= cl_image_tag @post.user.photo, class: "avatar" %> <%= @post.user.first_name %></p>
+      <h6 class="pb-3"><%= @post.content %></h6>
 
-<h5>Replies:</h5>
-  <ul>
-    <% if !@post.replies.empty? %>
-      <% @post.replies.each do |reply| %>
-      <li><%= reply.user.first_name %> says: <%= reply.content %></li>
-      <% end %>
-        <% if signed_in? %>
-          <%= simple_form_for [@post, @reply] do |f| %>
-          <%= f.input :content %>
-          <%= f.button :submit %>
+      <h6 class="pb-3" style="text-align: center;">Replies from the community</h6>
+        <% if !@post.replies.empty? %>
+          <% @post.replies.each do |reply| %>
+              <%= render 'components/card-reply', reply: reply %>
           <% end %>
+            <div class="py-3">
+              <% if signed_in? %>
+                <%= simple_form_for [@post, @reply] do |f| %>
+                <%= f.input :content %>
+                <%= f.button :submit %>
+                <% end %>
+              <% else %>
+                <p><%= link_to "Sign in to reply", new_user_session_path %> </p>
+              <% end %>
+            </div>
+        <% else %>
+          <% if signed_in? %>
+            <p>Be the first to reply</p>
+            <%= simple_form_for [@post, @reply] do |f| %>
+            <%= f.input :content %>
+            <%= f.button :submit %>
+            <% end %>
           <% else %>
-            <p><%= link_to "Sign in to reply", new_user_session_path %> </p>
+            <p><%= link_to "Be the first to reply", new_user_session_path %> </p>
+          <% end %>
         <% end %>
-    <% else %>
-      <% if signed_in? %>
-        <p>Be the first to reply</p>
-        <%= simple_form_for [@post, @reply] do |f| %>
-        <%= f.input :content %>
-        <%= f.button :submit %>
-        <% end %>
-      <% else %>
-        <p><%= link_to "Be the first to reply", new_user_session_path %> </p>
-      <% end %>
-    <% end %>
-  </ul>
 
+      <%= link_to "Back to #{@forum.name}", forum_path(@forum) %>
+    </div>
+  </div>
+</div>

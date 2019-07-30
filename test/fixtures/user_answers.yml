@@ -1,0 +1,25 @@
+one:
+  user: mentor
+  question_answer_pair: checkbox_one
+  value: 1
+
+two:
+  user: mentor
+  question_answer_pair: checkbox_two
+  value: 0
+
+three:
+  user: mentor
+  question_answer_pair: checkbox_three
+  value: 0
+
+four:
+  user: mentor
+  question_answer_pair: special_one
+  value: 1
+
+five:
+  user: mentor
+  question_answer_pair: special_two
+  value: 2
+

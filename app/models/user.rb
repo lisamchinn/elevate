@@ -43,6 +43,14 @@ class User < ApplicationRecord
     end
   end
 
+  def self.available
+    where(mentee: false).select { |mentor| mentor.available && mentor.user_answers.count.positive? }
+  end
+
+  def available
+    matches_as_mentor.empty?
+  end
+
   def mentor_profile
     matches_as_mentee.first.mentor.profile
   end

@@ -1,0 +1,12 @@
+<ul id="columns">
+  <% @question.question_answer_pairs.each do |question_answer_pair| %>
+  <li class="column answer" draggable="true" value="<%= question_answer_pair.id %>-"><%= question_answer_pair.answer_option.content %></span></li>
+  <% end %>
+</ul>
+
+<form action="/user_answers" method="post" id="submit_answers">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="hidden" name="user_answers" id="user_answers" draggable="true">
+  <input type="hidden" name="question" value="<%= @question.id %>">
+  <input type="submit">
+</form>

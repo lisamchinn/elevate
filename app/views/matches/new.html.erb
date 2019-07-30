@@ -1,3 +1,12 @@
+<% @matches.each do |m| %>
+  <div style="height: 100px; width: 100px; background-color: white; border: 1px solid blue;">
+      <%= m.mentor.first_name %>
+    <%= simple_form_for(m) do |f| %>
+      <%= f.input :mentor_id, as: :hidden, html_input: { value: m.mentor_id } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+<% end %>
 <div class="container-medium-small">
   <div class="row matches-text">
     <h4>Here are your matched mentors</h4>

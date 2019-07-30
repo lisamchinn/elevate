@@ -7,55 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'time'
 
-INDUSTRIES = [
-  {name: 'Business'},
-  {name: 'Consulting'},
-  {name: 'Design'},
-  {name: 'Education'},
-  {name: 'Finance'},
-  {name: 'Food/Beverages'},
-  {name: 'Healthcare'},
-  {name: 'Hospitality'},
-  {name: 'Human Resources/HR'},
-  {name: 'Journalism/Writing'},
-  {name: 'Marketing'},
-  {name: 'Non-Profit'},
-  {name: 'Sales'},
-  {name: 'Tech'},
-]
-
-JOB_TITLES = [
-  {title: 'Banker'},
-  {title: 'CEO'},
-  {title: 'CFO'},
-  {title: 'Consultant'},
-  {title: 'COO'},
-  {title: 'CTO'},
-  {title: 'Dentist'},
-  {title: 'Designer'},
-  {title: 'Director'},
-  {title: 'Editor'},
-  {title: 'Founder/Co-founder'},
-  {title: 'Fullstack Developer'},
-  {title: 'General Doctor'},
-  {title: 'General Manager'},
-  {title: 'Management Consultant'},
-  {title: 'Nurse'},
-  {title: 'Product Manager'},
-  {title: 'Project Manager'},
-  {title: 'Researcher'},
-  {title: 'Salesperson'},
-  {title: 'Software Engineer'},
-  {title: 'Software Quality Assurance Analyst'},
-  {title: 'Surgeon'},
-  {title: 'Teacher'},
-  {title: 'Trader'},
-  {title: 'Tutor'},
-  {title: 'University Professor'},
-  {title: 'Web Designer'},
-  {title: 'Writer'},
-]
-
 EVENTS = [ {
   title: 'Hunger by Roxane Gay',
   description: 'In her phenomenally popular essays and long-running Tumblr blog, Roxane Gay has written with intimacy and sensitivity about food and body, using her own emotional and psychological struggles as a means of exploring our shared anxieties over pleasure, consumption, appearance, and health. As a woman who describes her own body as wildly undisciplined, Roxane understands the tension between desire and denial, between self-comfort and self-care. In Hunger, she explores her past—including the devastating act of violence that acted as a turning point in her young life—and brings readers along on her journey to understand and ultimately save herself.\n With the bracing candor, vulnerability, and power that have made her one of the most admired writers of her generation, Roxane explores what it means to learn to take care of yourself: how to feed your hungers for delicious and satisfying food, a smaller and safer body, and a body that can love and be loved—in a time when the bigger you are, the smaller your world becomes.',
@@ -88,7 +39,6 @@ EVENTS = [ {
   -Safety and consent
   -Attachment
   -Aging
-  -Pornography
   -Parenting/single parenting
 
   Join us for lively discussion on living and loving as a feminist in Miami!',
@@ -299,14 +249,7 @@ A train and ferry are probably the easiest ways to get there depending on where 
   },
 ]
 
-MENTEES = [{
-  first_name: 'Lisa',
-  last_name: 'Chinn',
-  email: 'lisa@mail.com',
-  password: 123456789,
-  mentee: true,
-  photo: 'https://media.licdn.com/dms/image/C4E03AQFpRrFvbFbGSA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=O4LBdDgP2U1p9eqoIJa8vXn0Og9TKVqxV50Ui4GEJb4',
-  },
+MENTEES = [
   {
   first_name: 'Alberta',
   last_name: 'Lowe',
@@ -314,6 +257,14 @@ MENTEES = [{
   password: 123456789,
   mentee: true,
   photo: 'https://media.licdn.com/dms/image/C4E03AQFGluTfOTVoEA/profile-displayphoto-shrink_200_200/0?e=1569456000&v=beta&t=B_Sq5VGJ2xnOD3mL0Z7__M80bFhQtktRHisWUjxMP-Q',
+  },
+  {
+  first_name: 'Lisa',
+  last_name: 'Chinn',
+  email: 'lisa@mail.com',
+  password: 123456789,
+  mentee: true,
+  photo: 'https://media.licdn.com/dms/image/C4E03AQFpRrFvbFbGSA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=O4LBdDgP2U1p9eqoIJa8vXn0Og9TKVqxV50Ui4GEJb4',
   },
   {
   first_name: 'Jennifer',
@@ -382,21 +333,21 @@ MENTORS = [{
    photo: 'https://images.unsplash.com/photo-1548260435-f3e7ec40e513?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80',
    },
   {
- first_name: 'Irene',
- last_name: 'Abadi',
- email: 'ireneabadi@mail.com',
- password: 123456789,
- mentee: false,
- photo: 'https://images.unsplash.com/photo-1544817747-b11e3e3b6ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
- },
+   first_name: 'Irene',
+   last_name: 'Abadi',
+   email: 'ireneabadi@mail.com',
+   password: 123456789,
+   mentee: false,
+   photo: 'https://images.unsplash.com/photo-1544817747-b11e3e3b6ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+   },
  {
- first_name: 'Julia',
- last_name: 'Adams',
- email: 'juliaadams@mail.com',
- password: 123456789,
- mentee: false,
- photo: 'https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1312&q=80',
- },
+   first_name: 'Julia',
+   last_name: 'Adams',
+   email: 'juliaadams@mail.com',
+   password: 123456789,
+   mentee: false,
+   photo: 'https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1312&q=80',
+   },
 ]
 
 
@@ -449,7 +400,7 @@ MENTEE_PROFILES = [{
   hobbies: 'Doing yoga, reading books, playing tennis and golf',
   goals: 'Be a management consultant specializing in healthcare practice and hopefully exiting to the health-tech industry in the future.',
   birthday: Date.new(1993, 6, 8),
-  description: 'Alberta is passionate about problem solving and communicating with people. She has had working experience in consumer goods, retail, and healthcare in international settings (Hong Kong, Indonesia, USA, Switzerland, Middle East). She enjoys cross-cultural collaboration and her leadership experience includes founding title at Women in Leadership and presidency at Nash Business Cohort Community in HKUST. Alberta is interested in management consulting, healthcare, and third-wave coffee. ',
+  description: 'Daniella is passionate about problem solving and communicating with people. She has had working experience in consumer goods, retail, and healthcare in international settings (Hong Kong, Indonesia, USA, Switzerland, Middle East). She enjoys cross-cultural collaboration and her leadership experience includes founding title at Women in Leadership and presidency at Nash Business Cohort Community in HKUST. Daniella is interested in management consulting, healthcare, and third-wave coffee. ',
   tagline: 'Business management student who is about to enter management consulting industry. Looking for a mentor in the consulting industry to guide her.',
   public: true,
   phone: 91154568986,
@@ -565,7 +516,7 @@ MENTOR_PROFILES = [
   hobbies: 'Acrobatics, acting, and beatboxing',
   goals: 'To become a global tought leader in the area of healthcare and technology, as well as to mentor upcoming professionals in the industry',
   birthday: Date.new(1969, 8, 11),
-  description: 'Daniela is a healthcare and technology expert working with clients in different continents to help them transform their businesses. She focuses on strategy design and implementation, organization design, operational excellence, and innovation management. She leads BCG social impact activities in the Middle East working with different global and local NGOs.',
+  description: 'Daniella is a healthcare and technology expert working with clients in different continents to help them transform their businesses. She focuses on strategy design and implementation, organization design, operational excellence, and innovation management. She leads BCG social impact activities in the Middle East working with different global and local NGOs.',
   tagline: 'Experienced healthcare and management expert, eager to help young professionals pursuing the health-tech consulting path',
   public: true,
   phone: 1987233118,
@@ -665,7 +616,7 @@ MENTOR_PROFILES = [
  year_graduated_masters: 2003,
  city: 'Los Angeles',
  state: 'CA',
- fav_books: 'Start with Why by Simon Sinek and Mindset  by Carol Dweck',
+ fav_books: 'Start with Why by Simon Sinek and Mindset by Carol Dweck',
  hobbies: 'Biking',
  birthday: Date.new(1981, 4, 11),
  fav_quote: 'It is better to fail in originality than to succeed in imitation.',
@@ -677,21 +628,19 @@ MENTOR_PROFILES = [
 },
 {
  current_title: 'Chief Executive Officer',
- current_employer: 'Douglas Elliman Real Estate',
- current_industry: 'Real Estate',
+ current_employer: 'Apprenti',
+ current_industry: 'Tech',
  years_in_current_industry: 6,
  previous_title: 'Chief Operating Officer',
- previous_employer: 'Dolly Lenz Real Estate',
- previous_industry: 'Real Estate',
+ previous_employer: '8th Light',
+ previous_industry: 'Tech',
  years_in_previous_industry:4,
  bachelors_university: 'Harvard University',
- bachelors_degree: 'BA, Economics',
+ bachelors_degree: 'BA, Computer Science',
  year_graduated_bachelors: 1998,
  masters_university: 'Stanford University',
- masters_degree: 'Masters in Finance',
+ masters_degree: 'Masters in Computer Science',
  year_graduated_masters: 2004,
- doctorate_university:'Harvard University',
- doctorate_degree:'PhD in Economics',
  year_graduated_doctorate: 2009,
  city: 'New York City',
  state: 'NY',
@@ -735,24 +684,6 @@ MENTOR_PROFILES = [
  description: 'I believe people are basically good. I recognize and respect everyone as a unique individual. I believe everyone has something to contribute. I encourage people to treat others the way they want to be treated. I believe that an honest, open environment can bring out the best in people',
  tagline: 'Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.',
 },
-]
-
-MESSAGES = [
-  {content: 'Hi, how\'s it going?0'},
-  {content: 'Hi, how\'s it going?1'},
-  {content: 'Hi, how\'s it going?2'},
-  {content: 'Hi, how\'s it going?3'},
-  {content: 'Hi, how\'s it going?4'},
-  {content: 'Hi, how\'s it going?5'},
-  {content: 'Hi, how\'s it going?6'},
-  {content: 'Hi, how\'s it going?7'},
-  {content: 'Hi, how\'s it going?8'},
-  {content: 'Hi, how\'s it going?9'},
-  {content: 'Hi, how\'s it going?10'},
-  {content: 'Hi, how\'s it going?11'},
-  {content: 'Hi, how\'s it going?12'},
-  {content: 'Hi, how\'s it going?13'},
-  {content: 'Hi, how\'s it going?14'},
 ]
 
 FORUMS = [
@@ -900,20 +831,76 @@ REPLIES = [ {
   content: "This is exactly why a mentor would be so helpful."
 ]
 
-puts "Cleaning database"
-Match.destroy_all
-EventBooking.destroy_all
-Event.destroy_all
-Profile.destroy_all
-QuestionAnswerPair.destroy_all
-SurveyQuestion.destroy_all
-Survey.destroy_all
-Question.destroy_all
-AnswerOption.destroy_all
-User.destroy_all
-Forum.destroy_all
-Post.destroy_all
-Reply.destroy_all
+INDUSTRIES = [
+  {name: 'Business'},
+  {name: 'Consulting'},
+  {name: 'Design'},
+  {name: 'Education'},
+  {name: 'Finance'},
+  {name: 'Food/Beverages'},
+  {name: 'Healthcare'},
+  {name: 'Hospitality'},
+  {name: 'Human Resources/HR'},
+  {name: 'Journalism/Writing'},
+  {name: 'Marketing'},
+  {name: 'Non-Profit'},
+  {name: 'Sales'},
+  {name: 'Tech'},
+]
+
+JOB_TITLES = [
+  {title: 'Banker'},
+  {title: 'CEO'},
+  {title: 'CFO'},
+  {title: 'Consultant'},
+  {title: 'COO'},
+  {title: 'CTO'},
+  {title: 'Dentist'},
+  {title: 'Director'},
+  {title: 'Editor'},
+  {title: 'Founder/Co-founder'},
+  {title: 'Fullstack Developer'},
+  {title: 'General Doctor'},
+  {title: 'General Manager'},
+  {title: 'Management Consultant'},
+  {title: 'Nurse'},
+  {title: 'Product Manager'},
+  {title: 'Project Manager'},
+  {title: 'Researcher'},
+  {title: 'Salesperson'},
+  {title: 'Software Engineer'},
+  {title: 'Software Quality Assurance Analyst'},
+  {title: 'Surgeon'},
+  {title: 'Teacher'},
+  {title: 'Trader'},
+  {title: 'University Professor'},
+  {title: 'Venture Capitalist'},
+  {title: 'Web Designer'},
+  {title: 'Writer'},
+]
+
+  puts "Cleaning database"
+
+if Rails.env == "development"
+  Message.destroy_all
+  Industry.destroy_all
+  JobTitle.destroy_all
+  Donation.destroy_all
+  Match.destroy_all
+  EventBooking.destroy_all
+  Event.destroy_all
+  Profile.destroy_all
+  UserAnswer.destroy_all
+  QuestionAnswerPair.destroy_all
+  SurveyQuestion.destroy_all
+  Survey.destroy_all
+  Question.destroy_all
+  AnswerOption.destroy_all
+  User.destroy_all
+  Forum.destroy_all
+  Post.destroy_all
+  Reply.destroy_all
+end
 
 puts ""
 puts "Starting seeding process..."
@@ -991,12 +978,12 @@ puts "Creating Replies"
   end
 end
 
-puts "Creating Matches"
-4.times do |i|
-  match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
-  match.save!
-  puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
-end
+# puts "Creating Matches"
+# 4.times do |i|
+#   match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
+#   match.save!
+#   puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
+# end
 
 INDUSTRIES.each do |ind|
   industry = Industry.new(ind)
@@ -1058,9 +1045,6 @@ MENTEE_QUESTIONS = [
       {
         content: "Video call"
       },
-      {
-        content: "Either"
-      }
     ]
   },
   {
@@ -1202,9 +1186,6 @@ MENTOR_QUESTIONS = [
       {
         content: "Video call"
       },
-      {
-        content: "Either"
-      }
     ]
   },
   {
@@ -1313,16 +1294,18 @@ MENTEE_QUESTIONS.each do |q|
     puts "creating answer option #{answer.content}"
     question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
     question_answer_pair.save!
-    puts "creating both together #{question.content} - #{answer.content}"
+    puts "creating both together #{question.content} - #{answer.content} -  #{question_answer_pair.id}"
   end
   survey_question = SurveyQuestion.new(survey: mentee_survey, question: question)
   survey_question.save!
   puts "survey questions"
 end
 
+mentor_questions_array = []
 MENTOR_QUESTIONS.each do |q|
   question = Question.new(q[:contents])
   question.save!
+  mentor_questions_array << question
   puts "creating mentor questions #{question.content}"
   q[:answers].each do |a|
     answer = AnswerOption.new(a)
@@ -1330,18 +1313,14 @@ MENTOR_QUESTIONS.each do |q|
     puts "creating answer option #{answer.content}"
     question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
     question_answer_pair.save!
-    puts "creating both together #{question.content} - #{answer.content}"
+    puts "creating both together #{question.content} - #{answer.content} -  #{question_answer_pair.id}"
   end
   survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
   survey_question.save!
-  puts "survey questions"
+  puts "survey questions mentor - #{survey_question.id}"
 end
 
-
-#needs special questions for each survey
-
-
-puts "special"
+puts "special mentee question"
 question = Question.new({ content: "I would like a mentor that works in the following industry (choose 1)", question_type: 0})
 question.save!
 
@@ -1352,34 +1331,36 @@ Industry.all.each do |ind|
   puts "created answer for industry question mentee survey"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "created question answer for industry question mentee survey"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentee_survey, question: question)
 survey_question.save!
-puts "survey questions mentee"
+puts "survey questions mentee - #{survey_question.id}"
 
 
-question = Question.new({ content: "I would like a mentor who has held the following position", question_type: 0 })
+question = Question.new({content: "I would like a mentor who has held the following position", question_type: 0 })
 question.save!
-
-puts "creating quesitons + answer options for Job Title question mentor survey"
+puts "creating questions + answer options for Job Title question mentor survey"
 JobTitle.all.each do |j|
   answer = AnswerOption.new(content: j.title)
   answer.save!
   puts "created answer for job title question"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "created question answer for job title question"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentee_survey, question: question)
 survey_question.save!
+
 puts "survey questions mentor"
 
-puts "special"
+puts "special question for mentor"
 question = Question.new({ content: "I would like a mentee that works in the following industry (choose 1)", question_type: 0})
 question.save!
+mentor_questions_array << question
+
 
 puts "creating answer options for industry questions"
 Industry.all.each do |ind|
@@ -1388,7 +1369,7 @@ Industry.all.each do |ind|
   puts "creating answer options for industry questions"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "creating answer options for industry questions"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
@@ -1397,6 +1378,8 @@ puts "creating answer options for industry questions"
 
 question = Question.new({ content: "I would like a mentee who has held the following position", question_type: 0 })
 question.save!
+mentor_questions_array << question
+
 
 puts "creating answer options for Job Title question"
 JobTitle.all.each do |j|
@@ -1405,132 +1388,140 @@ JobTitle.all.each do |j|
   puts "creating answer options for industry questions"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "creating answer options for industry questions"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
 survey_question.save!
 puts "creating answer options for industry questions"
 
+MENTOR_ANSWERS = [
+  [
+    [0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0],
+    [2, 1],
+    [1, 3, 2, 4],
+    [10, 7, 4, 6, 8, 5, 3, 2, 9, 1],
+    [9, 10, 2, 4, 7, 1, 11, 6, 5, 3, 8],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 1, 1, 0, 0],
+    [0, 0, 0, 0, 1],
+    [2, 1],
+    [2, 3, 1, 4],
+    [6, 5, 3, 10, 7, 8, 4, 2, 1, 9],
+    [7, 8, 9, 5, 1, 6, 10, 11, 4, 2, 3],
+    [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0],
+    [2, 1],
+    [2, 3, 4, 1],
+    [1, 10, 2, 4, 5, 3, 6, 7, 8, 9],
+    [11, 9, 5, 10, 8, 3, 4, 6, 7, 2, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 1, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0],
+    [2, 1],
+    [1, 2, 3, 4],
+    [8, 7, 5, 3, 10, 6, 4, 2, 9, 1],
+    [1, 4, 7, 8, 2, 9, 10, 3, 11, 6, 5],
+    [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  ],
+  [
+    [0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0],
+    [2, 1],
+    [1, 3, 4, 2],
+    [1, 4, 2, 8, 5, 3, 9, 10, 7, 6],
+    [6, 1, 3, 4, 10, 5, 7, 8, 2, 11, 9],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [1, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0],
+    [1, 2],
+    [4, 3, 2, 1],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 1],
+    [2, 1],
+    [1, 2, 3, 4],
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0],
+    [1, 2],
+    [2, 1, 3, 4],
+    [7, 8, 3, 2, 6, 10, 9, 1, 4, 5],
+    [7, 8, 2, 3, 1, 6, 5, 4, 9, 11, 10],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+]
+
+puts "creating answer options for 8 mentors"
+
+User.where(mentee: false).each_with_index do |mentor, ma_index|
+  mentor_questions_array.each_with_index do |mentor_question, q_index|
+    mentor_question.question_answer_pairs.each_with_index do |mentor_q_a_p, qa_index|
+      user_answer = UserAnswer.new(user: mentor, question_answer_pair: mentor_q_a_p, value: MENTOR_ANSWERS[ma_index][q_index][qa_index])
+      user_answer.save!
+      puts "- mentor: #{mentor.first_name} / question: #{mentor_question.content} / answer: #{user_answer.question_answer_pair.answer_option.content} - value: #{user_answer.value} "
+    end
+  end
+end
+
+puts " #{UserAnswer.count} USER ANSWERS"
 
 
-  # {
-  #   contents: {content: "I would like a mentor that works in the following industry (choose 1)"
-  #   }, answers: [
-  #     {
-  #       content: "Business"
-  #     },
-  #     {
-  #       content: "Consulting"
-  #     },
-  #     {
-  #       content: "Design"
-  #     },
-  #     {
-  #       content: "Education"
-  #     },
-  #     {
-  #       content: "Finance"
-  #     },
-  #     {
-  #       content: "Food/Beverages"
-  #     },
-  #     {
-  #       content: "Healthcare"
-  #     },
-  #     {
-  #       content: "Hospitality"
-  #     },
-  #     {
-  #       content: "Human Resources/HR"
-  #     },
-  #     {
-  #       content: "Journalism/Writing"
-  #     },
-  #     {
-  #       content: "Non-Profit"
-  #     },
-  #     {
-  #       content: "Tech"
-  #     }
-  #   ]
-  # },
 
-  # {
-  #   contents: {
-  #     content: "I would like a mentor who has held the following position" },
-  #     answers: [
-  #     {
-  #       content: "CEO" #(or should I say Industry.all[0])
-  #     },
-  #     {
-  #       content: "CTO"
-  #     },
-  #     {
-  #       content: "CFO"
-  #     },
-  #     {
-  #       content: "COO"
-  #     },
-  #     {
-  #       content: "Product Manager"
-  #     },
-  #     {
-  #       content: "Designer"
-  #     },
-  #     {
-  #       content: "Researcher"
-  #     },
-  #     {
-  #       content: "Web Designer"
-  #     },
-  #     {
-  #       content: "Software Engineer"
-  #     },
-  #     {
-  #       content: "Fullstack Developer"
-  #     },
-  #     {
-  #       content: "Software Quality Assurance Analyst"
-  #     },
-  #     {
-  #       content: "Writer"
-  #     },
-  #     {
-  #       content: "Editor"
-  #     },
-  #     {
-  #       content: "Nurse"
-  #     },
-  #     {
-  #       content: "General Doctor"
-  #     },
-  #     {
-  #       content: "Surgeon"
-  #     },
-  #     {
-  #       content: "Dentist"
-  #     },
-  #     {
-  #       content: "Salespeon"
-  #     },
-  #   ]
-  # }
+# puts "creating user_answer options for Sheryl Sandberg (mentor1)"
+#   UserAnswer.new()
 
-# User.first(MENTEES.length).each do |user|
-#   Match.new(mentee: )
+# puts "Creating UserAnswers for all 8 mentors"
+#   MENTOR_ANSWERS.each_with_index do |value, index|
+#     mentor_answers = UserAnswer.new(value, index)
+#     mentee_profile.user = User.first(MENTEES.length)[index]
+#     mentee_profile.save!
+#     puts " - created #{mentee_profile.user.first_name}'s profile"
+#   end
 
+#   puts "Creating User Profiles (who are mentees)"
+#   MENTEE_PROFILES.each_with_index do |profile, index|
+#     mentee_profile = Profile.new(profile)
+#     mentee_profile.user = User.first(MENTEES.length)[index]
+#     mentee_profile.save!
+#     puts " - created #{mentee_profile.user.first_name}'s profile"
+#   end
 
-# class Match < ApplicationRecord
-#   belongs_to :mentor, class_name: 'User'
-#   belongs_to :mentee, class_name: 'User'
-#   has_many :messages
-
-#   validates :status, presence: true
-#   enum status: { pending: 0, ongoing: 1, canceled: 2 }
+# EVENTS.each do |event|
+#   seed_event = Event.new(event)
+#   seed_event.remote_photo_url = event[:photo]
+#   seed_event.save!
+#   puts " - created #{seed_event.title}"
+#   rand(1..5).times do
+#     event_booking = EventBooking.new(user: User.all.sample, event: seed_event, num_of_tickets: 2)
+#     event_booking.save!
+#     puts " - created #{event_booking.user.first_name}'s event booking"
+#   end
 # end
-
-# match.status = :pending
-
-# if match.pending?
 

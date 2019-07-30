@@ -24,6 +24,9 @@ Rails.application.routes.draw do
     resources :payments, only: [:new, :create]
   end
 
+  resources :questions, only: [:show]
+  resources :user_answers, only: [:create]
+
   get '/events/my_events', to: 'events#my_events', as: :events_my_events
   get '/dashboard', to: 'profiles#dashboard', as: :profiles_dashboard
 end

@@ -50,5 +50,3 @@ end
 # survey = Survey.find_by(role: role)
 # position_of_question = survey.survey_questions.map{|sq| sq.question}.index(@question)
 
-
-

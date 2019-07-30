@@ -1,0 +1,11 @@
+mentee:
+  first_name: Sam
+  last_name: Dutson
+  email: sam@mail.com
+  mentee: true
+
+mentor:
+  first_name: Lisa
+  last_name: Chinn
+  email: lisa@mail.com
+  mentee: false

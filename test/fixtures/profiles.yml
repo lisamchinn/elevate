@@ -1,0 +1,7 @@
+mentee:
+  user: mentee
+  current_title: Teacher
+
+mentor:
+  user: mentor
+  current_title: CEO

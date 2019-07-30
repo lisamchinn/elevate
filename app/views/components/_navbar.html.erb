@@ -25,9 +25,9 @@
           <% end %>
           <% unless current_user.mentors.empty? %>
             <%= link_to "My mentor", profile_path(current_user.mentors.last), class:" dropdown-item" %>
-            <%= link_to "Message", match_messages_path(current_user.get_match), class:" dropdown-item" %>
+             <%= link_to "Messages", match_messages_path(current_user.matches_as_mentee.first), class:" dropdown-item" %>
           <% else %>
-            <%= link_to "Find a mentor", new_match_path, class:" dropdown-item" %>
+            <%= link_to "Take the Survey", question_path(question_mentee), class:" dropdown-item" %>
           <% end %>
           <a class="dropdown-item" href="#">Past Mentors</a>
           <a class="dropdown-item" href="#">My Events</a>

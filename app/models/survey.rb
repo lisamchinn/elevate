@@ -3,4 +3,8 @@ class Survey < ApplicationRecord
   has_many :questions, through: :survey_questions
 
   validates :role, presence: true
+
+  # def completed?(user)
+
+  # end
 end

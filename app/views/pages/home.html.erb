@@ -23,23 +23,69 @@
     <div class="header d-flex align-items-center">
       <h2 class="text-align-center mx-auto">Why mentorship?</h2>
     </div>
-    <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
-      <div class="image-collage">
-        <div class="image-1">
-         <img src="https://images.unsplash.com/photo-1526658904499-9f2b473928f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman1">
+
+    <div id="carouselExampleControls-a" class="carousel slide" data-interval="false">
+      <div class="carousel-inner carousel-container">
+
+        <div class="carousel-item active">
+          <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
+            <div class="image-collage">
+              <div class="image-2">
+               <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
+              </div>
+              <div class="image-3">
+                <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
+              </div>
+            </div>
+            <div class="section-two-text">
+              <%= image_tag(asset_path('left-quote (1).png')) %>
+              <h6 class="px-4">When I wanted to change industry and look for a job, for example, my mentor jumped in to help with interview prep and to make introductions.”</h6>
+              <p class="px-4">-Alberta Lowe</p>
+            </div>
+          </div>
         </div>
-        <div class="image-2">
-         <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
+
+        <div class="carousel-item">
+          <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
+            <div class="image-collage">
+              <div class="image-1">
+               <img src="https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80" alt="photo of woman2">
+              </div>
+            </div>
+            <div class="section-two-text">
+              <%= image_tag(asset_path('left-quote (1).png')) %>
+              <h6 class="px-4">I’m such an introvert, but talking to my mentor has made things totally different for me. It has definitely helped build my confidence. Now I can actually say that I’m a leader.”</h6>
+              <p class="px-4">-Lisa Chinn</p>
+            </div>
+          </div>
         </div>
-        <div class="image-3">
-          <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
+
+        <div class="carousel-item">
+          <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
+            <div class="image-container">
+              <div class="image-4 mx-auto">
+               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
+              </div>
+            </div>
+            <div class="section-two-text">
+              <%= image_tag(asset_path('left-quote (1).png')) %>
+              <h6 class="px-4">I’m such an introvert, but talking to my mentor has made things totally different for me. It has definitely helped build my confidence. Now I can actually say that I’m a leader.”</h6>
+              <p class="px-4">-Lisa Chinn</p>
+            </div>
+          </div>
         </div>
+
       </div>
-      <div class="section-two-text">
-        <%= image_tag(asset_path('left-quote (1).png')) %>
-        <h6 class="px-4">When one of our members was struggling to find a job, for example, our Circle jumped in to help with interview prep and to make introductions.”</h6>
-        <p class="px-4">-Alberta Lowe</p>
-      </div>
+
+
+      <a class="d-flex justify-content-start" href="#carouselExampleControls-a" role="button" data-slide="prev">
+        <span class="carousel-button-left"><</span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="d-flex justify-content-end" href="#carouselExampleControls-a" role="button" data-slide="next">
+        <span class="carousel-button-right">></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 
@@ -141,42 +187,27 @@
     </div>
 
     <div class="mentors">
-
-      <div class="mentor-card-with-button">
-        <div class="mentor-card">
-          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
-          <h6>JULIE SHACKFORD</h6>
-          <p>HEAD COACH W&M</p>
-          <p>Williamsburg, VA</p>
-        </div>
-        <div class="mentor-button">
-          <%= link_to "See Profile", root_path, class: "btn-solid"%>
-        </div>
-      </div>
-
-      <div class="mentor-card-with-button">
-        <div class="mentor-card">
-          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
-          <h6>Julie Shackford</h6>
-          <p>Head Coach W&M</p>
-          <p>Williamsburg, VA</p>
-        </div>
-        <div class="mentor-button">
-          <%= link_to "See Profile", root_path, class: "btn-solid"%>
-        </div>
-      </div>
-
-      <div class="mentor-card-with-button">
-        <div class="mentor-card">
-          <img src="https://media.licdn.com/dms/image/C4E03AQEQG78nVS227Q/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=1RhfX_QYP2bBFNXrMSuLrSBNgy1d3dyz39oDN1aKxpI" alt="" class="avatar-xl-gray">
-          <h6><%= @mentors.first.first_name + " " + @mentors.first.last_name%></h6>
-          <p>Head Coach W&M</p>
-          <p>Williamsburg, VA</p>
-        </div>
-        <div class="mentor-button">
-          <%= link_to "See Profile", root_path, class: "btn-solid"%>
-        </div>
-      </div>
+      <% @mentors = User.select { |user| !user.mentee } %>
+        <% @mentors.sample(3).each do |mentor| %>
+          <%= link_to profile_path(mentor), target: "_blank" do %>
+          <div class="col-4 my-2">
+            <div class="mentor-card-container">
+              <div class="mentor-card">
+                <%= cl_image_tag mentor.photo  %>
+                <h6><%= mentor.first_name %> <%= mentor.last_name %></h6>
+                <p><%= mentor.profile.current_title %> at <%= mentor.profile.current_employer %></p>
+                <p><%= mentor.profile.city %>, <%= mentor.profile.state %></p>
+              </div>
+              <div class="mentor-tagline">
+                <p>"<%= mentor.profile.tagline %>"</p>
+              </div>
+              <div class="match-button">
+                <%= link_to "View Profile", profile_path(mentor), class: "btn-solid small"%>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 
@@ -216,26 +247,10 @@
           <%= link_to "See All Workshops", root_path, class: "btn-ghost-solid"%>
         </div>
       </div>
-
-</div>
-
-
-
     </div>
-
   </div>
-
-
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -249,3 +264,7 @@
 
 
 <!-- https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg -->
+
+<%= link_to "Take survey Mentee", question_path(@question_mentee) %>
+<%= link_to "Take survey Mentor", question_path(@question_mentor) %>
+

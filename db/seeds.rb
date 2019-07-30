@@ -7,55 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'time'
 
-INDUSTRIES = [
-  {name: 'Business'},
-  {name: 'Consulting'},
-  {name: 'Design'},
-  {name: 'Education'},
-  {name: 'Finance'},
-  {name: 'Food/Beverages'},
-  {name: 'Healthcare'},
-  {name: 'Hospitality'},
-  {name: 'Human Resources/HR'},
-  {name: 'Journalism/Writing'},
-  {name: 'Marketing'},
-  {name: 'Non-Profit'},
-  {name: 'Sales'},
-  {name: 'Tech'},
-]
-
-JOB_TITLES = [
-  {title: 'Banker'},
-  {title: 'CEO'},
-  {title: 'CFO'},
-  {title: 'Consultant'},
-  {title: 'COO'},
-  {title: 'CTO'},
-  {title: 'Dentist'},
-  {title: 'Designer'},
-  {title: 'Director'},
-  {title: 'Editor'},
-  {title: 'Founder/Co-founder'},
-  {title: 'Fullstack Developer'},
-  {title: 'General Doctor'},
-  {title: 'General Manager'},
-  {title: 'Management Consultant'},
-  {title: 'Nurse'},
-  {title: 'Product Manager'},
-  {title: 'Project Manager'},
-  {title: 'Researcher'},
-  {title: 'Salesperson'},
-  {title: 'Software Engineer'},
-  {title: 'Software Quality Assurance Analyst'},
-  {title: 'Surgeon'},
-  {title: 'Teacher'},
-  {title: 'Trader'},
-  {title: 'Tutor'},
-  {title: 'University Professor'},
-  {title: 'Web Designer'},
-  {title: 'Writer'},
-]
-
 EVENTS = [ {
   title: 'Hunger by Roxane Gay',
   description: 'In her phenomenally popular essays and long-running Tumblr blog, Roxane Gay has written with intimacy and sensitivity about food and body, using her own emotional and psychological struggles as a means of exploring our shared anxieties over pleasure, consumption, appearance, and health. As a woman who describes her own body as wildly undisciplined, Roxane understands the tension between desire and denial, between self-comfort and self-care. In Hunger, she explores her past—including the devastating act of violence that acted as a turning point in her young life—and brings readers along on her journey to understand and ultimately save herself.\n With the bracing candor, vulnerability, and power that have made her one of the most admired writers of her generation, Roxane explores what it means to learn to take care of yourself: how to feed your hungers for delicious and satisfying food, a smaller and safer body, and a body that can love and be loved—in a time when the bigger you are, the smaller your world becomes.',
@@ -88,7 +39,6 @@ EVENTS = [ {
   -Safety and consent
   -Attachment
   -Aging
-  -Pornography
   -Parenting/single parenting
 
   Join us for lively discussion on living and loving as a feminist in Miami!',
@@ -299,14 +249,7 @@ A train and ferry are probably the easiest ways to get there depending on where 
   },
 ]
 
-MENTEES = [{
-  first_name: 'Lisa',
-  last_name: 'Chinn',
-  email: 'lisa@mail.com',
-  password: 123456789,
-  mentee: true,
-  photo: 'https://media.licdn.com/dms/image/C4E03AQFpRrFvbFbGSA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=O4LBdDgP2U1p9eqoIJa8vXn0Og9TKVqxV50Ui4GEJb4',
-  },
+MENTEES = [
   {
   first_name: 'Alberta',
   last_name: 'Lowe',
@@ -314,6 +257,14 @@ MENTEES = [{
   password: 123456789,
   mentee: true,
   photo: 'https://media.licdn.com/dms/image/C4E03AQFGluTfOTVoEA/profile-displayphoto-shrink_200_200/0?e=1569456000&v=beta&t=B_Sq5VGJ2xnOD3mL0Z7__M80bFhQtktRHisWUjxMP-Q',
+  },
+  {
+  first_name: 'Lisa',
+  last_name: 'Chinn',
+  email: 'lisa@mail.com',
+  password: 123456789,
+  mentee: true,
+  photo: 'https://media.licdn.com/dms/image/C4E03AQFpRrFvbFbGSA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=O4LBdDgP2U1p9eqoIJa8vXn0Og9TKVqxV50Ui4GEJb4',
   },
   {
   first_name: 'Jennifer',
@@ -382,21 +333,21 @@ MENTORS = [{
    photo: 'https://images.unsplash.com/photo-1548260435-f3e7ec40e513?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80',
    },
   {
- first_name: 'Irene',
- last_name: 'Abadi',
- email: 'ireneabadi@mail.com',
- password: 123456789,
- mentee: false,
- photo: 'https://images.unsplash.com/photo-1544817747-b11e3e3b6ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
- },
+   first_name: 'Irene',
+   last_name: 'Abadi',
+   email: 'ireneabadi@mail.com',
+   password: 123456789,
+   mentee: false,
+   photo: 'https://images.unsplash.com/photo-1544817747-b11e3e3b6ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+   },
  {
- first_name: 'Julia',
- last_name: 'Adams',
- email: 'juliaadams@mail.com',
- password: 123456789,
- mentee: false,
- photo: 'https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1312&q=80',
- },
+   first_name: 'Julia',
+   last_name: 'Adams',
+   email: 'juliaadams@mail.com',
+   password: 123456789,
+   mentee: false,
+   photo: 'https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1312&q=80',
+   },
 ]
 
 
@@ -449,7 +400,7 @@ MENTEE_PROFILES = [{
   hobbies: 'Doing yoga, reading books, playing tennis and golf',
   goals: 'Be a management consultant specializing in healthcare practice and hopefully exiting to the health-tech industry in the future.',
   birthday: Date.new(1993, 6, 8),
-  description: 'Alberta is passionate about problem solving and communicating with people. She has had working experience in consumer goods, retail, and healthcare in international settings (Hong Kong, Indonesia, USA, Switzerland, Middle East). She enjoys cross-cultural collaboration and her leadership experience includes founding title at Women in Leadership and presidency at Nash Business Cohort Community in HKUST. Alberta is interested in management consulting, healthcare, and third-wave coffee. ',
+  description: 'Daniella is passionate about problem solving and communicating with people. She has had working experience in consumer goods, retail, and healthcare in international settings (Hong Kong, Indonesia, USA, Switzerland, Middle East). She enjoys cross-cultural collaboration and her leadership experience includes founding title at Women in Leadership and presidency at Nash Business Cohort Community in HKUST. Daniella is interested in management consulting, healthcare, and third-wave coffee. ',
   tagline: 'Business management student who is about to enter management consulting industry. Looking for a mentor in the consulting industry to guide her.',
   public: true,
   phone: 91154568986,
@@ -533,6 +484,7 @@ MENTOR_PROFILES = [
   state: 'CA',
   fav_books: 'Lean In by Sheryl Sandberg, Original by Adam Grant, Option B by Sheryl Sandberg and Adam Grant',
   hobbies: 'Writing, giving TED Talks',
+  goals: 'To lead the world\'s largest companies in making decisions that improve the world, and to mentor upcoming generations',
   birthday: Date.new(1969, 8, 28),
   description: 'There is no perfect fit when you are looking for the next big thing to do. You have to take opportunities and make an opportunity fit for you, rather than the other way around. The ability to learn is the most important quality a leader can have.',
   tagline: 'We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.',
@@ -540,7 +492,7 @@ MENTOR_PROFILES = [
   phone: 11758950024,
 },
 {
-  current_title: 'Senior Partner and Managing Director',
+  current_title: 'Senior Partner',
   current_employer: 'Boston Consulting Group',
   current_industry: 'Management Consulting',
   years_in_current_industry: 35,
@@ -562,8 +514,9 @@ MENTOR_PROFILES = [
   fav_books: 'In Search of Lost Time by Marcel Proust, Don Quixote by Miguel de Cervantes',
   fav_quote: 'All that we see or seem is but a dream within a dream - Edgar Allan Poe',
   hobbies: 'Acrobatics, acting, and beatboxing',
+  goals: 'To become a global tought leader in the area of healthcare and technology, as well as to mentor upcoming professionals in the industry',
   birthday: Date.new(1969, 8, 11),
-  description: 'Daniela is a healthcare and technology expert working with clients in different continents to help them transform their businesses. She focuses on strategy design and implementation, organization design, operational excellence, and innovation management. She leads BCG social impact activities in the Middle East working with different global and local NGOs.',
+  description: 'Daniella is a healthcare and technology expert working with clients in different continents to help them transform their businesses. She focuses on strategy design and implementation, organization design, operational excellence, and innovation management. She leads BCG social impact activities in the Middle East working with different global and local NGOs.',
   tagline: 'Experienced healthcare and management expert, eager to help young professionals pursuing the health-tech consulting path',
   public: true,
   phone: 1987233118,
@@ -663,7 +616,7 @@ MENTOR_PROFILES = [
  year_graduated_masters: 2003,
  city: 'Los Angeles',
  state: 'CA',
- fav_books: 'Start with Why by Simon Sinek and Mindset  by Carol Dweck',
+ fav_books: 'Start with Why by Simon Sinek and Mindset by Carol Dweck',
  hobbies: 'Biking',
  birthday: Date.new(1981, 4, 11),
  fav_quote: 'It is better to fail in originality than to succeed in imitation.',
@@ -675,21 +628,19 @@ MENTOR_PROFILES = [
 },
 {
  current_title: 'Chief Executive Officer',
- current_employer: 'Douglas Elliman Real Estate',
- current_industry: 'Real Estate',
+ current_employer: 'Apprenti',
+ current_industry: 'Tech',
  years_in_current_industry: 6,
  previous_title: 'Chief Operating Officer',
- previous_employer: 'Dolly Lenz Real Estate',
- previous_industry: 'Real Estate',
+ previous_employer: '8th Light',
+ previous_industry: 'Tech',
  years_in_previous_industry:4,
  bachelors_university: 'Harvard University',
- bachelors_degree: 'BA, Economics',
+ bachelors_degree: 'BA, Computer Science',
  year_graduated_bachelors: 1998,
  masters_university: 'Stanford University',
- masters_degree: 'Masters in Finance',
+ masters_degree: 'Masters in Computer Science',
  year_graduated_masters: 2004,
- doctorate_university:'Harvard University',
- doctorate_degree:'PhD in Economics',
  year_graduated_doctorate: 2009,
  city: 'New York City',
  state: 'NY',
@@ -735,183 +686,317 @@ MENTOR_PROFILES = [
 },
 ]
 
-MESSAGES = [
-  {content: 'Hi, how\'s it going?0'},
-  {content: 'Hi, how\'s it going?1'},
-  {content: 'Hi, how\'s it going?2'},
-  {content: 'Hi, how\'s it going?3'},
-  {content: 'Hi, how\'s it going?4'},
-  {content: 'Hi, how\'s it going?5'},
-  {content: 'Hi, how\'s it going?6'},
-  {content: 'Hi, how\'s it going?7'},
-  {content: 'Hi, how\'s it going?8'},
-  {content: 'Hi, how\'s it going?9'},
-  {content: 'Hi, how\'s it going?10'},
-  {content: 'Hi, how\'s it going?11'},
-  {content: 'Hi, how\'s it going?12'},
-  {content: 'Hi, how\'s it going?13'},
-  {content: 'Hi, how\'s it going?14'},
-]
-
 FORUMS = [
   {name: "Entrepreneurship"},
-  {name: "Career change"},
-  {name: "Career growth"},
-  {name: "Negotiation strategies"},
-  {name: "Learning how to network"},
-  {name: "Industry-specific skills"},
-  {name: "Dealing with biases in the workplace"},
-  {name: "Developing leadership skills"},
-  {name: "Creating work-life balance"},
-  {name: "Building confidence"}
+  {name: "Career Change"},
+  {name: "Career Growth"},
+  {name: "Negotiation Strategies"},
+  {name: "Learning How to Network"},
+  {name: "Industry-specific Skills"},
+  {name: "Dealing with Biases in the Workplace"},
+  {name: "Developing Leadership Skills"},
+  {name: "Creating Work-Life Balance"},
+  {name: "Building Confidence"}
 ]
 
-POSTS = [ {
-  subject: "Post 1",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+ENTREPRENEURSHIP_POSTS = [ {
+  subject: "Entrepreneurs, what do you do and how did you get there?",
+  content: "I have wanted to venture out on my own but find little guidance for women. The last time I picked up a book that I thought would help, it didn't. It was called Lean In and it was aimed towards mothers in the business field. I am 22, single, no children and looking for guidance from those more experienced. So what do you do and what motivated you?"
 },
 {
-  subject: "Post 2",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+  subject: "Ladies working from home - what are your top pain points with running your own business?",
+  content: "I'm hoping to launch a business soon, so I'd like to know what I'm in for!"
 },
 {
-  subject: "Post 3",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 4",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 5",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 6",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 7",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 8",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 9",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 10",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 11",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 12",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 13",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 14",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 15",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 16",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 17",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 18",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 19",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 20",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 21",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 22",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 23",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 24",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 25",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 26",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 27",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 28",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 29",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
-},
-{
-  subject: "Post 30",
-  content: "This is the rest of my post after the subject. I'll give the details of whatever my question is."
+  subject: "Calling entrepreneurs!",
+  content: "1: When did you start your company? 2: What do you do? 3: What are some challenges you face, particularly associated with being a (female) entrepreneur? "
 }
 ]
 
-REPLIES = [ {
-  content: "I like the way you think."
+ENTREPRENEURSHIP_REPLIES_ONE = [ {
+  content: "I am the cofounder of a software development consultancy building system integration solutions with a focus on startups and growth-stage companies. I agree with you, there are very few women who identify as entrepreneurs, and even fewer who found tech companies! I'm hoping to see women within the younger generations fill that gap. What business are you hoping to start?"
 },
 {
-  content: "You deserve a raise."
+  content: "I own and operate a company that I started from the ground up - $2,000 investment, started in a spare room in my home, added online, now have a brick & mortar and online business that sometimes gets so freaking busy that it kind of boggles my mind. I've had this concept for almost five years, my background is in corporate retail/planning & allocation/supply chain. I'm 36, married, no kids (no thanks), absolutely loving what I do and working hard to build this brand and concept to potentially franchise."
 },
-
-  content: "This is exactly why a mentor would be so helpful."
+{
+  content: "I run a screen print shop and two sister Apparel companies. My parents started one Apparel company and we just grew from there. I started one on my own. I was a zookeeper, got pregnant, needed to make money doing something else but wanted to stay in the same type of work (conservation) so I make clothes and donate to conservation. Best decision ever."
+},
+{
+  content: "I am 21, and the co-founder of a venture backed tech startup. I handle customer success, PR and internal logistics. Honestly, entrepreneurship is not something you can learn from a book. I have a completely non conventional bg and I just started this with my co-founders. Just find people around you who are ambitious and passionate about problem solving and starting building products. That is the best way."
+},
+{
+  content: "Hello! I stay motivated because...well I have a car payment to make haha. No, I really love what I do and I love that I get to do it on my own terms. I can accept the clients I think would be good to work with, and luckily I've had a really good go with that. One of my current clients I got off of this forum has been an absolute gem to work with. I built my model on integrity, which the prior agency I worked for lacked severely. That made me want to do things \"the right way\" and help others."
+}
 ]
 
-puts "Cleaning database"
-Match.destroy_all
-EventBooking.destroy_all
-Event.destroy_all
-Profile.destroy_all
-QuestionAnswerPair.destroy_all
-SurveyQuestion.destroy_all
-Survey.destroy_all
-Question.destroy_all
-AnswerOption.destroy_all
-User.destroy_all
-Forum.destroy_all
-Post.destroy_all
-Reply.destroy_all
+ENTREPRENEURSHIP_REPLIES_TWO = [ {
+  content: "Never really having time “off”. The business is always in the back of my mind. Even outside of typical business hours I constantly check my emails and respond to clients. I’ve recently turned business notifications off on my phone which has helped a lot, but it’s still always in my mind"
+},
+{
+  content: "Constant interruptions from kids and/or the phone. When I work, concentration for certain processes is paramount, and while the older two kids know to leave me alone when I have a torch going (I make jewelry), the littlest starts shouting questions from the living room while running into my workspace. "
+},
+{
+  content: "Still haven't figured out how to get ahead enough to afford health insurance (US)."
+},
+{
+  content: "Oh lord, I could have made this post, I feel every one of these. Time zones mean I don't really stop working at a certain time (clients worldwide) so the idea of a break or time off, or a vacation is so guilt-inducing. I have enough hotel and airline points for a free vacation and it still is like...but what if."
+},
+{
+  content: "I'd have to agree with all these points. I literally have to force myself to \"plug-out\" and take a breather sometimes—it's non-stop which in itself is a blessing when so many have no work but all 3 points above can be completely overwhelming."
+}
+]
+
+ENTREPRENEURSHIP_REPLIES_THREE = [ {
+  content: "1. Last winter.
+  2. I am blogger and dog nutritionist. (Online business)
+  3. None I can think of, to be honest. I haven't been met with any gender based challenges thus far. Considering the nature of my business, I don't think I will see much."
+},
+{
+  content: "1. I've been a Consultant IT Tech for the last 3/4 years.
+  2.I work with companies that have a technical project to roll out that is more work than their normal IT dept can deal with. Help them to automate repetitive tasks, plan a solution, implement it & train users.
+  3.Ideally I'd like to start doing this more for small businesses, solo business people & entrepreneurs like me. So website reviews, one-to-one advice on how they can make their idea a reality, even when starting from limited resources. The challenges are growing a network and becoming known for good advice."
+},
+{
+  content: "1. May, 2012
+  2. I'm running an educational consulting firm that helps students through the college admissions process and college students figure out what they want to be when they grow up.
+  3. Getting taken seriously is the hardest, I think. I'm currently working my day job as my business gains traction and I can't tell you how many people at work tell me I'm wasting my time or that I'll fail. After all, I'm supposed to be home taking care of my daughter and not working in the eyes of my coworkers (I'm in a male dominated, old school industry)."
+},
+{
+  content: "I work for my mother, but technically she started the business so I will reference our conversation in the matter.
+
+  1. We bought a website in 2008 and started an s corp. in 2009 we became active.
+  2. A service business. We access or help insurance adjusters access steep and tall homes/buildings.
+  3. In a predominantly male market it's hard to be taken professionally. Man times the clients are older than myself and my mother and have been in the industry for years. Since we are at the bottom of the totem pole offering services, we get yelled at when things don't go right. Sometimes it's even a typo in their end in the request form. Although most of the men are very polite, we often run into men being rude after discovering the business is run by women. I assume a woman who owns a construction company would be treated the same."
+},
+{
+  content: "1. I started an online store in 2010 and sold it late 2012. While managing it (I sold fertility/maternity products mostly) I got an idea for a product for pregnant women so I started a company (August 2011) and after lots of trouble with finding and dealing with manufacturers the product is finally ready and is being shipped overseas to us, we´ll launch the website in a few weeks hopefully. 2. I'm the CEO and co-founder. An acquaintance (another woman) is the other founder and she's in sales. So far I've been in charge of designing the product, contacting factories and agents, raising money, dealing with graphic designers, setting up the website and probably a lot of other things I'm forgetting. 3. I come from a pretty gender equal country and must say that being a woman has mostly opened doors for me, for example I've received 2 grants and 1 business loan only available for women."
+}
+]
+
+CAREER_CHANGE_POSTS = [ {
+  subject: "Dancing into Ops - How I got my job",
+  content: "Being able to pivot our career is a woman’s prerogative and should be exercised how you choose. If you plan to pivot your career, know that you’re not alone. I didn’t have great communities like Elpha. I didn’t have a network of people who were in the space I was trying to move to, so I read all the industry news I could, networked so not comfortably and kept learning. Communities like this make it easier and less lonely, so feel free to reach out."
+}
+]
+
+CAREER_CHANGE_REPLIES = [ {
+  content: "This is really inspirational. I particularly appreciated learning that this pivot took years of preplanning. Everyone thinks it \"just happens\" but a lot of work & learning goes into transitions like this."
+},
+{
+  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!"
+},
+{
+  content: "I appreciate the story of your pivot/transition. I am in the middle of mine and it is challenging both in good ways and not so fun ways. It is nice to hear about your challenges and successes to keep me going! Thank you!"
+}
+]
+
+CAREER_GROWTH_POSTS = [ {
+  subject: "Take risks to reach your goals",
+  content: "I’ve taken a number of big risks during my career. I’ve learned that taking career risks doesn’t always mean having extraordinary courage. Instead, it can mean looking for new opportunities or creating them for yourself then pursuing them when you can."
+}
+]
+
+CAREER_GROWTH_REPLIES = [ {
+  content: "Thank you for sharing! I found a lot of comfort in this piece. My background reminds me of a fireplace where every tile is a different style and sometimes size - fitting everything together to make the larger piece work can be frustrating and discouraging. It's so important to see other women making theirs work. I'm also a huge fan of reaching out and offering help where I can so I'm thrilled to see that Abadesi was able to help you."
+},
+{
+  content: "Thank you for taking the time to share your insights! This story is truly inspiring. I loved how you took risk after risk and continued to seek learning opportunities that stretched you."
+},
+{
+  content: "Thank you for your sharing you story! As an artist, I've been told that we are risks. (Which isn't the greatest feedback to hear) When the thought was broken down, it does make sense as to why patrons or otherwise would see us as \"risks\"."
+}
+]
+
+NEGOTIATION_STRATEGIES_POSTS = [ {
+  subject: "What advice do you have for negotiating in the workplace? Any tips or success stories?",
+  content: "Unfortunately, I've read that when women negotiate, people are more likely to think of them as aggressive or intimidating. How do we avoid this and still get what we deserve? Thanks for your insights!"
+}
+]
+
+NEGOTIATION_STRATEGIES_REPLIES = [ {
+  content: "Many people take the time to research before a negotiation. A much smaller percentage talk to others about how to approach the issue and then rehearse the actual conversation. Make sure you do. There’s evidence that people who take those additional steps are more likely to get a raise."
+},
+{
+  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!"
+},
+{
+  content: "I appreciate the story of your pivot/transition. I am in the middle of mine and it is challenging both in good ways and not so fun ways. It is nice to hear about your challenges and successes to keep me going! Thank you!"
+}
+]
+
+LEARNING_HOW_TO_NETWORK_POSTS = [ {
+  subject: "So how do successful women network?",
+  content: "What I’ve discovered from coaching professional women for over a decade is that many women have no idea what it means to network to support their aspirations. I label their approach to networking, the ‘throw spaghetti against the wall to see what sticks’ approach. It has no focus or intention. These women go to events, collect business cards, maybe do some follow up, but for the most part their networks consist of a random group of people who barely know them."
+}
+]
+
+LEARNING_HOW_TO_NETWORK_REPLIES = [ {
+  content: "Networking is really important for building a book of business and business development. And I think that a lot of people don’t tell you that you need to start that early on in your career. Because by year seven, everyone’s turning around going, ‘Well, what relationships do you have? And how are you bringing in business?’ And networking is really an important part of that."
+},
+{
+  content: "Being a part of the conversation is always helpful. It helps keep me top of mind for business opportunities, allowed me to have a network to ask advice, and enabled me to understand the current market terms of the business. There is no downside to networking."
+},
+{
+  content: "Men go to different types of events like sports, golf, and conferences. Women tend to go to events that don’t last as long like dinners, breakfast, lunches, and conferences in their hometown or those that only last a day or so and take place during the week."
+}
+]
+
+INDUSTRY_SPECIFIC_SKILLS_POSTS = [ {
+  subject: "The shortage of women in tech is especially pronounced within the field of Cybersecurity",
+  content: "I’ve experienced this firsthand through my career as both a consultant and engineer. I’ve wondered why so few women go into the field considering Cybersecurity affects everyone and arguably has a more negative impact on women than men."
+}
+]
+
+INDUSTRY_SPECIFIC_SKILLS_REPLIES = [ {
+  content: "LOVE this plea to get more women into cybersecurity. For me at least, there is a daunting amount of things to learn and so many folks who have been at it longer that sometimes it makes me feel like I am an imposter in this space - even though I've been working in it for nearly 5+ years."
+},
+{
+  content: "My Masters is in Information Security, but I've never felt confident enough that I know any of the technical side of it - especially since I got my Masters 7 years ago and times have changed! And most of the cybersecurity/InfoSec positions within my company require some of that technical knowledge, so it's a barrier for me to even apply for those positions."
+},
+{
+  content: "I completely agree with the things mentioned above- and the statistics puts everything in so much perspective. From experience, it is really intimidating at first as most mentors I've been assigned have been older, white men, and a lot of the discussions I'm having have been with and in front of men. As someone who is a lot younger and also a female with limited help from other women in the specific field of cybersecurity, it's been difficult to be taken seriously!"
+}
+]
+
+DEALING_WITH_BIASES_IN_THE_WORKPLACE_POSTS = [ {
+  subject: "What example of gender inequality in the workplace affects you today?",
+  content: "I'm an engineer and the one I see consistently is my female coworkers(myself included) getting interrupted a lot. Part of this stems from the way women communicate information (lots of details, more info than necessary) however I still find it rude and condescending."
+}
+]
+
+DEALING_WITH_BIASES_IN_THE_WORKPLACE_REPLIES = [ {
+  content: "I work in retail. My first day on the floor at my new job, my boss tells me I am required to wear heels. I had just gone over the dress code, so I asked where it stated that because I must have overlooked it. He said \"it's not corporate policy, it's mine.\""
+},
+{
+  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!"
+},
+{
+  content: "I appreciate the story of your pivot/transition. I am in the middle of mine and it is challenging both in good ways and not so fun ways. It is nice to hear about your challenges and successes to keep me going! Thank you!"
+}
+]
+
+DEVELOPING_LEADERSHIP_SKILLS_POSTS = [ {
+  subject: "Are you a leader or a follower?",
+  content: "Let's say theres a team project, are you usually leading the group or just following along, taking orders? Feel free to give examples from your life/place of work."
+}
+]
+
+DEVELOPING_LEADERSHIP_SKILLS_REPLIES = [ {
+  content: "I'm a leader because I don't trust other people to do things right(and by right I mean the way I want, lol). I don't want anybody directing me or telling me what to do, its just my personality. I don't mind doing all the work, I like solving problems and finishing things."
+},
+{
+  content: "I'm introverted with a quiet voice who has no natural 'authorative aura' or whatever. I usually inevitably disappear into the background and it's from there I prefer to have my influence on things. I could say it depends on the situation, but that's looking at it idealistically. Realistically speaking, I've always fallen into the role of the follower. If I am being told to do something, whether it be at a job, uni, or elsewhere, I do it, and I tend to do it to the word, precisely. I take things rather literally and can't stand vague directions."
+},
+{
+  content: "If someone is involved who has all of my skills and talents and a stronger personality than I do, I follow and things usually remain that way as long as that person is around. If a person has a stronger personality but not the skills and talents I do, I start by following but everyone else usually recognizes over time (on their own; I'm not backstabbing the person) that the person doesn't have enough to back up the personality and I get sent up the ranks."
+}
+]
+
+CREATING_WORK_LIFE_BALANCE_POSTS = [ {
+  subject: "For moms, what’s a good career that provides work life balance?",
+  content: "I'm potentially looking to switch careers, but I also want to start a family. What career fields would allow me to have a good work/life balance as a mother?"
+}
+]
+
+CREATING_WORK_LIFE_BALANCE_REPLIES = [ {
+  content: "Teacher! My hours are great (I leave for work at 7am and can be home by 3:30pm, even with my 35 minute commute), you have summers and lots of holidays off, and there is a real \"family first\" vibe, at least at all the schools I’ve worked at."
+},
+{
+  content: "Lots of career paths are great. In a different world, I'd be a teacher. In Canada, being a teacher is a great career. Summers off (mostly), breaks off, you have an easier schedule (despite all the extra marking), and great benefits. There are also tech jobs that are good for moms, because of the remote work possibilities. Working in government and public jobs can be good too."
+},
+{
+  content: "Speech-language pathologist! The only downside is that you need at least a master's degree. But the upside is you could choose to work in a school, private clinic, skilled nursing facility, hospital, etc. There's so much flexibility and possibility in the field."
+}
+]
+
+BUILDING_CONFIDENCE_POSTS = [ {
+  subject: "Ways women can grow the confidence to take their seat at the table",
+  content: "Closing the gender gap will require stepping up, leaning into discomfort and acting with the confidence we women often wish we had (or had more of!). So if you’re wondering what you can do to build your confidence, banish your doubt and make your mark, first look within and ask yourself this question: What would I do today if I were being really brave? What would you do?"
+}
+]
+
+BUILDING_CONFIDENCE_REPLIES = [ {
+  content: "Ask for what you want! It’s simple enough but let’s face it, too often we dilute what we ask for or we don’t ask at all for fear of appearing needy or being rejected. But how can you can’t expect to get what you want if you’re not willing to ask for it? There’s a direct correlation between getting what you want and asking for it. Ask big."
+},
+{
+  content: "Say no. It’s a short little word but it’s one many women struggle to say because we know it’s not the answer people want to hear and let’s face it, we love keeping people happy! But if you’re ever going to make your biggest mark on the world, you’ve got to learn to say no to the \"good\" so you can create space for \"great.\""
+},
+{
+  content: "Yes, you’re a nice person and you’re loathe to be a trouble-maker, but if all you ever do is nod your head, smile politely and \"go along to get along,\" then you are selling yourself short. Way short. As social beings we are wired to belong to a \"tribe\", but too often we let our fear of disapproval keep us from confidently expressing our opinion. Pushing back is not about being pushy. It’s simply owning your right to see things differently than others. Sure, women have been called bossy for simply speaking their truth, but that doesn’t mean you shouldn’t speak up."
+}
+]
+
+INDUSTRIES = [
+  {name: 'Business'},
+  {name: 'Consulting'},
+  {name: 'Design'},
+  {name: 'Education'},
+  {name: 'Finance'},
+  {name: 'Food/Beverages'},
+  {name: 'Healthcare'},
+  {name: 'Hospitality'},
+  {name: 'Human Resources/HR'},
+  {name: 'Journalism/Writing'},
+  {name: 'Marketing'},
+  {name: 'Non-Profit'},
+  {name: 'Sales'},
+  {name: 'Tech'},
+]
+
+JOB_TITLES = [
+  {title: 'Banker'},
+  {title: 'CEO'},
+  {title: 'CFO'},
+  {title: 'Consultant'},
+  {title: 'COO'},
+  {title: 'CTO'},
+  {title: 'Dentist'},
+  {title: 'Director'},
+  {title: 'Editor'},
+  {title: 'Founder/Co-founder'},
+  {title: 'Fullstack Developer'},
+  {title: 'General Doctor'},
+  {title: 'General Manager'},
+  {title: 'Management Consultant'},
+  {title: 'Nurse'},
+  {title: 'Product Manager'},
+  {title: 'Project Manager'},
+  {title: 'Researcher'},
+  {title: 'Salesperson'},
+  {title: 'Software Engineer'},
+  {title: 'Software Quality Assurance Analyst'},
+  {title: 'Surgeon'},
+  {title: 'Teacher'},
+  {title: 'Trader'},
+  {title: 'University Professor'},
+  {title: 'Venture Capitalist'},
+  {title: 'Web Designer'},
+  {title: 'Writer'},
+]
+
+  puts "Cleaning database"
+
+if Rails.env == "development"
+  Message.destroy_all
+  Industry.destroy_all
+  JobTitle.destroy_all
+  Donation.destroy_all
+  Match.destroy_all
+  EventBooking.destroy_all
+  Event.destroy_all
+  Profile.destroy_all
+  UserAnswer.destroy_all
+  QuestionAnswerPair.destroy_all
+  SurveyQuestion.destroy_all
+  Survey.destroy_all
+  Question.destroy_all
+  AnswerOption.destroy_all
+  User.destroy_all
+  Forum.destroy_all
+  Post.destroy_all
+  Reply.destroy_all
+end
 
 puts ""
 puts "Starting seeding process..."
@@ -969,32 +1054,208 @@ FORUMS.each do |forum|
   puts " - created #{seed_forum.name}"
 end
 
-puts "Creating Posts"
-POSTS.each do |post|
+puts "Creating Entrepreneurship Posts"
+ENTREPRENEURSHIP_POSTS.each do |post|
   seed_post = Post.new(post)
   seed_post.user = User.all.sample
-  seed_post.forum = Forum.all.sample
+  seed_post.forum_id = Forum.where(name: "Entrepreneurship").first.id
   seed_post.save!
-  puts " - created #{seed_post.subject}"
+  puts " - created #{seed_post.forum.name} post"
 end
 
-puts "Creating Replies"
-33.times do
-  REPLIES.each do |reply|
-    seed_reply = Reply.new(reply)
-    seed_reply.user = User.all.sample
-    seed_reply.post = Post.all.sample
-    seed_reply.save!
-    puts " - created reply #{seed_reply.id}"
-  end
+puts "Creating Entrepreneurship Replies"
+ENTREPRENEURSHIP_REPLIES_ONE.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
 end
 
-puts "Creating Matches"
-4.times do |i|
-  match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
-  match.save!
-  puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
+ENTREPRENEURSHIP_REPLIES_TWO.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[1].id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
 end
+
+ENTREPRENEURSHIP_REPLIES_THREE.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[2].id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Career Change Posts"
+CAREER_CHANGE_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Career Change").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Career Change Replies"
+CAREER_CHANGE_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Career Change")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Career Growth Posts"
+CAREER_GROWTH_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Career Growth").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Career Growth Replies"
+CAREER_GROWTH_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Career Growth")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Negotiation Strategies Posts"
+NEGOTIATION_STRATEGIES_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Negotiation Strategies").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Negotiation Strategies Replies"
+NEGOTIATION_STRATEGIES_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Negotiation Strategies")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Learning How to Network Posts"
+LEARNING_HOW_TO_NETWORK_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Learning How to Network").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Learning How to Network Replies"
+LEARNING_HOW_TO_NETWORK_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Learning How to Network")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Industry-specific Skills Posts"
+INDUSTRY_SPECIFIC_SKILLS_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Industry-specific Skills").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Industry-specific Skills Replies"
+INDUSTRY_SPECIFIC_SKILLS_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Industry-specific Skills")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Dealing with Biases in the Workplace Posts"
+DEALING_WITH_BIASES_IN_THE_WORKPLACE_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Dealing with Biases in the Workplace").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Dealing with Biases in the Workplace Replies"
+DEALING_WITH_BIASES_IN_THE_WORKPLACE_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Dealing with Biases in the Workplace")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Developing Leadership Skills Posts"
+DEVELOPING_LEADERSHIP_SKILLS_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Developing Leadership Skills").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Developing Leadership Skills Replies"
+DEVELOPING_LEADERSHIP_SKILLS_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Developing Leadership Skills")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Creating Work-Life Balance Posts"
+CREATING_WORK_LIFE_BALANCE_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Creating Work-Life Balance").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Creating Work-Life Balance Replies"
+CREATING_WORK_LIFE_BALANCE_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Creating Work-Life Balance")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+puts "Creating Building Confidence Posts"
+BUILDING_CONFIDENCE_POSTS.each do |post|
+  seed_post = Post.new(post)
+  seed_post.user = User.all.sample
+  seed_post.forum_id = Forum.where(name: "Building Confidence").first.id
+  seed_post.save!
+  puts " - created #{seed_post.forum.name} post"
+end
+
+puts "Creating Building Confidence Replies"
+BUILDING_CONFIDENCE_REPLIES.each do |reply|
+  seed_reply = Reply.new(reply)
+  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Building Confidence")).first.id
+  seed_reply.save!
+  puts " - created reply #{seed_reply.id}"
+end
+
+# puts "Creating Matches"
+# 4.times do |i|
+#   match = Match.new(mentee: User.first(MENTEES.length)[i], mentor: User.last(MENTORS.length)[i], status: 0)
+#   match.save!
+#   puts " - created match between #{match.mentee.first_name} and #{match.mentor.first_name}"
+# end
 
 INDUSTRIES.each do |ind|
   industry = Industry.new(ind)
@@ -1056,9 +1317,6 @@ MENTEE_QUESTIONS = [
       {
         content: "Video call"
       },
-      {
-        content: "Either"
-      }
     ]
   },
   {
@@ -1200,9 +1458,6 @@ MENTOR_QUESTIONS = [
       {
         content: "Video call"
       },
-      {
-        content: "Either"
-      }
     ]
   },
   {
@@ -1311,16 +1566,18 @@ MENTEE_QUESTIONS.each do |q|
     puts "creating answer option #{answer.content}"
     question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
     question_answer_pair.save!
-    puts "creating both together #{question.content} - #{answer.content}"
+    puts "creating both together #{question.content} - #{answer.content} -  #{question_answer_pair.id}"
   end
   survey_question = SurveyQuestion.new(survey: mentee_survey, question: question)
   survey_question.save!
   puts "survey questions"
 end
 
+mentor_questions_array = []
 MENTOR_QUESTIONS.each do |q|
   question = Question.new(q[:contents])
   question.save!
+  mentor_questions_array << question
   puts "creating mentor questions #{question.content}"
   q[:answers].each do |a|
     answer = AnswerOption.new(a)
@@ -1328,18 +1585,14 @@ MENTOR_QUESTIONS.each do |q|
     puts "creating answer option #{answer.content}"
     question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
     question_answer_pair.save!
-    puts "creating both together #{question.content} - #{answer.content}"
+    puts "creating both together #{question.content} - #{answer.content} -  #{question_answer_pair.id}"
   end
   survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
   survey_question.save!
-  puts "survey questions"
+  puts "survey questions mentor - #{survey_question.id}"
 end
 
-
-#needs special questions for each survey
-
-
-puts "special"
+puts "special mentee question"
 question = Question.new({ content: "I would like a mentor that works in the following industry (choose 1)", question_type: 0})
 question.save!
 
@@ -1350,34 +1603,36 @@ Industry.all.each do |ind|
   puts "created answer for industry question mentee survey"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "created question answer for industry question mentee survey"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentee_survey, question: question)
 survey_question.save!
-puts "survey questions mentee"
+puts "survey questions mentee - #{survey_question.id}"
 
 
-question = Question.new({ content: "I would like a mentor who has held the following position", question_type: 0 })
+question = Question.new({content: "I would like a mentor who has held the following position", question_type: 0 })
 question.save!
-
-puts "creating quesitons + answer options for Job Title question mentor survey"
+puts "creating questions + answer options for Job Title question mentor survey"
 JobTitle.all.each do |j|
   answer = AnswerOption.new(content: j.title)
   answer.save!
   puts "created answer for job title question"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "created question answer for job title question"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentee_survey, question: question)
 survey_question.save!
+
 puts "survey questions mentor"
 
-puts "special"
+puts "special question for mentor"
 question = Question.new({ content: "I would like a mentee that works in the following industry (choose 1)", question_type: 0})
 question.save!
+mentor_questions_array << question
+
 
 puts "creating answer options for industry questions"
 Industry.all.each do |ind|
@@ -1386,7 +1641,7 @@ Industry.all.each do |ind|
   puts "creating answer options for industry questions"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "creating answer options for industry questions"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
@@ -1395,6 +1650,8 @@ puts "creating answer options for industry questions"
 
 question = Question.new({ content: "I would like a mentee who has held the following position", question_type: 0 })
 question.save!
+mentor_questions_array << question
+
 
 puts "creating answer options for Job Title question"
 JobTitle.all.each do |j|
@@ -1403,132 +1660,140 @@ JobTitle.all.each do |j|
   puts "creating answer options for industry questions"
   question_answer_pair = QuestionAnswerPair.new(answer_option: answer, question: question)
   question_answer_pair.save!
-  puts "creating answer options for industry questions"
+  puts "creating both together #{answer.content} -  #{question_answer_pair.id}"
 end
 
 survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
 survey_question.save!
 puts "creating answer options for industry questions"
 
+MENTOR_ANSWERS = [
+  [
+    [0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0],
+    [2, 1],
+    [1, 3, 2, 4],
+    [10, 7, 4, 6, 8, 5, 3, 2, 9, 1],
+    [9, 10, 2, 4, 7, 1, 11, 6, 5, 3, 8],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 1, 1, 0, 0],
+    [0, 0, 0, 0, 1],
+    [2, 1],
+    [2, 3, 1, 4],
+    [6, 5, 3, 10, 7, 8, 4, 2, 1, 9],
+    [7, 8, 9, 5, 1, 6, 10, 11, 4, 2, 3],
+    [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0],
+    [2, 1],
+    [2, 3, 4, 1],
+    [1, 10, 2, 4, 5, 3, 6, 7, 8, 9],
+    [11, 9, 5, 10, 8, 3, 4, 6, 7, 2, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 1, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0],
+    [2, 1],
+    [1, 2, 3, 4],
+    [8, 7, 5, 3, 10, 6, 4, 2, 9, 1],
+    [1, 4, 7, 8, 2, 9, 10, 3, 11, 6, 5],
+    [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  ],
+  [
+    [0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0],
+    [2, 1],
+    [1, 3, 4, 2],
+    [1, 4, 2, 8, 5, 3, 9, 10, 7, 6],
+    [6, 1, 3, 4, 10, 5, 7, 8, 2, 11, 9],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [1, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0],
+    [1, 2],
+    [4, 3, 2, 1],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 1],
+    [2, 1],
+    [1, 2, 3, 4],
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  [
+    [0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0],
+    [1, 2],
+    [2, 1, 3, 4],
+    [7, 8, 3, 2, 6, 10, 9, 1, 4, 5],
+    [7, 8, 2, 3, 1, 6, 5, 4, 9, 11, 10],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+]
+
+puts "creating answer options for 8 mentors"
+
+User.where(mentee: false).each_with_index do |mentor, ma_index|
+  mentor_questions_array.each_with_index do |mentor_question, q_index|
+    mentor_question.question_answer_pairs.each_with_index do |mentor_q_a_p, qa_index|
+      user_answer = UserAnswer.new(user: mentor, question_answer_pair: mentor_q_a_p, value: MENTOR_ANSWERS[ma_index][q_index][qa_index])
+      user_answer.save!
+      puts "- mentor: #{mentor.first_name} / question: #{mentor_question.content} / answer: #{user_answer.question_answer_pair.answer_option.content} - value: #{user_answer.value} "
+    end
+  end
+end
+
+puts " #{UserAnswer.count} USER ANSWERS"
 
 
-  # {
-  #   contents: {content: "I would like a mentor that works in the following industry (choose 1)"
-  #   }, answers: [
-  #     {
-  #       content: "Business"
-  #     },
-  #     {
-  #       content: "Consulting"
-  #     },
-  #     {
-  #       content: "Design"
-  #     },
-  #     {
-  #       content: "Education"
-  #     },
-  #     {
-  #       content: "Finance"
-  #     },
-  #     {
-  #       content: "Food/Beverages"
-  #     },
-  #     {
-  #       content: "Healthcare"
-  #     },
-  #     {
-  #       content: "Hospitality"
-  #     },
-  #     {
-  #       content: "Human Resources/HR"
-  #     },
-  #     {
-  #       content: "Journalism/Writing"
-  #     },
-  #     {
-  #       content: "Non-Profit"
-  #     },
-  #     {
-  #       content: "Tech"
-  #     }
-  #   ]
-  # },
 
-  # {
-  #   contents: {
-  #     content: "I would like a mentor who has held the following position" },
-  #     answers: [
-  #     {
-  #       content: "CEO" #(or should I say Industry.all[0])
-  #     },
-  #     {
-  #       content: "CTO"
-  #     },
-  #     {
-  #       content: "CFO"
-  #     },
-  #     {
-  #       content: "COO"
-  #     },
-  #     {
-  #       content: "Product Manager"
-  #     },
-  #     {
-  #       content: "Designer"
-  #     },
-  #     {
-  #       content: "Researcher"
-  #     },
-  #     {
-  #       content: "Web Designer"
-  #     },
-  #     {
-  #       content: "Software Engineer"
-  #     },
-  #     {
-  #       content: "Fullstack Developer"
-  #     },
-  #     {
-  #       content: "Software Quality Assurance Analyst"
-  #     },
-  #     {
-  #       content: "Writer"
-  #     },
-  #     {
-  #       content: "Editor"
-  #     },
-  #     {
-  #       content: "Nurse"
-  #     },
-  #     {
-  #       content: "General Doctor"
-  #     },
-  #     {
-  #       content: "Surgeon"
-  #     },
-  #     {
-  #       content: "Dentist"
-  #     },
-  #     {
-  #       content: "Salespeon"
-  #     },
-  #   ]
-  # }
+# puts "creating user_answer options for Sheryl Sandberg (mentor1)"
+#   UserAnswer.new()
 
-# User.first(MENTEES.length).each do |user|
-#   Match.new(mentee: )
+# puts "Creating UserAnswers for all 8 mentors"
+#   MENTOR_ANSWERS.each_with_index do |value, index|
+#     mentor_answers = UserAnswer.new(value, index)
+#     mentee_profile.user = User.first(MENTEES.length)[index]
+#     mentee_profile.save!
+#     puts " - created #{mentee_profile.user.first_name}'s profile"
+#   end
 
+#   puts "Creating User Profiles (who are mentees)"
+#   MENTEE_PROFILES.each_with_index do |profile, index|
+#     mentee_profile = Profile.new(profile)
+#     mentee_profile.user = User.first(MENTEES.length)[index]
+#     mentee_profile.save!
+#     puts " - created #{mentee_profile.user.first_name}'s profile"
+#   end
 
-# class Match < ApplicationRecord
-#   belongs_to :mentor, class_name: 'User'
-#   belongs_to :mentee, class_name: 'User'
-#   has_many :messages
-
-#   validates :status, presence: true
-#   enum status: { pending: 0, ongoing: 1, canceled: 2 }
+# EVENTS.each do |event|
+#   seed_event = Event.new(event)
+#   seed_event.remote_photo_url = event[:photo]
+#   seed_event.save!
+#   puts " - created #{seed_event.title}"
+#   rand(1..5).times do
+#     event_booking = EventBooking.new(user: User.all.sample, event: seed_event, num_of_tickets: 2)
+#     event_booking.save!
+#     puts " - created #{event_booking.user.first_name}'s event booking"
+#   end
 # end
-
-# match.status = :pending
-
-# if match.pending?
 

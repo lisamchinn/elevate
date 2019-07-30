@@ -1,0 +1,14 @@
+<form action="/user_answers" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <input type="hidden" name="question" value="<%= @question.id %>">
+  <% @question.question_answer_pairs.each_with_index do |question_answer_pair, index| %>
+    <div class="checkbox-answer" style="background-color: blue; color: white; height: 100px; width: 100px; border: 1px solid red;">
+      <input type="checkbox" name="question_answer_pair[<%= index %>]" value="<%= question_answer_pair.id %>"><span><%= question_answer_pair.answer_option.content %></span>
+    </div>
+  <% end %>
+  <input type="submit">
+</form>
+
+
+
+

@@ -78,7 +78,10 @@ margin-bottom: 25px;
 .background-card {
    background-color: white;
    padding: 25px;
-   box-shadow: 2px 2px 4px grey;
+   box-shadow: 2px 2px 4px gray;
+   &.education {
+    min-height: 380px;
+   }
 h2 {
     font-size: 17px;
     margin-top: 8px;
@@ -124,7 +127,7 @@ margin-top: 10px;
 }
 
 .min-height-card {
-  min-height: 120px;
+  min-height: 140px;
   h4 {
   text-align: center;
    font-size: 13px;

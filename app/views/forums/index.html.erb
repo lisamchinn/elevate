@@ -1,6 +1,46 @@
-<h1>Forum Index</h1>
-<ul>
-  <% @forums.each do |forum| %>
-  <li><%= link_to forum.name, forum_path(forum) %></li>
-  <% end %>
-</ul>
+<h1 style="text-align: center;">Forums</h1>
+
+<div class="d-flex justify-content-center" style="margin-bottom: 10px;">
+  <form class="form-inline" action="/forums/" method='get'>
+    <div class="search-form-control form-group">
+      <input class="form-control string required text-black" style="width: 320px;" type="text" name="search" placeholder="Search all forums...">
+      <button name="button" type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+</div>
+
+<div class="container d-flex-wrap justify-content-center" style="min-height: 400px;">
+  <% if !@posts.nil? %>
+    <% if @posts.empty? %>
+      <div class="d-flex justify-content-center pt-3">
+        <p style="font-size: 18px;">No results for this search :(</p>
+      </div>
+    <% elsif @posts.count == 1 %>
+      <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned 1 result!</p>
+      <div class="d-flex justify-content-center pt-3">
+        <span><%= render 'components/card-post', post: @posts.first %></span>
+      </div>
+    <% else %>
+      <div class="d-flex justify-content-center pt-3">
+        <ul>
+          <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned <%= @posts.count %> results!</p>
+          <% @posts.each do |post| %>
+            <span><%= render 'components/card-post', post: post %></span>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="d-flex justify-content-center pt-3">
+      <span><%= link_to "Back to Forums", forums_path, class: "text-dark" %></span>
+    </div>
+  <% else %>
+    <ul>
+      <% @forums.each do |forum| %>
+        <%= render 'components/card-forum-cat', forum: forum %>
+      <% end %>
+    </ul>
+    <% end %>
+</div>
+<div class="d-flex justify-content-center">
+    <%= link_to "Back to Home", root_path, class: "text-dark" %>
+</div>

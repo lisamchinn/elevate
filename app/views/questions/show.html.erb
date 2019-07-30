@@ -1,0 +1,9 @@
+<div class="question-content">
+  <h5><%= @question.content %></h5>
+</div>
+
+<% if @question.question_type == 'checkbox' %>
+  <%= render 'components/card-survey-checkbox', question: @question%>
+<% elsif @question.question_type == 'special' %>
+  <%= render 'components/card-survey-special', question: @question%>
+<% end %>

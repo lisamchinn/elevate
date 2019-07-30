@@ -15,7 +15,7 @@ class MatchesController < ApplicationController
     @match.mentee = current_user
     authorize @match
     if @match.save
-      redirect_to root_path
+      redirect_to match_messages_path(@match)
     else
       render :new
     end

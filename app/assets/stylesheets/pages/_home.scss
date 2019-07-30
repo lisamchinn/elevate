@@ -387,7 +387,30 @@
   }
 }
 
+.paragraph-margin {
+  margin-bottom: 200px;
+  margin-left: 12px;
+}
 
+.image-shadow {
+  box-shadow: 5px 10px red;
+}
+
+.big-cont-wrapper {
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.shadow-and-width {
+  width:750px;
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 21px;
+  margin-top: 65px;
+   margin-bottom: 65px;
+
+}
 
 // .section-six-background {
 //   background-size: cover;

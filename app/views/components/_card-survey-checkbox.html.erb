@@ -1,6 +1,4 @@
-
-
-<form action="/user_answers" method="post">
+<form action="/user_answers" method="post" id="checkbox-form">
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
   <input type="hidden" name="question" value="<%= @question.id %>">
 
@@ -8,12 +6,14 @@
     <ul class="ks-cboxtags">
     <% @question.question_answer_pairs.each_with_index do |question_answer_pair, index| %>
       <!-- <ul class="ks-cboxtags"> -->
-      <li><input type="checkbox" id="lisa[<%= index %>]" name="question_answer_pair[<%= index %>]" value="<%= question_answer_pair.id %>"><label for="lisa[<%= index %>]"><span><%= question_answer_pair.answer_option.content %></span></label></li>
+      <li><input class="input-checkbox" type="checkbox" id="lisa[<%= index %>]" name="question_answer_pair[<%= index %>]" value="<%= question_answer_pair.id %>"><label for="lisa[<%= index %>]"><span><%= question_answer_pair.answer_option.content %></span></label></li>
     <!-- </ul> -->
     <% end %>
     </ul>
   </div>
-  <input type="submit">
+  <div class="d-flex align-items-center justify-content-center">
+    <input type="submit" class="mt-2 mb-4" id="submit-checkbox">
+  </div>
 </form>
 
 <!--

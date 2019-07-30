@@ -688,15 +688,15 @@ MENTOR_PROFILES = [
 
 FORUMS = [
   {name: "Entrepreneurship"},
-  {name: "Career Change"},
-  {name: "Career Growth"},
-  {name: "Negotiation Strategies"},
-  {name: "Learning How to Network"},
-  {name: "Industry-specific Skills"},
-  {name: "Dealing with Biases in the Workplace"},
-  {name: "Developing Leadership Skills"},
-  {name: "Creating Work-Life Balance"},
-  {name: "Building Confidence"}
+  {name: "Career change"},
+  {name: "Career growth"},
+  {name: "Negotiation strategies"},
+  {name: "Learning how to network"},
+  {name: "Industry-specific skills"},
+  {name: "Handling Workplace Biases"},
+  {name: "Developing leadership skills"},
+  {name: "Creating work-life balance"},
+  {name: "Building confidence"}
 ]
 
 ENTREPRENEURSHIP_POSTS = [ {
@@ -951,7 +951,7 @@ JOB_TITLES = [
   {title: 'Consultant'},
   {title: 'COO'},
   {title: 'CTO'},
-  {title: 'Dentist'},
+  {title: 'Designer'},
   {title: 'Director'},
   {title: 'Editor'},
   {title: 'Founder/Co-founder'},
@@ -1178,20 +1178,20 @@ INDUSTRY_SPECIFIC_SKILLS_REPLIES.each do |reply|
   puts " - created reply #{seed_reply.id}"
 end
 
-puts "Creating Dealing with Biases in the Workplace Posts"
+puts "Creating Handling workplace biases Posts"
 DEALING_WITH_BIASES_IN_THE_WORKPLACE_POSTS.each do |post|
   seed_post = Post.new(post)
   seed_post.user = User.all.sample
-  seed_post.forum_id = Forum.where(name: "Dealing with Biases in the Workplace").first.id
+  seed_post.forum_id = Forum.where(name: "Handling Workplace Biases").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
 end
 
-puts "Creating Dealing with Biases in the Workplace Replies"
+puts "Creating Handling workplace biases Replies"
 DEALING_WITH_BIASES_IN_THE_WORKPLACE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
   seed_reply.user = User.all.sample # need to make sure user doesn't match post user
-  seed_reply.post_id = Post.where(forum: Forum.where(name: "Dealing with Biases in the Workplace")).first.id
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Handling Workplace Biases")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
 end
@@ -1269,7 +1269,7 @@ end
 
 MENTEE_QUESTIONS = [
   {
-    contents: { content: "OPTIONAL: What is your race?", question_type: 0 }, answers: [
+    contents: { content: "What is your race? (OPTIONAL)", question_type: 0 }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1291,7 +1291,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "OPTIONAL: How important is it to you that your mentor or mentee has the same race as you?", question_type: 0}, answers: [
+    contents: { content: "How important is it to you that your mentor or mentee has the same race as you? (OPTIONAL)", question_type: 0}, answers: [
       {
         content: "Not at all important"
       },
@@ -1356,7 +1356,7 @@ MENTEE_QUESTIONS = [
         content: "Industry-specific skills"
       },
       {
-        content: "Dealing with biases in the workplace"
+        content: "Handling worksplace biases"
       },
       {
         content: "Developing leadership skills"
@@ -1410,7 +1410,7 @@ MENTEE_QUESTIONS = [
 
 MENTOR_QUESTIONS = [
   {
-    contents: { content: "OPTIONAL: What is your race?", question_type: 0 }, answers: [
+    contents: { content: "What is your race? (OPTIONAL)", question_type: 0 }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1432,7 +1432,7 @@ MENTOR_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "OPTIONAL: How important is it to you that your mentor or mentee has the same race as you?", question_type: 0 }, answers: [
+    contents: { content: "How important is it to you that your mentor or mentee has the same race as you? (OPTIONAL)", question_type: 0 }, answers: [
       {
         content: "Not at all important"
       },
@@ -1497,7 +1497,7 @@ MENTOR_QUESTIONS = [
         content: "Industry-specific skills"
       },
       {
-        content: "Dealing with biases in the workplace"
+        content: "Handling workplace biases"
       },
       {
         content: "Developing leadership skills"
@@ -1593,7 +1593,7 @@ MENTOR_QUESTIONS.each do |q|
 end
 
 puts "special mentee question"
-question = Question.new({ content: "I would like a mentor that works in the following industry (choose 1)", question_type: 0})
+question = Question.new({ content: "I would like a mentor that works in the following industries (choose up to 3)", question_type: 0})
 question.save!
 
 puts "creating questions + answer options for industry questions mentee survey"
@@ -1611,7 +1611,7 @@ survey_question.save!
 puts "survey questions mentee - #{survey_question.id}"
 
 
-question = Question.new({content: "I would like a mentor who has held the following position", question_type: 0 })
+question = Question.new({content: "I would like a mentor who has held the following positions (choose up to 3)", question_type: 0 })
 question.save!
 puts "creating questions + answer options for Job Title question mentor survey"
 JobTitle.all.each do |j|
@@ -1629,7 +1629,7 @@ survey_question.save!
 puts "survey questions mentor"
 
 puts "special question for mentor"
-question = Question.new({ content: "I would like a mentee that works in the following industry (choose 1)", question_type: 0})
+question = Question.new({ content: "I would like a mentee that works in the following industries (choose up to 3)", question_type: 0})
 question.save!
 mentor_questions_array << question
 
@@ -1648,7 +1648,7 @@ survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
 survey_question.save!
 puts "creating answer options for industry questions"
 
-question = Question.new({ content: "I would like a mentee who has held the following position", question_type: 0 })
+question = Question.new({ content: "I would like a mentee who has held the following positions (choose up to 3)", question_type: 0 })
 question.save!
 mentor_questions_array << question
 
@@ -1765,6 +1765,62 @@ end
 puts " #{UserAnswer.count} USER ANSWERS"
 
 
+
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+
+
+
+
+# puts "creating answer options for a bunch more mentors (don't have the mentors yet)"
+
+# User.where(mentee: false).each_with_index do |mentor, ma_index|
+#   mentor_questions_array.each_with_index do |mentor_question, q_index|
+#     mentor_question.question_answer_pairs.each_with_index do |mentor_q_a_p, qa_index|
+#       user_answer = UserAnswer.new(user: mentor, question_answer_pair: mentor_q_a_p, value: MENTOR_ANSWERS[ma_index][q_index][qa_index])
+#       user_answer.save!
+#       puts "- mentor: #{mentor.first_name} / question: #{mentor_question.content} / answer: #{user_answer.question_answer_pair.answer_option.content} - value: #{user_answer.value} "
+#     end
+#   end
+# end
+
+# puts " #{UserAnswer.count} USER ANSWERS"
+
+# UserAnswer.new(user: mentor, )
+#   [
+#     [0, 0, 0, 0, 0, 1].shuffle,
+#     [0, 0, 0, 0, 1].shuffle,
+#     [1, 2].shuffle,
+#     [1, 2, 3, 4].shuffle,
+#     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].shuffle,
+#     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].shuffle,
+#     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1].shuffle,
+#     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1].shuffle,
+#   ]
+# end
+
+# (1..6).map {[0, 1].sample}
+# (1..5).map {[0, 1].sample}
+# (1..14).map {[0, 1].sample}
+# (1..28).map {[0, 1].sample}
+# [(rand(0..1)), rand(0..1), rand(0..1), rand(0..1), rand(0..1), rand(0..1)],
+# [(rand(0..1)), rand(0..1), rand(0..1), rand(0..1), rand(0..1)],
+
+# rand(0..1)
+
+#     [0, 0, 0, 0, 0, 1],
+#     [1, 0, 0, 0, 0],
+#     [1, 2],
+#     [2, 1, 3, 4],
+#     [7, 8, 3, 2, 6, 10, 9, 1, 4, 5],
+#     [7, 8, 2, 3, 1, 6, 5, 4, 9, 11, 10],
+#     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+#     [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+#   ],
 
 # puts "creating user_answer options for Sheryl Sandberg (mentor1)"
 #   UserAnswer.new()

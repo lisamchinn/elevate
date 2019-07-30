@@ -8,12 +8,6 @@
   <div class="navbar-links-and-buttons d-flex align-items-center">
     <% if signed_in? %>
     <div class="navbar-links d-flex justify-space-around">
-      <% if current_user.get_match %>
-        <%= link_to match_messages_path(current_user.get_match) do %>
-          <i class="far fa-comment-alt px-3 icon-size"></i>
-        <% end %>
-      <% end %>
-
       <div class="dropdown show">
          <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-bars burger-size mt-3 ml-2"></i>
@@ -29,10 +23,15 @@
               <div class="thin-line"></div>
             </div>
           <% end %>
-          <a class="dropdown-item" href="#">My Mentor</a>
-          <a class="dropdown-item" href="#">Past Mentor</a>
+          <% unless current_user.mentors.empty? %>
+            <%= link_to "My mentor", profile_path(current_user.mentors.last), class:" dropdown-item" %>
+            <%= link_to "Message", match_messages_path(current_user.get_match), class:" dropdown-item" %>
+          <% else %>
+            <%= link_to "Find a mentor", new_match_path, class:" dropdown-item" %>
+          <% end %>
+          <a class="dropdown-item" href="#">Past Mentors</a>
           <a class="dropdown-item" href="#">My Events</a>
-          <a class="dropdown-item" href="/forums/">Forum</a>
+          <%= link_to "Forum", forums_path, class:" dropdown-item" %>
           <%= link_to "Donate", new_donation_path, class:" dropdown-item" %> <br>
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:" dropdown-item" %>
         </div>

@@ -32,7 +32,9 @@
             </div>
           <% end %>
         </div>
-        <%= render 'components/card-mentor', profile: @profile %>
+        <% if @counterparty_profile %>
+          <%= render 'components/card-mentor', profile: @profile %>
+        <% end  %>
       </div>
     </div>
 

@@ -22,8 +22,13 @@ class ProfilesController < ApplicationController
   def dashboard
     @profile = current_user.profile
 
-    @counterparty_profile = current_user.get_match
-
+    if current_user.mentee && !current_user.matches_as_mentee.empty?
+      @counterparty_profile = current_user.matches_as_mentee.first.mentor.profile
+    elsif !current_user.mentee && !current_user.matches_as_mentor.empty?
+      @counterparty_profile = current_user.matches_as_mentor.first.mentee.profile
+    else
+      @counterparty_profile = false
+    end
     authorize @profile
   end
 

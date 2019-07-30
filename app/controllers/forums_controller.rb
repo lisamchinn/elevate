@@ -2,14 +2,26 @@ class ForumsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @forums = policy_scope(Forum)
+    if params[:search].present?
+      @posts = policy_scope(Post).global_search(params[:search])
+    else
+      @forums = policy_scope(Forum)
+      # @forum_posts = policy_scope(Post)
+    end
   end
 
   def show
+    @forums = policy_scope(Forum)
     @forum = Forum.find(params[:id])
-    @posts = Post.where(forum_id: @forum.id)
-    @post = Post.new
+    if params[:search].present?
+      posts = policy_scope(Post).global_search(params[:search])
+      @results = posts.where(forum_id: @forum.id)
+    else
+      @posts = Post.where(forum_id: @forum.id)
+    end
+    @post = Post.new # for the form
     @replies = Reply.all
+
     authorize @forum
   end
 end

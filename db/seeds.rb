@@ -693,7 +693,7 @@ FORUMS = [
   {name: "Negotiation strategies"},
   {name: "Learning how to network"},
   {name: "Industry-specific skills"},
-  {name: "Dealing with biases in the workplace"},
+  {name: "Handling workplace biases"},
   {name: "Developing leadership skills"},
   {name: "Creating work-life balance"},
   {name: "Building confidence"}
@@ -1084,7 +1084,7 @@ MENTEE_QUESTIONS = [
         content: "Industry-specific skills"
       },
       {
-        content: "Dealing with biases in the workplace"
+        content: "Handling worksplace biases"
       },
       {
         content: "Developing leadership skills"
@@ -1225,7 +1225,7 @@ MENTOR_QUESTIONS = [
         content: "Industry-specific skills"
       },
       {
-        content: "Dealing with biases in the workplace"
+        content: "Handling workplace biases"
       },
       {
         content: "Developing leadership skills"
@@ -1493,6 +1493,62 @@ end
 puts " #{UserAnswer.count} USER ANSWERS"
 
 
+
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+# puts "----------------------"
+
+
+
+
+# puts "creating answer options for a bunch more mentors (don't have the mentors yet)"
+
+# User.where(mentee: false).each_with_index do |mentor, ma_index|
+#   mentor_questions_array.each_with_index do |mentor_question, q_index|
+#     mentor_question.question_answer_pairs.each_with_index do |mentor_q_a_p, qa_index|
+#       user_answer = UserAnswer.new(user: mentor, question_answer_pair: mentor_q_a_p, value: MENTOR_ANSWERS[ma_index][q_index][qa_index])
+#       user_answer.save!
+#       puts "- mentor: #{mentor.first_name} / question: #{mentor_question.content} / answer: #{user_answer.question_answer_pair.answer_option.content} - value: #{user_answer.value} "
+#     end
+#   end
+# end
+
+# puts " #{UserAnswer.count} USER ANSWERS"
+
+# UserAnswer.new(user: mentor, )
+#   [
+#     [0, 0, 0, 0, 0, 1].shuffle,
+#     [0, 0, 0, 0, 1].shuffle,
+#     [1, 2].shuffle,
+#     [1, 2, 3, 4].shuffle,
+#     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].shuffle,
+#     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].shuffle,
+#     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1].shuffle,
+#     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1].shuffle,
+#   ]
+# end
+
+# (1..6).map {[0, 1].sample}
+# (1..5).map {[0, 1].sample}
+# (1..14).map {[0, 1].sample}
+# (1..28).map {[0, 1].sample}
+# [(rand(0..1)), rand(0..1), rand(0..1), rand(0..1), rand(0..1), rand(0..1)],
+# [(rand(0..1)), rand(0..1), rand(0..1), rand(0..1), rand(0..1)],
+
+# rand(0..1)
+
+#     [0, 0, 0, 0, 0, 1],
+#     [1, 0, 0, 0, 0],
+#     [1, 2],
+#     [2, 1, 3, 4],
+#     [7, 8, 3, 2, 6, 10, 9, 1, 4, 5],
+#     [7, 8, 2, 3, 1, 6, 5, 4, 9, 11, 10],
+#     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+#     [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+#   ],
 
 # puts "creating user_answer options for Sheryl Sandberg (mentor1)"
 #   UserAnswer.new()

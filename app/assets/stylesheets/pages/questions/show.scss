@@ -1,9 +1,24 @@
-.question-content {
+.question-card {
+  background-color: $cream;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease-in-out 0s;
+  min-height: 490px;
   h5 {
     text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 40px;
   }
-}
-
-.question-content {
-  margin-top: 100px;
+  .question-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

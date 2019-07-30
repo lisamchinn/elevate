@@ -848,8 +848,12 @@ CAREER_CHANGE_POSTS = [ {
 ]
 
 CAREER_CHANGE_REPLIES = [ {
-  content: "This is really inspirational. I particularly appreciated learning that this pivot took years of preplanning. Everyone thinks it \"just happens\" but a lot of work & learning goes into transitions like this.",
-  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!",
+  content: "This is really inspirational. I particularly appreciated learning that this pivot took years of preplanning. Everyone thinks it \"just happens\" but a lot of work & learning goes into transitions like this."
+},
+{
+  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!"
+},
+{
   content: "I appreciate the story of your pivot/transition. I am in the middle of mine and it is challenging both in good ways and not so fun ways. It is nice to hear about your challenges and successes to keep me going! Thank you!"
 }
 ]
@@ -861,8 +865,12 @@ CAREER_GROWTH_POSTS = [ {
 ]
 
 CAREER_GROWTH_REPLIES = [ {
-  content: "Thank you for sharing! I found a lot of comfort in this piece. My background reminds me of a fireplace where every tile is a different style and sometimes size - fitting everything together to make the larger piece work can be frustrating and discouraging. It's so important to see other women making theirs work. I'm also a huge fan of reaching out and offering help where I can so I'm thrilled to see that Abadesi was able to help you.",
-  content: "Thank you for taking the time to share your insights! This story is truly inspiring. I loved how you took risk after risk and continued to seek learning opportunities that stretched you.",
+  content: "Thank you for sharing! I found a lot of comfort in this piece. My background reminds me of a fireplace where every tile is a different style and sometimes size - fitting everything together to make the larger piece work can be frustrating and discouraging. It's so important to see other women making theirs work. I'm also a huge fan of reaching out and offering help where I can so I'm thrilled to see that Abadesi was able to help you."
+},
+{
+  content: "Thank you for taking the time to share your insights! This story is truly inspiring. I loved how you took risk after risk and continued to seek learning opportunities that stretched you."
+},
+{
   content: "Thank you for your sharing you story! As an artist, I've been told that we are risks. (Which isn't the greatest feedback to hear) When the thought was broken down, it does make sense as to why patrons or otherwise would see us as \"risks\"."
 }
 ]
@@ -874,8 +882,12 @@ NEGOTIATION_STRATEGIES_POSTS = [ {
 ]
 
 NEGOTIATION_STRATEGIES_REPLIES = [ {
-  content: "Many people take the time to research before a negotiation. A much smaller percentage talk to others about how to approach the issue and then rehearse the actual conversation. Make sure you do. There’s evidence that people who take those additional steps are more likely to get a raise.",
-  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!",
+  content: "Many people take the time to research before a negotiation. A much smaller percentage talk to others about how to approach the issue and then rehearse the actual conversation. Make sure you do. There’s evidence that people who take those additional steps are more likely to get a raise."
+},
+{
+  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!"
+},
+{
   content: "I appreciate the story of your pivot/transition. I am in the middle of mine and it is challenging both in good ways and not so fun ways. It is nice to hear about your challenges and successes to keep me going! Thank you!"
 }
 ]
@@ -887,8 +899,12 @@ LEARNING_HOW_TO_NETWORK_POSTS = [ {
 ]
 
 LEARNING_HOW_TO_NETWORK_REPLIES = [ {
-  content: "Networking is really important for building a book of business and business development. And I think that a lot of people don’t tell you that you need to start that early on in your career. Because by year seven, everyone’s turning around going, ‘Well, what relationships do you have? And how are you bringing in business?’ And networking is really an important part of that.",
-  content: "Being a part of the conversation is always helpful. It helps keep me top of mind for business opportunities, allowed me to have a network to ask advice, and enabled me to understand the current market terms of the business. There is no downside to networking.",
+  content: "Networking is really important for building a book of business and business development. And I think that a lot of people don’t tell you that you need to start that early on in your career. Because by year seven, everyone’s turning around going, ‘Well, what relationships do you have? And how are you bringing in business?’ And networking is really an important part of that."
+},
+{
+  content: "Being a part of the conversation is always helpful. It helps keep me top of mind for business opportunities, allowed me to have a network to ask advice, and enabled me to understand the current market terms of the business. There is no downside to networking."
+},
+{
   content: "Men go to different types of events like sports, golf, and conferences. Women tend to go to events that don’t last as long like dinners, breakfast, lunches, and conferences in their hometown or those that only last a day or so and take place during the week."
 }
 ]
@@ -900,8 +916,12 @@ INDUSTRY_SPECIFIC_SKILLS_POSTS = [ {
 ]
 
 INDUSTRY_SPECIFIC_SKILLS_REPLIES = [ {
-  content: "LOVE this plea to get more women into cybersecurity. For me at least, there is a daunting amount of things to learn and so many folks who have been at it longer that sometimes it makes me feel like I am an imposter in this space - even though I've been working in it for nearly 5+ years.",
-  content: "My Masters is in Information Security, but I've never felt confident enough that I know any of the technical side of it - especially since I got my Masters 7 years ago and times have changed! And most of the cybersecurity/InfoSec positions within my company require some of that technical knowledge, so it's a barrier for me to even apply for those positions.",
+  content: "LOVE this plea to get more women into cybersecurity. For me at least, there is a daunting amount of things to learn and so many folks who have been at it longer that sometimes it makes me feel like I am an imposter in this space - even though I've been working in it for nearly 5+ years."
+},
+{
+  content: "My Masters is in Information Security, but I've never felt confident enough that I know any of the technical side of it - especially since I got my Masters 7 years ago and times have changed! And most of the cybersecurity/InfoSec positions within my company require some of that technical knowledge, so it's a barrier for me to even apply for those positions."
+},
+{
   content: "I completely agree with the things mentioned above- and the statistics puts everything in so much perspective. From experience, it is really intimidating at first as most mentors I've been assigned have been older, white men, and a lot of the discussions I'm having have been with and in front of men. As someone who is a lot younger and also a female with limited help from other women in the specific field of cybersecurity, it's been difficult to be taken seriously!"
 }
 ]
@@ -913,8 +933,12 @@ DEALING_WITH_BIASES_IN_THE_WORKPLACE_POSTS = [ {
 ]
 
 DEALING_WITH_BIASES_IN_THE_WORKPLACE_REPLIES = [ {
-  content: "I work in retail. My first day on the floor at my new job, my boss tells me I am required to wear heels. I had just gone over the dress code, so I asked where it stated that because I must have overlooked it. He said \"it's not corporate policy, it's mine.\"",
-  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!",
+  content: "I work in retail. My first day on the floor at my new job, my boss tells me I am required to wear heels. I had just gone over the dress code, so I asked where it stated that because I must have overlooked it. He said \"it's not corporate policy, it's mine.\""
+},
+{
+  content: "I've been experiencing this lately with a passion of mine that I'm slowly developing on the side. It's so energizing to me that I can't wait to spend time on the weekend \"working\" on it. It never feels like work, though! Thank you for sharing your story!"
+},
+{
   content: "I appreciate the story of your pivot/transition. I am in the middle of mine and it is challenging both in good ways and not so fun ways. It is nice to hear about your challenges and successes to keep me going! Thank you!"
 }
 ]
@@ -926,8 +950,12 @@ DEVELOPING_LEADERSHIP_SKILLS_POSTS = [ {
 ]
 
 DEVELOPING_LEADERSHIP_SKILLS_REPLIES = [ {
-  content: "I'm a leader because I don't trust other people to do things right(and by right I mean the way I want, lol). I don't want anybody directing me or telling me what to do, its just my personality. I don't mind doing all the work, I like solving problems and finishing things.",
-  content: "I'm introverted with a quiet voice who has no natural 'authorative aura' or whatever. I usually inevitably disappear into the background and it's from there I prefer to have my influence on things. I could say it depends on the situation, but that's looking at it idealistically. Realistically speaking, I've always fallen into the role of the follower. If I am being told to do something, whether it be at a job, uni, or elsewhere, I do it, and I tend to do it to the word, precisely. I take things rather literally and can't stand vague directions.",
+  content: "I'm a leader because I don't trust other people to do things right(and by right I mean the way I want, lol). I don't want anybody directing me or telling me what to do, its just my personality. I don't mind doing all the work, I like solving problems and finishing things."
+},
+{
+  content: "I'm introverted with a quiet voice who has no natural 'authorative aura' or whatever. I usually inevitably disappear into the background and it's from there I prefer to have my influence on things. I could say it depends on the situation, but that's looking at it idealistically. Realistically speaking, I've always fallen into the role of the follower. If I am being told to do something, whether it be at a job, uni, or elsewhere, I do it, and I tend to do it to the word, precisely. I take things rather literally and can't stand vague directions."
+},
+{
   content: "If someone is involved who has all of my skills and talents and a stronger personality than I do, I follow and things usually remain that way as long as that person is around. If a person has a stronger personality but not the skills and talents I do, I start by following but everyone else usually recognizes over time (on their own; I'm not backstabbing the person) that the person doesn't have enough to back up the personality and I get sent up the ranks."
 }
 ]
@@ -939,8 +967,12 @@ CREATING_WORK_LIFE_BALANCE_POSTS = [ {
 ]
 
 CREATING_WORK_LIFE_BALANCE_REPLIES = [ {
-  content: "Teacher! My hours are great (I leave for work at 7am and can be home by 3:30pm, even with my 35 minute commute), you have summers and lots of holidays off, and there is a real \"family first\" vibe, at least at all the schools I’ve worked at.",
-  content: "Lots of career paths are great. In a different world, I'd be a teacher. In Canada, being a teacher is a great career. Summers off (mostly), breaks off, you have an easier schedule (despite all the extra marking), and great benefits. There are also tech jobs that are good for moms, because of the remote work possibilities. Working in government and public jobs can be good too.",
+  content: "Teacher! My hours are great (I leave for work at 7am and can be home by 3:30pm, even with my 35 minute commute), you have summers and lots of holidays off, and there is a real \"family first\" vibe, at least at all the schools I’ve worked at."
+},
+{
+  content: "Lots of career paths are great. In a different world, I'd be a teacher. In Canada, being a teacher is a great career. Summers off (mostly), breaks off, you have an easier schedule (despite all the extra marking), and great benefits. There are also tech jobs that are good for moms, because of the remote work possibilities. Working in government and public jobs can be good too."
+},
+{
   content: "Speech-language pathologist! The only downside is that you need at least a master's degree. But the upside is you could choose to work in a school, private clinic, skilled nursing facility, hospital, etc. There's so much flexibility and possibility in the field."
 }
 ]
@@ -952,8 +984,12 @@ BUILDING_CONFIDENCE_POSTS = [ {
 ]
 
 BUILDING_CONFIDENCE_REPLIES = [ {
-  content: "Ask for what you want! It’s simple enough but let’s face it, too often we dilute what we ask for or we don’t ask at all for fear of appearing needy or being rejected. But how can you can’t expect to get what you want if you’re not willing to ask for it? There’s a direct correlation between getting what you want and asking for it. Ask big.",
-  content: "Say no. It’s a short little word but it’s one many women struggle to say because we know it’s not the answer people want to hear and let’s face it, we love keeping people happy! But if you’re ever going to make your biggest mark on the world, you’ve got to learn to say no to the \"good\" so you can create space for \"great.\"",
+  content: "Ask for what you want! It’s simple enough but let’s face it, too often we dilute what we ask for or we don’t ask at all for fear of appearing needy or being rejected. But how can you can’t expect to get what you want if you’re not willing to ask for it? There’s a direct correlation between getting what you want and asking for it. Ask big."
+},
+{
+  content: "Say no. It’s a short little word but it’s one many women struggle to say because we know it’s not the answer people want to hear and let’s face it, we love keeping people happy! But if you’re ever going to make your biggest mark on the world, you’ve got to learn to say no to the \"good\" so you can create space for \"great.\""
+},
+{
   content: "Yes, you’re a nice person and you’re loathe to be a trouble-maker, but if all you ever do is nod your head, smile politely and \"go along to get along,\" then you are selling yourself short. Way short. As social beings we are wired to belong to a \"tribe\", but too often we let our fear of disapproval keep us from confidently expressing our opinion. Pushing back is not about being pushy. It’s simply owning your right to see things differently than others. Sure, women have been called bossy for simply speaking their truth, but that doesn’t mean you shouldn’t speak up."
 }
 ]

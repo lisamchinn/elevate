@@ -6,7 +6,7 @@ class ForumsController < ApplicationController
       @posts = policy_scope(Post).global_search(params[:search])
     else
       @forums = policy_scope(Forum)
-      @forum_posts = policy_scope(Post)
+      # @forum_posts = policy_scope(Post)
     end
   end
 

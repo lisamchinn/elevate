@@ -9,30 +9,38 @@
   </form>
 </div>
 
-<div class="d-flex-wrap justify-content-center" style="min-height: 500px;">
+<div class="container d-flex-wrap justify-content-center" style="min-height: 400px;">
   <% if !@posts.nil? %>
     <% if @posts.empty? %>
-      <h4>No results for this search :(</h4>
+      <div class="d-flex justify-content-center pt-3">
+        <p style="font-size: 18px;">No results for this search :(</p>
+      </div>
     <% elsif @posts.count == 1 %>
-      <h4>Your search returned 1 result!</h4>
-      <%= render 'components/card-post', post: @posts.first %>
+      <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned 1 result!</p>
+      <div class="d-flex justify-content-center pt-3">
+        <span><%= render 'components/card-post', post: @posts.first %></span>
+      </div>
     <% else %>
-      <ul>
-        <h4>Your search returned <%= @posts.count %> results!</h4>
-        <% @posts.each do |post| %>
-          <%= render 'components/card-post', post: post %>
-        <% end %>
-      </ul>
+      <div class="d-flex justify-content-center pt-3">
+        <ul>
+          <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned <%= @posts.count %> results!</p>
+          <% @posts.each do |post| %>
+            <span><%= render 'components/card-post', post: post %></span>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
-    <%= link_to "Back to Forums", forums_path %>
+    <div class="d-flex justify-content-center pt-3">
+      <span><%= link_to "Back to Forums", forums_path, class: "text-dark" %></span>
+    </div>
   <% else %>
     <ul>
       <% @forums.each do |forum| %>
-        <%= render 'components/card-forum-cat', forum: forum, posts: @forum_posts %>
+        <%= render 'components/card-forum-cat', forum: forum %>
       <% end %>
     </ul>
+    <% end %>
 </div>
 <div class="d-flex justify-content-center">
-    <%= link_to "Back to home", root_path %>
+    <%= link_to "Back to Home", root_path, class: "text-dark" %>
 </div>
-  <% end %>

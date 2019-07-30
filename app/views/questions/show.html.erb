@@ -1,9 +1,19 @@
-<div class="question-content">
+<div class="question-card">
+
   <h5><%= @question.content %></h5>
-</div>
 
 <% if @question.question_type == 'checkbox' %>
   <%= render 'components/card-survey-checkbox', question: @question%>
+
 <% elsif @question.question_type == 'special' %>
   <%= render 'components/card-survey-special', question: @question%>
 <% end %>
+
+</div>
+<!-- elsif @question.question_type == 'checkbox' && question includes something?
+render 'components/card-survey-checkbox2', question: @question% -->
+
+ <!--  # @questions.each_with_index do |question, index|
+    #   @question_order = index + 1
+    #   @question_order
+    # end -->

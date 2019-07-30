@@ -1,12 +1,13 @@
 <div class="navbar-ellevate navbar navbar-expand-sm mt-30 sticky-top mt-0">
   <div class="navbar-image-and-logo d-flex align-items-center">
-      <%= image_tag(asset_path('logo_v3.png'), class: "avatar logo") %>
-      <p>Ellevate</p>
+      <%= link_to root_path do %>
+        <%= image_tag(asset_path('logo_v3.png'), class: "avatar logo") %>
+      <% end %>
+      <p class="logo-font-size ml-3">Ellevate</p>
   </div>
   <div class="navbar-links-and-buttons d-flex align-items-center">
     <% if signed_in? %>
     <div class="navbar-links d-flex justify-space-around">
-      <%= link_to "Donate", new_donation_path, class:"px-3" %>
       <% if current_user.get_match %>
         <%= link_to match_messages_path(current_user.get_match) do %>
           <i class="far fa-comment-alt px-3 icon-size"></i>
@@ -15,14 +16,25 @@
 
       <div class="dropdown show">
          <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <i class="far fa-caret-square-down px-3 icon-size "></i>
+    <i class="fas fa-bars burger-size mt-3 ml-2"></i>
   </a>
         <div class="dropdown-menu move-right" aria-labelledby="dropdownMenuButton">
+          <div class="d-flex"></div>
+
+          <%= link_to profiles_dashboard_path, class: "d-flex w-100 mx-2 py-2" do %>
+            <%= cl_image_tag current_user.photo, class:"avatar mr-3 ml-3 mt-1", id:"avatar-size" %>
+            <div class="d-flex flex-column" >
+              <div><%= current_user.first_name %></div>
+              <div class="font-size-dashboard">My Dashboard</div>
+              <div class="thin-line"></div>
+            </div>
+          <% end %>
           <a class="dropdown-item" href="#">My Mentor</a>
           <a class="dropdown-item" href="#">Past Mentor</a>
           <a class="dropdown-item" href="#">My Events</a>
           <a class="dropdown-item" href="/forums/">Forum</a>
-          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"px-4" %>
+          <%= link_to "Donate", new_donation_path, class:" dropdown-item" %> <br>
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:" dropdown-item" %>
         </div>
       </div>
     </div>

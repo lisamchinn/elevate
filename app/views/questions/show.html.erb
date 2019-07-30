@@ -4,6 +4,10 @@
 
 <% if @question.question_type == 'checkbox' %>
   <%= render 'components/card-survey-checkbox', question: @question%>
+
 <% elsif @question.question_type == 'special' %>
   <%= render 'components/card-survey-special', question: @question%>
 <% end %>
+
+<!-- elsif @question.question_type == 'checkbox' && question includes something?
+render 'components/card-survey-checkbox2', question: @question% -->

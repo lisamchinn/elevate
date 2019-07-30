@@ -855,7 +855,7 @@ JOB_TITLES = [
   {title: 'Consultant'},
   {title: 'COO'},
   {title: 'CTO'},
-  {title: 'Dentist'},
+  {title: 'Designer'},
   {title: 'Director'},
   {title: 'Editor'},
   {title: 'Founder/Co-founder'},
@@ -997,7 +997,7 @@ end
 
 MENTEE_QUESTIONS = [
   {
-    contents: { content: "OPTIONAL: What is your race?", question_type: 0 }, answers: [
+    contents: { content: "What is your race? (OPTIONAL)", question_type: 0 }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1019,7 +1019,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "OPTIONAL: How important is it to you that your mentor or mentee has the same race as you?", question_type: 0}, answers: [
+    contents: { content: "How important is it to you that your mentor or mentee has the same race as you? (OPTIONAL)", question_type: 0}, answers: [
       {
         content: "Not at all important"
       },
@@ -1321,7 +1321,7 @@ MENTOR_QUESTIONS.each do |q|
 end
 
 puts "special mentee question"
-question = Question.new({ content: "I would like a mentor that works in the following industry (choose 1)", question_type: 0})
+question = Question.new({ content: "I would like a mentor that works in the following industries (choose up to 3)", question_type: 0})
 question.save!
 
 puts "creating questions + answer options for industry questions mentee survey"
@@ -1339,7 +1339,7 @@ survey_question.save!
 puts "survey questions mentee - #{survey_question.id}"
 
 
-question = Question.new({content: "I would like a mentor who has held the following position", question_type: 0 })
+question = Question.new({content: "I would like a mentor who has held the following positions (choose up to 3)", question_type: 0 })
 question.save!
 puts "creating questions + answer options for Job Title question mentor survey"
 JobTitle.all.each do |j|
@@ -1357,7 +1357,7 @@ survey_question.save!
 puts "survey questions mentor"
 
 puts "special question for mentor"
-question = Question.new({ content: "I would like a mentee that works in the following industry (choose 1)", question_type: 0})
+question = Question.new({ content: "I would like a mentee that works in the following industries (choose up to 3)", question_type: 0})
 question.save!
 mentor_questions_array << question
 
@@ -1376,7 +1376,7 @@ survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
 survey_question.save!
 puts "creating answer options for industry questions"
 
-question = Question.new({ content: "I would like a mentee who has held the following position", question_type: 0 })
+question = Question.new({ content: "I would like a mentee who has held the following positions (choose up to 3)", question_type: 0 })
 question.save!
 mentor_questions_array << question
 

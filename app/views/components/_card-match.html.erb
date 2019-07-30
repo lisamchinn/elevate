@@ -1,17 +1,17 @@
 <%= link_to profile_path(match.mentor.profile), target: "_blank" do %>
-<div class="mentor-card-container large">
-  <div class="mentor-card">
-    <%= cl_image_tag match.mentor.photo %>
-    <h6><%= match.mentor.first_name %> <%= match.mentor.last_name %></h6>
-    <p><%= match.mentor.profile.current_title %> at <%= match.mentor.profile.current_employer %></p>
-    <p><%= match.mentor.profile.city %>, <%= match.mentor.profile.state %></p>
+  <div class="mentor-card-container large">
+    <div class="mentor-card">
+      <%= cl_image_tag match.mentor.photo %>
+      <h6><%= match.mentor.first_name %> <%= match.mentor.last_name %></h6>
+      <p><%= match.mentor.profile.current_title %> at <%= match.mentor.profile.current_employer %></p>
+      <p><%= match.mentor.profile.city %>, <%= match.mentor.profile.state %></p>
+    </div>
+    <div class="mentor-tagline">
+      <p>"<%= match.mentor.profile.tagline %>"</p>
+    </div>
+    <div class="match-button">
+      <%= link_to "View Profile", profile_path(match.mentor.profile), class: "btn-ghost small"%>
+      <%= link_to "Match with her", matches_path, class: "btn-solid small"%>
+    </div>
   </div>
-  <div class="mentor-tagline">
-    <p>"<%= match.mentor.profile.tagline %>"</p>
-  </div>
-  <div class="match-button">
-    <%= link_to "View Profile", profile_path(match.mentor.profile), class: "btn-ghost small"%>
-    <%= link_to "Match with her", matches_path, class: "btn-solid small"%>
-  </div>
-</div>
 <% end %>

@@ -8,4 +8,12 @@ class UserAnswerPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def checkbox_question?
+    true
+  end
+
+  def special_question?
+    true
+  end
 end

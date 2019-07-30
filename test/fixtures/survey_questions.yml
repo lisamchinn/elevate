@@ -1,0 +1,15 @@
+mentee_checkbox:
+  survey: mentee
+  question: checkbox
+
+mentor_checkbox:
+  survey: mentor
+  question: checkbox
+
+mentee_special:
+  survey: mentee
+  question: special
+
+mentor_special:
+  survey: mentor
+  question: special

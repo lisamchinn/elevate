@@ -1,0 +1,20 @@
+checkbox_one:
+  question: checkbox
+  answer_option: one
+
+checkbox_two:
+  question: checkbox
+  answer_option: two
+
+checkbox_three:
+  question: checkbox
+  answer_option: three
+
+special_one:
+  question: special
+  answer_option: one
+
+special_two:
+  question: special
+  answer_option: two
+

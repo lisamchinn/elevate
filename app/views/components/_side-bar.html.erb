@@ -1,0 +1,6 @@
+<ul style="list-style-type: none;">
+  <h6 class="p-3">Categories</h6>
+  <% forums.each do |forum| %>
+  <p><%= link_to forum.name, forum_path(forum), class: "nav-link" %></p>
+  <% end %>
+</ul>

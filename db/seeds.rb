@@ -298,7 +298,7 @@ MENTORS = [{
   email: 'daniella@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://media.licdn.com/dms/image/C4D03AQH4HpK0mbQp4w/profile-displayphoto-shrink_800_800/0?e=1570060800&v=beta&t=Y9liVK_EwAqGNZIuI6R0g9ex8WhpcLG_YmG3dJse0bg',
+  photo: 'https://www.mckinsey.com/~/media/McKinsey/Our%20People/Angelika%20Reich/reich-angelika_profile_1536x1152.ashx?mw=488&car=1:1',
   },
   {
   first_name: 'Whitney',
@@ -322,7 +322,7 @@ MENTORS = [{
   email: 'lillianchabe@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://images.unsplash.com/photo-1513732822839-24f03a92f633?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80',
+  photo: 'https://www.indiewire.com/wp-content/uploads/2018/02/amma.jpg?w=763',
   },
   {
    first_name: 'Margaret',
@@ -330,7 +330,7 @@ MENTORS = [{
    email: 'margaretmayer@mail.com',
    password: 123456789,
    mentee: false,
-   photo: 'https://images.unsplash.com/photo-1548260435-f3e7ec40e513?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80',
+   photo: 'https://pbs.twimg.com/media/Ct8UdjxWYAI84zF.jpg',
    },
   {
    first_name: 'Irene',
@@ -338,7 +338,7 @@ MENTORS = [{
    email: 'ireneabadi@mail.com',
    password: 123456789,
    mentee: false,
-   photo: 'https://images.unsplash.com/photo-1544817747-b11e3e3b6ac2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+   photo: 'http://assets.summit.vanityfair.com.s3.amazonaws.com/speaker_thumbnail_large_29ed451123228f45dec9a8aedcd02a42dda3df93.png',
    },
  {
    first_name: 'Julia',

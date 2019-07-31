@@ -1,0 +1,79 @@
+.forum-categories {
+    a {
+      text-decoration: none;
+      color: black;
+    }
+}
+
+.card-category {
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(46, 53, 57, 0.11);
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: box-shadow 0.3s ease-in-out 0s;
+    border-radius: 2px;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+    }
+  .category{
+    display: flex;
+    img {
+    height: 170px;
+    width: 170px;
+    }
+    h2 {
+      font-size: 20px;
+      flex-grow: 1;
+    }
+  }
+
+  .content {
+    border-left: solid 1px #E7E7E7;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    padding-left: 20px;
+    .row {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  h6 {
+    font-size: 14px;
+    margin-top: 10px;
+    color: gray;
+  }
+  p {
+    font-size: 16px;
+  }
+  .last-topic {
+    flex-direction: column;
+    display: flex;
+    border-top: solid 1px #E7E7E7;
+    .avatar {
+      margin-right: 10px;
+    }
+  }
+
+  .topic {
+    display: flex;
+    flex-direction: row;
+
+    h4{
+      font-size: 18px;
+    }
+
+  }
+}
+}
+
+.forum-searchbar {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+}

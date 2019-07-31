@@ -1,0 +1,21 @@
+<%= link_to forum_path(forum), class:"text-decoration-none" do %>
+<div class="card-category">
+  <div class="category col-6">
+    <img src="<%= asset_path('profile.svg') %>" alt="">
+    <h2 class="d-flex align-items-center justify-content-center"><%= forum.name %></h2>
+  </div>
+  <div class="content col-6">
+    <div>
+      <h6>Latest Activity</h6>
+      <p>5 days ago</p>
+    </div>
+    <div class="last-topic">
+      <h6>Latest Post</h6>
+      <div class="topic">
+        <img src="https://media.licdn.com/dms/image/C4E03AQFGluTfOTVoEA/profile-displayphoto-shrink_200_200/0?e=1570060800&v=beta&t=Wunp4KH7BqiNwqSy2JY5YDNW_7XVHAf0HpKfUmk82LA" alt="" class="avatar">
+        <h4><%= forum.posts.last.subject %></h4>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

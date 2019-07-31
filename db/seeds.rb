@@ -1288,7 +1288,7 @@ end
 
 MENTEE_QUESTIONS = [
   {
-    contents: { content: "What is your race?", question_type: 2, importance:  }, answers: [
+    contents: { content: "What is your race?", question_type: 2, importance: 1 }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1310,7 +1310,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentor has the same race as you?", question_type: 2, importance: }, answers: [
+    contents: { content: "How important is it to you that your mentor has the same race as you?", question_type: 2, importance: 1}, answers: [
       {
         content: "Not at all important"
       },
@@ -1329,7 +1329,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I would like to conduct mentorship sessions...", question_type: 1, importance: }, answers: [
+    contents: { content: "I would like to conduct mentorship sessions...", question_type: 1, importance: 15}, answers: [
       {
         content: "In-person"
       },
@@ -1339,7 +1339,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am generally available on...", question_type: 1, importance:  }, answers: [
+    contents: { content: "I am generally available on...", question_type: 1, importance: 1}, answers: [
       {
         content: "Weekday mornings"
       },
@@ -1355,7 +1355,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am looking for advice in the following areas (rank in order):", question_type: 1, importance:  }, answers: [
+    contents: { content: "I am looking for advice in the following areas (rank in order):", question_type: 1, importance: 1 }, answers: [
       {
         content: "Entrepreneurship"
       },
@@ -1389,7 +1389,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am motivated by the following (rank in order):", question_type: 1, importance: }, answers: [
+    contents: { content: "I am motivated by the following (rank in order):", question_type: 1, importance: 1}, answers: [
       {
         content: "Rationality"
       },

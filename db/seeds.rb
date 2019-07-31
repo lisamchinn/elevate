@@ -1259,7 +1259,7 @@ end
 
 MENTEE_QUESTIONS = [
   {
-    contents: { content: "What is your race? (OPTIONAL)", question_type: 0 }, answers: [
+    contents: { content: "What is your race?", question_type: 2 }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1281,7 +1281,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentor has the same race as you? (OPTIONAL)", question_type: 0}, answers: [
+    contents: { content: "How important is it to you that your mentor has the same race as you?", question_type: 2}, answers: [
       {
         content: "Not at all important"
       },
@@ -1400,7 +1400,7 @@ MENTEE_QUESTIONS = [
 
 MENTOR_QUESTIONS = [
   {
-    contents: { content: "What is your race? (OPTIONAL)", question_type: 0 }, answers: [
+    contents: { content: "What is your race?", question_type: 0 }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1422,7 +1422,7 @@ MENTOR_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentee has the same race as you? (OPTIONAL)", question_type: 0 }, answers: [
+    contents: { content: "How important is it to you that your mentee has the same race as you?", question_type: 0 }, answers: [
       {
         content: "Not at all important"
       },

@@ -10,4 +10,12 @@ class Question < ApplicationRecord
   def survey
     survey_questions.first.survey
   end
+
+  def number
+    "#{question_index} of #{self.survey.questions.count}"
+  end
+
+  def question_index
+    self.survey.questions.index(self) + 1
+  end
 end

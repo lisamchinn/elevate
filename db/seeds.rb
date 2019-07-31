@@ -974,34 +974,24 @@ INDUSTRIES = [
 ]
 
 JOB_TITLES = [
-  {title: 'Banker'},
   {title: 'CEO'},
   {title: 'CFO'},
   {title: 'Consultant'},
   {title: 'COO'},
   {title: 'CTO'},
-  {title: 'Designer'},
+  {title: 'Data Scientist'},
   {title: 'Director'},
-  {title: 'Editor'},
   {title: 'Founder/Co-founder'},
   {title: 'Fullstack Developer'},
-  {title: 'General Doctor'},
-  {title: 'General Manager'},
   {title: 'Management Consultant'},
-  {title: 'Nurse'},
   {title: 'Product Manager'},
   {title: 'Project Manager'},
   {title: 'Researcher'},
   {title: 'Salesperson'},
   {title: 'Software Engineer'},
-  {title: 'Software Quality Assurance Analyst'},
-  {title: 'Surgeon'},
-  {title: 'Teacher'},
-  {title: 'Trader'},
-  {title: 'University Professor'},
+  {title: 'UX Designer'},
   {title: 'Venture Capitalist'},
   {title: 'Web Designer'},
-  {title: 'Writer'},
 ]
 
   puts "Cleaning database"
@@ -1320,7 +1310,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentor or mentee has the same race as you? (OPTIONAL)", question_type: 0}, answers: [
+    contents: { content: "How important is it to you that your mentor has the same race as you? (OPTIONAL)", question_type: 0}, answers: [
       {
         content: "Not at all important"
       },
@@ -1349,7 +1339,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am generally available …  (In order of preference, from highest to lowest)", question_type: 1 }, answers: [
+    contents: { content: "I am generally available on...", question_type: 1 }, answers: [
       {
         content: "Weekday mornings"
       },
@@ -1365,7 +1355,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am looking for advice in the following areas:  (In order of preference, from highest to lowest)", question_type: 1 }, answers: [
+    contents: { content: "I am looking for advice in the following areas (rank in order):", question_type: 1 }, answers: [
       {
         content: "Entrepreneurship"
       },
@@ -1385,7 +1375,7 @@ MENTEE_QUESTIONS = [
         content: "Industry-specific skills"
       },
       {
-        content: "Handling worksplace biases"
+        content: "Handling workplace biases"
       },
       {
         content: "Developing leadership skills"
@@ -1399,7 +1389,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am motivated by the following: (In order of importance, from highest to lowest) ", question_type: 1 }, answers: [
+    contents: { content: "I am motivated by the following (rank in order):", question_type: 1 }, answers: [
       {
         content: "Rationality"
       },
@@ -1461,7 +1451,7 @@ MENTOR_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentor or mentee has the same race as you? (OPTIONAL)", question_type: 0 }, answers: [
+    contents: { content: "How important is it to you that your mentee has the same race as you? (OPTIONAL)", question_type: 0 }, answers: [
       {
         content: "Not at all important"
       },
@@ -1490,7 +1480,7 @@ MENTOR_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am generally available …  (In order of preference, from highest to lowest)", question_type: 1 }, answers: [
+    contents: { content: "I am generally available...", question_type: 1 }, answers: [
       {
         content: "Weekday mornings"
       },
@@ -1506,7 +1496,7 @@ MENTOR_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I can give advice in the following areas:  (In order of preference, from highest to lowest)", question_type: 1 }, answers: [
+    contents: { content: "I can give advice in the following areas (rank in order):", question_type: 1 }, answers: [
       {
         content: "Entrepreneurship"
       },
@@ -1540,7 +1530,7 @@ MENTOR_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am motivated by the following: (In order of importance, from highest to lowest) ", question_type: 1 }, answers: [
+    contents: { content: "I am motivated by the following (rank in order):", question_type: 1 }, answers: [
       {
         content: "Rationality"
       },
@@ -1622,7 +1612,7 @@ MENTOR_QUESTIONS.each do |q|
 end
 
 puts "special mentee question"
-question = Question.new({ content: "I would like a mentor that works in the following industries (choose up to 3)", question_type: 0})
+question = Question.new({ content: "I would like a mentor that works in the following industries (Choose up to 3)", question_type: 0})
 question.save!
 
 puts "creating questions + answer options for industry questions mentee survey"
@@ -1640,7 +1630,7 @@ survey_question.save!
 puts "survey questions mentee - #{survey_question.id}"
 
 
-question = Question.new({content: "I would like a mentor who has held the following positions (choose up to 3)", question_type: 0 })
+question = Question.new({content: "I would like a mentor who has held the following positions (Choose up to 3)", question_type: 0 })
 question.save!
 puts "creating questions + answer options for Job Title question mentor survey"
 JobTitle.all.each do |j|
@@ -1705,7 +1695,7 @@ MENTOR_ANSWERS = [
     [10, 7, 4, 6, 8, 5, 3, 2, 9, 1],
     [9, 10, 2, 4, 7, 1, 11, 6, 5, 3, 8],
     [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 0, 1, 1, 0, 0],
@@ -1715,7 +1705,7 @@ MENTOR_ANSWERS = [
     [6, 5, 3, 10, 7, 8, 4, 2, 1, 9],
     [7, 8, 9, 5, 1, 6, 10, 11, 4, 2, 3],
     [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 0, 0, 0, 0, 1],
@@ -1725,7 +1715,7 @@ MENTOR_ANSWERS = [
     [1, 10, 2, 4, 5, 3, 6, 7, 8, 9],
     [11, 9, 5, 10, 8, 3, 4, 6, 7, 2, 1],
     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
-    [0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 1, 0, 0, 0, 0],
@@ -1735,7 +1725,7 @@ MENTOR_ANSWERS = [
     [8, 7, 5, 3, 10, 6, 4, 2, 9, 1],
     [1, 4, 7, 8, 2, 9, 10, 3, 11, 6, 5],
     [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
   ],
   [
     [0, 1, 0, 0, 0, 0],
@@ -1745,7 +1735,7 @@ MENTOR_ANSWERS = [
     [1, 4, 2, 8, 5, 3, 9, 10, 7, 6],
     [6, 1, 3, 4, 10, 5, 7, 8, 2, 11, 9],
     [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
   ],
   [
     [1, 0, 0, 0, 0, 0],
@@ -1755,7 +1745,7 @@ MENTOR_ANSWERS = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
     [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 0, 0, 1, 0, 0],
@@ -1765,7 +1755,7 @@ MENTOR_ANSWERS = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
     [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
     [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-    [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
   [
     [0, 0, 0, 0, 0, 1],
@@ -1775,7 +1765,7 @@ MENTOR_ANSWERS = [
     [7, 8, 3, 2, 6, 10, 9, 1, 4, 5],
     [7, 8, 2, 3, 1, 6, 5, 4, 9, 11, 10],
     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
-    [0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
   ],
 ]
 

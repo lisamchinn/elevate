@@ -1,14 +1,19 @@
-<div class="question-card">
+<div class="questions-show">
+  <div class="question-card">
+    <div class="question-number">
+      <%= @question.number %>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <h5><%= @question.content %></h5>
+    </div>
+  <% if @question.question_type == 'checkbox' %>
+    <%= render 'components/card-survey-checkbox', question: @question%>
 
-  <h5><%= @question.content %></h5>
+  <% elsif @question.question_type == 'special' %>
+    <%= render 'components/card-survey-special', question: @question%>
+  <% end %>
 
-<% if @question.question_type == 'checkbox' %>
-  <%= render 'components/card-survey-checkbox', question: @question%>
-
-<% elsif @question.question_type == 'special' %>
-  <%= render 'components/card-survey-special', question: @question%>
-<% end %>
-
+  </div>
 </div>
 <!-- elsif @question.question_type == 'checkbox' && question includes something?
 render 'components/card-survey-checkbox2', question: @question% -->

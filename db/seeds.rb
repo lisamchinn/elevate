@@ -686,17 +686,46 @@ MENTOR_PROFILES = [
 },
 ]
 
-FORUMS = [
-  {name: "Entrepreneurship"},
-  {name: "Career Change"},
-  {name: "Career Growth"},
-  {name: "Negotiation Strategies"},
-  {name: "Learning How to Network"},
-  {name: "Industry-Specific Skills"},
-  {name: "Handling Workplace Biases"},
-  {name: "Developing Leadership Skills"},
-  {name: "Creating Work-Life Balance"},
-  {name: "Building Confidence"}
+FORUMS = [ {
+    name: "Entrepreneurship",
+    photo: "app/assets/images/undraw_freelancer_b0my.svg"
+  },
+  {
+    name: "Career Change",
+    photo: "app/assets/images/undraw_design_sprint_x3eb.svg"
+  },
+  {
+    name: "Career Growth",
+    photo: "app/assets/images/undraw_working_late_pukg.svg"
+  },
+  {
+    name: "Negotiation Strategies",
+    photo: "app/assets/images/undraw_process_e90d.svg"
+  },
+  {
+    name: "Learning How to Network",
+    photo: "app/assets/images/undraw_co-working_825n.svg"
+  },
+  {
+    name: "Industry-Specific Skills",
+    photo: "app/assets/images/undraw_software_engineer_lvl5.svg"
+  },
+  {
+    name: "Handling Workplace Biases",
+    photo: "app/assets/images/undraw_multitasking_hqg3.svg"
+  },
+  {
+    name: "Developing Leadership Skills",
+    photo: "app/assets/images/undraw_leadership_26ry.svg"
+  },
+  {
+    name: "Creating Work-Life Balance",
+    photo: "app/assets/images/undraw_worklife_o89g.svg"
+  },
+  {
+    name: "Building Confidence",
+    photo: "app/assets/images/undraw_confidence_ubwv.svg"
+  }
 ]
 
 ENTREPRENEURSHIP_POSTS = [ {

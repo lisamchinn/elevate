@@ -2,7 +2,19 @@ ul {
   padding-inline-start: 0px;
 }
 
-// .row {
-//   flex-wrap: nowrap;
-// }
+.post-body{
+  margin-top: 80px;
+  padding-left: 40px;
+  .post-title {
+    h2 {
+      margin-bottom: 30px;
+    }
+    p {
+      color: gray;
+    }
+    h6 {
+      padding: 20px 60px 60px 60px;
+    }
+  }
+}
 

@@ -1259,7 +1259,7 @@ end
 
 MENTEE_QUESTIONS = [
   {
-    contents: { content: "What is your race?", question_type: 2 }, answers: [
+    contents: { content: "What is your race?", question_type: 2, importance:  }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1281,7 +1281,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentor has the same race as you?", question_type: 2}, answers: [
+    contents: { content: "How important is it to you that your mentor has the same race as you?", question_type: 2, importance: }, answers: [
       {
         content: "Not at all important"
       },
@@ -1300,7 +1300,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I would like to conduct mentorship sessions...", question_type: 1 }, answers: [
+    contents: { content: "I would like to conduct mentorship sessions...", question_type: 1, importance: }, answers: [
       {
         content: "In-person"
       },
@@ -1310,7 +1310,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am generally available on...", question_type: 1 }, answers: [
+    contents: { content: "I am generally available on...", question_type: 1, importance:  }, answers: [
       {
         content: "Weekday mornings"
       },
@@ -1326,7 +1326,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am looking for advice in the following areas (rank in order):", question_type: 1 }, answers: [
+    contents: { content: "I am looking for advice in the following areas (rank in order):", question_type: 1, importance:  }, answers: [
       {
         content: "Entrepreneurship"
       },
@@ -1360,7 +1360,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am motivated by the following (rank in order):", question_type: 1 }, answers: [
+    contents: { content: "I am motivated by the following (rank in order):", question_type: 1, importance: }, answers: [
       {
         content: "Rationality"
       },
@@ -1400,7 +1400,7 @@ MENTEE_QUESTIONS = [
 
 MENTOR_QUESTIONS = [
   {
-    contents: { content: "What is your race?", question_type: 0 }, answers: [
+    contents: { content: "What is your race?", question_type: 0 , importance: 1 }, answers: [
       {
         content: "American Indian or Alaska Native"
       },
@@ -1422,7 +1422,7 @@ MENTOR_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentee has the same race as you?", question_type: 0 }, answers: [
+    contents: { content: "How important is it to you that your mentee has the same race as you?", question_type: 0 , importance: 1}, answers: [
       {
         content: "Not at all important"
       },
@@ -1441,7 +1441,7 @@ MENTOR_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I would like to conduct mentorship sessions...", question_type: 1 }, answers: [
+    contents: { content: "I would like to conduct mentorship sessions...", question_type: 1 , importance: 15}, answers: [
       {
         content: "In-person"
       },
@@ -1451,7 +1451,7 @@ MENTOR_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am generally available...", question_type: 1 }, answers: [
+    contents: { content: "I am generally available...", question_type: 1 , importance: 1}, answers: [
       {
         content: "Weekday mornings"
       },
@@ -1467,7 +1467,7 @@ MENTOR_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I can give advice in the following areas (rank in order):", question_type: 1 }, answers: [
+    contents: { content: "I can give advice in the following areas (rank in order):", question_type: 1, importance: 1 }, answers: [
       {
         content: "Entrepreneurship"
       },
@@ -1501,7 +1501,7 @@ MENTOR_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am motivated by the following (rank in order):", question_type: 1 }, answers: [
+    contents: { content: "I am motivated by the following (rank in order):", question_type: 1, importance: 1 }, answers: [
       {
         content: "Rationality"
       },
@@ -1583,7 +1583,7 @@ MENTOR_QUESTIONS.each do |q|
 end
 
 puts "special mentee question"
-question = Question.new({ content: "I would like a mentor that works in the following industries (Choose up to 3)", question_type: 0})
+question = Question.new({ content: "I would like a mentor that works in the following industries (Choose up to 3)", question_type: 0, importance: 25})
 question.save!
 
 puts "creating questions + answer options for industry questions mentee survey"
@@ -1601,7 +1601,7 @@ survey_question.save!
 puts "survey questions mentee - #{survey_question.id}"
 
 
-question = Question.new({content: "I would like a mentor who has held the following positions (Choose up to 3)", question_type: 0 })
+question = Question.new({content: "I would like a mentor who has held the following positions (Choose up to 3)", question_type: 0, importance: 25 })
 question.save!
 puts "creating questions + answer options for Job Title question mentor survey"
 JobTitle.all.each do |j|
@@ -1619,7 +1619,7 @@ survey_question.save!
 puts "survey questions mentor"
 
 puts "special question for mentor"
-question = Question.new({ content: "I would like a mentee that works in the following industries (choose up to 3)", question_type: 0})
+question = Question.new({ content: "I would like a mentee that works in the following industries (choose up to 3)", question_type: 0, importance: 25})
 question.save!
 mentor_questions_array << question
 
@@ -1638,7 +1638,7 @@ survey_question = SurveyQuestion.new(survey: mentor_survey, question: question)
 survey_question.save!
 puts "creating answer options for industry questions"
 
-question = Question.new({ content: "I would like a mentee who has held the following positions (choose up to 3)", question_type: 0 })
+question = Question.new({ content: "I would like a mentee who has held the following positions (choose up to 3)", question_type: 0, importance: 25})
 question.save!
 mentor_questions_array << question
 

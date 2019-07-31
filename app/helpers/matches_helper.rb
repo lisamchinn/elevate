@@ -3,7 +3,10 @@ module MatchesHelper
     mentee_structure = structure(mentee, "mentee")
     mentor_list = User.available.map do |m|
       mentor_structure = structure(m, "mentor")
-      { mentor_id: m.id, score: score(mentee_structure, mentor_structure) }
+      years_diff = mentee.birthday > m.birthday ? mentee.birthday.year - m.birthday.year : m.birthday.year - mentee.birthday.year
+
+      iield = years_diff.positive? ? (years_diff X 10) : 0
+      { mentor_id: m.id, score: score(mentee_structure, mentor_structure) + iield }
       # { mentor_id: 1, score: 0 }
     end
     # return a list of available mentos
@@ -25,9 +28,11 @@ module MatchesHelper
 
   def question_score(question_type, mentee_answers, mentor_answers)
     if question_type == 'checkbox'
-      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs }.sum * 3
+      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs }.sum * importance
+    elsif question_type == "core"
+      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs }.sum * importance
     else
-      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs * (mentor_answers.length - i) }.sum
+      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs * (mentor_answers.length - i) }.sum * importance
     end
   end
 

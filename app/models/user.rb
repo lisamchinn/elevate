@@ -72,4 +72,8 @@ class User < ApplicationRecord
   def identifier
     full_name
   end
+
+  def birthday
+    profile.birthday
+  end
 end

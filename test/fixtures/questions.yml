@@ -1,0 +1,7 @@
+special:
+  content: "What time do you prefer to meet?"
+  question_type: 1
+
+checkbox:
+  content: "What is your race? (Optional)"
+  question_type: 0

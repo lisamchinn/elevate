@@ -251,20 +251,20 @@ A train and ferry are probably the easiest ways to get there depending on where 
 
 MENTEES = [
   {
-  first_name: 'Alberta',
-  last_name: 'Lowe',
-  email: 'albie@mail.com',
-  password: 123456789,
-  mentee: true,
-  photo: 'https://media.licdn.com/dms/image/C4E03AQFGluTfOTVoEA/profile-displayphoto-shrink_200_200/0?e=1569456000&v=beta&t=B_Sq5VGJ2xnOD3mL0Z7__M80bFhQtktRHisWUjxMP-Q',
-  },
-  {
   first_name: 'Lisa',
   last_name: 'Chinn',
   email: 'lisa@mail.com',
   password: 123456789,
   mentee: true,
   photo: 'https://media.licdn.com/dms/image/C4E03AQFpRrFvbFbGSA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=O4LBdDgP2U1p9eqoIJa8vXn0Og9TKVqxV50Ui4GEJb4',
+  },
+  {
+  first_name: 'Alberta',
+  last_name: 'Lowe',
+  email: 'albie@mail.com',
+  password: 123456789,
+  mentee: true,
+  photo: 'https://media.licdn.com/dms/image/C4E03AQFGluTfOTVoEA/profile-displayphoto-shrink_200_200/0?e=1569456000&v=beta&t=B_Sq5VGJ2xnOD3mL0Z7__M80bFhQtktRHisWUjxMP-Q',
   },
   {
   first_name: 'Jennifer',

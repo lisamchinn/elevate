@@ -21,13 +21,16 @@ class ProfilesController < ApplicationController
 
   def dashboard
     @profile = current_user.profile
+    @question_mentee = Survey.find_by(role: "mentee").survey_questions.first.question
+    @question_mentor = Survey.find_by(role: "mentor").survey_questions.first.question
 
-    if current_user.mentee
+    if current_user.mentee && !current_user.matches_as_mentee.empty?
       @counterparty_profile = current_user.matches_as_mentee.first.mentor.profile
-    else
+    elsif !current_user.mentee && !current_user.matches_as_mentor.empty?
       @counterparty_profile = current_user.matches_as_mentor.first.mentee.profile
+    else
+      @counterparty_profile = false
     end
-
     authorize @profile
   end
 

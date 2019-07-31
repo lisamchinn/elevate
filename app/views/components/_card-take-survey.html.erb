@@ -1,0 +1,17 @@
+<div class="card-mentor">
+  <div class="d-flex flex-column align-items-center">
+    <% if profile.user.mentee %>
+      <img class="greeting-image mt-3 mb-4" src="<%= asset_path('analyze.svg') %>">
+      <h5>Take the survey now to get matched to one of our mentors!</h5>
+      <div class="card-link-wrapper">
+        <%= link_to "Take survey", question_path(question_mentee), class: "btn btn-solid small mt-2 mb-1" %>
+      </div>
+    <% else %>
+      <img class="greeting-image mt-3 mb-4" src="<%= asset_path('analyze.svg') %>">
+      <h5>Take the survey now so we can match you with one of our mentees!</h5>
+      <div class="card-link-wrapper">
+        <%= link_to "Take survey", question_path(question_mentor), class: "btn btn-solid small mt-2 mb-1" %>
+      </div>
+    <% end %>
+  </div>
+</div>

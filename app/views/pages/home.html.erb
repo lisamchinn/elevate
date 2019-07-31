@@ -6,12 +6,10 @@
       <h1>Mentorship is the key to our success</h1>
       <h6 class="mt-50">We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.</h6>
       <div class="landing-buttons">
-        <%= link_to root_path do %>
+        <%= link_to question_path(question_mentee) do %>
           <p class="btn btn-solid">Start Now</p>
         <% end %>
-        <%= link_to root_path do %>
-          <p class="btn btn-ghost">See mentors</p>
-        <% end %>
+        <a href="#our-mentors" class="btn btn-ghost mb-3">See mentors</a>
       </div>
     </div>
     <div class="landing-image">
@@ -30,17 +28,19 @@
         <div class="carousel-item active">
           <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
             <div class="image-collage">
-              <div class="image-2">
+              <div class="image-2 mb-4">
                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
               </div>
-              <div class="image-3">
+              <div class="image-3 ml-5">
                 <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
               </div>
             </div>
             <div class="section-two-text">
               <%= image_tag(asset_path('left-quote (1).png')) %>
+              <div class="paragraph-margin">
               <h6 class="px-4">When I wanted to change industry and look for a job, for example, my mentor jumped in to help with interview prep and to make introductions.”</h6>
-              <p class="px-4">-Alberta Lowe</p>
+              <p class="px-4 mt-4">-Alberta Lowe</p>
+              </div>
             </div>
           </div>
         </div>
@@ -50,33 +50,18 @@
             <div class="image-collage">
               <div class="image-1">
                <img src="https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80" alt="photo of woman2">
-              </div>
+               </div>
             </div>
             <div class="section-two-text">
               <%= image_tag(asset_path('left-quote (1).png')) %>
+              <div class="paragraph-margin">
               <h6 class="px-4">I’m such an introvert, but talking to my mentor has made things totally different for me. It has definitely helped build my confidence. Now I can actually say that I’m a leader.”</h6>
-              <p class="px-4">-Lisa Chinn</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="section-two-images-and-text d-flex justify-space-around align-items-center">
-            <div class="image-container">
-              <div class="image-4 mx-auto">
-               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80">
+              <p class="px-4 mt-4">-Lisa Chinn</p>
               </div>
             </div>
-            <div class="section-two-text">
-              <%= image_tag(asset_path('left-quote (1).png')) %>
-              <h6 class="px-4">I’m such an introvert, but talking to my mentor has made things totally different for me. It has definitely helped build my confidence. Now I can actually say that I’m a leader.”</h6>
-              <p class="px-4">-Lisa Chinn</p>
-            </div>
           </div>
         </div>
-
       </div>
-
 
       <a class="d-flex justify-content-start" href="#carouselExampleControls-a" role="button" data-slide="prev">
         <span class="carousel-button-left"><</span>
@@ -121,14 +106,8 @@
         <p>86% of women in Circles say their group has made a positive impact on their life. Blah blah blah blah blah blah.</p>
       </div>
     </div>
-
-    <div class="how-ellevate-works-video-and-steps">
-      <div class="ellevate-video">
-        <iframe width="550" height="400" src="https://www.youtube.com/embed/R1qVPWEleRY">
-        </iframe>
-      </div>
-
-      <div class="ellevate-steps">
+    <div class="big-cont-wrapper">
+      <div class="ellevate-steps shadow-and-width">
         <h5>Getting started is easy</h5>
 
         <div class="all-steps">
@@ -178,11 +157,11 @@
       </div>
     </div>
   </div>
-
+  </div>
   <div class="section-four">
     <div>
       <div class="header-four">
-        <h2>Our Mentors</h2>
+        <h2 id="our-mentors">Our Mentors</h2>
       </div>
     </div>
 
@@ -235,7 +214,7 @@
           FORUMS
         </div>
         <div class="comm-card-button">
-          <%= link_to "See All Forums", root_path, class: "btn-ghost-solid"%>
+          <%= link_to "See All Forums", forums_path, class:" btn-ghost-solid" %>
         </div>
       </div>
 
@@ -252,19 +231,9 @@
   </div>
 </div>
 
+<div class="section-six">
+  <%= link_to "Take Mentee Survey", question_path(@question_mentee), class: "btn-solid" %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
 
-
-
-
-
-
-
-
-
-
-
-<!-- https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056_1280.jpg -->
-
-<%= link_to "Take survey Mentee", question_path(@question_mentee) %>
-<%= link_to "Take survey Mentor", question_path(@question_mentor) %>
+</div>
 

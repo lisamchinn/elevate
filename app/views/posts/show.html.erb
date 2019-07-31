@@ -1,12 +1,9 @@
-<div class="forum-show-container">
+<div class="container">
   <div class="row">
-    <div class="col-3 sticky pt-5 mt-2" style="height: 400px;">
-      <ul style="list-style-type: none;">
-        <% @forums.each do |forum| %>
-        <li><%= link_to forum.name, forum_path(forum) %></li>
-        <% end %>
-      </ul>
+    <div class="col-3 side-bar">
+      <%= render "components/side-bar", forums: @forums %>
     </div>
+
     <div class="col-9 pt-5 pl-4 pr-5" style="border-left: 0.5px solid lightgrey;">
       <h2><%= @post.subject %></h2>
       <p><%= cl_image_tag @post.user.photo, class: "avatar" %> <%= @post.user.first_name %></p>

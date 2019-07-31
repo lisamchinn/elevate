@@ -1,11 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-3 sticky pt-5 mt-2" style="height: 400px;">
-      <ul style="list-style-type: none;">
-        <% @forums.each do |forum| %>
-        <li><%= link_to forum.name, forum_path(forum) %></li>
-        <% end %>
-      </ul>
+    <div class="col-3 side-bar">
+      <%= render "components/side-bar", forums: @forums %>
     </div>
 
     <div class="col-9 forum-show">
@@ -30,22 +26,9 @@
       </div>
 
       <% if @results.nil? && !@posts.empty?%>
-        <div class="forum-searchbar">
-          <div class="pb-3" style="width: 700px;">
-            <%= simple_form_for [@forum, @post] do |f| %>
-            <%= f.input :subject %>
-            <%= f.input :content %>
-            <%= f.button :submit, class: "btn-solid small"%>
-            <% end %>
-          </div>
-
+      <div class="d-flex row justify-content-end mr-3 mb-2">
           <%= render 'components/modal-new-post' %>
-
-        </div>
-
-
-
-
+      </div>
         <div class="card-post table-header disabled">
           <div class="user">
             <p>User</p>
@@ -60,7 +43,7 @@
             <h4>Activity</h4>
           </div>
         </div>
-        <% @posts.each do |post| %>
+        <% @posts.reverse.each do |post| %>
           <%= render 'components/card-forum-post', post: post %>
         <% end %>
 
@@ -90,7 +73,7 @@
         <% end %>
       <% end %>
       <div class="d-flex justify-content-center mt-5">
-        <span><%= link_to "Back to Categories", forums_path, class: "btn-solid small" %></span>
+        <span><%= link_to "Back to Categories", forums_path, class: "btn-solid" %></span>
       </div>
     </div>
   </div>

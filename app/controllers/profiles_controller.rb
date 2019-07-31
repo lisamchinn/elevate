@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :show
+
   def index
     @profiles = policy_scope(Profile)
   end

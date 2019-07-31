@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-solid" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create new topic</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New topic</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group string required post_subject">
+            <label for="post_subject" class="col-form-label string required">Subject:<abbr title="required">*</abbr></label>
+            <input type="text" class="form-control string required" name="post[subject]" id="post_subject">
+          </div>
+          <div class="form-group text required post_content">
+            <label for="post_content" class="col-form-label text required">Content:<abbr title="required">*</abbr></label>
+            <textarea class="form-control text required" id="post_content" name="post[content]"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-ghost small" data-dismiss="modal">Close</button>
+        <input type="submit" name="commit" value="Create Post" class="btn btn-solid small" data-disable-with="Create Post">
+        <button type="button" class="btn btn-solid small">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,3 +10,26 @@
 .forum-show-form {
   background-color: black;
 }
+
+.forum-show {
+  .dashboard-welcome {
+    height: 200px;
+    margin-bottom: 71px;
+    background-color: #EAD094;
+    border-radius: 3px;
+    margin-top: 80px;
+    img {
+      height: 115%;
+      width: 80%;
+      margin-bottom: 0px;
+      position: absolute;
+      top: -10px;
+    }
+    .content {
+      padding-left: 20px;
+      margin-top: 0px;
+      align-items: center;
+      display: flex;
+    }
+  }
+}

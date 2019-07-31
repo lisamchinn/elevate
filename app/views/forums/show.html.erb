@@ -7,67 +7,90 @@
         <% end %>
       </ul>
     </div>
-    <div class="col-9 pt-5 pl-4 pr-5" style="border-left: 0.5px solid lightgrey;">
-      <h1 style="text-align: center;"><%= @forum.name %></h1>
-      <%= render 'components/card-forum-post' %>
-      <%= render 'components/card-forum-post' %>
-      <%= render 'components/card-forum-post' %>
 
-      <div class="d-flex justify-content-center">
-        <form class="form-inline" action="<%= forum_path(@forum) %>" method='get'>
-          <div class="search-form-control form-group">
-            <input class="form-control string required text-black" style="width: 320px;" type="text" name="search" placeholder="Search within <%= @forum.name %>...">
-            <button name="button" type="submit"><i class="fas fa-search"></i></button>
-          </div>
+    <div class="col-9 forum-show">
+      <div class="dashboard-welcome d-flex flex-row">
+        <div class="col-6">
+          <img src="<%= asset_path('step_into_sun.svg') %>" alt="">
+        </div>
+        <div class="content col-6">
+          <h2><%= @forum.name %></h2>
+        </div>
+      </div>
+
+      <div class="forum-searchbar">
+        <form class="simple_form search" action="<%= forum_path(@forum) %>" method="get">
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" name="search" id="search_query" placeholder="Search within <%= @forum.name.downcase %>..." />
+          <button name="button" type="submit" class="btn btn-solid">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
         </form>
       </div>
 
-      <div class="d-flex justify-content-center pt-3">
-        <ul style="list-style-type: none;">
-        <% if @results.nil? && !@posts.empty?%>
-          <div class="pb-3" style="width: 800px;">
-          <%= simple_form_for [@forum, @post] do |f| %>
-          <%= f.input :subject %>
-          <%= f.input :content %>
-          <%= f.button :submit %>
-          <% end %>
+      <% if @results.nil? && !@posts.empty?%>
+        <div class="forum-searchbar">
+          <div class="pb-3" style="width: 700px;">
+            <%= simple_form_for [@forum, @post] do |f| %>
+            <%= f.input :subject %>
+            <%= f.input :content %>
+            <%= f.button :submit, class: "btn-solid small"%>
+            <% end %>
           </div>
-          <% @posts.each do |post| %>
-          <li><%= render 'components/card-post', post: post %></li>
-          <% end %>
-        <% elsif @results.nil? && @posts.empty? %>
-          <p>No posts for this category</p>
-        <% elsif !@results.nil? %>
-          <% if @results.empty? %>
-            <div class="d-flex justify-content-center pt-3">
-              <p class="pt-3" style="text-align: center;font-size: 18px;">No results for this search :(</p>
-            </div>
-          <% elsif @results.count == 1 %>
-            <div class="d-flex justify-content-center pt-3">
-              <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned 1 result!</p>
-            </div>
-            <div class="d-flex justify-content-center pt-3">
-              <li><%= render 'components/card-post', post: @results.first %></li>
-            </div>
-          <% else %>
-            <div>
-              <div>
-                <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned <%= @results.count %> results!</p>
-              </div>
-              <div class="d-flex justify-content-center pt-3">
-                <ul>
-                  <% @results.each do |result| %>
-                    <span><%= render 'components/card-post', post: result %></span>
-                  <% end %>
-                </ul>
-              </div>
-             </div>
-          <% end %>
+
+          <%= render 'components/modal-new-post' %>
+
+        </div>
+
+
+
+
+        <div class="card-post table-header disabled">
+          <div class="user">
+            <p>User</p>
+          </div>
+          <div class="post-title">
+            <h6 class="d-flex align-items-center">Topic</h6>
+          </div>
+          <div class="post-number">
+            <h4>Replies</h4>
+          </div>
+          <div class="post-date">
+            <h4>Activity</h4>
+          </div>
+        </div>
+        <% @posts.each do |post| %>
+          <%= render 'components/card-forum-post', post: post %>
         <% end %>
-        </ul>
-      </div>
-      <div class="d-flex justify-content-center pt-3">
-        <span><%= link_to "Back to Categories", forums_path %></span>
+
+      <% elsif @results.nil? && @posts.empty? %>
+        <p>No posts for this category</p>
+      <% elsif !@results.nil? %>
+        <% if @results.empty? %>
+          <div class="d-flex justify-content-center pt-3">
+            <p class="pt-3" style="text-align: center;font-size: 18px;">No results for this search :(</p>
+          </div>
+        <% elsif @results.count == 1 %>
+          <div class="d-flex justify-content-center pt-3">
+            <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned 1 result!</p>
+          </div>
+          <div class="d-flex justify-content-center pt-3">
+            <li><%= render 'components/card-post', post: @results.first %></li>
+          </div>
+        <% else %>
+          <p class="pt-3" style="text-align: center;font-size: 18px;">Your search returned <%= @results.count %> results!</p>
+          <div class="d-flex justify-content-center pt-3">
+            <ul>
+              <% @results.each do |result| %>
+                <span><%= render 'components/card-post', post: result %></span>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <% end %>
+      <div class="d-flex justify-content-center mt-5">
+        <span><%= link_to "Back to Categories", forums_path, class: "btn-solid small" %></span>
       </div>
     </div>
   </div>

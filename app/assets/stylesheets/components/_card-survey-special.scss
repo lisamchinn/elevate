@@ -20,16 +20,58 @@
 }
 
 .column {
-  width: 200px;
+  width: 300px;
   padding-bottom: 5px;
   padding-top: 5px;
   text-align: center;
   cursor: move;
 }
 
-.draggable-zone {
- width: 300px;
- margin: 5px;
+// .draggable-zone {
+//   width: 300px;
+//   margin: 5px;
+// }
+
+#draggable {
+  color: rgb(82, 187, 190);
+  background-color: rgba(82, 187, 190, 0.1);
+  box-shadow: rgba(82, 187, 190, 0.8) 0px 0px 0px 2px inset;
+  cursor: pointer;
+  opacity: 1;
+  height: auto;
+  border-radius: 8px;
+  animation: 0.25s ease 0s 2 normal none running qNIWx;
+  margin-top: 6px;
+}
+
+.column.dragElem {
+  opacity: 0.4;
+}
+
+#submit-special {
+  background-color: transparent;
+  line-height: 1;
+  text-align: center;
+  font-size: 20px;
+  padding: 16px 20px;
+  border-radius: 2px;
+  border: 1px solid $black;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color .25s cubic-bezier(.35,.97,.57,.99),background-color .25s cubic-bezier(.35,.97,.57,.99);
+  color: $black;
+  font-family: Roboto;
+  font-weight: 300;
+  &:hover {
+  color: $black;
+  border: 1px solid $black;
+  text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+    background-color: $black;
+    color: white;
+  }
 }
 
 // .column header {
@@ -47,21 +89,6 @@
 //   background-color: $cream;
 //   color: $black;
 // }
-#draggable {
-  color: rgb(82, 187, 190);
-  background-color: rgba(82, 187, 190, 0.1);
-  box-shadow: rgba(82, 187, 190, 0.8) 0px 0px 0px 2px inset;
-  cursor: pointer;
-  opacity: 1;
-  height: auto;
-  border-radius: 8px;
-  animation: 0.25s ease 0s 2 normal none running qNIWx;
-  margin-top: 10px;
-}
-
-.column.dragElem {
-  opacity: 0.4;
-}
 
 // .over {
 //   //border: 2px dashed #000;

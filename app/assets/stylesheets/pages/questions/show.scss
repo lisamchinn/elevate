@@ -1,8 +1,14 @@
+.questions-show {
+  width: 100%;
+  height: 120vh;
+  margin: 0 auto;
+}
+
 .question-card {
   background-color: $cream;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 100px;
   padding: 20px;
@@ -10,23 +16,23 @@
   text-decoration: none;
   transition: box-shadow 0.3s ease-in-out 0s;
   min-height: 360px;
+  // align-items: center;
   h5 {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-  .question-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 75%;
   }
 }
 
-.questions-show {
-  width: 100%;
-  height: 120vh;
-  margin: 0 auto;
+.question-number {
+  text-align: right;
+  font-size: 24px;
+  color: $black;
+  font-weight: 500;
 }
+
+
 

@@ -3,12 +3,24 @@ class UserAnswersController < ApplicationController
     @question = Question.find(params[:question])
     if @question.question_type == "checkbox"
       checkbox_question
+    elsif @question.question_type == "pre"
+      pre_question
     else
       special_question
     end
   end
 
   private
+
+  def pre_question
+    @question.question_answer_pairs.each do |question_answer_pair|
+      value = params['question_answer_pair'].values.include?(question_answer_pair.id.to_s) ? 1 : 0
+      user_answer = UserAnswer.new(question_answer_pair: question_answer_pair, user: current_user, value: value)
+      authorize user_answer
+      user_answer.save!
+    end
+    next_question
+  end
 
   def checkbox_question
     @question.question_answer_pairs.each do |question_answer_pair|

@@ -1,4 +1,4 @@
-<div class="forum-show-container">
+<div class="container">
   <div class="row">
     <div class="col-3 sticky pt-5 mt-2" style="height: 400px;">
       <ul style="list-style-type: none;">
@@ -9,6 +9,9 @@
     </div>
     <div class="col-9 pt-5 pl-4 pr-5" style="border-left: 0.5px solid lightgrey;">
       <h1 style="text-align: center;"><%= @forum.name %></h1>
+      <%= render 'components/card-forum-post' %>
+      <%= render 'components/card-forum-post' %>
+      <%= render 'components/card-forum-post' %>
 
       <div class="d-flex justify-content-center">
         <form class="form-inline" action="<%= forum_path(@forum) %>" method='get'>

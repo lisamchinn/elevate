@@ -92,3 +92,7 @@ moveLogo();
 
 import { initDefaultDonationValue } from '../components/init_default_donation_amount';
 initDefaultDonationValue();
+
+import { initQuestions, initQuestionTemplate } from '../components/questions';
+initQuestions();
+initQuestionTemplate();

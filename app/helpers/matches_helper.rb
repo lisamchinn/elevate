@@ -3,7 +3,10 @@ module MatchesHelper
     mentee_structure = structure(mentee, "mentee")
     mentor_list = User.available.map do |m|
       mentor_structure = structure(m, "mentor")
-      { mentor_id: m.id, score: score(mentee_structure, mentor_structure) }
+      years_diff = mentee.birthday > m.birthday ? mentee.birthday.year - m.birthday.year : m.birthday.year - mentee.birthday.year
+
+      iield = years_diff.positive? ? (years_diff * 10) : 0
+      { mentor_id: m.id, score: score(mentee_structure, mentor_structure) + iield }
       # { mentor_id: 1, score: 0 }
     end
     # return a list of available mentos
@@ -18,16 +21,18 @@ module MatchesHelper
   def score(mentee_structure, mentor_structure)
     score = 0
     mentee_structure.each_with_index do |question, index|
-      score += question_score(question[0], question[1], mentor_structure[index][1])
+      score += question_score(question[0], question[1], question[2], mentor_structure[index][2])
     end
     score
   end
 
-  def question_score(question_type, mentee_answers, mentor_answers)
-    if question_type == 'checkbox'
-      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs }.sum * 3
+  #question[4] should be the importance
+
+  def question_score(question_importance, question_type, mentee_answers, mentor_answers)
+    if question_type == 'checkbox' || question_type == 'pre'
+      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs }.sum * question_importance
     else
-      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs * (mentor_answers.length - i) }.sum
+      mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs * (mentor_answers.length - i) }.sum * question_importance
     end
   end
 
@@ -40,7 +45,7 @@ module MatchesHelper
         ua = UserAnswer.where(question_answer_pair: q_a_p, user: user).first
         answers_values << UserAnswer.where(question_answer_pair: q_a_p, user: user).first.value if !ua.nil?
       end
-      users_survey_structure << [q.question_type, answers_values]
+      users_survey_structure << [q.importance, q.question_type, answers_values]
     end
 
     return users_survey_structure

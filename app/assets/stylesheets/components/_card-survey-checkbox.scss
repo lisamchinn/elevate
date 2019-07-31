@@ -75,8 +75,8 @@ ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
 }
 
 ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-    border: 2px solid #1bdbf8;
-    background-color: #12bbd4;
+    // border: 2px solid #1bdbf8;
+    background-color: rgba(82, 187, 190, 0.8);
     color: #fff;
     transition: all .2s;
 }
@@ -92,7 +92,41 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   border: 2px solid rgba(139, 139, 139, .3);
 }
 
+input[type=submit] {
+  background-color: transparent;
+  line-height: 1;
+  text-align: center;
+  font-size: 20px;
+  padding: 16px 20px;
+  border-radius: 2px;
+  border: 1px solid $black;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color .25s cubic-bezier(.35,.97,.57,.99),background-color .25s cubic-bezier(.35,.97,.57,.99);
+  color: $black;
+  font-weight: 300;
+  &:hover {
+  color: $black;
+  border: 1px solid $black;
+  text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+    background-color: $black;
+    color: white;
+  }
+}
 
-
-
-
+// .submit-button {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: flex-start;
+//   margin: 0;
+//   padding: 0;
+// }
+ // padding:5px 15px;
+ //  background:#ccc;
+ //  border:0 none;
+ //  cursor:pointer;
+ //  -webkit-border-radius: 5px;
+ //  border-radius: 5px;

@@ -6,7 +6,7 @@
     <div class="d-flex align-items-center justify-content-center">
       <h5><%= @question.content %></h5>
     </div>
-  <% if @question.question_type == 'checkbox' %>
+  <% if @question.question_type == 'checkbox' || @question.question_type == 'pre'%>
     <%= render 'components/card-survey-checkbox', question: @question%>
 
   <% elsif @question.question_type == 'special' %>

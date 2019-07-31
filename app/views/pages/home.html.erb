@@ -199,29 +199,33 @@
     </div>
 
     <div class="community">
-
       <div class="com-card-and-button">
-        <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
+      <%= link_to root_path do %>
+        <div class="community-card image-hover" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
           EVENTS
         </div>
+        <% end %>
         <div class="comm-card-button">
-          <%= link_to "See All Events", root_path, class: "btn-ghost-solid"%>
+        <%= link_to "See All Events", root_path, class: "btn-ghost-solid"%>
         </div>
       </div>
-
       <div class="com-card-and-button">
-        <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+      <%= link_to forums_path do %>
+        <div class="community-card image-hover" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
           FORUMS
         </div>
+        <% end %>
         <div class="comm-card-button">
           <%= link_to "See All Forums", forums_path, class:" btn-ghost-solid" %>
         </div>
       </div>
 
       <div class="com-card-and-button">
-        <div class="community-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1556565681-306458ef93cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
+        <%= link_to root_path do %>
+        <div class="community-card image-hover" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1556565681-306458ef93cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)">
           WORKSHOPS
         </div>
+        <% end %>
         <div class="comm-card-button">
           <%= link_to "See All Workshops", root_path, class: "btn-ghost-solid"%>
         </div>
@@ -231,9 +235,15 @@
   </div>
 </div>
 
-<div class="section-six">
-  <%= link_to "Take Mentee Survey", question_path(@question_mentee), class: "btn-solid" %>
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
 
-</div>
+  <div class="d-flex justify-content-center section-six background-image-pattern">
+      <div class="d-flex flex-column justify-content-center">
+        <h4 class="center-text">Get started today!</h4>
+        <div class="text-width">
+        <h6 class="center-text my-3 mb-4"> Ellevate members around the world are meeting regularly to support each other and advance equality. Take the survey and get matched with a mentor today. </h6>
+        <%= link_to "Take Mentee Survey", question_path(@question_mentee), class: "btn-solid width-btn" %>
+        </div>
+    </div>
+  </div>
+
 

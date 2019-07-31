@@ -9,6 +9,10 @@ class UserAnswerPolicy < ApplicationPolicy
     true
   end
 
+  def pre_question?
+    true
+  end
+
   def checkbox_question?
     true
   end

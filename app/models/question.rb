@@ -5,7 +5,7 @@ class Question < ApplicationRecord
 
   validates :content, presence: true
   validates :question_type, presence: true
-  enum question_type: { checkbox: 0, special: 1, core: 2 }
+  enum question_type: { checkbox: 0, special: 1, pre: 2 }
 
   def survey
     survey_questions.first.survey

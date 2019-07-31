@@ -27,9 +27,9 @@ class ProfilesController < ApplicationController
     @question_mentor = Survey.find_by(role: "mentor").survey_questions.first.question
 
     if current_user.mentee && !current_user.matches_as_mentee.empty?
-      @counterparty_profile = current_user.matches_as_mentee.first.mentor.profile
+      @counterparty_profile = current_user.matches_as_mentee.last.mentor.profile
     elsif !current_user.mentee && !current_user.matches_as_mentor.empty?
-      @counterparty_profile = current_user.matches_as_mentor.first.mentee.profile
+      @counterparty_profile = current_user.matches_as_mentor.last.mentee.profile
     else
       @counterparty_profile = false
     end

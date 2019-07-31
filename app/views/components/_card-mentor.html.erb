@@ -21,9 +21,9 @@
   <% end %>
   <div class="card-link-wrapper">
     <% if current_user.mentee %>
-      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentee.first), class: "btn btn-solid small mt-2 mb-1" %>
+      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentee.last), class: "btn btn-solid small mt-2 mb-1" %>
     <% elsif @counterparty_profile %>
-      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentor.first), class: "btn btn-solid small mt-2 mb-1" %>
+      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentor.last), class: "btn btn-solid small mt-2 mb-1" %>
     <% end %>
   </div>
   <% if @counterparty_profile %>

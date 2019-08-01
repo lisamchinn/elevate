@@ -46,6 +46,9 @@
   padding: 22px;
   border-radius: 2px;
   margin-bottom: 20px;
+  a {
+    display: block;
+  }
   .circle {
     width: 90px;
     height: 90px;
@@ -75,3 +78,49 @@
     color: gray;
   }
 }
+
+.card-mentor-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  a {
+    display: block;
+  }
+  .circle {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: dotted 2px black;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .round {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    object-fit: cover;
+    object-position: center;
+    crop: thumb;
+  }
+  h6{
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  p {
+    font-size: 16px;
+    color: gray;
+  }
+}
+

@@ -11,7 +11,9 @@
       <h4><%= post.replies.count %></h4>
     </div>
     <div class="post-date">
+      <% if !post.replies.last.nil? %>
       <h4><%= time_ago_in_words post.replies.last.created_at, locale: :en %> ago</h4>
+      <% end %>
     </div>
   </div>
 <% end %>

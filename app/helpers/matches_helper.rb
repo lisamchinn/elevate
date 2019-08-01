@@ -50,4 +50,12 @@ module MatchesHelper
 
     return users_survey_structure
   end
+
+  def max_score(user)
+    598.8 + ((65 - user.age) * 10)
+  end
+
+  def percent_match
+
+  end
 end

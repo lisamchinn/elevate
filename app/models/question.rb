@@ -11,11 +11,19 @@ class Question < ApplicationRecord
     survey_questions.first.survey
   end
 
+  def q_percent
+    question_index.fdiv(num_of_survey_questions) * 100
+  end
+
   def number
-    "#{question_index} of #{self.survey.questions.count}"
+    "#{question_index} of #{num_of_survey_questions}"
   end
 
   def question_index
     self.survey.questions.index(self) + 1
+  end
+
+  def num_of_survey_questions
+    self.survey.questions.count
   end
 end

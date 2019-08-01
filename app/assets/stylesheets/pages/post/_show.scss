@@ -6,14 +6,19 @@ ul {
   margin-top: 80px;
   padding-left: 40px;
   .post-title {
+    border-bottom: 1px solid #b2b1b1;
+    margin-bottom: 20px;
     h2 {
       margin-bottom: 30px;
     }
     p {
-      color: gray;
+      color: #303030;
     }
     h6 {
       padding: 20px 60px 60px 60px;
+      color: #303030;
+      margin-bottom: 10px;
+      line-height: 30px;
     }
   }
 }

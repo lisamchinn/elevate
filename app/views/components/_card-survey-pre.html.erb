@@ -6,7 +6,7 @@
     <ul class="pre-cboxtags">
     <% @question.question_answer_pairs.each_with_index do |question_answer_pair, index| %>
       <!-- <ul class="ks-cboxtags"> -->
-      <li><input class="input-checkbox" type="checkbox" id="lisa[<%= index %>]" name="question_answer_pair[<%= index %>]" value="<%= question_answer_pair.id %>"><label for="lisa[<%= index %>]"><span id="checkbox-design"><span><%= question_answer_pair.answer_option.content %></span></label></li>
+      <li><input class="input-checkbox" type="checkbox" id="lisa[<%= index %>]" name="question_answer_pair[<%= index %>]" value="<%= question_answer_pair.id %>"><label for="lisa[<%= index %>]"><span id="checkbox-design-2"><span><%= question_answer_pair.answer_option.content %></span></label></li>
     <!-- </ul> -->
     <% end %>
     </ul>

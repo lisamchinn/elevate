@@ -1,3 +1,4 @@
+<% content_for :meta_title, "#{@post.subject} | Ellevate" %>
 <div class="container">
   <div class="row">
     <div class="col-3 side-bar">
@@ -8,7 +9,7 @@
       <div class="post-title">
         <h2><%= @post.subject %></h2>
         <p><%= cl_image_tag @post.user.photo, class: "avatar" %> <%= @post.user.first_name %></p>
-        <h6><%= @post.content %></h6>
+        <h6 style="word-break: break-word;"><%= @post.content %></h6>
       </div>
 
       <h6 class="pb-3" style="text-align: center;">Replies from the community</h6>

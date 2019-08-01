@@ -18,7 +18,7 @@
   flex-direction: column;
   padding: 20px;
   transition: box-shadow 0.3s ease-in-out 0s;
-  min-height: 490px;
+  min-height: 520px;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
     text-decoration: none;
@@ -54,9 +54,10 @@
   }
   .mentor-tagline {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     flex-grow: 1;
-    height: 95px;
+    height: 80px;
   }
   a:hover{
     text-decoration: none;
@@ -154,7 +155,8 @@
   color: white;
   width: 50%;
   margin: 0 auto;
-  margin-bottom: 18px;
+  margin-bottom: 26px;
+  margin-top: 12px;
 }
 
 .percent-match p {

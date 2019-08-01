@@ -547,7 +547,7 @@ MENTOR_PROFILES = [
 },
 {
   current_title: 'Venture Partner',
-  current_employer: 'Softbank Investment Advisors',
+  current_employer: 'SIA',
   current_industry: 'Technology Ventures',
   years_in_current_industry: 2,
   previous_title: 'Managing Global Client Partner and Emerging Markets Lead, Global Partnerships',

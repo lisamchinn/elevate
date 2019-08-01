@@ -1,6 +1,12 @@
 <% content_for :meta_title, "Survey | Ellevate" %>
 <div class="questions-show">
   <div class="question-card">
+    <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="<%= @question.q_percent %>"
+    aria-valuemin="0" aria-valuemax="100" style="width:<%= @question.q_percent %>%">
+    </div>
+
+  </div>
     <div class="question-number">
       <%= @question.number %>
     </div>
@@ -14,13 +20,5 @@
   <% elsif @question.question_type == 'pre' %>
     <%= render 'components/card-survey-pre', question: @question%>
   <% end %>
-
   </div>
 </div>
-<!-- elsif @question.question_type == 'checkbox' && question includes something?
-render 'components/card-survey-checkbox2', question: @question% -->
-
- <!--  # @questions.each_with_index do |question, index|
-    #   @question_order = index + 1
-    #   @question_order
-    # end -->

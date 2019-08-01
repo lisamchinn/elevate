@@ -4,9 +4,9 @@ class MatchesController < ApplicationController
   def new
     @matches = []
     get_match(6, current_user).each do |mentor|
-      match_mentor = Match.new(mentee: current_user, mentor: User.find(mentor))
+      match_mentor = Match.new(mentee: current_user, mentor: User.find(mentor.first))
       authorize match_mentor
-      @matches << match_mentor
+      @matches << [match_mentor, mentor[1]]
     end
   end
 

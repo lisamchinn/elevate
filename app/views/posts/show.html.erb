@@ -18,9 +18,10 @@
           <% end %>
             <div class="py-3">
               <% if signed_in? %>
+                <h6 class="my-3"><strong>Post a reply</strong></h6>
                 <%= simple_form_for [@post, @reply] do |f| %>
                 <%= f.input :content %>
-                <%= f.button :submit %>
+                <%= f.button :submit, autocomplete: "off", class: "btn-solid small" %>
                 <% end %>
               <% else %>
                 <p><%= link_to "Sign in to reply", new_user_session_path %> </p>

@@ -21,8 +21,8 @@
           </div>
         </form>  -->
         <%= simple_form_for [@forum, @post] do |f| %>
-            <%= f.input :subject %>
-            <%= f.input :content %>
+            <%= f.input :subject, autocomplete: "off" %>
+            <%= f.input :content, autocomplete: "off" %>
             <%= f.button :submit, class: "btn-solid small"%>
             <% end %>
       </div>

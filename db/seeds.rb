@@ -1066,7 +1066,7 @@ end
 puts "Creating Entrepreneurship Posts"
 ENTREPRENEURSHIP_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Entrepreneurship").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1075,7 +1075,7 @@ end
 puts "Creating Entrepreneurship Replies"
 ENTREPRENEURSHIP_REPLIES_ONE.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[0].id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1083,7 +1083,7 @@ end
 
 ENTREPRENEURSHIP_REPLIES_TWO.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[1].id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1091,7 +1091,7 @@ end
 
 ENTREPRENEURSHIP_REPLIES_THREE.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[2].id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1100,7 +1100,7 @@ end
 puts "Creating Career Change Posts"
 CAREER_CHANGE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Career Change").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1109,7 +1109,7 @@ end
 puts "Creating Career Change Replies"
 CAREER_CHANGE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Career Change")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1118,7 +1118,7 @@ end
 puts "Creating Career Growth Posts"
 CAREER_GROWTH_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Career Growth").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1127,7 +1127,7 @@ end
 puts "Creating Career Growth Replies"
 CAREER_GROWTH_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Career Growth")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1136,7 +1136,7 @@ end
 puts "Creating Negotiation Strategies Posts"
 NEGOTIATION_STRATEGIES_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Negotiation Strategies").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1145,7 +1145,7 @@ end
 puts "Creating Negotiation Strategies Replies"
 NEGOTIATION_STRATEGIES_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Negotiation Strategies")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1154,7 +1154,7 @@ end
 puts "Creating Learning How to Network Posts"
 LEARNING_HOW_TO_NETWORK_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Learning How to Network").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1163,7 +1163,7 @@ end
 puts "Creating Learning How to Network Replies"
 LEARNING_HOW_TO_NETWORK_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Learning How to Network")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1172,7 +1172,7 @@ end
 puts "Creating Industry-specific Skills Posts"
 INDUSTRY_SPECIFIC_SKILLS_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Industry-Specific Skills").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1181,7 +1181,7 @@ end
 puts "Creating Industry-specific Skills Replies"
 INDUSTRY_SPECIFIC_SKILLS_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Industry-Specific Skills")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1190,7 +1190,7 @@ end
 puts "Creating Handling workplace biases Posts"
 DEALING_WITH_BIASES_IN_THE_WORKPLACE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Handling Workplace Biases").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1199,7 +1199,7 @@ end
 puts "Creating Handling workplace biases Replies"
 DEALING_WITH_BIASES_IN_THE_WORKPLACE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Handling Workplace Biases")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1208,7 +1208,7 @@ end
 puts "Creating Developing Leadership Skills Posts"
 DEVELOPING_LEADERSHIP_SKILLS_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Developing Leadership Skills").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1217,7 +1217,7 @@ end
 puts "Creating Developing Leadership Skills Replies"
 DEVELOPING_LEADERSHIP_SKILLS_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Developing Leadership Skills")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1226,7 +1226,7 @@ end
 puts "Creating Creating Work-Life Balance Posts"
 CREATING_WORK_LIFE_BALANCE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Creating Work-Life Balance").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1235,7 +1235,7 @@ end
 puts "Creating Creating Work-Life Balance Replies"
 CREATING_WORK_LIFE_BALANCE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Creating Work-Life Balance")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1244,7 +1244,7 @@ end
 puts "Creating Building Confidence Posts"
 BUILDING_CONFIDENCE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Building Confidence").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1253,7 +1253,7 @@ end
 puts "Creating Building Confidence Replies"
 BUILDING_CONFIDENCE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Building Confidence")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"

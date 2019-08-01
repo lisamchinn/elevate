@@ -7,30 +7,25 @@
     <h4 class="text-center">No Mentee asigned yet.</h4>
   <% end  %>
   <% if @counterparty_profile %>
-    <div class="d-flex my-2">
+<!--     <div class="d-flex my-2"> -->
       <%= cl_image_tag @counterparty_profile.user.photo, class: "round" %>
-      <div class="ml-2 flex-column d-flex align-items-start">
+<!--       <div class="ml-2 flex-column d-flex align-items-start"> -->
         <h6 class="font-weight-bold my-0"><%= @counterparty_profile.user.first_name %> <%= @counterparty_profile.user.last_name %></h6>
         <p class="my-0"><%= @counterparty_profile.current_title %> at <%= @counterparty_profile.current_employer %></p>
         <p class="mt-0"><%= @counterparty_profile.city %>, <%= @counterparty_profile.state %></p>
-      </div>
-    </div>
-    <div class="card-link-wrapper">
-      <%= link_to "View Profile", profile_path(@counterparty_profile), class: "btn btn-ghost small mt-2 mb-1" %>
-    </div>
+<!--       </div> -->
+<!--     </div> -->
+<!--     <div class="card-link-wrapper"> -->
+      <%= link_to "View Profile", profile_path(@counterparty_profile), class: "btn btn-ghost mt-2 mb-1 small btn-block" %>
+<!--     </div> -->
   <% end %>
-  <div class="card-link-wrapper">
+<!--   <div class="card-link-wrapper"> -->
     <% if current_user.mentee %>
-      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentee.last), class: "btn btn-solid small mt-2 mb-1" %>
+      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentee.last), class: "btn btn-solid small btn-block mt-2 mb-1" %>
     <% elsif @counterparty_profile %>
-      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentor.last), class: "btn btn-solid small mt-2 mb-1" %>
+      <%= link_to "Message her", match_messages_path(profile.user.matches_as_mentor.last), class: "btn btn-solid small btn-block mt-2 mb-1" %>
     <% end %>
-  </div>
-  <% if @counterparty_profile %>
-    <div class="card-link-wrapper">
-      <%= link_to "End Mentorship", root_path, class: "btn btn-ghost small mt-2 mb-1"%>
-    </div>
-  <% end %>
+<!--   </div> -->
 </div>
 
 

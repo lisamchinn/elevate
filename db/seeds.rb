@@ -314,7 +314,7 @@ MENTORS = [{
   email: 'kirthiga@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://smedia2.intoday.in/btmt/images/stories/kirthiga-reddy-facebook_660_090915064745.jpg',
+  photo: 'https://www.businessinsider.in/thumb/msid-69651687,width-640,resizemode-4/Kirthiga-Reddy-venture-partner-Americas.jpg?1041191',
   },
   {
   first_name: 'Lillian',
@@ -688,43 +688,43 @@ MENTOR_PROFILES = [
 
 FORUMS = [ {
     name: "Entrepreneurship",
-    photo: "app/assets/images/undraw_freelancer_b0my.svg"
+    photo: "undraw_freelancer_b0my.svg"
   },
   {
     name: "Career Change",
-    photo: "app/assets/images/undraw_design_sprint_x3eb.svg"
+    photo: "undraw_design_sprint_x3eb.svg"
   },
   {
     name: "Career Growth",
-    photo: "app/assets/images/undraw_working_late_pukg.svg"
+    photo: "undraw_working_late_pukg.svg"
   },
   {
     name: "Negotiation Strategies",
-    photo: "app/assets/images/undraw_process_e90d.svg"
+    photo: "undraw_process_e90d.svg"
   },
   {
     name: "Learning How to Network",
-    photo: "app/assets/images/undraw_co-working_825n.svg"
+    photo: "undraw_co-working_825n.svg"
   },
   {
     name: "Industry-Specific Skills",
-    photo: "app/assets/images/undraw_software_engineer_lvl5.svg"
+    photo: "undraw_software_engineer_lvl5.svg"
   },
   {
     name: "Handling Workplace Biases",
-    photo: "app/assets/images/undraw_multitasking_hqg3.svg"
+    photo: "undraw_multitasking_hqg3.svg"
   },
   {
     name: "Developing Leadership Skills",
-    photo: "app/assets/images/undraw_leadership_26ry.svg"
+    photo: "undraw_leadership_26ry.svg"
   },
   {
     name: "Creating Work-Life Balance",
-    photo: "app/assets/images/undraw_worklife_o89g.svg"
+    photo: "undraw_worklife_o89g.svg"
   },
   {
     name: "Building Confidence",
-    photo: "app/assets/images/undraw_confidence_ubwv.svg"
+    photo: "undraw_confidence_ubwv.svg"
   }
 ]
 
@@ -738,7 +738,7 @@ ENTREPRENEURSHIP_POSTS = [ {
 },
 {
   subject: "Calling entrepreneurs!",
-  content: "1: When did you start your company? 2: What do you do? 3: What are some challenges you face, particularly associated with being a (female) entrepreneur? "
+  content: "When did you start your company? What do you do? What are some challenges you face, particularly associated with being a (female) entrepreneur? "
 }
 ]
 
@@ -777,29 +777,19 @@ ENTREPRENEURSHIP_REPLIES_TWO = [ {
 ]
 
 ENTREPRENEURSHIP_REPLIES_THREE = [ {
-  content: "1. Last winter.
-  2. I am blogger and dog nutritionist. (Online business)
-  3. None I can think of, to be honest. I haven't been met with any gender based challenges thus far. Considering the nature of my business, I don't think I will see much."
+  content: "Last winter. I am blogger and dog nutritionist. (Online business) None I can think of, to be honest. I haven't been met with any gender based challenges thus far. Considering the nature of my business, I don't think I will see much."
 },
 {
-  content: "1. I've been a Consultant IT Tech for the last 3/4 years.
-  2.I work with companies that have a technical project to roll out that is more work than their normal IT dept can deal with. Help them to automate repetitive tasks, plan a solution, implement it & train users.
-  3.Ideally I'd like to start doing this more for small businesses, solo business people & entrepreneurs like me. So website reviews, one-to-one advice on how they can make their idea a reality, even when starting from limited resources. The challenges are growing a network and becoming known for good advice."
+  content: "I've been a Consultant IT Tech for the last 3/4 years. I work with companies that have a technical project to roll out that is more work than their normal IT dept can deal with. Help them to automate repetitive tasks, plan a solution, implement it & train users. Ideally I'd like to start doing this more for small businesses, solo business people & entrepreneurs like me. So website reviews, one-to-one advice on how they can make their idea a reality, even when starting from limited resources. The challenges are growing a network and becoming known for good advice."
 },
 {
-  content: "1. May, 2012
-  2. I'm running an educational consulting firm that helps students through the college admissions process and college students figure out what they want to be when they grow up.
-  3. Getting taken seriously is the hardest, I think. I'm currently working my day job as my business gains traction and I can't tell you how many people at work tell me I'm wasting my time or that I'll fail. After all, I'm supposed to be home taking care of my daughter and not working in the eyes of my coworkers (I'm in a male dominated, old school industry)."
+  content: "May, 2012. I'm running an educational consulting firm that helps students through the college admissions process and college students figure out what they want to be when they grow up. Getting taken seriously is the hardest, I think. I'm currently working my day job as my business gains traction and I can't tell you how many people at work tell me I'm wasting my time or that I'll fail. After all, I'm supposed to be home taking care of my daughter and not working in the eyes of my coworkers (I'm in a male dominated, old school industry)."
 },
 {
-  content: "I work for my mother, but technically she started the business so I will reference our conversation in the matter.
-
-  1. We bought a website in 2008 and started an s corp. in 2009 we became active.
-  2. A service business. We access or help insurance adjusters access steep and tall homes/buildings.
-  3. In a predominantly male market it's hard to be taken professionally. Man times the clients are older than myself and my mother and have been in the industry for years. Since we are at the bottom of the totem pole offering services, we get yelled at when things don't go right. Sometimes it's even a typo in their end in the request form. Although most of the men are very polite, we often run into men being rude after discovering the business is run by women. I assume a woman who owns a construction company would be treated the same."
+  content: "I work for my mother, but technically she started the business so I will reference our conversation in the matter. We bought a website in 2008 and started an s corp. in 2009 we became active. A service business. We access or help insurance adjusters access steep and tall homes/buildings. In a predominantly male market it's hard to be taken professionally. Man times the clients are older than myself and my mother and have been in the industry for years. Since we are at the bottom of the totem pole offering services, we get yelled at when things don't go right. Sometimes it's even a typo in their end in the request form. Although most of the men are very polite, we often run into men being rude after discovering the business is run by women. I assume a woman who owns a construction company would be treated the same."
 },
 {
-  content: "1. I started an online store in 2010 and sold it late 2012. While managing it (I sold fertility/maternity products mostly) I got an idea for a product for pregnant women so I started a company (August 2011) and after lots of trouble with finding and dealing with manufacturers the product is finally ready and is being shipped overseas to us, we´ll launch the website in a few weeks hopefully. 2. I'm the CEO and co-founder. An acquaintance (another woman) is the other founder and she's in sales. So far I've been in charge of designing the product, contacting factories and agents, raising money, dealing with graphic designers, setting up the website and probably a lot of other things I'm forgetting. 3. I come from a pretty gender equal country and must say that being a woman has mostly opened doors for me, for example I've received 2 grants and 1 business loan only available for women."
+  content: "I started an online store in 2010 and sold it late 2012. While managing it (I sold fertility/maternity products mostly) I got an idea for a product for pregnant women so I started a company (August 2011) and after lots of trouble with finding and dealing with manufacturers the product is finally ready and is being shipped overseas to us, we´ll launch the website in a few weeks hopefully. I'm the CEO and co-founder. An acquaintance (another woman) is the other founder and she's in sales. So far I've been in charge of designing the product, contacting factories and agents, raising money, dealing with graphic designers, setting up the website and probably a lot of other things I'm forgetting. I come from a pretty gender equal country and must say that being a woman has mostly opened doors for me, for example I've received 2 grants and 1 business loan only available for women."
 }
 ]
 

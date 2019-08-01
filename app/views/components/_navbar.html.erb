@@ -24,8 +24,8 @@
             </div>
           <% end %>
           <% unless current_user.mentors.empty? %>
-            <%= link_to "My mentor", profile_path(current_user.mentors.last), class:" dropdown-item" %>
-             <%= link_to "Messages", match_messages_path(current_user.matches_as_mentee.first), class:" dropdown-item" %>
+            <%= link_to "My mentor", profile_path(current_user.matches_as_mentee.last.mentor.profile), class:" dropdown-item" %>
+             <%= link_to "Messages", match_messages_path(current_user.matches_as_mentee.last), class:" dropdown-item" %>
           <% else %>
             <%= link_to "Take the Survey", question_path(question_mentee), class:" dropdown-item" %>
           <% end %>

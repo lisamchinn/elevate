@@ -1,10 +1,11 @@
 const dateFormat = require('dateformat');
+import dayjs from 'dayjs'
 
 $(document).ready(() => {
   const updateChat = (data, sender) => {
-    const formatDate = (date) => {
-      return `${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
-    };
+    // const formatDate = (date) => {
+    //   return `${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+    // };
     $('.chat-box').prepend(`
 
       <div class="chat-bubble-wrapper d-flex chat-container ${sender}">
@@ -13,7 +14,7 @@ $(document).ready(() => {
         </div>
         <div class="chat-bubble d-flex flex-column justify-content-between ${sender}">
           <div class="chat-message">${data.content}</div>
-          <div class="chat-timestamp ${sender}">${dateFormat((new Date(data.created_at)), 'mm-dd-yyyy HH:MM')}</div>
+          <div class="chat-timestamp ${sender}">${dayjs(new Date(data.created_at)).format("MMM D, hh:mm A")}</div>
         </div>
       </div>
 

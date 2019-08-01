@@ -1,0 +1,84 @@
+Searching 359 files for "woman"
+
+/Users/lisachinn/code/elevate/app/views/components/_footer.html.erb:
+   11        <div class="footer-quote col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+   12          <h6 class="text-uppercase mb-4">ELLEVATE</h6>
+   13:           <p>When a woman helps another woman, they both benefit. And when women celebrate one another’s accomplishments, we’re all lifted up. Together women can do more, go further, and change the world. Let’s #EllevateEachOther</p>
+   14        </div>
+   15
+
+/Users/lisachinn/code/elevate/app/views/pages/home.html.erb:
+   30              <div class="image-collage">
+   31                <div class="image-2 mb-4">
+   32:                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman2">
+   33                </div>
+   34                <div class="image-3 ml-5">
+   35:                 <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="photo of woman3">
+   36                </div>
+   37              </div>
+   ..
+   50              <div class="image-collage">
+   51                <div class="image-1">
+   52:                <img src="https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80" alt="photo of woman2">
+   53                 </div>
+   54              </div>
+
+/Users/lisachinn/code/elevate/db/seeds.rb:
+   10  EVENTS = [ {
+   11    title: 'Hunger by Roxane Gay',
+   12:   description: 'In her phenomenally popular essays and long-running Tumblr blog, Roxane Gay has written with intimacy and sensitivity about food and body, using her own emotional and psychological struggles as a means of exploring our shared anxieties over pleasure, consumption, appearance, and health. As a woman who describes her own body as wildly undisciplined, Roxane understands the tension between desire and denial, between self-comfort and self-care. In Hunger, she explores her past—including the devastating act of violence that acted as a turning point in her young life—and brings readers along on her journey to understand and ultimately save herself.\n With the bracing candor, vulnerability, and power that have made her one of the most admired writers of her generation, Roxane explores what it means to learn to take care of yourself: how to feed your hungers for delicious and satisfying food, a smaller and safer body, and a body that can love and be loved—in a time when the bigger you are, the smaller your world becomes.',
+   13    address: '1148 Grant St, Longmont, CO, USA',
+   14    date: Date.today + rand(3..40).days,
+   ..
+  226
+  227  Who Should Come?
+  228: Anyone who identifies as a woman who supports women. Going to the beach can often feel like a scary task for those of us who are self conscious about our beach bodies. But listen, EVERY BODY IS A BEACH BODY! Come as you are and know that you are with a group of people who just want to spend time with other like-minded women for a day of fun!
+  229
+  230  What Should I Bring?
+  ...
+  571    goals: 'Lead Softbank global marketing initiatives and grow the Southeast Asian offices',
+  572    birthday: Date.new(1970, 4, 19),
+  573:   description: 'Kirthiga is an American businesswoman and venture partner for the US$100 billion Vision Fund from Softbank. She is the first female investing partner of Softbank and the former managing director of Facebook Asia. She has the distinction of being the first employee of the social media giant in India and has been one of the leading forces behind its expansive growth in the country.',
+  574    tagline: 'Tech executive with over 20 years of experience building high-growth global businesses in Sales, Operations, and Engineering.',
+  575    public: true,
+  ...
+  685   goals: 'Win The Fields Medal',
+  686   description: 'I believe people are basically good. I recognize and respect everyone as a unique individual. I believe everyone has something to contribute. I encourage people to treat others the way they want to be treated. I believe that an honest, open environment can bring out the best in people',
+  687:  tagline: 'Passionate businesswoman and activist hoping to share her knowledge and passion with the next generation of women',
+  688  },
+  689  ]
+  ...
+  789  },
+  790  {
+  791:   content: "I work for my mother, but technically she started the business so I will reference our conversation in the matter. We bought a website in 2008 and started an s corp. in 2009 we became active. A service business. We access or help insurance adjusters access steep and tall homes/buildings. In a predominantly male market it's hard to be taken professionally. Man times the clients are older than myself and my mother and have been in the industry for years. Since we are at the bottom of the totem pole offering services, we get yelled at when things don't go right. Sometimes it's even a typo in their end in the request form. Although most of the men are very polite, we often run into men being rude after discovering the business is run by women. I assume a woman who owns a construction company would be treated the same."
+  792  },
+  793  {
+  794:   content: "I started an online store in 2010 and sold it late 2012. While managing it (I sold fertility/maternity products mostly) I got an idea for a product for pregnant women so I started a company (August 2011) and after lots of trouble with finding and dealing with manufacturers the product is finally ready and is being shipped overseas to us, we´ll launch the website in a few weeks hopefully. I'm the CEO and co-founder. An acquaintance (another woman) is the other founder and she's in sales. So far I've been in charge of designing the product, contacting factories and agents, raising money, dealing with graphic designers, setting up the website and probably a lot of other things I'm forgetting. I come from a pretty gender equal country and must say that being a woman has mostly opened doors for me, for example I've received 2 grants and 1 business loan only available for women."
+  795  }
+  796  ]
+  ...
+  798  CAREER_CHANGE_POSTS = [ {
+  799    subject: "Dancing into Ops - How I got my job",
+  800:   content: "Being able to pivot our career is a woman’s prerogative and should be exercised how you choose. If you plan to pivot your career, know that you’re not alone. I didn’t have great communities like Elpha. I didn’t have a network of people who were in the space I was trying to move to, so I read all the industry news I could, networked so not comfortably and kept learning. Communities like this make it easier and less lonely, so feel free to reach out."
+  801  }
+  802  ]
+
+13 matches across 3 files
+
+
+Searching 359 files for "desk"
+
+/Users/lisachinn/code/elevate/app/views/layouts/application.html.erb:
+    7      <meta name="description" content="We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.">
+    8      <meta property="og:title" content="Ellevate - Mentorship is the key to our success">
+    9:     <meta property="og:image" content="<%= asset_path('women-at-desk.jpeg') %>">
+   10      <meta property="og:description" content="We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.">
+   11      <meta property="og:type" content="website" />
+   ..
+   17      <meta name="twitter:description" content="We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.">
+   18      <meta name="twitter:creator" content="@Ellevate">
+   19:     <meta name="twitter:image:src" content="<%= asset_path('women-at-desk.jpeg') %>">
+   20      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+   21      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+
+2 matches in 1 file

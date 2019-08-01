@@ -34,8 +34,13 @@
             <% end %>
 
             <div class="chat-bubble-wrapper head d-flex flex-row chat-container me">
-             <%= form.text_area :content, id: :message, class: "form-control p-4", required: true, placeholder: "Type a message and press enter to send...", autocomplete: 'off', rows: 4 %>
-             <%= form.hidden_field :identifier, id: :identifier, value: current_user.identifier %>
+              <div id="message-area">
+               <%= form.text_area :content, id: :message, class: "form-control p-4", required: true, placeholder: "Type a message...", autocomplete: 'off', rows: 4 %>
+               <%= form.hidden_field :identifier, id: :identifier, value: current_user.identifier %>
+               <div class="d-flex justify-content-end mt-3">
+                <%= form.submit 'Send Message', class: "btn-solid small" %>
+               </div>
+              </div>
              <div class="chat-image d-flex flex-column align-items-center me">
                 <%= cl_image_tag current_user.photo %>
               </div>

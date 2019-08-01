@@ -11,7 +11,9 @@ class PostsController < ApplicationController
 
   def create
     @forum = Forum.find(params[:forum_id])
+    @posts = @forum.posts
     @post = Post.new(post_params)
+    @forums = policy_scope(Forum)
     @post.forum = @forum
     @post.user = current_user
     if @post.save

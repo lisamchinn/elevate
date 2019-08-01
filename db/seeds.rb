@@ -505,7 +505,7 @@ MENTOR_PROFILES = [
   year_graduated_bachelors: 1997,
   masters_university: 'University of Montreal',
   masters_degree: 'M.Sc., Business Administration - Health Care',
-  year_graduated_masters: 1998,
+  year_graduated_masters: 1999,
   doctorate_university: 'Université de Montréal - HEC Montréal',
   doctorate_degree: 'Ph.D., Strategic Management',
   year_graduated_doctorate: 2007,
@@ -532,7 +532,10 @@ MENTOR_PROFILES = [
   years_in_previous_industry: 2,
   bachelors_university: 'Southern Methodist University',
   bachelors_degree: 'Chemical Engineering',
-  year_graduated_bachelors: 2000,
+  year_graduated_bachelors: 2011,
+  masters_university: 'The University of Chicago Booth School of Business',
+  masters_degree: 'Masters in Business Administration (MBA)',
+  year_graduated_masters: 2013,
   city: 'Austin',
   state: 'TX',
   fav_books: "\"A Room of One's Own\" by Virginia Woolf",
@@ -584,7 +587,7 @@ MENTOR_PROFILES = [
  bachelors_university: 'Princeton University',
  bachelors_degree: 'BA, Engineering',
  year_graduated_bachelors: 1993,
- masters_university: 'Princeton University',
+ masters_university: 'University of Pennsylvania Wharton School',
  masters_degree: 'Masters in Business Administration (MBA)',
  year_graduated_masters: 1996,
  city: 'Redwood City',
@@ -610,10 +613,10 @@ MENTOR_PROFILES = [
  years_in_previous_industry:4,
  bachelors_university: 'Stanford University',
  bachelors_degree: 'BA, Engineering',
- year_graduated_bachelors: 1999,
+ year_graduated_bachelors: 2002,
  masters_university: 'Stanford University',
  masters_degree: 'Masters in Business Administration (MBA)',
- year_graduated_masters: 2003,
+ year_graduated_masters: 2004,
  city: 'Los Angeles',
  state: 'CA',
  fav_books: "\"Mindset\" by Carol Dweck",
@@ -637,11 +640,10 @@ MENTOR_PROFILES = [
  years_in_previous_industry:4,
  bachelors_university: 'Harvard University',
  bachelors_degree: 'BA, Computer Science',
- year_graduated_bachelors: 1998,
+ year_graduated_bachelors: 2000,
  masters_university: 'Stanford University',
  masters_degree: 'Masters in Computer Science',
- year_graduated_masters: 2004,
- year_graduated_doctorate: 2009,
+ year_graduated_masters: 2002,
  city: 'New York City',
  state: 'NY',
  fav_books: "\"The Lean Startup\" by Eric Ries",
@@ -668,7 +670,7 @@ MENTOR_PROFILES = [
  year_graduated_bachelors: 1999,
  masters_university: 'Stanford University',
  masters_degree: 'Masters in Business Administration (MBA)',
- year_graduated_masters: 2003,
+ year_graduated_masters: 2002,
  doctorate_university:'Harvard University',
  doctorate_degree:'PhD in Finance',
  year_graduated_doctorate: 2009,
@@ -1300,7 +1302,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentor has the same race as you?", question_type: 2, importance: 5}, answers: [
+    contents: { content: "How important is it that your mentor has the same race as you?", question_type: 2, importance: 5}, answers: [
       {
         content: "Not at all important"
       },
@@ -1329,7 +1331,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am generally available on...", question_type: 1, importance: 1}, answers: [
+    contents: { content: "I am generally available on (rank in order):", question_type: 1, importance: 1}, answers: [
       {
         content: "Weekday mornings"
       },

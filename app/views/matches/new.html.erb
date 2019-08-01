@@ -1,12 +1,12 @@
 <div class="container-medium-small">
   <div class="row matches-text">
-    <h4>Here are your matched mentors</h4>
-    <p>Please review each of their profiles before sending a request to one of them</p>
+    <h4>Congratulations!   You have matched with <%= @matches.length %> amazing mentors: </h4>
+    <p>We recommend that you review each mentor's profiles before sending a request to one.</p>
   </div>
   <div class="row justify-content-start">
-    <% @matches.each do |match| %>
+    <% @matches.each_with_index do |match, index| %>
       <div class="col-4 my-2">
-        <%= render 'components/card-match', match: match %>
+        <%= render 'components/card-match', match: match, index: index %>
       </div>
     <% end %>
   </div>

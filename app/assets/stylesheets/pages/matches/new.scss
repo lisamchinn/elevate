@@ -63,6 +63,30 @@
   }
 }
 
+.mentor-rank {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mentor-rank span {
+  font-family: 'Cookie', cursive;
+  font-size: 24px;
+  margin-top: 10px;
+
+}
+
+.mentor-rank p {
+  color: $black;
+  font-family: 'Cookie', cursive;
+  font-size: 46px;
+  text-align: right;
+  margin-right: 25px;
+}
+
+
+
 .match-button {
   text-align: center;
   margin-top: 5px;

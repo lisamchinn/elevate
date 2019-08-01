@@ -1,5 +1,9 @@
-<div class="mentor-card-container large">
+<div class="mentor-card-container large mb-5">
   <div class="mentor-card">
+    <div class="mentor-rank">
+      <span>#</span>
+      <p><%= index + 1 %></p>
+    </div>
     <%= cl_image_tag match.mentor.photo %>
     <h6><%= match.mentor.first_name %> <%= match.mentor.last_name %></h6>
     <p><%= match.mentor.profile.current_title %> at <%= match.mentor.profile.current_employer %></p>
@@ -15,9 +19,7 @@
 </div>
 
 
-
 <!-- Button trigger modal -->
-
 
 <!-- Modal -->
 <div class="modal fade" id="mentor-<%= match.mentor.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">

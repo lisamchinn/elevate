@@ -114,7 +114,7 @@ margin-top: 10px;
 }
 
 .horizontal-bar {
-  width: 200px;
+  width: 240px;
   height:1px;
   background-color: grey;
 }
@@ -133,7 +133,7 @@ margin-top: 10px;
 .min-height-card {
   min-height: 167px;
   h4 {
-  text-align: center;
+  text-align: left;
    font-size: 15px;
   margin-top: 4px;
   }
@@ -141,7 +141,7 @@ margin-top: 10px;
 
 .goals-cont {
    h4 {
-  text-align: center;
+  text-align: left;
   }
   h3 {
     color: black;
@@ -158,4 +158,11 @@ margin-top: 10px;
 
 .color-card {
   color: black !important;
+}
+
+.suitcase-image {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  opacity: 0.9;
 }

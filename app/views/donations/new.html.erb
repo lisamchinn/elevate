@@ -1,19 +1,34 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);">
-  <div class="container-donation">
-    <div class="col-6">
-      <div class="donation-form">
-        <%= simple_form_for @donation do |f| %>
-        <h2>Help us do more!</h2>
-        <p>We're a nonprofit that relies on support from people like you. If everyone reading this gives $10 monthly, Ellevate can continue to thrive for years. Invest in our bold vision for the future, and help prove that this generation of women belongs in the conversation. </p>
+<div class="banner-donation" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80);">
+  <div class="all-donation-info">
+    <div class="container-donation">
+      <!-- <div class="col-6"> -->
+        <div class="donation-form">
+          <%= simple_form_for @donation do |f| %>
+          <h2>Help us do more!</h2>
+          <p>We're a nonprofit that relies on support from people like you. If everyone reading this gives $10 monthly, Ellevate can continue to thrive for years. Invest in our bold vision for the future, and help prove that this generation of women belongs in the conversation. Let's Ellevate Each Other! </p>
 
-        <h4>Your email address: </h4>
-        <%= f.input :donor_email, class: "form-control mt-5", placeholder: 'name@mail.com', label: false %>
-        <h4> Input your support amount: </h4>
-        <span class="mb-2">$USD</span>
-        <%= f.input :amount, class: "form-control", html_input: { value: '$20' }, label: false %>
-        <%= f.button :submit, class: "btn btn-solid" %>
-        <% end %>
-      </div>
+          <h3>Join the 10,873 other women who have donated to Ellevate</h3>
+
+          <h4>Your email address: </h4>
+          <%= f.input :donor_email, class: "form-control mt-5", placeholder: 'name@mail.com', label: false %>
+          <h4> Input your support amount: </h4>
+          <span class="mb-2">$USD</span>
+          <%= f.input :amount, class: "form-control", placeholder: '10', html_input: { value: '$10' }, label: false %>
+          <%= f.button :submit, class: "btn btn-solid" %>
+          <% end %>
+        </div>
+      <!-- </div> -->
+    </div>
+    <div class="donation-faq">
+      <h4>Frequently Asked Questions: </h4>
+      <ul>
+        <li>How secure is my payment?</li>
+        <li>How is my donation used?</li>
+        <li>How secure is my payment?</li>
+        <li>How is my donation used?</li>
+        <li>How secure is my payment?</li>
+        <li>How is my donation used?</li>
+      </ul>
     </div>
   </div>
 </div>

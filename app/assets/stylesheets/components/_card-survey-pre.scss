@@ -1,0 +1,103 @@
+.container-pre-form {
+  max-width: 640px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+ul.pre-cboxtags li label{
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .9);
+  // border: 2px solid rgba(139, 139, 139, .3);
+  color: #adadad;
+  border-radius: 25px;
+  white-space: nowrap;
+  margin: 3px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all .2s;
+}
+
+ul.pre-cboxtags {
+  list-style: none;
+  margin: 16px;
+}
+ul.pre-cboxtags li{
+  display: block;
+}
+ul.pre-cboxtags li label{
+  color: rgb(82, 187, 190);
+  background-color: rgba(82, 187, 190, 0.1);
+  box-shadow: rgba(82, 187, 190, 0.8) 0px 0px 0px 2px inset;
+  cursor: pointer;
+  opacity: 1;
+  height: auto;
+  border-radius: 8px;
+  animation: 0.25s ease 0s 2 normal none running qNIWx;
+  margin-top: 6px;
+  padding: 5px, 3px;
+}
+
+ul.pre-cboxtags li label {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+ul.pre-cboxtags li label::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    content: "\f067";
+    transition: transform .3s ease-in-out;
+}
+
+ul.pre-cboxtags li input[type="checkbox"]:checked + label::before {
+    content: "\f00c";
+    transform: rotate(-360deg);
+    transition: transform .3s ease-in-out;
+}
+
+ul.pre-cboxtags li input[type="checkbox"]:checked + label {
+    // border: 2px solid #1bdbf8;
+    background-color: rgba(82, 187, 190, 0.8);
+    color: #fff;
+    transition: all .2s;
+}
+
+ul.pre-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+ul.pre-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+ul.pre-cboxtags li input[type="checkbox"]:focus + label {
+  // border: 2px solid rgba(139, 139, 139, .3);
+}
+
+// #checkbox-design {
+//   color: #52bbbe;
+//   border: 2px solid #52bbbe;
+//   padding: 2px 5px;
+//   margin: 1px;
+//   font-size: 12px;
+//   margin-right: 3px;
+//   &:hover {
+//     -ms-transform: scale(1.5); /* IE 9 */
+//     -webkit-transform: scale(1.5); /* Safari 3-8 */
+//     transform: scale(1.5);
+//     color: red;
+//   }
+// }
+
+

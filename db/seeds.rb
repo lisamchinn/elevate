@@ -540,13 +540,8 @@ MENTOR_PROFILES = [
   hobbies: 'Karaoke, karate, listening to music',
   goals: 'To launch the next version of Bumble within the next 2 years',
   birthday: Date.new(1980, 1, 21),
-<<<<<<< HEAD
-  description: 'Whitney is an entrepreneur who has launched two of the largest dating app in the world. She has experience in leading +100 team around the world and is known for her prowess in identifying customer insights, creativity, speed to execution, and detailed attention to customer experience.',
-  tagline: 'Experienced entrepreneur with a passion for growth marketing, eager to mentor an upcoming female entrepreneur!',
-=======
   description: 'Whitney is an entrepreneur who has launched two of the largest dating app in the world. She has experience in leading 100+ team around the world and is known for her prowess in identifying customer insights, creativity, speed to execution, and detailed attention to customer experience.',
-  tagline: 'Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same trajectory.',
->>>>>>> master
+  tagline: 'Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same path.',
   public: true,
   phone: 1986613118,
 },

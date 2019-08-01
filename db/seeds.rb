@@ -374,7 +374,7 @@ MENTEE_PROFILES = [{
   goals: 'Be a product manager or founder in a edu-tech company, summitting Mount Everest',
   birthday: Date.new(1986, 9, 1),
   description: 'I am from the US, and spent the last 7 years living and working in Tokyo. I have been working & traveling for the last year and a half, and I am interested in learning to code to hopefully to start my own education-related company in the near future.',
-  tagline: 'Passionate educator with +8 years experience of leading a school. Would like to enter the tech industry and is looking for a mentor to guide her.',
+  tagline: 'Passionate educator with 8+ years experience of leading a school. Would like to enter the tech industry and is looking for a mentor to guide her.',
   public: true,
   phone: 11758950024,
 },
@@ -430,7 +430,7 @@ Adichie Chimamanda Ngozi',
   hobbies: 'Drawing, doing yoga, coding, and cooking',
   goals: 'I want to successfully launch Elpha, grow the company and hopefully go public.',
   birthday: Date.new(1990, 4, 11),
-  description: 'Experienced at managing projects and products. I was responsible for launching +10 medium-to-large features which are used by hundreds of customers. I thrive in an environment where I had to translate between customers needs into technological features. I enjoyed coding with Ruby, mySQL, JavaScript, and React. ',
+  description: 'Experienced at managing projects and products. I was responsible for launching 10+ medium-to-large features which are used by hundreds of customers. I thrive in an environment where I had to translate between customers needs into technological features. I enjoyed coding with Ruby, mySQL, JavaScript, and React. ',
   tagline: 'Currently working on Elphy, a startup focused on helping women gain management skills. I am looking for a mentor that can guide me to successfuly launch and grow this product.',
   public: true,
   phone: 41765715598,
@@ -540,7 +540,7 @@ MENTOR_PROFILES = [
   hobbies: 'Karaoke, karate, listening to music',
   goals: 'Launch the next version of Bumble within the next 5 years',
   birthday: Date.new(1980, 1, 21),
-  description: 'Whitney is an entrepreneur who has launched two of the largest dating app in the world. She has experience in leading +100 team around the world and is known for her prowess in identifying customer insights, creativity, speed to execution, and detailed attention to customer experience.',
+  description: 'Whitney is an entrepreneur who has launched two of the largest dating app in the world. She has experience in leading 100+ team around the world and is known for her prowess in identifying customer insights, creativity, speed to execution, and detailed attention to customer experience.',
   tagline: 'Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same trajectory.',
   public: true,
   phone: 1986613118,
@@ -1289,7 +1289,7 @@ MENTEE_QUESTIONS = [
         content: "Black or African American"
       },
       {
-        content: "Hispanic or Latino"
+        content: "Hispanic or Latina"
       },
       {
         content: "Native Hawaiian or Other Pacific Islander"
@@ -1430,7 +1430,7 @@ MENTOR_QUESTIONS = [
         content: "Black or African American"
       },
       {
-        content: "Hispanic or Latino"
+        content: "Hispanic or Latina"
       },
       {
         content: "Native Hawaiian or Other Pacific Islander"

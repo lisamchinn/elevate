@@ -1,3 +1,4 @@
+<% content_for :meta_title, "#{@post.subject} | Ellevate" %>
 <div class="container">
   <div class="row">
     <div class="col-3 side-bar">
@@ -8,7 +9,7 @@
       <div class="post-title">
         <h2><%= @post.subject %></h2>
         <p><%= cl_image_tag @post.user.photo, class: "avatar" %> <%= @post.user.first_name %></p>
-        <h6><%= @post.content %></h6>
+        <h6 style="word-break: break-word;"><%= @post.content %></h6>
       </div>
 
       <h6 class="pb-3" style="text-align: center;">Replies from the community</h6>
@@ -18,9 +19,10 @@
           <% end %>
             <div class="py-3">
               <% if signed_in? %>
+                <h6 class="my-3"><strong>Post a reply</strong></h6>
                 <%= simple_form_for [@post, @reply] do |f| %>
                 <%= f.input :content %>
-                <%= f.button :submit %>
+                <%= f.button :submit, autocomplete: "off", class: "btn-solid small" %>
                 <% end %>
               <% else %>
                 <p><%= link_to "Sign in to reply", new_user_session_path %> </p>
@@ -38,7 +40,7 @@
           <% end %>
         <% end %>
 
-      <%= link_to "Back to #{@forum.name}", forum_path(@forum), class: "btn btn-solid" %>
+      <%= link_to "Back to #{@forum.name}", forum_path(@forum), class: "btn btn-solid my-5" %>
     </div>
   </div>
 </div>

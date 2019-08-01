@@ -1,9 +1,33 @@
+// .reply-card {
+//   padding: 20px;
+//   background-color: #fefcf7;
+//   border-radius: 2px;
+//   box-shadow: 0 0 3px rgba(0,0,0,0.1);
+//   margin-bottom: 10px;
+//   .reply-content {
+//     p {
+//       font-size: 16px;
+//       color: black;
+//     }
+//   }
+// }
+
 .reply-card {
-  padding: 20px;
-  background-color: white;
-  border-radius: 2px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  background-color: #FEFCF7;
+  padding: 30px;
+  box-shadow: 0 0 20px 0 rgba(46, 53, 57, 0.11);
+  h2 {
+    margin-bottom: 30px;
+  }
+  p {
+    color: #303030;
+  }
+  h6 {
+    padding: 20px 60px 20px 60px;
+    color: #303030;
+    line-height: 30px;
+  }
 }
 
 .reply-info-card {
@@ -21,7 +45,7 @@
   p {
     margin: 0;
     margin-bottom: 2px;
-    font-size: 14px;
+    font-size: 16px;
   }
   div {
     text-align: right;

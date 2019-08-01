@@ -1302,7 +1302,7 @@ MENTEE_QUESTIONS = [
     ]
   },
     {
-    contents: { content: "How important is it to you that your mentor has the same race as you?", question_type: 2, importance: 5}, answers: [
+    contents: { content: "How important is it that your mentor has the same race as you?", question_type: 2, importance: 5}, answers: [
       {
         content: "Not at all important"
       },
@@ -1331,7 +1331,7 @@ MENTEE_QUESTIONS = [
     ]
   },
   {
-    contents: { content: "I am generally available on...", question_type: 1, importance: 1}, answers: [
+    contents: { content: "I am generally available on (rank in order):", question_type: 1, importance: 1}, answers: [
       {
         content: "Weekday mornings"
       },

@@ -314,7 +314,7 @@ MENTORS = [{
   email: 'kirthiga@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://smedia2.intoday.in/btmt/images/stories/kirthiga-reddy-facebook_660_090915064745.jpg',
+  photo: 'https://www.businessinsider.in/thumb/msid-69651687,width-640,resizemode-4/Kirthiga-Reddy-venture-partner-Americas.jpg?1041191',
   },
   {
   first_name: 'Lillian',

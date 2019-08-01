@@ -15,7 +15,7 @@
       </div>
 
       <div class="forum-searchbar">
-        <form class="simple_form search" action="<%= forum_path(@forum) %>" method="get">
+        <form class="simple_form search" action="<%= forum_path(@forum) %>" method="get" autocomplete="off">
         <div class="search-form-control form-group">
           <input class="form-control string required" type="text" name="search" id="search_query" placeholder="Search within <%= @forum.name.downcase %>..." />
           <button name="button" type="submit" class="btn btn-solid">

@@ -8,10 +8,10 @@
       <h6 class="d-flex align-items-center"><%= post.subject %></h6>
     </div>
     <div class="post-number">
-      <h4>5</h4>
+      <h4><%= post.replies.count %></h4>
     </div>
     <div class="post-date">
-      <h4>21 July 2019</h4>
+      <h4><%= time_ago_in_words post.created_at, locale: :en %> ago</h4>
     </div>
   </div>
 <% end %>

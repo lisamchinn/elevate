@@ -7,7 +7,7 @@
     <div class="col-9 post-body">
       <div class="post-title">
         <h2><%= @post.subject %></h2>
-        <p><%= cl_image_tag @post.user.photo, class: "avatar" %> <%= @post.user.first_name %></p>
+        <p><%= cl_image_tag @post.user.photo, class: "avatar mr-3" %> <%= @post.user.first_name %></p>
         <h6><%= @post.content %></h6>
       </div>
 
@@ -38,7 +38,7 @@
           <% end %>
         <% end %>
 
-      <%= link_to "Back to #{@forum.name}", forum_path(@forum), class: "btn btn-solid" %>
+      <%= link_to "Back to #{@forum.name}", forum_path(@forum), class: "btn btn-solid my-5" %>
     </div>
   </div>
 </div>

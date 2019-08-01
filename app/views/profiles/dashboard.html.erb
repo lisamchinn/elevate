@@ -1,4 +1,5 @@
-<div class="container-medium-small">
+<% content_for :meta_title, "My Dashboard | Ellevate" %>
+<div class="container mt-4">
   <div class="dashboard-welcome d-flex flex-row">
     <div class="content col-6">
       <h2>Hello, <%= @profile.user.first_name.capitalize %>!</h2>
@@ -42,11 +43,20 @@
 
     <div class="col-12 col-md-9">
       <%= render 'components/card-greeting', profile: @profile %>
-      <h4 class="dashboard-title">Your upcoming events</h4>
       <% if !@profile.user.events.empty? %>
+        <h4 class="dashboard-title">Recommended events</h4>
         <% @profile.user.events.each do |event| %>
-          <% unless event.date.past?  %>
+          <% if !event.date.past?  %>
             <%= render 'components/card-dashboard', event: event %>
+          <% else %>
+            <div class="greeting-card d-flex">
+              <img class="greeting-image" src="<%= asset_path('events.svg') %>">
+              <div class="greeting-info-card">
+                <h2>Sign up to one of our events!</h2>
+                <p>Meet other enthusiastic and aspiring women like yourselves in one of our 100+ events, and get inspired! </p>
+                <div><%= link_to "View events", events_path, class: "btn btn-solid small" %></div>
+              </div>
+            </div>
           <% end %>
         <% end %>
       <% else %>
@@ -54,7 +64,7 @@
           <img class="greeting-image" src="<%= asset_path('events.svg') %>">
           <div class="greeting-info-card">
             <h2>Sign up to one of our events!</h2>
-            <p>Meet other enthusiastic and aspiring women like yourselves in one of our +100 events, and get inspired! </p>
+            <p>Meet other enthusiastic and aspiring women like yourselves in one of our 100+ events, and get inspired! </p>
             <div><%= link_to "View events", events_path, class: "btn btn-solid small" %></div>
           </div>
         </div>
@@ -92,7 +102,7 @@
           <h4>Have you checked out our forums?</h4>
           <p style="
           font-style: italic;
-          margin-bottom: 16px;">From topic A to topic B, join in the conversations with our +100 members! </p>
+          margin-bottom: 16px;">From starting a new business to learning how to network, join the conversation! </p>
           <%= link_to "View forum", forums_path, class: "btn btn-ghost small"  %>
         </div>
         <img src="https://images.unsplash.com/photo-1556159992-e189f8e50104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">

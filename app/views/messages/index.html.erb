@@ -1,29 +1,26 @@
-<div class="container-medium-small">
+<% content_for :meta_title, "Messages | Ellevate" %>
+<div class="container mt-5">
   <div class="d-flex row">
-    <div class="col-12 col-md-3">
+    <div class="col-12 col-md-4">
       <div class="mr-1 sticky">
-        <div class="card-mentor">
-          <h4>You are chatting with </h4>
-          <div class="d-flex my-2">
 
+        <div class="card-mentor-chat">
+          <h6>You are chatting with </h6>
+          <div class="circle">
             <%= cl_image_tag @counterparty.photo, class: "round" %>
-            <div class="ml-2 flex-column d-flex align-items-start">
-              <h6 class="font-weight-bold my-0"><%= @counterparty.first_name %> <%= @counterparty.last_name %></h6>
-              <p class="my-0"><%= @counterparty.profile.current_title %> at <%= @counterparty.profile.current_employer %></p>
-              <p class="mt-0"><%= @counterparty.profile.city %>, <%= @counterparty.profile.state %></p>
-            </div>
           </div>
-          <div class="card-link-wrapper">
-            <%= link_to "View Profile", profile_path(@counterparty.profile), class: "btn btn-ghost small mt-2 mb-1" %>
+          <div>
+            <h6 class="font-weight-bold my-0"><%= @counterparty.first_name %> <%= @counterparty.last_name %></h6>
+            <p class="my-0"><%= @counterparty.profile.current_title %> at <%= @counterparty.profile.current_employer %></p>
+            <p class="mt-0 mb-2"><%= @counterparty.profile.city %>, <%= @counterparty.profile.state %></p>
           </div>
-          <div class="card-link-wrapper">
-            <%= link_to "End Mentorship", root_path, class: "btn btn-solid small mt-2 mb-1"%>
-          </div>
+            <%= link_to "View Profile", profile_path(@counterparty.profile), class: "btn btn-ghost btn-block mt-4 mb-1" %>
         </div>
       </div>
+
     </div>
 
-    <div class="col-12 col-md-9">
+    <div class="col-12 col-md-8">
         <div class="chat-wrapper">
           <%= form_with(model: [@match, @message], remote: true, format: :json, id: 'chat-form') do |form| %>
             <% if @message.errors.any? %>
@@ -38,8 +35,13 @@
             <% end %>
 
             <div class="chat-bubble-wrapper head d-flex flex-row chat-container me">
-             <%= form.text_field :content, id: :message, class: "form-control", required: true, placeholder: "Type a message...", autocomplete: 'off' %>
-             <%= form.hidden_field :identifier, id: :identifier, value: current_user.identifier %>
+              <div id="message-area">
+               <%= form.text_area :content, id: :message, class: "form-control p-4", required: true, placeholder: "Type a message...", autocomplete: 'off', rows: 4 %>
+               <%= form.hidden_field :identifier, id: :identifier, value: current_user.identifier %>
+               <div class="d-flex justify-content-end mt-3">
+                <%= form.submit 'Send Message', class: "btn-solid small" %>
+               </div>
+              </div>
              <div class="chat-image d-flex flex-column align-items-center me">
                 <%= cl_image_tag current_user.photo %>
               </div>

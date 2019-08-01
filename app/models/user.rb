@@ -52,11 +52,11 @@ class User < ApplicationRecord
   end
 
   def mentor_profile
-    matches_as_mentee.first.mentor.profile
+    matches_as_mentee.last.mentor.profile
   end
 
   def mentee_profile
-    matches_as_mentor.first.mentee.profile
+    matches_as_mentor.last.mentee.profile
   end
 
   def full_name
@@ -64,8 +64,8 @@ class User < ApplicationRecord
   end
 
   def get_match
-    return matches_as_mentee.first if matches_as_mentee.count.positive?
-    return matches_as_mentor.first if matches_as_mentor.count.positive?
+    return matches_as_mentee.last if matches_as_mentee.count.positive?
+    return matches_as_mentor.last if matches_as_mentor.count.positive?
     nil
   end
 

@@ -98,7 +98,7 @@
     h4 {
     color: gray;
     font-size: 14px !important;
-    margin-right: 45px;
+    margin-right: 22px;
     }
   }
 }
@@ -114,9 +114,13 @@
   border: 1px solid #e5e5e5;
   color: rgba(255,255,255,0.5);
   padding: 15px 15px;
-  height: 510px;
+  height: 520px;
   position: sticky;
   top: 145px;
+  a {
+      text-decoration: none;
+      color: white;
+  }
   p{
     margin-bottom: 0px !important;
     margin-top: 0px;
@@ -124,9 +128,9 @@
   .nav-link {
     display: inline-block;
     box-sizing: border-box;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.75);
     padding: 0.6rem 1.25rem 0.6rem 1.875rem;
-    font-size: 0.875rem;
+    font-size: 16px;
     display: block;
     transition: all 0.2s;
     transition-delay: 0s;

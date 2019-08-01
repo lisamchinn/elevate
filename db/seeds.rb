@@ -314,7 +314,7 @@ MENTORS = [{
   email: 'kirthiga@mail.com',
   password: 123456789,
   mentee: false,
-  photo: 'https://smedia2.intoday.in/btmt/images/stories/kirthiga-reddy-facebook_660_090915064745.jpg',
+  photo: 'https://www.businessinsider.in/thumb/msid-69651687,width-640,resizemode-4/Kirthiga-Reddy-venture-partner-Americas.jpg?1041191',
   },
   {
   first_name: 'Lillian',
@@ -374,7 +374,7 @@ MENTEE_PROFILES = [{
   goals: 'Be a product manager or founder in a edu-tech company, summitting Mount Everest',
   birthday: Date.new(1986, 9, 1),
   description: 'I am from the US, and spent the last 7 years living and working in Tokyo. I have been working & traveling for the last year and a half, and I am interested in learning to code to hopefully to start my own education-related company in the near future.',
-  tagline: 'Passionate educator with +8 years experience of leading a school. Would like to enter the tech industry and is looking for a mentor to guide her.',
+  tagline: 'Passionate educator with 8+ years experience of leading a school. Would like to enter the tech industry and is looking for a mentor to guide her.',
   public: true,
   phone: 11758950024,
 },
@@ -430,7 +430,7 @@ Adichie Chimamanda Ngozi',
   hobbies: 'Drawing, doing yoga, coding, and cooking',
   goals: 'I want to successfully launch Elpha, grow the company and hopefully go public.',
   birthday: Date.new(1990, 4, 11),
-  description: 'Experienced at managing projects and products. I was responsible for launching +10 medium-to-large features which are used by hundreds of customers. I thrive in an environment where I had to translate between customers needs into technological features. I enjoyed coding with Ruby, mySQL, JavaScript, and React. ',
+  description: 'Experienced at managing projects and products. I was responsible for launching 10+ medium-to-large features which are used by hundreds of customers. I thrive in an environment where I had to translate between customers needs into technological features. I enjoyed coding with Ruby, mySQL, JavaScript, and React. ',
   tagline: 'Currently working on Elphy, a startup focused on helping women gain management skills. I am looking for a mentor that can guide me to successfuly launch and grow this product.',
   public: true,
   phone: 41765715598,
@@ -540,8 +540,13 @@ MENTOR_PROFILES = [
   hobbies: 'Karaoke, karate, listening to music',
   goals: 'To launch the next version of Bumble within the next 2 years',
   birthday: Date.new(1980, 1, 21),
+<<<<<<< HEAD
   description: 'Whitney is an entrepreneur who has launched two of the largest dating app in the world. She has experience in leading +100 team around the world and is known for her prowess in identifying customer insights, creativity, speed to execution, and detailed attention to customer experience.',
   tagline: 'Experienced entrepreneur with a passion for growth marketing, eager to mentor an upcoming female entrepreneur!',
+=======
+  description: 'Whitney is an entrepreneur who has launched two of the largest dating app in the world. She has experience in leading 100+ team around the world and is known for her prowess in identifying customer insights, creativity, speed to execution, and detailed attention to customer experience.',
+  tagline: 'Experienced entrepreneur with passion for product launches and growth marketing, eager to mentor a female entrepreneur on the same trajectory.',
+>>>>>>> master
   public: true,
   phone: 1986613118,
 },
@@ -688,43 +693,43 @@ MENTOR_PROFILES = [
 
 FORUMS = [ {
     name: "Entrepreneurship",
-    photo: "app/assets/images/undraw_freelancer_b0my.svg"
+    photo: "undraw_freelancer_b0my.svg"
   },
   {
     name: "Career Change",
-    photo: "app/assets/images/undraw_design_sprint_x3eb.svg"
+    photo: "undraw_design_sprint_x3eb.svg"
   },
   {
     name: "Career Growth",
-    photo: "app/assets/images/undraw_working_late_pukg.svg"
+    photo: "undraw_working_late_pukg.svg"
   },
   {
     name: "Negotiation Strategies",
-    photo: "app/assets/images/undraw_process_e90d.svg"
+    photo: "undraw_process_e90d.svg"
   },
   {
     name: "Learning How to Network",
-    photo: "app/assets/images/undraw_co-working_825n.svg"
+    photo: "undraw_co-working_825n.svg"
   },
   {
     name: "Industry-Specific Skills",
-    photo: "app/assets/images/undraw_software_engineer_lvl5.svg"
+    photo: "undraw_software_engineer_lvl5.svg"
   },
   {
     name: "Handling Workplace Biases",
-    photo: "app/assets/images/undraw_multitasking_hqg3.svg"
+    photo: "undraw_multitasking_hqg3.svg"
   },
   {
     name: "Developing Leadership Skills",
-    photo: "app/assets/images/undraw_leadership_26ry.svg"
+    photo: "undraw_leadership_26ry.svg"
   },
   {
     name: "Creating Work-Life Balance",
-    photo: "app/assets/images/undraw_worklife_o89g.svg"
+    photo: "undraw_worklife_o89g.svg"
   },
   {
     name: "Building Confidence",
-    photo: "app/assets/images/undraw_confidence_ubwv.svg"
+    photo: "undraw_confidence_ubwv.svg"
   }
 ]
 
@@ -738,7 +743,7 @@ ENTREPRENEURSHIP_POSTS = [ {
 },
 {
   subject: "Calling entrepreneurs!",
-  content: "1: When did you start your company? 2: What do you do? 3: What are some challenges you face, particularly associated with being a (female) entrepreneur? "
+  content: "When did you start your company? What do you do? What are some challenges you face, particularly associated with being a (female) entrepreneur? "
 }
 ]
 
@@ -777,29 +782,19 @@ ENTREPRENEURSHIP_REPLIES_TWO = [ {
 ]
 
 ENTREPRENEURSHIP_REPLIES_THREE = [ {
-  content: "1. Last winter.
-  2. I am blogger and dog nutritionist. (Online business)
-  3. None I can think of, to be honest. I haven't been met with any gender based challenges thus far. Considering the nature of my business, I don't think I will see much."
+  content: "Last winter. I am blogger and dog nutritionist. (Online business) None I can think of, to be honest. I haven't been met with any gender based challenges thus far. Considering the nature of my business, I don't think I will see much."
 },
 {
-  content: "1. I've been a Consultant IT Tech for the last 3/4 years.
-  2.I work with companies that have a technical project to roll out that is more work than their normal IT dept can deal with. Help them to automate repetitive tasks, plan a solution, implement it & train users.
-  3.Ideally I'd like to start doing this more for small businesses, solo business people & entrepreneurs like me. So website reviews, one-to-one advice on how they can make their idea a reality, even when starting from limited resources. The challenges are growing a network and becoming known for good advice."
+  content: "I've been a Consultant IT Tech for the last 3/4 years. I work with companies that have a technical project to roll out that is more work than their normal IT dept can deal with. Help them to automate repetitive tasks, plan a solution, implement it & train users. Ideally I'd like to start doing this more for small businesses, solo business people & entrepreneurs like me. So website reviews, one-to-one advice on how they can make their idea a reality, even when starting from limited resources. The challenges are growing a network and becoming known for good advice."
 },
 {
-  content: "1. May, 2012
-  2. I'm running an educational consulting firm that helps students through the college admissions process and college students figure out what they want to be when they grow up.
-  3. Getting taken seriously is the hardest, I think. I'm currently working my day job as my business gains traction and I can't tell you how many people at work tell me I'm wasting my time or that I'll fail. After all, I'm supposed to be home taking care of my daughter and not working in the eyes of my coworkers (I'm in a male dominated, old school industry)."
+  content: "May, 2012. I'm running an educational consulting firm that helps students through the college admissions process and college students figure out what they want to be when they grow up. Getting taken seriously is the hardest, I think. I'm currently working my day job as my business gains traction and I can't tell you how many people at work tell me I'm wasting my time or that I'll fail. After all, I'm supposed to be home taking care of my daughter and not working in the eyes of my coworkers (I'm in a male dominated, old school industry)."
 },
 {
-  content: "I work for my mother, but technically she started the business so I will reference our conversation in the matter.
-
-  1. We bought a website in 2008 and started an s corp. in 2009 we became active.
-  2. A service business. We access or help insurance adjusters access steep and tall homes/buildings.
-  3. In a predominantly male market it's hard to be taken professionally. Man times the clients are older than myself and my mother and have been in the industry for years. Since we are at the bottom of the totem pole offering services, we get yelled at when things don't go right. Sometimes it's even a typo in their end in the request form. Although most of the men are very polite, we often run into men being rude after discovering the business is run by women. I assume a woman who owns a construction company would be treated the same."
+  content: "I work for my mother, but technically she started the business so I will reference our conversation in the matter. We bought a website in 2008 and started an s corp. in 2009 we became active. A service business. We access or help insurance adjusters access steep and tall homes/buildings. In a predominantly male market it's hard to be taken professionally. Man times the clients are older than myself and my mother and have been in the industry for years. Since we are at the bottom of the totem pole offering services, we get yelled at when things don't go right. Sometimes it's even a typo in their end in the request form. Although most of the men are very polite, we often run into men being rude after discovering the business is run by women. I assume a woman who owns a construction company would be treated the same."
 },
 {
-  content: "1. I started an online store in 2010 and sold it late 2012. While managing it (I sold fertility/maternity products mostly) I got an idea for a product for pregnant women so I started a company (August 2011) and after lots of trouble with finding and dealing with manufacturers the product is finally ready and is being shipped overseas to us, we´ll launch the website in a few weeks hopefully. 2. I'm the CEO and co-founder. An acquaintance (another woman) is the other founder and she's in sales. So far I've been in charge of designing the product, contacting factories and agents, raising money, dealing with graphic designers, setting up the website and probably a lot of other things I'm forgetting. 3. I come from a pretty gender equal country and must say that being a woman has mostly opened doors for me, for example I've received 2 grants and 1 business loan only available for women."
+  content: "I started an online store in 2010 and sold it late 2012. While managing it (I sold fertility/maternity products mostly) I got an idea for a product for pregnant women so I started a company (August 2011) and after lots of trouble with finding and dealing with manufacturers the product is finally ready and is being shipped overseas to us, we´ll launch the website in a few weeks hopefully. I'm the CEO and co-founder. An acquaintance (another woman) is the other founder and she's in sales. So far I've been in charge of designing the product, contacting factories and agents, raising money, dealing with graphic designers, setting up the website and probably a lot of other things I'm forgetting. I come from a pretty gender equal country and must say that being a woman has mostly opened doors for me, for example I've received 2 grants and 1 business loan only available for women."
 }
 ]
 
@@ -1076,7 +1071,7 @@ end
 puts "Creating Entrepreneurship Posts"
 ENTREPRENEURSHIP_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Entrepreneurship").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1085,15 +1080,15 @@ end
 puts "Creating Entrepreneurship Replies"
 ENTREPRENEURSHIP_REPLIES_ONE.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
-  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship")).first.id
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
+  seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[0].id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
 end
 
 ENTREPRENEURSHIP_REPLIES_TWO.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[1].id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1101,7 +1096,7 @@ end
 
 ENTREPRENEURSHIP_REPLIES_THREE.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Entrepreneurship"))[2].id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1110,7 +1105,7 @@ end
 puts "Creating Career Change Posts"
 CAREER_CHANGE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Career Change").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1119,7 +1114,7 @@ end
 puts "Creating Career Change Replies"
 CAREER_CHANGE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Career Change")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1128,7 +1123,7 @@ end
 puts "Creating Career Growth Posts"
 CAREER_GROWTH_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Career Growth").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1137,7 +1132,7 @@ end
 puts "Creating Career Growth Replies"
 CAREER_GROWTH_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Career Growth")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1146,7 +1141,7 @@ end
 puts "Creating Negotiation Strategies Posts"
 NEGOTIATION_STRATEGIES_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Negotiation Strategies").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1155,7 +1150,7 @@ end
 puts "Creating Negotiation Strategies Replies"
 NEGOTIATION_STRATEGIES_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Negotiation Strategies")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1164,7 +1159,7 @@ end
 puts "Creating Learning How to Network Posts"
 LEARNING_HOW_TO_NETWORK_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Learning How to Network").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1173,7 +1168,7 @@ end
 puts "Creating Learning How to Network Replies"
 LEARNING_HOW_TO_NETWORK_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Learning How to Network")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1182,7 +1177,7 @@ end
 puts "Creating Industry-specific Skills Posts"
 INDUSTRY_SPECIFIC_SKILLS_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Industry-Specific Skills").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1191,7 +1186,7 @@ end
 puts "Creating Industry-specific Skills Replies"
 INDUSTRY_SPECIFIC_SKILLS_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Industry-Specific Skills")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1200,7 +1195,7 @@ end
 puts "Creating Handling workplace biases Posts"
 DEALING_WITH_BIASES_IN_THE_WORKPLACE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Handling Workplace Biases").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1209,7 +1204,7 @@ end
 puts "Creating Handling workplace biases Replies"
 DEALING_WITH_BIASES_IN_THE_WORKPLACE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Handling Workplace Biases")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1218,7 +1213,7 @@ end
 puts "Creating Developing Leadership Skills Posts"
 DEVELOPING_LEADERSHIP_SKILLS_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Developing Leadership Skills").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1227,7 +1222,7 @@ end
 puts "Creating Developing Leadership Skills Replies"
 DEVELOPING_LEADERSHIP_SKILLS_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Developing Leadership Skills")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1236,7 +1231,7 @@ end
 puts "Creating Creating Work-Life Balance Posts"
 CREATING_WORK_LIFE_BALANCE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Creating Work-Life Balance").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1245,7 +1240,7 @@ end
 puts "Creating Creating Work-Life Balance Replies"
 CREATING_WORK_LIFE_BALANCE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Creating Work-Life Balance")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1254,7 +1249,7 @@ end
 puts "Creating Building Confidence Posts"
 BUILDING_CONFIDENCE_POSTS.each do |post|
   seed_post = Post.new(post)
-  seed_post.user = User.all.sample
+  seed_post.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_post.forum_id = Forum.where(name: "Building Confidence").first.id
   seed_post.save!
   puts " - created #{seed_post.forum.name} post"
@@ -1263,7 +1258,7 @@ end
 puts "Creating Building Confidence Replies"
 BUILDING_CONFIDENCE_REPLIES.each do |reply|
   seed_reply = Reply.new(reply)
-  seed_reply.user = User.all.sample # need to make sure user doesn't match post user
+  seed_reply.user = User.all.reject {|item| item.first_name == "Alberta"}.sample
   seed_reply.post_id = Post.where(forum: Forum.where(name: "Building Confidence")).first.id
   seed_reply.save!
   puts " - created reply #{seed_reply.id}"
@@ -1299,7 +1294,7 @@ MENTEE_QUESTIONS = [
         content: "Black or African American"
       },
       {
-        content: "Hispanic or Latino"
+        content: "Hispanic or Latina"
       },
       {
         content: "Native Hawaiian or Other Pacific Islander"
@@ -1440,7 +1435,7 @@ MENTOR_QUESTIONS = [
         content: "Black or African American"
       },
       {
-        content: "Hispanic or Latino"
+        content: "Hispanic or Latina"
       },
       {
         content: "Native Hawaiian or Other Pacific Islander"

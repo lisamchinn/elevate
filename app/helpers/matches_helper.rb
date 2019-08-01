@@ -4,17 +4,15 @@ module MatchesHelper
     mentor_list = User.available.map do |m|
       mentor_structure = structure(m, "mentor")
       years_diff = mentee.birthday > m.birthday ? mentee.birthday.year - m.birthday.year : m.birthday.year - mentee.birthday.year
-
       iield = years_diff.positive? ? (years_diff * 10) : 0
-      { mentor_id: m.id, score: score(mentee_structure, mentor_structure) + iield }
-      # { mentor_id: 1, score: 0 }
+      match_score = score(mentee_structure, mentor_structure) + iield
+      match_percentage = ((1 - (match_score / max_score(mentee)) ** 3).to_f * 100).round(1)
+      { mentor_id: m.id, score: match_score, match_percentage: match_percentage}
     end
-    # return a list of available mentos
-
     if mentor_list.empty?
       return { error: "There are no mentors available"}
     else
-      return mentor_list.sort_by { |match| match[:score] }.first(amount).map { |match_pair| match_pair[:mentor_id] }
+      return mentor_list.sort_by { |match| -match[:match_percentage] }.first(amount).map { |match_pair| [match_pair[:mentor_id], match_pair[:match_percentage]] }
     end
   end
 
@@ -55,7 +53,9 @@ module MatchesHelper
     598.8 + ((65 - user.age) * 10)
   end
 
-  def percent_match
-
-  end
+  # def worst_score
+  #   mentee_structure = fake_structure(0)
+  #   mentor_structure = fake_structure(1)
+  #   score(mentee_structure, mentor_structure)
+  # end
 end

@@ -1,42 +1,100 @@
+.container-donation {
+  width: 50%;
+  // margin: 0 auto;
+}
+
+.all-donation-info {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .donation-form {
   background: rgba(255, 255, 255, 0.89);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   padding: 37px;
   border-radius: 0px;
   border-top: 0px;
   border-right: 0px;
   border-bottom: 0px;
   border-left: 0px;
+  margin-top: 125px;
   h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h3 {
     font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
   }
   h4 {
     font-size: 16px;
+    width: 50%;
   }
   p {
-    font-size: 14px;
-    margin-bottom: 35px;
-  }
-}
-
-.container-donation {
-  width: 900px;
-  margin: 0 auto;
-  h2 {
-    margin-bottom: 10px;
-  }
-}
-
-.donation-logo-wrapper {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.donation-paragraph {
-  margin: 0 auto;
-  margin-top: 10px;
-  h6 {
     font-size: 18px;
+    margin-bottom: 35px;
+    text-align: center;
   }
 }
+
+// .donation-logo-wrapper {
+//   margin: 0 auto;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .donation-paragraph {
+//   margin: 0 auto;
+//   margin-top: 10px;
+//   h6 {
+//     font-size: 18px;
+//   }
+// }
+
+.banner-donation {
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: top;
+}
+
+.donation-faq {
+  width: 30%;
+  background-color: $cream;
+  margin-top: 50px;
+  padding: 27px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  h4 {
+    font-size: 23px;
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  li {
+    font-size: 16px;
+    padding-left: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+
+  }
+  li {
+    list-style-type: none;
+  }
+}
+
+.donation-faq ul li:nth-child(5) {
+  padding-bottom: 0;
+}
+
+
+

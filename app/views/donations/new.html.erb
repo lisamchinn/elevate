@@ -6,15 +6,27 @@
         <%= simple_form_for @donation do |f| %>
         <h2>Help us do more!</h2>
         <p>We're a nonprofit that relies on support from people like you. If everyone reading this gives $10 monthly, Ellevate can continue to thrive for years. Invest in our bold vision for the future, and help prove that this generation of women belongs in the conversation. </p>
+          <h3>Join the 10,873 other women who have donated to Ellevate</h3>
 
-        <h4>Your email address: </h4>
-        <%= f.input :donor_email, class: "form-control mt-5", placeholder: 'name@mail.com', label: false %>
-        <h4> Input your support amount: </h4>
-        <span class="mb-2">$USD</span>
-        <%= f.input :amount, class: "form-control", html_input: { value: '$20' }, label: false %>
-        <%= f.button :submit, class: "btn btn-solid" %>
-        <% end %>
-      </div>
+          <h4>Your email address: </h4>
+          <%= f.input :donor_email, class: "form-control mt-5", placeholder: 'name@mail.com', label: false %>
+          <h4> Input your support amount: </h4>
+          <span class="mb-2">$USD</span>
+          <%= f.input :amount, class: "form-control", placeholder: '10', html_input: { value: '$10' }, label: false %>
+          <%= f.button :submit, class: "btn btn-solid" %>
+          <% end %>
+        </div>
+      <!-- </div> -->
+    </div>
+    <div class="donation-faq">
+      <h4>Frequently Asked Questions: </h4>
+      <ul>
+        <li>How secure is my payment?</li>
+        <li>How is my donation used?</li>
+        <li>Can I pay in currency other than USD?</li>
+        <li>Is my donation tax deductible?</li>
+        <li>Can I make a recurring donation?</li>
+      </ul>
     </div>
   </div>
 </div>

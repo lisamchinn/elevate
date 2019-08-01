@@ -76,4 +76,8 @@ class User < ApplicationRecord
   def birthday
     profile.birthday
   end
+
+  def age
+    (((Date.today - birthday).to_f)/365).to_i
+  end
 end

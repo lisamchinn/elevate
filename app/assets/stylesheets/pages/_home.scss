@@ -9,7 +9,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 101vh;
+  padding-bottom: 65px;
 }
 
 .big-yellow-square {
@@ -437,7 +438,7 @@
 }
 
 .background-image-pattern {
-  background-image: url('world-map-op-5.png');
+
   background-size: cover;
   h4 {
   text-shadow: 1px 1px grey;
@@ -448,6 +449,7 @@
     text-shadow: 1px 1px grey;
   }
 }
+
 
 
 // .section-six-background {

@@ -71,13 +71,13 @@ Searching 359 files for "desk"
 /Users/lisachinn/code/elevate/app/views/layouts/application.html.erb:
     7      <meta name="description" content="We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.">
     8      <meta property="og:title" content="Ellevate - Mentorship is the key to our success">
-    9:     <meta property="og:image" content="<%= asset_path('women-at-desk.jpeg') %>">
+    9:     <meta property="og:image" content="<%= cl_image_tag('women-at-desk.jpeg') %>">
    10      <meta property="og:description" content="We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.">
    11      <meta property="og:type" content="website" />
    ..
    17      <meta name="twitter:description" content="We help women come together to learn from each other and achieve their goals, because women can be a powerful force for change in the world.">
    18      <meta name="twitter:creator" content="@Ellevate">
-   19:     <meta name="twitter:image:src" content="<%= asset_path('women-at-desk.jpeg') %>">
+   19:     <meta name="twitter:image:src" content="<%= cl_image_tag('women-at-desk.jpeg') %>">
    20      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
    21      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 

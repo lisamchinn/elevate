@@ -47,6 +47,7 @@
     <%= render 'shared/flashes' %>
     <div id="view-wrapper">
       <%= yield %>
+      <%= yield :stylesheets %>
     </div>
     <%= render 'components/footer' %>
     <%= javascript_include_tag 'application' %>

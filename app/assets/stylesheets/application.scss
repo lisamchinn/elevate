@@ -16,7 +16,7 @@
 @import "devise/index";
 @import "payments/new";
 @import "donation/new";
-@import "pages/events/index";
+@import "events/index";
 
 // MAIN DESGIN
 
@@ -38,7 +38,6 @@ h1 {
 h2 {
   font-weight: 100;
   font-size: 52px;
-  color: red;
 }
 
 h3 {

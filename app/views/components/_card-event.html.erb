@@ -1,3 +1,18 @@
-<div class="heed mt-5">
-  <h1>hi</h1>
+<div class="card-event">
+  <%= cl_image_tag event.photo%>
+  <div class="event-info">
+    <h6>SEATTLE</h6>
+    <h2><%= event.title %></h2>
+    <h5><%= event.date.strftime('%b %d, %Y') %></h5>
+    <h5><%= event.start_time.strftime('%l:%M %p') %>~<%= event.end_time.strftime('%l:%M %p') %></h5>
+    <div class="d-flex event-host-info">
+      <img class="avatar" src="https://avatars1.githubusercontent.com/u/50211536?s=400&u=75d49c57f098a5f81be5d1c2ebed7f3528950a3f&v=4" alt="event host image">
+      <p>Hosted by <%= event.host %> of <%= event.host_company %></p>
+    </div>
+  </div>
+
 </div>
+
+
+
+

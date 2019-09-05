@@ -1,5 +1,9 @@
 class Event < ApplicationRecord
   mount_uploader :photo, PhotoUploader
+  include PgSearch
+  pg_search_scope :global_search,
+    against: [:title, :description, :city, :host_company],
+    using: { tsearch: { prefix: true } }
 
   has_many :event_bookings, dependent: :destroy
   has_many :users, through: :event_bookings

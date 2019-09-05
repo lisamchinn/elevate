@@ -2,7 +2,11 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @events = policy_scope(Event)
+    if params[:search].present?
+      @events = policy_scope(Event).global_search(params[:search])
+    else
+      @events = policy_scope(Event)
+    end
   end
 
   def show

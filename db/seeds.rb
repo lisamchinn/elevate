@@ -280,7 +280,7 @@ MENTEES = [
   email: 'lisa@mail.com',
   password: 123456789,
   mentee: true,
-  photo: 'https://media.licdn.com/dms/image/C4E03AQFpRrFvbFbGSA/profile-displayphoto-shrink_800_800/0?e=1569456000&v=beta&t=O4LBdDgP2U1p9eqoIJa8vXn0Og9TKVqxV50Ui4GEJb4',
+  photo: 'https://media.licdn.com/dms/image/C4E03AQHp081xpTX78w/profile-displayphoto-shrink_800_800/0?e=1574899200&v=beta&t=fVKDqVXRp-WQ3UC-Y3smWWzo2LmCWayUaCHzImvwTkk',
   },
   {
   first_name: 'Alberta',

@@ -24,8 +24,6 @@ module MatchesHelper
     score
   end
 
-  #question[4] should be the importance
-
   def question_score(question_importance, question_type, mentee_answers, mentor_answers)
     if question_type == 'checkbox' || question_type == 'pre'
       mentee_answers.map.with_index { |a, i| (a - mentor_answers[i]).abs }.sum * question_importance

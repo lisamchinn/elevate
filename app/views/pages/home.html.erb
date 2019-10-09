@@ -164,7 +164,7 @@
     <div class="mentors">
       <% @mentors = User.select { |user| !user.mentee } %>
         <% @mentors.sample(3).each do |mentor| %>
-          <%= link_to profile_path(mentor), target: "_blank" do %>
+          <%= link_to profile_path(mentor.profile), target: "_blank" do %>
           <div class="col-4 my-2">
             <div class="mentor-card-container">
               <div class="mentor-card">
@@ -177,7 +177,7 @@
                 <p>"<%= mentor.profile.tagline %>"</p>
               </div>
               <div class="match-button">
-                <%= link_to "View Profile", profile_path(mentor), class: "btn-solid small"%>
+                <%= link_to "View Profile", profile_path(mentor.profile), class: "btn-solid small"%>
               </div>
             </div>
           </div>

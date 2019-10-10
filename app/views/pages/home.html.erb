@@ -148,7 +148,9 @@
           </div>
         </div>
         <div class="steps-button">
-          <%= link_to "Take the Survey", root_path, class: "btn-solid"%>
+          <%= link_to question_path(question_mentee) do %>
+            <p class="btn btn-solid">Take the Survey</p>
+          <% end %>
         </div>
       </div>
     </div>
